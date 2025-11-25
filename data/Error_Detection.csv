@@ -1,0 +1,961 @@
+title,input,choices,target,target_index,task_description,error
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef Ebfe | fed e3 | def | fed edB | AGA BAG | D##2 F G3 :","[4, 2, 3, 5]",257,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_3:g→Eb(key=G), enharmonic_error_in_measure_8:E2→D##2, invalid_duration_in_measure_5:shortened(0.75→0.5)"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>F#f gFe | fed D##dB | d>ef gfe | feF e3 | def gfe | fed eBbB | AGA BAG | E2 F G3 :","[4, 5, 2, 1]",12358,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_1:e→F#(12度/18半音), enharmonic_error_in_measure_2:E→D##, excessive_leap_≥10th_in_measure_4:d→F(11度/17半音), invalid_note_name_in_key_6:d→Bb(key=G), excessive_leap_≥10th_in_measure_1:f→F(12度/19半音)"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef gfe d>ef gfe | fGd edB | d>ef gfe | fed e3 | def gfe | fed edB | AGA AAG | E2 F G3 :","[3, 2, 1, 5]",567,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_7:B→A(key=G), excessive_leap_≥10th_in_measure_2:e→G(12度/19半音), invalid_duration_in_measure_1:lengthened(0.75→1.12)"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef F#fe | fed edB | d>ef gfe | fed F#3 | def gfe | fed edB | AGA BAb#G | E2 F G3 :","[4, 5, 1, 3]",1268,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_7:A→G##, excessive_leap_≥10th_in_measure_1:g→F#(12度/18半音), invalid_note_name_in_key_4:e3→F#3(key=G), enharmonic_error_in_measure_7:G#→Ab"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fC#d e3 | def gfe | fed edB | G##GA BAG | E2 F G3 :","[3, 2, 4, 5]",68,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_7:A→G##, invalid_note_name_in_key_4:e→C#(key=G)"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>D##f gfe | fed edFb | d>ef gfe | fed e3 | def gfe | fed edB Ebed edB | AGA | E2 F G3 :","[1, 3, 2, 5]",12357,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_7:shortened(0.75→0.62), enharmonic_error_in_measure_1:E→D##, invalid_note_name_in_key_2:B→Fb(key=G), invalid_duration_in_measure_6:lengthened(0.75→1.0), invalid_note_name_in_key_6:f→Eb(key=G)"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | def gfe | feG edB | GbGA BAG | E2 F G3 :","[3, 2, 4, 5]",23,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_6:d→G(11度/17半音), invalid_note_name_in_key_7:A→Gb(key=G)"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | dD##f gfe | fed eE#B | AGA BAG | E2 F G3 :","[4, 5, 1, 3]",14578,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_5:f→O#, invalid_note_in_measure_7:A→H, invalid_note_in_measure_8:G3→Z5, invalid_note_name_in_key_6:d→E#(key=G), enharmonic_error_in_measure_5:E→D##"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | def gfe | fed edB | AEA BAG | E2 F G3 :","[3, 4, 1, 5]",368,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_7:G→E(12度/19半音), invalid_note_in_measure_3:g→T''', invalid_note_in_measure_7:E→Y#"
+Irishman_40080,"L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | def gfe | fD##d edB | AGA BAG | E2 F G3 :","[4, 3, 1, 2]",45,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_6:E→D##, invalid_note_in_measure_1:f→R##9"
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3E#/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::","[2, 5, 1, 4]",7,2,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_4:F→E#
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | G##BA AFD | DGG BF#G | (3F/E/D/ EF A3 | ABA ABB# | ABG AFD | Bdg G3 Bdg G3 | cAF G3 ::","[5, 4, 1, 2]",1257,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:A→F#(11度/17半音), enharmonic_error_in_measure_5:C→B#, invalid_duration_in_measure_7:lengthened(0.42→0.67), enharmonic_error_in_measure_2:A→G##"
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BG##G | (3F/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::","[5, 4, 2, 1]",7,3,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_3:A→G##
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/A#/D/ EF A3 | ABA ABc | ABG AFD ABG AFD | Bdg G3 | cAF G3 ::","[1, 2, 5, 4]",26,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_4:E→A#(11度/17半音), invalid_duration_in_measure_6:lengthened(0.75→1.0)"
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+Wn3BA G##BA | ABA AFD | DGG BAG | (3F/E/D/ EF A3 | ABA ABB# | ABG AFD | Bdg G3 | cAF G3 ::","[3, 4, 2, 1]",2457,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_5:C→B#, invalid_note_in_measure_1:A→Wn3, invalid_note_in_measure_4:F→Wn3, enharmonic_error_in_measure_1:A→G##"
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA ABA ABA | ABA AFD | DGG BG##G | (3F/E/D/ EF A3 | ABA ABc | ABG AFD ABG AFD | Bdg G3 | cAF G3 ::","[4, 3, 2, 5]",137,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_6:lengthened(0.75→1.0), invalid_duration_in_measure_1:lengthened(0.75→1.0), enharmonic_error_in_measure_3:A→G##"
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/E/D/ EF A3 | AB#A ABc | ABG AFD | Bdg G3 Bdg | cG#F G3 ::","[1, 5, 3, 4]",2478,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_5:B→B#(key=G), invalid_duration_in_measure_7:lengthened(0.42→0.79), excessive_leap_≥10th_in_measure_8:A→G#(13度/20半音), invalid_duration_in_measure_7:shortened(0.83→0.7)"
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | G##BA AFD | DGG BAG | (3F/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::","[4, 2, 5, 3]",12,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_7:d→O#, enharmonic_error_in_measure_2:A→G##"
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::","[5, 1, 3, 2]",5,1,Identify inserted errors in the provided ABC score,invalid_note_in_measure_4:E→T'''
+Irishman_199283,"L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/E/G##/ EF A3 | AAA ABc | ABG AE#D | Bdg G3 | cAF G3 ::","[2, 5, 4, 3]",12347,1,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_4:D→A(key=G), invalid_note_in_measure_2:D→I4, enharmonic_error_in_measure_4:A→G##, invalid_note_name_in_key_5:B→A(key=G), enharmonic_error_in_measure_6:F→E#"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg E#aafb | bgaf gefd | BGbBc dAFD","[4, 3, 5, 1]",12356,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_4:A→Y#, excessive_leap_≥10th_in_measure_8:A→Gb(11度/17半音), enharmonic_error_in_measure_6:F→E#, invalid_duration_in_measure_4:lengthened(1.0→1.12), invalid_duration_in_measure_4:shortened(1.5→1.38)"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd Gb2 | defg faaf | d2 fd c2 | BABc dAFA | d2 fd c2 ec | defg faaf | bF#af gefd | BABc dAFD","[3, 5, 1, 4]",1568,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_1:shortened(0.62→0.49), invalid_duration_in_measure_3:shortened(0.62→0.49), invalid_note_name_in_key_1:c2→Gb2(key=Edor), enharmonic_error_in_measure_7:Gb→F#"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec c2 ec | defg faA#f | d2 E#d c2 ecb | BABc dAFA | d2 fGb c2 ec | defg faaf | bgaf gefd | HABc dAFD","[5, 2, 3, 4]",13678,0,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_8:B→H, invalid_note_name_in_key_2:a→A#(key=Edor), enharmonic_error_in_measure_3:F→E#, invalid_note_name_in_key_5:d→Gb(key=Edor), invalid_duration_in_measure_1:lengthened(0.62→0.87)"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg Eaaf | d2 fd c2 ec | BABc AAFA | d2 fd c2 ec | defg Gaaf | bgaf gefd | BABc dAFD","[3, 4, 2, 1]",458,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_4:d→A(key=Edor), excessive_leap_≥10th_in_measure_6:f→G(11度/17半音), excessive_leap_≥10th_in_measure_2:f→E(13度/20半音)"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaF# | d2 fd c2 ec | BABc dAFGb | d2 fd c2 eC# | defG faaf | bgaf gefd | BABc dAFD","[3, 2, 1, 4]",4568,3,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_6:g→G(11度/17半音), invalid_note_name_in_key_4:A→Gb(key=Edor), invalid_note_name_in_key_5:c→C#(key=Edor), invalid_note_name_in_key_2:f→F#(key=Edor)"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fG# c2 ec | defg E#aaf# | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg faaf | bgaf gefd | BABc dAFD","[3, 5, 2, 4]",27,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:F→E#, invalid_note_name_in_key_1:d→G#(key=Edor)"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defCb faaf | bgaf gefd | BABc dAFD","[3, 4, 1, 2]",36,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_8:A→U#2, invalid_note_name_in_key_6:g→Cb(key=Edor)"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg faaf | bgaf gefd | BABB# dbAFD","[2, 1, 5, 3]",23467,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_5:d→P,6, invalid_note_in_measure_5:f→H, enharmonic_error_in_measure_8:C→B#, invalid_note_in_measure_2:f→I4, invalid_note_in_measure_5:c→J"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg faaf | bgaf gefd | BABc","[5, 1, 3, 2]",18,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_8:shortened(1.0→0.62), invalid_note_in_measure_1:c→X3"
+Irishman_152072,"L: 1/8
+M: 4/4
+K: Edor
+d2 fEb c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg fabG##f | bgaf gefd | BABc dAFD","[5, 4, 2, 1]",13,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_6:A→G##, invalid_note_name_in_key_1:d→Eb(key=Edor)"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (D3/2 A/) Bc | d2 z2 (fAb) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GB) | G3/2 C#/ F2 z","[3, 2, 4, 1]",5689,2,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_8:F→B(10度/16半音), excessive_leap_≥10th_in_measure_5:d→Ab(10度/16半音), excessive_leap_≥10th_in_measure_4:B3→D3(11度/17半音), invalid_note_name_in_key_9:F→C#(key=F)"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 Bb2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z","[2, 5, 1, 3]",2,2,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_2:F2→Bb2(12度/19半音)
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) BB# | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 E#/ F2 z","[2, 4, 3, 5]",37,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_9:F→E#, enharmonic_error_in_measure_4:C→B#"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (Fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z","[2, 3, 1, 5]",68,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_5:F→E#, enharmonic_error_in_measure_5:E#→F"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | S,A C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (F#d) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z","[3, 5, 4, 1]",1689,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_8:A2→Vb5, invalid_note_in_measure_8:F→X3, excessive_leap_≥10th_in_measure_5:f→F#(12度/18半音), invalid_note_in_measure_3:G→S,"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+I4 | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc Gb2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z F2 z","[5, 4, 2, 1]",1589,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_1:C→I4, invalid_note_in_measure_4:B→P,6, invalid_note_name_in_key_7:d2→Gb2(key=F), invalid_duration_in_measure_9:lengthened(0.35→0.72)"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | T''' z2 (E#d) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z","[1, 4, 3, 2]",259,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_5:d2→T''', enharmonic_error_in_measure_5:F→E#, invalid_note_in_measure_7:f→U#2"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA B#3 A/A/ | (B3/2 Gb/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z z","[2, 3, 5, 4]",2349,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_8:G→U#2, invalid_duration_in_measure_9:lengthened(0.35→0.47), invalid_note_name_in_key_4:A→Gb(key=F), invalid_note_name_in_key_3:C3→B#3(key=F)"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc Bc | d2 z2 (fd) | HA A2 GF | Bc d2 z A# | c3/2 A/ A2 (GF) | G3/2 F/ F2 z","[4, 2, 1, 3]",349,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_4:lengthened(0.58→0.7), invalid_note_in_measure_6:c→H, invalid_note_name_in_key_7:f→A#(key=F)"
+Irishman_39275,"L: 1/8
+M: 3/4
+K: F
+C | DE F2 E#2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2","[4, 3, 5, 2]",24,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:F2→E#2, invalid_duration_in_measure_9:shortened(0.35→0.22)"
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd D##ee# | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :","[2, 4, 1, 5]",2,2,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_6:E→D##
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e ee/e/e | edc c :","[3, 1, 4, 2]",24,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_5:shortened(0.88→0.76), invalid_duration_in_measure_8:lengthened(1.12→1.25)"
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: | B#cd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :","[3, 1, 4, 2]",459,0,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:e→Qb7, invalid_note_name_in_key_2:G→B#(key=C), invalid_duration_in_measure_1:shortened(0.25→0.0)"
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eeF | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc Ab :","[1, 4, 3, 5]",4568,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_1:A→I4, invalid_note_in_measure_9:c→Z5, enharmonic_error_in_measure_4:E#→F, excessive_leap_≥10th_in_measure_9:c→Ab(10度/16半音)"
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | dE/d/c dBc | Gcd eee | de/d/c gcd de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :","[2, 5, 4, 3]",24,0,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_5:lengthened(0.88→1.25), excessive_leap_≥10th_in_measure_3:e→E(10度/16半音)"
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee Gcd eee | de/d/G# dBc | Abcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | ebdc B# :","[5, 3, 4, 1]",4567,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_4:G#→Ab, invalid_duration_in_measure_2:lengthened(0.75→1.0), excessive_leap_≥10th_in_measure_3:c→G#(13度/20半音), enharmonic_error_in_measure_9:C→B#"
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/Db/g/g ee/e/e | edc c :","[1, 5, 3, 4]",4,0,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_8:g→Db(key=C)
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GBb | Gcd eee | de/G#/c dBc | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :","[2, 1, 5, 4]",12349,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:c→Wn3, excessive_leap_≥10th_in_measure_3:d→G#(10度/16半音), invalid_note_in_measure_7:c→Y#, invalid_note_in_measure_7:b→S,, enharmonic_error_in_measure_1:A#→Bb"
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :","[2, 4, 1, 5]",4,2,Identify inserted errors in the provided ABC score,invalid_duration_in_measure_6:shortened(0.75→0.38)
+Irishman_124343,"L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/Gb dBGb | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :","[5, 2, 4, 1]",78,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:c→Gb(12度/18半音), excessive_leap_≥10th_in_measure_3:c→Gb(11度/17半音)"
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ DG GF/G/ | AG FD | DG GGb | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | Y#G G2 :","[5, 3, 2, 4]",2358,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_1:lengthened(0.62→0.99), invalid_note_name_in_key_3:A→Gb(key=G), invalid_note_in_measure_8:A→Y#, invalid_note_in_measure_6:A→Qb7"
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | AG G2 :","[5, 2, 1, 3]",5,2,Identify inserted errors in the provided ABC score,invalid_note_in_measure_1:G→Vb5
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: | AG E#D | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | dGb/d/ EF | AG G2 :","[1, 4, 5, 3]",45678,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_7:e→Gb(key=G), invalid_note_in_measure_6:D→Y#, invalid_duration_in_measure_1:shortened(0.62→0.37), excessive_leap_≥10th_in_measure_7:c→E(10度/16半音), enharmonic_error_in_measure_2:F→E#"
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | CbG G2 :","[4, 1, 3, 2]",348,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_8:A→Cb(key=G), invalid_note_in_measure_1:F→P,6, invalid_note_in_measure_5:G→O#"
+Irishman_48930,"L: 1/5
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | AG G2 :","[3, 1, 5, 4]",3,1,Identify inserted errors in the provided ABC score,invalid_length:1/8→1/5
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG# GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cE# | AG G2 :","[2, 4, 5, 3]",45,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_7:F→E#, excessive_leap_≥10th_in_measure_3:G→G#(12度/18半音)"
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | AG F2 :","[5, 1, 4, 2]",3,1,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_8:G2→F2(key=G)
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DB# GA DB# GG## | Bc d2 | DG GB | A/B/A/G/ FD | A#e/d/ cF | AG G2 :","[4, 5, 1, 3]",23456,1,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_3:G→B#(key=G), invalid_duration_in_measure_3:lengthened(0.5→0.75), invalid_note_name_in_key_7:d→A#(key=G), invalid_note_in_measure_3:A→P,6, enharmonic_error_in_measure_3:A→G##"
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG CbA | BB# Db2 | DG GB | A/B/A/G/ FD | de/d/ cE# | G##G G2 :","[2, 4, 5, 1]",34678,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_4:C→B#, invalid_note_name_in_key_3:G→Cb(key=G), enharmonic_error_in_measure_8:A→G##, enharmonic_error_in_measure_7:F→E#, invalid_note_name_in_key_4:d2→Db2(key=G)"
+Irishman_48930,"L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | G##G G2 :","[1, 2, 4, 5]",2,0,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_8:A→G##
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: L
+fcf gcg | a2 A A3 | fcf fed | geg gab | afd ge^c | d2 D D3 ::","[4, 1, 2, 5]",0,1,Identify inserted errors in the provided ABC score,invalid_key:F→L
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcG gcg | Wn3 A C#3 | fcf fed | geg gab | afd ge^c | d2 D D3 ::","[4, 3, 2, 1]",1356,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_2:A3→C#3(13度/20半音), invalid_note_in_measure_6:D→X3, invalid_note_in_measure_2:a2→Wn3, invalid_note_name_in_key_1:f→G(key=F)"
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg fcf gcg | Gb2 A Db3 | fcf fed | geg gG# | afd ge^c | d2 D D3 ::","[5, 2, 4, 1]",2345,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_2:a2→Gb2(key=F), enharmonic_error_in_measure_4:Ab→G#, invalid_duration_in_measure_1:lengthened(0.75→1.0), excessive_leap_≥10th_in_measure_2:A3→Db3(10度/16半音)"
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 | fcf fed | geg gab | afd ge^c | d2 D D3 ::","[1, 2, 3, 5]",6,0,Identify inserted errors in the provided ABC score,invalid_note_in_measure_5:g→T'''
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | B#2 A A3 | fcf Eed | geg gab | afd ge^c | d2 D D3 ::","[2, 4, 3, 5]",12,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:f→E(10度/16半音), invalid_note_name_in_key_2:a2→B#2(key=F)"
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 A3 | fcf fed | geg gab | afd Ee^c | d2 D D3 ::","[3, 5, 4, 1]",123,0,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_2:lengthened(0.23→0.35), excessive_leap_≥10th_in_measure_5:g→E(13度/20半音), invalid_note_in_measure_4:ab→Y#"
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcG gcg | a2 Fb A3 | Abcf | geg gab | afd ge^c | d2 D D3 ::","[1, 5, 4, 2]",12346,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_3:shortened(0.75→0.38), invalid_note_in_measure_5:f→Qb7, excessive_leap_≥10th_in_measure_1:f→G(12度/19半音), invalid_note_name_in_key_3:f→Ab(key=F), invalid_note_name_in_key_2:A→Fb(key=F)"
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fB#f gcg | a2 A | fcf fed | geg gab | afd ge^c | d2 E D3 ::","[1, 5, 3, 4]",2356,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_1:c→B#(key=F), invalid_duration_in_measure_2:shortened(0.23→0.11), excessive_leap_≥10th_in_measure_6:D→E(13度/20半音), invalid_note_in_measure_5:c→O#"
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 | fcf fed | geg gab | afd ge^c afd ge^c | d2 D B3 ::","[5, 1, 2, 3]",13,2,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_5:lengthened(0.75→1.0), invalid_note_name_in_key_6:D3→B3(key=F)"
+Irishman_152825,"L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 | fcf fed | Bbeg gab | afd ge^c | d2 D D3 ::","[1, 2, 5, 3]",4,0,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_4:g→Bb(key=F)
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd | c^fgc | Bb^E#gB | A3 e | d^FGe | d^F GC | BecA | ^F3 | :","[4, 5, 3, 2]",610,3,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_7:c→C(12度/19半音), enharmonic_error_in_measure_4:F→E#"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd d^fgd d^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :","[1, 4, 2, 3]",12,2,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_2:lengthened(0.5→0.75), invalid_duration_in_measure_9:shortened(0.04→-0.08)"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+F | d^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Abc | BecA | ^Gb3 | :","[5, 4, 3, 1]",3489,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_7:G#→Ab, enharmonic_error_in_measure_1:E#→F, invalid_duration_in_measure_10:shortened(0.0→-0.25), enharmonic_error_in_measure_9:F#3→Gb3"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgE | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BGcA | ^F3 | :","[3, 4, 2, 5]",4579,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_8:e→G(13度/20半音), excessive_leap_≥10th_in_measure_2:d→E(13度/20半音), invalid_note_in_measure_2:E→T''', invalid_duration_in_measure_1:shortened(0.12→-0.13)"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^Gbgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :","[1, 4, 3, 2]",18,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:G→S,, enharmonic_error_in_measure_2:F#→Gb"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgG | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :","[2, 4, 1, 5]",1,2,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_2:d→G(11度/17半音)
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+Z5 | Eb^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^A#3 | :","[3, 1, 5, 2]",467810,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_9:F3→A#3(key=Gmin), invalid_note_in_measure_1:e→Z5, excessive_leap_≥10th_in_measure_7:F→F(12度/19半音), enharmonic_error_in_measure_2:D#→Eb, invalid_note_in_measure_4:g→T'''"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^E#g#d | c^fgc | B^fgB | A#3 D## | d^FGe | d^F Gc | BecA | ^F3 | :","[4, 2, 5, 1]",1278,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:F→E#, enharmonic_error_in_measure_5:E→D##, invalid_note_in_measure_6:e→Wn3, invalid_note_name_in_key_9:F3→F3(key=Gmin)"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :","[1, 3, 4, 2]",69,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:e→P,6, invalid_note_in_measure_4:g→R##9"
+Irishman_84685,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd | c^fgAb | B^fgC | A3 e | d^GGe | d^E Gc | BecA | ^F3 | :","[3, 1, 2, 5]",346710,3,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:c→Ab(13度/20半音), excessive_leap_≥10th_in_measure_6:F→G(11度/17半音), enharmonic_error_in_measure_4:B#→C, excessive_leap_≥10th_in_measure_7:F→E(10度/16半音), invalid_note_in_measure_5:e→J"
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::","[2, 5, 3, 1]",5,3,Identify inserted errors in the provided ABC score,invalid_note_in_measure_8:B2→H
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/Fbb/ | f2 f f2 f | f3 d>ef f3 d>ef | g2 D f2 E | D3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::","[5, 4, 3, 1]",13456,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_4:e→E(10度/16半音), enharmonic_error_in_measure_1:Eb→Fbb, invalid_duration_in_measure_3:lengthened(0.42→0.67), invalid_note_name_in_key_5:d3→D3(key=Gmin), invalid_note_name_in_key_4:g→D(key=Gmin)"
+Irishman_20127,"L: 2/3
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::","[3, 4, 1, 5]",8,2,Identify inserted errors in the provided ABC score,invalid_length:1/8→2/3
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 A# f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB GAB | c B2 B2 A | B3 B2 ::","[5, 2, 3, 1]",58,1,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_2:f→A#(key=Gmin), invalid_duration_in_measure_7:lengthened(0.42→0.54)"
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: J
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::","[1, 3, 2, 4]",0,0,Identify inserted errors in the provided ABC score,invalid_key:Gmin→J
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 E# fb2 F | f3 d>ef | g2 g f2 e | d3 d2 d | Wn3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::","[3, 2, 5, 4]",5789,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:F→E#, invalid_note_in_measure_6:d→T''', invalid_note_in_measure_6:c3→Wn3, excessive_leap_≥10th_in_measure_2:f→F(12度/19半音)"
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 E f2 e | d3 d2 d | c3 F2 d | c3 GAB | c F2 B2 A | B3 B2 ::","[2, 5, 3, 1]",29,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_8:B2→F2(key=Gmin), excessive_leap_≥10th_in_measure_4:g→E(13度/20半音)"
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | B#3 GAB# | c B2 B2 A | B3 B2 ::","[1, 5, 4, 3]",4,0,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_7:C3→B#3
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+Wn3/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::","[2, 1, 4, 5]",6,1,Identify inserted errors in the provided ABC score,invalid_note_in_measure_1:d→Wn3
+Irishman_20127,"L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 E | f3 d>ef | g2 F f2 e | d3 C#2 d | c3 F2 d | c3 GAB | c Ab2 B2 A | B3 B2 :: ::","[5, 3, 1, 2]",12678,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_8:B2→Ab2(10度/16半音), excessive_leap_≥10th_in_measure_2:f→E(13度/20半音), enharmonic_error_in_measure_5:Db2→C#2, invalid_duration_in_measure_9:lengthened(0.1→0.23), excessive_leap_≥10th_in_measure_4:g→F(11度/17半音)"
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 eGb | G##2 | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | Qb7 D2 z2","[3, 5, 1, 2]",13458,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_5:shortened(0.48→0.1), excessive_leap_≥10th_in_measure_4:c→Gb(12度/18半音), enharmonic_error_in_measure_5:A2→G##2, invalid_note_in_measure_9:B4→Qb7, invalid_note_name_in_key_9:A2→D2(key=A)"
+Irishman_113383,"L: 0/1
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2","[2, 1, 3, 4]",1,1,Identify inserted errors in the provided ABC score,invalid_length:1/8→0/1
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | G##2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 FbB | e3 e Eefc | Qb7 F2 z2","[2, 4, 5, 3]",35789,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_7:A→Fb(key=A), excessive_leap_≥10th_in_measure_9:A2→F2(12度/18半音), invalid_note_in_measure_9:B4→Qb7, excessive_leap_≥10th_in_measure_8:f→E(10度/16半音), enharmonic_error_in_measure_4:A2→G##2"
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>C# c>d | B>c d>e f3 e | a2 ga f2 D##c | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2","[3, 2, 5, 4]",2579,3,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_2:B→C#(13度/20半音), invalid_duration_in_measure_2:shortened(0.81→0.44), invalid_note_in_measure_7:B→O#, enharmonic_error_in_measure_4:E→D##"
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B Ab>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 D#>B c3 e | a2 ga f2 e>a | (eB#)BA B2 AB | e3 e fefc | B4 A2 z2","[4, 5, 3, 1]",137,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_7:c→B#(key=A), excessive_leap_≥10th_in_measure_5:B→D#(12度/18半音), invalid_note_name_in_key_2:c→Ab(key=A)"
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 G | a2 ga f2 ec | A2 B>B c3 E | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2","[4, 1, 3, 5]",124,2,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:e→G(11度/17半音), excessive_leap_≥10th_in_measure_5:e→E(10度/16半音), invalid_note_in_measure_6:e→S,"
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (eB#)BA B2 AB | e3 e fefc e fefc | B4 A2 z2","[1, 3, 2, 4]",57,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_7:C→B#, invalid_duration_in_measure_8:lengthened(0.67→0.92)"
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2","[1, 2, 4, 5]",2,0,Identify inserted errors in the provided ABC score,invalid_duration_in_measure_5:shortened(0.48→0.23)
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 eD## | B>c d>e f3 e | a2 ga f2 ec | Vb5 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2","[3, 2, 4, 1]",357,0,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_5:A2→Vb5, enharmonic_error_in_measure_2:E→D##, invalid_note_in_measure_2:c→R##9"
+Irishman_113383,"L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fD##fc | B4 A2 z2","[1, 3, 2, 5]",6,0,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_8:E→D##
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""D##"" B/Bb/ B/A/ | G Eb | B/B/ B/A/ | G2 | G F | E D# | G F | E2","[1, 4, 3, 5]",12356,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_1:E→D##, invalid_duration_in_measure_8:shortened(0.12→-0.38), invalid_note_in_measure_1:A→S,, excessive_leap_≥10th_in_measure_2:A→Eb(10度/16半音), invalid_note_name_in_key_6:F→D#(key=Emix)"
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/E/ B/A/ | G2 | G F | E F | G F | E2 :","[3, 4, 5, 1]",4,3,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_3:B→E(12度/19半音)
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | G F | E Bb | G F | E2 :","[5, 1, 4, 2]",3,1,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_6:F→Bb(12度/18半音)
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ B/B/ B/A/ B/B/ | G2 | G B | E F | G F | E2 :","[1, 4, 2, 3]",146,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:F→Qb7, invalid_duration_in_measure_3:lengthened(1.0→1.75), excessive_leap_≥10th_in_measure_5:F→B(10度/16半音)"
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | Gb E# | E F | G F | E2 :","[4, 5, 1, 3]",145,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_3:B→B(key=Emix), enharmonic_error_in_measure_5:F→E#, invalid_note_in_measure_1:B→Z5"
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | G F | E F | G F | Eb2 :","[5, 1, 4, 2]",1,1,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_8:E2→Eb2(key=Emix)
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" Cbb/B/ B/Eb/ | G D | B/B/ B/A/ | G2 | G F | E# F | G F | E2 :","[5, 3, 1, 4]",1245,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_6:E→E#(key=Emix), enharmonic_error_in_measure_1:Bb→Cbb, excessive_leap_≥10th_in_measure_2:A→D(12度/19半音), excessive_leap_≥10th_in_measure_1:A→Eb(10度/16半音)"
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | G F | E F | G F | E2 :","[5, 3, 2, 4]",12,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_5:F→Y#, invalid_note_in_measure_1:B→P,6"
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G G# | B/B/ B/A/ | C#2 | G F | E F | J F | E2 :","[4, 1, 3, 5]",1256,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_4:G2→Eb2(key=Emix), invalid_note_name_in_key_4:Eb2→C#2(key=Emix), enharmonic_error_in_measure_2:Ab→G#, invalid_note_in_measure_7:G→J"
+Irishman_172230,"L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/G/ | G A | B/B/ B/A/ | G2 | G F | E Fb | G F | FbA#2 :","[4, 3, 2, 5]",23456,3,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_1:A→G(10度/16半音), enharmonic_error_in_measure_8:Eb2→Fbb2, invalid_note_name_in_key_6:F→Fb(key=Emix), excessive_leap_≥10th_in_measure_8:b2→A#2(11度/17半音), invalid_note_in_measure_6:Fb→X3"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/Gb/ ee | Ae/e/ ed | c2""Dm"" d2 | ""Am"" cd | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 : c/d/C#/B/ A2 :","[5, 4, 3, 1]",2346,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_1:e→Gb(12度/18半音), invalid_duration_in_measure_6:lengthened(0.56→0.94), invalid_note_name_in_key_6:c→C#(key=Amin), invalid_duration_in_measure_4:shortened(0.88→0.76)"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/E/ ee | Ae/e/ ed | c2""Dm"" Gb2 | ""Am"" cd Fbb/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :","[1, 5, 4, 2]",23456,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:d2→Gb2(10度/16半音), invalid_note_in_measure_2:e→Qb7, enharmonic_error_in_measure_4:Eb→Fbb, invalid_note_in_measure_5:A→J, excessive_leap_≥10th_in_measure_1:e→E(13度/20半音)"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ ed | c2""Fm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ D#2 :","[2, 3, 5, 4]",14,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_6:A2→D#2(13度/20半音), excessive_leap_≥10th_in_measure_3:D→F(12度/19半音)"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" | Ae/e/ ed | c2""Dm"" d2 | ""Am"" cd e/d/B#/B#/ | ""Dm"" Bbd""Am"" cB | c/d/c/B/ A2 :","[3, 1, 4, 5]",23456,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_4:d→Qb7, invalid_note_in_measure_3:d2→U#2, invalid_duration_in_measure_1:shortened(0.75→0.5), enharmonic_error_in_measure_4:C→B#, enharmonic_error_in_measure_5:A#→Bb"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" | AbCb/e/ D##d | c2""Dm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :","[4, 5, 2, 3]",245,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:E→D##, invalid_duration_in_measure_1:shortened(0.75→0.38), invalid_note_name_in_key_2:e→Cb(key=Amin)"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ | c2""Dm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Bbd""Am"" cB cB Bbd""Am"" cB cB | c/d/c/B/ A2 :","[5, 3, 4, 1]",12356,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_5:A→Bb(13度/20半音), invalid_duration_in_measure_5:lengthened(0.75→0.88), invalid_duration_in_measure_2:shortened(0.62→0.49), invalid_note_in_measure_5:B→R##9, invalid_duration_in_measure_5:lengthened(1.0→1.38)"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Hm"" Ae/e/ ee | Ae/e/ eEb | c2""Ebm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Ad""Am"" cB Ad""Am"" cB | c/d/c/B/ A2 :","[5, 1, 4, 2]",2356,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_3:D#→Eb, invalid_note_in_measure_1:A→H, enharmonic_error_in_measure_2:D#→Eb, invalid_duration_in_measure_5:lengthened(0.75→1.12)"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ ed | c2""Dm"" d2 | ""Am"" cd e/d/c/B/ cd e/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :","[4, 2, 1, 5]",25,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:c→J, invalid_duration_in_measure_4:lengthened(0.88→1.25)"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ ed | c2""Dm"" d2 | ""Am"" B#d e/d#/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :","[2, 1, 5, 4]",35,0,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_3:D→J, enharmonic_error_in_measure_4:C→B#"
+Irishman_170004,"L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ G#e | AFb/e/ ed | c2""Dm"" d2 | ""Am"" cd e/d/c/G/ e/d/c/G/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :","[4, 5, 1, 3]",1246,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_4:B→G(11度/17半音), invalid_note_name_in_key_2:e→Fb(key=Amin), invalid_duration_in_measure_4:lengthened(0.88→1.0), excessive_leap_≥10th_in_measure_1:e→G#(10度/16半音)"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 G##G | ""D"" A8 | ""C#"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :","[3, 1, 5, 4]",23456,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_3:A8→P,6, invalid_note_in_measure_3:A8→S,, enharmonic_error_in_measure_2:A→G##, invalid_note_name_in_key_4:D→C#(key=D), invalid_note_in_measure_1:D4→Y#"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 AA""D"" A4 | ""Bm"" B3 A""Gb"" G2 AG | 1""D"" F8 :","[2, 4, 5, 1]",12,0,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_4:lengthened(0.59→0.84), invalid_note_name_in_key_5:G→Gb(key=D)"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" D#2 AEb | 1""B#""","[3, 2, 1, 4]",2346,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_6:shortened(0.14→-0.23), excessive_leap_≥10th_in_measure_5:G→Eb(12度/18半音), invalid_note_name_in_key_5:G2→D#2(key=D), invalid_note_name_in_key_6:D→B#(key=D)"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" B#2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :","[2, 5, 3, 1]",123,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_2:F2→B#2(key=D), invalid_note_in_measure_5:B3→Wn3, invalid_note_in_measure_6:F8→I4"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AB#""D"" A4 | ""Bm"" B3 A""G"" G2 AG G2 AG | 1""D"" Ab8 :","[5, 3, 2, 4]",13456,0,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_5:lengthened(0.73→0.98), excessive_leap_≥10th_in_measure_6:F8→Ab8(12度/18半音), excessive_leap_≥10th_in_measure_1:D4→A4(11度/17半音), invalid_duration_in_measure_1:shortened(0.59→0.21), invalid_note_name_in_key_4:A→B#(key=D)"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" | ""Fb"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :","[2, 4, 5, 1]",56,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_3:D→Fb(key=D), invalid_duration_in_measure_2:shortened(0.88→0.63)"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 | 1""D"" F8 :","[3, 2, 4, 5]",46,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_5:shortened(0.73→0.35), invalid_note_in_measure_4:A2→O#"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""O#"" F2 FG""D"" A2 AG | ""D"" Ab8 ""D"" Ab8 ""D"" | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :","[4, 3, 1, 2]",1346,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_3:A8→Ab8(key=D), invalid_note_in_measure_2:D→O#, invalid_note_in_measure_5:A→U#2, invalid_duration_in_measure_3:lengthened(0.14→0.52)"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" | ""D"" A8 ""D"" A8 | ""D"" | ""Bm"" G3 A""G"" G2 AG | 1""D"" E8 :","[5, 2, 4, 3]",12456,0,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_2:shortened(0.88→0.51), excessive_leap_≥10th_in_measure_5:B3→G3(13度/20半音), invalid_duration_in_measure_4:shortened(0.59→0.21), invalid_note_name_in_key_6:F8→E8(key=D), invalid_duration_in_measure_3:lengthened(0.14→0.39)"
+Irishman_99059,"L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FG""D"" D4 | ""D"" F2 E#G""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AC# | 1""D"" E#8 :","[2, 5, 1, 4]",12356,1,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_6:F8→E#8(key=D), enharmonic_error_in_measure_2:F→E#, invalid_note_in_measure_5:G→Vb5, excessive_leap_≥10th_in_measure_5:G→C#(10度/16半音), invalid_note_name_in_key_1:E→G(key=D)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | G##F FE | cGb/c/ ef | ec Bc/B/ | AF FE | AF FE | cB/c/ ec | BA A2 :","[2, 5, 3, 1]",23,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_3:B→Gb(key=A), enharmonic_error_in_measure_2:A→G##"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AE# FE | AF FE | cB/c/ ef | ec Bc/B/ | AF FE | AF A#E | cB/c/ ec | BA A2 :","[2, 1, 4, 3]",168,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_1:F→E#, invalid_note_in_measure_4:c→T''', excessive_leap_≥10th_in_measure_6:F→A#(11度/17半音)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | D#F FE | cB/c/ ef | ec Ebc/B/ | AF FC | AF FE | cB/c/ ec | BA A2 :","[3, 5, 1, 4]",137,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_5:E→C(12度/19半音), invalid_note_name_in_key_2:A→D#(key=A), invalid_note_name_in_key_4:B→Eb(key=A)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | AE# FE | cB/c/ ef | ec Bc/B/ | AF FE | AF FE | cB/c/ Ec | BA A2 :","[4, 5, 2, 1]",78,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:F→E#, excessive_leap_≥10th_in_measure_7:e→E(13度/20半音)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/c/ ef | ec Bc/B/ | AF FE | AF FC | cB/c/ ec cB/c/ ec | BA A2 :","[4, 3, 5, 2]",123,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_7:lengthened(0.62→0.87), invalid_note_in_measure_6:F→S,, excessive_leap_≥10th_in_measure_6:E→C(12度/19半音)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/c/ Gf | ec Bc/B/ | G##F FE | AF FE | cB/c/ ec | BA A2 :","[3, 2, 4, 5]",48,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_5:A→G##, invalid_note_name_in_key_3:e→G(key=A)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | G##F FE | cB/c/ ef | ec Bc/B/ | AF FE | AE# FE | Qb7B/c/ ec | BA A2 :","[4, 2, 3, 1]",346,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_6:F→E#, enharmonic_error_in_measure_2:A→G##, invalid_note_in_measure_7:c→Qb7"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AE# FE | AF FE | cB/c/ ef cB/c/ ef | ec Bc/B/ | AF FE | AF FE | cB/c/ ec | BA A2 :","[1, 3, 2, 4]",67,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_1:F→E#, invalid_duration_in_measure_3:lengthened(0.62→0.87)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/G/ ef | ec Bc/B/ | AbF FE | AF | cB/c/ ec | BA A2 : BA A2 :","[2, 3, 4, 5]",1246,2,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_6:shortened(0.5→0.38), invalid_duration_in_measure_8:lengthened(0.31→0.69), excessive_leap_≥10th_in_measure_3:c→G(10度/16半音), invalid_note_name_in_key_5:A→Ab(key=A)"
+Irishman_69603,"L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/c/ | ec Bc/B/ | E#F FE | AF DbE | cB/c/ eF | BCb A2 :","[1, 5, 4, 2]",13468,1,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_5:A→E#(key=A), excessive_leap_≥10th_in_measure_7:c→F(11度/17半音), invalid_duration_in_measure_3:shortened(0.62→0.37), invalid_note_name_in_key_8:A→Cb(key=A), excessive_leap_≥10th_in_measure_6:F→Db(10度/16半音)"
+Irishman_70331,"L: 1/5
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcB | AEcE | BEdE | cedf | e4 | :","[4, 5, 1, 2]",8,2,Identify inserted errors in the provided ABC score,invalid_length:1/8→1/5
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcB | AEcE | BEdEb | cedf | e4 | :","[1, 3, 5, 4]",5,0,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_6:E→Eb(key=A)
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cE | BE dB BE dB | cedf | edcB | AEcG | BEdE | Wn3edf | e4 | :","[3, 4, 2, 1]",1346,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_5:E→G(12度/19半音), invalid_duration_in_measure_2:lengthened(0.5→0.75), excessive_leap_≥10th_in_measure_1:A→E(10度/16半音), invalid_note_in_measure_7:c→Wn3"
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cF# | BD## dB | cedf | D##dcB | AEcE | BEdE | cedf | e4 | :","[2, 3, 1, 4]",1789,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_4:E→D##, invalid_duration_in_measure_9:shortened(0.0→-0.12), excessive_leap_≥10th_in_measure_1:A→F#(12度/18半音), enharmonic_error_in_measure_2:E→D##"
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | eCB#B | AEcE AEcE AEcE | BF#dG# | cedf | e4 | :","[5, 4, 3, 1]",13567,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_4:C→B#, excessive_leap_≥10th_in_measure_6:E→G#(10度/16半音), invalid_duration_in_measure_5:lengthened(0.5→0.75), invalid_note_name_in_key_4:d→C(key=A), excessive_leap_≥10th_in_measure_6:E→F#(12度/19半音)"
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cG# | BE dB | cedf | edcB | AEcE | BEBE | cedf | J | :","[1, 3, 2, 5]",23579,3,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_6:d→B(11度/17半音), invalid_note_in_measure_2:d→Qb7, excessive_leap_≥10th_in_measure_1:A→G#(13度/20半音), invalid_note_in_measure_8:e4→J, invalid_note_in_measure_7:f→J"
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcB | AEcE | BEdE | cedf | Bb4 | :","[4, 1, 5, 3]",4,1,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_8:e4→Bb4(key=A)
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedFb | edcB | AEcE | BEdG# | cedf | e4 | :","[2, 3, 5, 1]",123,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_6:E→G#(13度/20半音), invalid_note_name_in_key_3:f→Fb(key=A), invalid_note_in_measure_4:B→U#2"
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcD# | AEcE | BEdE | cedf | e4 | :","[4, 3, 5, 1]",3,3,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_4:B→D#(key=A)
+Irishman_70331,"L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cAb | BE dB | cedf | edcB | AEGE | BEdBb | cedf | e4 | :","[5, 2, 1, 3]",179,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_6:E→Bb(key=A), invalid_note_name_in_key_5:c→G(key=A), excessive_leap_≥10th_in_measure_1:A→Ab(13度/20半音)"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | R##9F# F2 dBG##F | E2 ED B# D##3 | DEFD","[5, 4, 2, 3]",34578,0,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:A→R##9, invalid_duration_in_measure_8:shortened(0.53→0.16), enharmonic_error_in_measure_6:A→G##, enharmonic_error_in_measure_7:E3→D##3, invalid_note_name_in_key_7:B#→B#(key=Edor)"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFBbD | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 ED B E3 | DEFD E4 :","[5, 1, 4, 2]",8,1,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_2:E→Bb(11度/17半音)
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFbD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBbAE# | E2 ED B E3 | DEbE#D E4 :","[2, 4, 3, 5]",4568,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_6:F→E#, invalid_note_in_measure_2:E→H, invalid_note_name_in_key_2:F→Fb(key=Edor), enharmonic_error_in_measure_8:F→E#"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 E3 | (3Bcd ed e2 ef | g Ab3 gedB | AF F2 dBAF | E2 ED B E3 | DEFD D4 :","[2, 1, 3, 4]",3456,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_8:E4→D4(key=Edor), excessive_leap_≥10th_in_measure_5:B3→Ab3(13度/20半音), invalid_duration_in_measure_3:lengthened(0.48→0.6), invalid_note_in_measure_2:F→Y#"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 ED Bb D##3 | DEFD E4 :","[2, 1, 3, 4]",248,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_7:E3→D##3, invalid_note_in_measure_5:B→R##9, invalid_note_in_measure_4:d→Vb5"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: B#2 ED B E3 | DG#FD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 ED B Fbb3 | DEFD E4 :","[3, 2, 1, 4]",167,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_1:E2→B#2(key=Edor), invalid_note_name_in_key_2:E→G#(key=Edor), enharmonic_error_in_measure_7:Eb3→Fbb3"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | D##2 ED B E#3 | DEFD E4 :","[1, 5, 2, 4]",47,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_7:E2→D##2, invalid_note_in_measure_6:F2→H"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B F#3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 | DEFD E4 :","[5, 3, 2, 4]",1236,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_7:E3→F3(key=Edor), invalid_note_name_in_key_7:D→F(key=Edor), invalid_duration_in_measure_7:shortened(0.48→0.1), excessive_leap_≥10th_in_measure_3:E3→F#3(11度/17半音)"
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g F#3 gedB | AF F2 dBAF | E2 ED B E3 | DEFD E4 :","[4, 2, 3, 1]",1,3,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_5:B3→F#3(key=Edor)
+Irishman_131351,"L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 CD B E3 | (3Bcd ed e2 ef | g B3 gedB | AE# F2 dBbAF | E2 ED B E3 | DEFD E4 :","[3, 1, 5, 2]",123,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:E→C(13度/20半音), enharmonic_error_in_measure_6:F→E#, invalid_note_in_measure_8:E4→J"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fG#""Dm"" d4 :","[1, 5, 3, 4]",2,0,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_8:e→G#(13度/20半音)
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dA# | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Z5m"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :","[2, 3, 4, 1]",14,0,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:G→Z5, invalid_note_name_in_key_1:c→A#(key=Dmin)"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc | d2e2 f2""C7""g2 | ""Qb7"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" A#4 :","[5, 4, 2, 3]",45,2,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_8:d4→A#4(10度/16半音), invalid_note_in_measure_3:F→Qb7"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""F7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :","[1, 5, 2, 3]",16,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:A7→P,6, excessive_leap_≥10th_in_measure_6:A7→F7(12度/19半音)"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Ebm"" d2dc d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :","[4, 2, 5, 1]",8,3,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_1:D#→Eb
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2Ebc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc | ""A7"" f2fG#""Dm"" d4 :","[5, 4, 3, 2]",4568,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_1:D#→Eb, invalid_note_in_measure_1:c→Z5, invalid_duration_in_measure_7:shortened(0.38→0.26), invalid_note_name_in_key_8:e→G#(key=Dmin)"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dAb d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2D#c d2dc | ""G##7"" f2fe""Dbm"" d4 :","[2, 1, 3, 5]",127,2,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_1:c→Ab(10度/16半音), enharmonic_error_in_measure_8:A7→G##7, invalid_note_name_in_key_7:d→D#(key=Dmin)"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""R##9m"" d2dc d2dc | d2e2 f2""C7""E2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Fm"" a2fg | ""Gm"" D#g2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :","[4, 5, 3, 2]",23467,1,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_6:ab→D#(key=Dmin), invalid_note_in_measure_5:a→P,6, excessive_leap_≥10th_in_measure_2:g2→E2(10度/16半音), invalid_note_in_measure_1:D→R##9, excessive_leap_≥10th_in_measure_5:D→F(11度/17半音)"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""E#"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc E2dc | ""A7"" f2fe""Dm"" d4 :","[1, 4, 3, 5]",2478,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_3:a→X3, excessive_leap_≥10th_in_measure_7:d2→E2(10度/16半音), invalid_duration_in_measure_1:shortened(0.38→0.26), enharmonic_error_in_measure_5:F→E#"
+Irishman_210477,"L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc d2dB# d2C#c | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""F#m"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :","[1, 2, 3, 5]",13458,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_1:lengthened(0.38→0.51), enharmonic_error_in_measure_1:Db→C#, enharmonic_error_in_measure_1:C→B#, invalid_note_name_in_key_5:D→F#(key=Dmin), invalid_note_in_measure_2:f2→I4"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+A | B2 B | (B A) B | d d d | D2 E | F F A | E D B, | E E E | F2","[4, 3, 1, 5]",2689,0,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_9:E2→F2(key=G), invalid_note_in_measure_8:E→R##9, invalid_note_in_measure_5:E→Qb7, excessive_leap_≥10th_in_measure_6:F→A(10度/16半音)"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+A | B2 | (B A) B | d d d | D2 E | F F F | E D B, | E E E | E2","[1, 4, 3, 2]",45,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_2:shortened(0.38→-0.12), invalid_note_in_measure_5:E→Vb5"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+A | B2 | (B G##) B | d d d | D2 E | F F F | E D B, | E E E | E2","[2, 5, 4, 3]",2679,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_8:E→X3, enharmonic_error_in_measure_3:A→G##, invalid_duration_in_measure_2:shortened(0.38→0.13), invalid_note_in_measure_3:G#→P,6"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+A | B2 B | (B A) B | d d d | D2 E | F F F | E D B, | E B E | E2","[2, 4, 1, 3]",2,2,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_8:E→B(11度/17半音)
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+A A A A | B2 B | (B A) F | d | D#2 E | F F F | E D B, | E E E | E2","[2, 3, 4, 1]",2467,2,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_3:B→F(13度/20半音), invalid_duration_in_measure_1:lengthened(0.25→1.0), invalid_note_name_in_key_5:D2→D#2(key=G), invalid_duration_in_measure_4:shortened(0.75→0.0)"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+A | B2 Fb | (B A) B | d d d | D2 D## | F F F | E A B, | E E E | E2","[5, 2, 4, 1]",1267,2,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_5:E→D##, invalid_note_name_in_key_2:B→Fb(key=G), excessive_leap_≥10th_in_measure_7:D→A(11度/17半音), invalid_note_in_measure_7:B→T'''"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: T
+A | B2 B | (B A) B | d d d | D2 E | F F F | E D B, | E E E | E2","[5, 4, 2, 1]",0,3,Identify inserted errors in the provided ABC score,invalid_key:G→T
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+G## | B2 B | (B A) B | d d d | D2 D## | F F F | E D Bb, | E E E | E2","[2, 3, 5, 4]",3567,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_4:d→P,6, enharmonic_error_in_measure_1:A→G##, excessive_leap_≥10th_in_measure_7:B→Bb(13度/20半音), enharmonic_error_in_measure_5:E→D##"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+A | B2 B | (B A) B | F# d d | D2 E | F E# F | E | E E E | A2","[4, 2, 1, 3]",2369,0,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_7:shortened(0.75→0.25), enharmonic_error_in_measure_6:F→E#, invalid_note_name_in_key_4:d→F#(key=G), invalid_note_name_in_key_9:E2→A2(key=G)"
+Irishman_34338,"L: 1/4
+M: 3/4
+K: G
+Eb | B2 E | (B A) B | d d d | D2 E | F F F | E D B, | H D# E | E2","[3, 1, 4, 2]",1689,2,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_1:A→Eb(key=G), invalid_note_in_measure_8:E→H, excessive_leap_≥10th_in_measure_2:B→E(11度/17半音), invalid_note_name_in_key_8:E→D#(key=G)"
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, E DB,G, | A, A2 | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[1, 3, 2, 5]",347,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_3:shortened(0.38→0.13), invalid_duration_in_measure_2:lengthened(0.56→0.81), invalid_note_in_measure_8:C→Wn3"
+Irishman_159456,"L: 1/8
+M: 3/2
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[2, 1, 5, 3]",0,1,Identify inserted errors in the provided ABC score,invalid_meter:6/8→3/2
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | T''', A2 Db2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[4, 1, 3, 2]",12,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_3:A→T''', excessive_leap_≥10th_in_measure_3:A2→Db2(10度/16半音)"
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, G#2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[3, 4, 1, 2]",6,2,Identify inserted errors in the provided ABC score,enharmonic_error_in_measure_5:Ab2→G#2
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,E, DB,G, | C3 DCD | ECA, A,3 :","[2, 3, 1, 5]",46,0,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_6:lengthened(0.56→0.69), excessive_leap_≥10th_in_measure_6:G→E(12度/19半音)"
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 | A, A2 A2 E | ABc cBA | A, A#2 G##2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[5, 1, 2, 3]",346,3,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_6:E→Y#, invalid_duration_in_measure_2:shortened(0.56→0.31), enharmonic_error_in_measure_5:A2→G##2"
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 G##2 Ab | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[1, 2, 5, 3]",146,3,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_1:E→Ab(key=Amin), invalid_note_in_measure_2:E→Vb5, enharmonic_error_in_measure_1:A2→G##2"
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[1, 5, 3, 4]",7,0,Identify inserted errors in the provided ABC score,invalid_note_in_measure_4:A→Z5
+Irishman_159456,"L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 Fbb | A, A2 A2 E | ABc cBA | A, E2 A2 E | G2 E DB,G, | B#3 DCbD | ECA, A,3 :","[5, 1, 3, 4]",1458,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:Eb→Fbb, excessive_leap_≥10th_in_measure_5:A2→E2(11度/17半音), enharmonic_error_in_measure_7:C3→B#3, invalid_duration_in_measure_2:shortened(0.69→0.56)"
+Irishman_159456,"L: 1/8
+M: 6/8
+K: X
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :","[5, 4, 1, 2]",5,2,Identify inserted errors in the provided ABC score,invalid_key:Amin→X
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEbD## BEE | AFD AFD | BEE BEE | GAB AD#D | BED# BEE | AFD AFD | GFG cBA | cBA GC#D :","[2, 1, 3, 4]",1345,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_1:E→D##, excessive_leap_≥10th_in_measure_4:F→D#(12度/18半音), invalid_note_name_in_key_5:E→D#(key=Emin), excessive_leap_≥10th_in_measure_8:F→C#(12度/18半音)"
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :","[2, 4, 1, 3]",7,2,Identify inserted errors in the provided ABC score,invalid_note_in_measure_4:A→X3
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAB AFD | BEE BEE | AFG# AFD | GFG cBA | cBA GFD :","[1, 2, 4, 3]",67,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_7:F→S,, invalid_note_name_in_key_6:D→G#(key=Emin)"
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAB AFD | BEE BEE | AE#D G#FB | GFG cBA | Z5BA GFD :","[3, 2, 5, 1]",12357,2,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_6:D→B(12度/18半音), invalid_note_in_measure_8:c→Z5, invalid_note_in_measure_5:E→Vb5, invalid_note_name_in_key_6:A→G#(key=Emin), enharmonic_error_in_measure_6:F→E#"
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAC# AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :","[2, 1, 5, 3]",3,1,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_4:B→C#(10度/16半音)
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEA# | GAB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :","[5, 2, 1, 4]",3,2,Identify inserted errors in the provided ABC score,excessive_leap_≥10th_in_measure_3:E→A#(12度/18半音)
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | T'''EE BEE | GAB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :","[4, 5, 1, 2]",2,2,Identify inserted errors in the provided ABC score,invalid_note_in_measure_3:B→T'''
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+CbEE BEE BEE BEE | AFD AFD | BEE BEE | GEbB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :","[1, 5, 2, 3]",127,3,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_1:lengthened(0.75→1.12), invalid_note_name_in_key_1:B→Cb(key=Emin), excessive_leap_≥10th_in_measure_4:A→Eb(10度/16半音)"
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BbED## | AFD AFD | BEE BEE | GAEb AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :","[1, 2, 5, 3]",14,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_1:E→D##, invalid_note_name_in_key_4:B→Eb(key=Emin)"
+Irishman_34736,"L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AE#Db | BEE BEE | GAB | BEE BEE | AFD AFD | GFG cAbA | cBA GFD :","[1, 2, 5, 3]",237,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:F→E#, invalid_duration_in_measure_4:shortened(0.75→0.5), excessive_leap_≥10th_in_measure_7:B→Ab(10度/16半音)"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 F e2 d | ^cBA d2 c | d2 e f3 | e2 e e2 d | ^cAbA a2 g | f2 e d3 d3 | :","[2, 3, 1, 5]",235,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_6:lengthened(0.23→0.35), excessive_leap_≥10th_in_measure_1:e→F(12度/19半音), excessive_leap_≥10th_in_measure_5:B→Ab(13度/20半音)"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cB#A d2 B# | d2 e f3 | e2 e e2 d | ^cBA a2 g | f2 e d3 | :","[3, 2, 5, 4]",36,1,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:C→B#, invalid_note_in_measure_1:d→I4"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c | d2 e f3 | e2 e e2 Gb | ^cBA a2 g | f2 e d3 | :","[3, 2, 4, 1]",5,3,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_4:d→Gb(key=Dmin)
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c ^F#BA d2 c | d2 e f3 | e2 e e2 d | ^cBA a2 g | f2 G d3 | :","[3, 4, 1, 2]",2346,1,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_4:d→S,, invalid_duration_in_measure_2:lengthened(0.56→0.94), excessive_leap_≥10th_in_measure_2:c→F#(12度/18半音), excessive_leap_≥10th_in_measure_6:e→G(12度/19半音)"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c | d2 e f3 | Eb2 e e2 | ^cBA a2 g | f2 e d3 | :","[3, 4, 5, 1]",1356,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_4:shortened(0.38→0.26), invalid_note_in_measure_6:e→T''', invalid_note_name_in_key_4:e2→D#2(key=Dmin), enharmonic_error_in_measure_4:D#2→Eb2"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e | ^B#BA d#2 c | d2 e f3 | U#2 e e2 d | ^cBA a2 g | f2 e d3 | :","[1, 3, 4, 5]",1257,2,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_1:shortened(0.38→0.13), enharmonic_error_in_measure_2:C→B#, invalid_note_in_measure_4:e2→U#2, invalid_duration_in_measure_7:shortened(0.0→-0.12)"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c | d2 e Ab3 | e2 e e2 F | ^cBA a2 g | f2 e d3 | :","[2, 5, 1, 4]",35,0,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_4:d→F(12度/19半音), excessive_leap_≥10th_in_measure_3:f3→Ab3(10度/16半音)"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA F2 c | C#2 e f3 | e2 G | ^cCbbA a2 g | f2 e d3 | :","[1, 3, 2, 5]",12567,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_5:Bb→Cbb, invalid_duration_in_measure_4:shortened(0.38→0.01), enharmonic_error_in_measure_3:Db2→C#2, excessive_leap_≥10th_in_measure_2:d2→F2(13度/20半音), excessive_leap_≥10th_in_measure_4:e→G(11度/17半音)"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cCbbA d2 c | d2 e f3 | e2 e e2 d | ^cBG## a2 gb | f#2 D## d3 | :","[3, 2, 4, 1]",257,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_2:Bb→Cbb, enharmonic_error_in_measure_5:A→G##, enharmonic_error_in_measure_6:E→D##"
+Irishman_12514,"L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 D## e#2 d | ^cBA d2 c | d2 e f3 | e2 e e2 d | ^cBA Gb2 g | F#2 e d3 | :","[2, 1, 5, 3]",123,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_1:E→D##, invalid_note_name_in_key_5:a2→Gb2(key=Dmin), invalid_note_name_in_key_6:f2→F#2(key=Dmin)"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | AF DF | EF | E>F GA | Be B2 | AG FD | E2 Cb2 :","[1, 2, 3, 5]",16,1,Identify inserted errors in the provided ABC score,"invalid_note_name_in_key_8:E2→Cb2(key=Emin), invalid_duration_in_measure_4:shortened(0.31→0.18)"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Vb5F B2 | AF DF | R##9F D2 R##9F D2 | E>F GA | Be B2 | AG FD | E2 E2 :","[5, 4, 1, 2]",12347,0,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_4:E→R##9, invalid_duration_in_measure_4:lengthened(0.19→0.56), invalid_note_in_measure_2:B→Vb5, invalid_note_in_measure_6:B2→Z5, enharmonic_error_in_measure_2:E#→F"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | B#D## B2 | AF DF | Vb5F A#2 | E>F GEb | Be B2 | AG FD | E2 E2 :","[2, 3, 5, 1]",14568,2,Identify inserted errors in the provided ABC score,"invalid_note_in_measure_2:B2→Y#, excessive_leap_≥10th_in_measure_4:D2→A#2(12度/19半音), invalid_note_in_measure_4:E→Vb5, enharmonic_error_in_measure_2:E→D##, excessive_leap_≥10th_in_measure_5:A→Eb(13度/20半音)"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: Eb>E# GA | Be B2 | AF DF | EF D2 | E>F GA | Be B2 | AG FD | D##2 F2 :","[2, 5, 1, 3]",148,3,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_8:E2→D##2, enharmonic_error_in_measure_1:F→E#, enharmonic_error_in_measure_8:E#2→F2"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | AF DF | S,F D2 | D##>F# GA | Be B2 | AG FD | E2 E2 :","[4, 2, 1, 3]",1378,0,Identify inserted errors in the provided ABC score,"enharmonic_error_in_measure_5:E→D##, invalid_note_in_measure_8:E2→R##9, invalid_note_in_measure_4:E→S,, invalid_note_in_measure_3:F→U#2"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F BA | BA# B2 | AF DF | EF D2 | E>F GA | Be B2 | G##G F#D FD | E2 E2 :","[2, 4, 5, 3]",1457,1,Identify inserted errors in the provided ABC score,"excessive_leap_≥10th_in_measure_1:G→B(12度/18半音), invalid_note_name_in_key_2:e→A#(key=Emin), invalid_duration_in_measure_7:lengthened(0.5→0.62), enharmonic_error_in_measure_7:A→G##"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F GA E>F GA | Be B2 | AF DF | EF D2 | E>F GA | Be B2 B2 | AG FD | E2 Db2 :","[2, 4, 3, 1]",1467,1,Identify inserted errors in the provided ABC score,"invalid_duration_in_measure_1:lengthened(0.5→0.75), invalid_note_name_in_key_8:E2→Db2(key=Emin), invalid_duration_in_measure_6:lengthened(0.31→0.43), invalid_note_in_measure_1:G→J"
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | AF DF | EF D2 | E>Db GA | Be B2 | AG FD | E2 E2 :","[2, 1, 3, 4]",6,1,Identify inserted errors in the provided ABC score,invalid_note_name_in_key_5:F→Db(key=Emin)
+Irishman_19396,"L: 1/8
+M: 7/8
+K: Emin
+: E>F GA | Be B2 | AF DF | EF D2 | E>F GA | Be B2 | AG FD | E2 E2 :","[1, 2, 5, 3]",0,0,Identify inserted errors in the provided ABC score,invalid_meter:2/4→7/8
+Irishman_19396,"L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | T'''F DF | EF D2 | E>F GA | Be B2 | AG FD | E2 E2 :","[4, 3, 1, 5]",7,2,Identify inserted errors in the provided ABC score,invalid_note_in_measure_3:A→T'''

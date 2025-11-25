@@ -1,0 +1,489 @@
+title,score,choices,target,target_index,task_description
+Irishman_40080,"L:1/8
+M:6/8
+K:G
+|: d>ef gfe | fed edB | d>ef gfe | fed e3 | def gfe | fed edB | AGA BAG | E2 F G3 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_199283,"L:1/8
+M:6/8
+K:G
+ ABA ABA | ABA AFD | DGG BAG | (3F/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_93735,"L:1/8
+M:6/8
+K:C
+ A | A2 G A2 G | F2 E D2 c/c/ | d2 c BAG | c2 d A2 B/c/ | ddc (3B/c/B/AA | D2 E FED | GA/A/B c>BA | 
+ (3G/A/G/ FE D2 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_152072,"L:1/8
+M:4/4
+K:Edor
+ d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg faaf | bgaf gefd | 
+ BABc dAFD ||",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_132121,"L:1/8
+Q:1/4=110
+M:6/8
+K:G
+ G2 A | B2 B BAB | A2 G GFG | A3 E3 | A3- AGA | B2 B BAB | A2 G G2 G | B2 d A2 B | G3 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_108319,"L:1/8
+M:4/4
+K:Bb
+ B>A | F2 B2 B2 d>c | BA F2 F2 Bc | d2 e2 f2 B2 | c6 AB | c2 f2 fg af | fe cA BA Bc | d2 ed c2 A2 | 
+ BA F2 F2 Ac | f2 f2 ec B>A | B6 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_193001,"L:1/8
+M:2/2
+K:A
+ Aaae cAAc | Bbba geeg | (ag)ae (fe)(dc) | dfedA A2 | cAGA EGDG | (GABc) dfed | cAGFEGDG | 
+ (df)ed cA A2 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_39275,"L:1/8
+M:3/4
+K:F
+ C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc d2 z f | 
+ c3/2 A/ A2 (GF) | G3/2 F/ F2 z ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_124343,"L:1/8
+M:6/8
+K:C
+|: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | 
+ edc c :|",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_170946,"L:1/8
+M:2/4
+K:B
+ C4 | CB, B,B, | B,2 z2 | CC B,2 | B,B, F,F, | F,F,/F,/ F,F,/ z/ | G,F,/F,/ F,F,/ z/ | 
+ G,F,/F,/ F,F,/ z/ | G,F,/F,/ F,F,/ z/ | G,F,/F,/ F,F,/ z/ :|",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_92855,"L:1/8
+M:6/8
+K:G
+ D | GAB BAG | FGA AGF | GAB BAG | B (d2 d2) c/B/ | cee edc | BAG d2 c/B/ | cBc ABc | B (G2 G2) ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_112769,"L:1/4
+Q:1/2=100
+M:2/2
+K:Bb
+ G d2 A | B2 A G | F B A G | ^F D D2 | G d2 A | B2 A G | B2 c2 | d2- d2 ::",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_48930,"L:1/8
+M:2/4
+K:G
+|: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | AG G2 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_101231,"L:1/8
+Q:1/4=160
+M:2/4
+K:C
+ G | AA Bc | BA GG | c2 dd | e2 z e | ed ef | ed Bc | dd dd | dc AB | c2 BA | G2 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_152825,"L:1/8
+Q:3/8=100
+M:6/8
+K:F
+ fcf gcg | a2 A A3 | fcf fed | geg gab | afd ge^c | d2 D D3 ::",null,6,null,Identify the num of bars of the provided ABC notation score.
+Irishman_84685,"L:1/8
+Q:1/2=80
+M:2/4
+K:Gmin
+ e | d^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 |:",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_210363,"L:1/8
+M:4/4
+K:Ador
+ A2 ed BAdB | AGGG AG(3EFG | A2 ed (3B^cd ef | g2 fa gedg | eA (3ABA AedB | AGEF G2 AG | 
+ EA (3AAA GABd |1 gedB BAGB :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_20127,"L:1/8
+Q:1/8=120
+M:6/8
+K:Gmin
+ d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_111796,"L:1/8
+M:3/4
+K:F
+ z2 z A B A | G G A B c B | A2 B c | d2 d d e c | d2 z d d c | B2 d2 c B | A3 z G A | A B A G A B | 
+ G2 z4 | Eded B dcg- |35 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_153636,"L:1/8
+M:4/4
+K:A
+ E2 | A3 G A2 B2 | A6 A c | e2 e2 d2 (cB) | (A4 E2) E2 | c2 c c (ec) d B | (AB) c A E2 E E | 
+ D2 D D E2 E2 | e6 d B | c2 d B A2 G2 | A6 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_145676,"L:1/8
+Q:1/4=112
+M:2/4
+K:G
+ D>G | G>B d>c | (A3/2B/4A/4) G2- | G2 B>d | e>e d>c | A3/2(3B/4A/4G/4 F2- | F2 A>B | c>d e>e | 
+ e>d e>e | e>d d>c | (A3/2B/4A/4) G2- | G2 ||",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_177891,"L:1/4
+M:5/4
+K:G
+ D | G G G B G | E E E2 G | A A c A F | D D D2 c | d d B c d | e c A2 G | A A D E F | G G G2 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_31410,"L:1/16
+Q:1/2=60
+M:2/4
+K:G
+|: d2a2 | a2b2g2a2 | f4 fgfe | fefg agfe | f2d2d2a2 | a2b2g2a2 | f4 fgfe | defg agfe | d4 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_136731,"L:1/16
+M:3/4
+K:Ddor
+ dcde f2fa e2ef | d2db abag fgfe | dcde f2fa e2ef | d2db abag fgfe | a2c'2 c'd'c'a f2f2 | 
+ g2g2 gbge c2c2 | f2fe dcde fefg | g2a2 agab a2a2 | a2c'2 c'd'c'a f2f2 | g2g2 gbge c2c2 | 
+ fgfe dcde gefd | egec c2d2 d4 :|",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_113383,"L:1/8
+M:4/4
+K:A
+ E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | 
+ e3 e fefc | B4 A2 z2 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_142181,"L:1/16
+M:2/4
+K:C
+ d2 | G2 GG G2(AB) | c3 B A2 Bd | (f3 e) (d3 G) | A2G2 G2 | d2 | G2 GG G2 AB | cd cB A2(GB) | 
+ (f3 e) d2G2 | G4 z2 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_172230,"L:1/4
+Q:1/4=180
+M:2/4
+K:Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | G F | E F | G F | E2 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_194103,"L:1/16
+M:4/4
+K:C
+ DD | D3 G G3 A B4 D3 E | F4 D3 E F4 D2D2 | D3 G G3 A B4 c4 | d4 A3 B c3 B | G2 Bc | 
+ d4 B4 c2c2 B4 | G3 G G3 FD D3 z4 | D3 E F2F2 E4 D4 | D3 G G3 A | B G3 G2 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_154083,"L:1/8
+M:4/4
+K:A
+ E | c<(ed>)B A>Bc>A | d<(fe>)c B>cd>B | c<ed>B A>Bc>A | F<A G(ba>)f e<(ac>)A | d<(fe>)c B>cd>B | 
+ a>(ba>)f e<(ae>)d | c<ed>B A2- A>e | a>b (3agf e<ac<a | d<b c<a B>cd>B | c<ed<f e<ac<e | 
+ d<f G<e A2- A ||",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_139595,"L:1/8
+Q:3/8=80
+M:6/8
+K:G
+ GAB | c2 c cBA | B2 B GAB | ccc cBA | B2 B GAB | ccc B2 A | B2 B GGG | AAA AGF | G3 G3- | G2 z ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_170004,"L:1/8
+Q:1/4=96
+M:2/4
+K:Amin
+|:""Am"" Ae/e/ ee | Ae/e/ ed | c2""Dm"" d2 |""Am"" cd e/d/c/B/ |""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :|",null,6,null,Identify the num of bars of the provided ABC notation score.
+Irishman_129801,"L:1/16
+M:4/4
+K:F
+ F2 | C3 D F3 G F2F2 F2d2 | c2A2 G2F2 D6 (FD) | C D3 F3 G F2F2 F2d2 | c2(de) f2A2 c4 | z2 c2 | 
+ (f2e2) d2c2(d2c2)(B2A2) | G2A2(BA)(GF) D4 D3 F | (C3 D) F2F2 F4 F3 d | c3 A G3 A F6 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_42153,"L:1/8
+M:2/4
+K:G
+|: D>E DB, | DE G2 | Bd AB/A/ | GE cE | D>E DB, | DE GA | Bd AB |1 G2 GE :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_11895,"L:1/8
+M:3/2
+K:Bmin
+ B2 | e2 (e>d) e4 (Bd) | (cB) A2 B6 B2 | g2 (g>e) f4 (ec) | d2 e2 f6 (ga) | b2 a2 (g3 f) e2 d2 | 
+ (ef) g2 B6 (BA) | G2 A2 B4 (g2 f2) | f{/g}f e6 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_99059,"L:1/8
+Q:1/4=120
+M:4/4
+K:D
+|:""D"" F2 FE""D"" D4 |""D"" F2 FG""D"" A2 AG |""D"" A8 |""D"" A2 AA""D"" A4 |""Bm"" B3 A""G"" G2 AG |1""D"" F8 :|",null,6,null,Identify the num of bars of the provided ABC notation score.
+Irishman_132960,"L:1/8
+M:3/4
+K:G
+ d | BA G2 d2 | B>A G3 A | Bg e2 dB | A4 z d | ed B3 d | ef g3 e | d>d B3 A | G4- G ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_104245,"L:1/4
+Q:1/2=100
+M:2/2
+K:D
+ A2 c2 | d2 f2 | e d c d | e/d/c/B/ c B | A2 c2 | d2 b2 | a/g/ f g/f/ e | d4 |:",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_183947,"L:1/8
+Q:1/4=180
+M:2/2
+K:G
+ Bc |""G"" d2 d2""D"" d3 c |""G"" B2 G4 cd |""C"" e2 e2 B3 c |""D4"" d6""D"" AB |""C"" c2 c2""D7"" B2 A2 | 
+""G"" B4""D7"" A2""G"" G2 |""Am"" A2 B2""D7"" A3 G |""G"" G6 :|",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_36848,"L:1/8
+M:6/8
+K:Ador
+ A |""Am"" A3 AGE | GED EDE |""C"" c3 cAd |""D"" dcA""A"" AGE | A3 AGE | GEG cGE |""D"" DED DFA | DED D2 :|",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_204753,"L:1/4
+M:3/4
+K:C
+ D | B B B | B G G | d A A | A2 d | d e c | d e c | B c A | G G G | G2 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_69603,"L:1/8
+M:2/4
+K:A
+|: AF FE | AF FE | cB/c/ ef | ec Bc/B/ | AF FE | AF FE | cB/c/ ec | BA A2 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_70331,"L:1/8
+Q:1/2=80
+M:2/4
+K:A
+ A2 cA | BE dB | cedf | edcB | AEcE | BEdE | cedf | e4 |:",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_109009,"L:1/8
+M:6/8
+K:Ador
+|: eaa aga | bab age | e/f/ge G3 | ede ged | eaa aga | bab age | e/f/ge dBG | ABA A3 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_131351,"L:1/8
+M:4/4
+K:Edor
+|: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 ED B E3 | 
+ DEFD E4 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_210477,"L:1/16
+M:2/4
+K:Dmin
+|:""Dm"" d2dc d2dc | d2e2 f2""C7""g2 |""F"" a2ag""Dm"" a2ag |""Gm"" b2ba""C7"" g4 |""F"" abag""Dm"" a2fg | 
+""Gm"" abg2""A7"" g2a2 |""Dm"" d2dc d2dc |""A7"" f2fe""Dm"" d4 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_34338,"L:1/4
+M:3/4
+K:G
+ A | B2 B | (B A) B | d d d | D2 E | F F F | E D B, | E E E | E2 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_181036,"L:1/8
+M:4/4
+K:C
+ E2 | A3 B c2 G2 | E2 G2 ED C2 | G2 c2 c3 e | d6 | z E | A3 B c2 G2 | E2 G2 (ED) C2 | 
+ E2 A2 (GA) B2 | A6 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_4444,"L:1/8
+M:3/4
+K:E
+ EGB | A3 DF F | E3 AA A | A3 EG A | B3 BG B | e3 Bd c | B3 EG B | A3 DF F | E3 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_108712,"L:1/8
+M:3/4
+K:C
+ C2 | E3 D C2 | G2 E2 (Gc) | c2 d4- | d4 (cB) | A G- G4 | z2 z2 G2 | c4 GA | G2 E3 C | E G3 E2 | 
+ D C- C4 | z4 ||",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_159456,"L:1/8
+M:6/8
+K:Amin
+ A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_34736,"L:1/8
+M:6/8
+K:Emin
+ BEE BEE | AFD AFD | BEE BEE | GAB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_12514,"L:1/8
+Q:3/8=123
+M:6/8
+K:Dmin
+ e2 e e2 d | ^cBA d2 c | d2 e f3 | e2 e e2 d | ^cBA a2 g | f2 e d3 |:",null,6,null,Identify the num of bars of the provided ABC notation score.
+Irishman_73379,"L:1/8
+M:6/8
+K:G
+ (D | G)AB AGE | DEG GBd | efg dBG |{c} BAA A2 (D | G)AB AGE | DGE GBd | efg dBA | BGG G2 :|",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_184726,"L:1/8
+M:6/8
+K:G
+ D | G2 A B2 A | G2 F D2 D | G2 A B2 c | (d3 d2) d | d2 d ABc | BcA GFG | A2 D DFA | (c3{dc} BA)G | 
+ ADD DEF | (G3 G2) ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_93514,"L:1/4
+Q:1/4=110
+M:2/2
+K:F
+ G A | B2 A2 | G ^F G A | B2 A2 | G2 D E | ^F G F2 | G G ^F G | D2 D3/2 E/ | ^F E F G | 
+ ^F2 G3/2 A/ | B3/2 c/ A2 | G2 ||",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_123003,"L:1/4
+Q:1/2=60
+M:4/2
+K:D
+ D4 F2 F2 | E2 E2 D2 D2 | G2 F2 E4 | F2 F F E2 E2 | D2 D D E2 E2 | F2 D F G2 F2 | E4 D4 | 
+ F3 F E2 E2 | D3 D E2 E2 | F3 D G2 F2 | E4 D4 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_6457,"L:1/8
+M:6/8
+K:G
+{F} G2 E E""^roll""DE |""^cut"" GEG ege | d2 B""^cut"" BAG | AcB AGF |{F} G2 E E""^roll""DE | 
+""^cut"" GEG ege | d2{A} B""^cut"" BAG |1 (3ABc BAGF :|2 ABA GBc ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_68622,"L:1/8
+M:6/8
+K:A
+ E | EAB c2 B | A2 C E2 G | GGG G2 B | A2 B A2 E | EAB c2 B | A2 C E2 A |1 GGG G2 B | B2 c A2 :|2 
+ a | gfe dcB | Ace a2 ||",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_19396,"L:1/8
+M:2/4
+K:Emin
+|: E>F GA | Be B2 | AF DF | EF D2 | E>F GA | Be B2 | AG FD | E2 E2 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_96566,"L:1/8
+M:3/2
+K:D
+ d2 cd B2 GF (E2 D2) | d2 cd B2 Ad e2 E2 | d2 cd BB(AF) | E2 (FA) | B2 (Ac) d2 (AF) (E2 D2) | 
+ G2 BG F2 (AF) (E2 D)D | G2 BG F2 AB (=c2 E2) | G2 BG F2 (AF) E2 (FA) | B2 (Ac) d2 (AF) | E2- E ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_191995,"L:1/8
+Q:1/4=132
+M:7/8
+K:G
+|: F2 D E2 B,2 | D3 DE D2 | F2 D E2 B,2 | D3 D4 | D3 D4 | D2 C D2 C2 | B,3 B,C D2 | E2 F DCDC | 
+ B,3 B,4 | B,3 B,4 | B,3 B,4 :|",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_35398,"L:1/8
+M:3/4
+K:Amin
+|: A2 A^G A^c | d2 d>e d2 | =c2 cA c_B | G2 F>G A2 | A2 A^G A^c | ^c2 d4 | =c2 cA c_B | G2 A4 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_209594,"L:1/8
+M:4/4
+K:G
+ D2 | G2 GG G D3 | B2 dc A3/2 (B/) cA | G2 GA G D3 | c2 dc | A4 | cB AB cB AB | d2 GGGF ED | 
+ G2 GGGABc | d2 AA | G4 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_152251,"L:1/8
+M:4/4
+K:A
+|: A2 cA B2 dB | c2 eA BAGB | A2 cA B2 dB | cBAc BAGB | A2 cA B2 dB | c2 eA BAGA | dcBc BABG | 
+ EGBG A2 z2 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_148927,"L:1/8
+M:6/8
+K:D
+|:""D"" FGA d2 d |""A"" cBA""Bm"" BFB |""A"" A2 A""G"" G2 G |""Em"" FEF""A"" AGE |""D"" D3""Bm"" dBd | 
+""A"" cAc""G"" BGB |""A"" A2 A""G"" G2 F |""A"" EDC""D"" D3 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_48714,"L:1/8
+Q:3/8=120
+M:6/8
+K:Ddor
+ A | AAA ccc | EDC D3 | d3 cAG | ABc ddd | ddd d2 d | DDD FFG | A2 G A2 G | ABc EDD | D3- D2 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_203639,"L:1/8
+M:2/4
+K:G
+ (D/G/)G GG | (F/G/)A/F/ G2 | (D/B/)B BB | (A/B/)c/A/ B2 | dd e2 | (c/B/)c/e/ d2 | BB cc | AA B2 | 
+ dd e2 | (c/B/)c/e/ d2 | BB cc | FF G2 :|",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_40782,"L:1/8
+M:4/4
+K:G
+ e | dg g2 gedg | eaag ageg | f/e/dad bdad | f/e/dad gfed | BG G2 EGDf | g2 fg edBA | G2 BG DGBG | 
+ AGFA G2 :|",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_3036,"L:1/16
+Q:1/4=100
+M:2/4
+K:D
+|: d2a2 | a2gf e2g2 | Tf4 dAFD | (Bcd2) g2f2 | Te4 d2a2 | a2gf e2g2 | Tf4 dAFD | Bcd2 F2E2 | D4 |:",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_58188,"L:1/8
+M:4/4
+K:C
+ cc c2 | A2 AA A2 A A- | A4 ^EE ^F2 | D2 D2 ^E ^F2 D- | D4 | =EE ^F2 | G2 G2 G G- G2- | 
+ G2 F2- FF E2 | C8 | z4 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_8474,"L:1/8
+M:4/4
+K:A
+|: cA(3AAA cdec | deed efge | aege edce | decA BAFA | E3 A AAce | deed efge | aege edce | 
+ deed cA(3AAA :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_101169,"L:1/8
+M:4/4
+K:G
+ D2 | G3 F E2 FG | A2 B2 D2 z c | c3 cBA G2 | A6 | z D | GABc d3 c | BAGF E2 cc | B2 D2 F2 A2 | 
+ G6 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_126453,"L:1/8
+Q:1/4=120
+M:2/2
+K:G
+ G/A/B/A/ GA Bc d2 | gdcB gdcB | A a2 g Tf2 ed | G/A/B/A/ GA Bc d2 | gdcB gdcB | Aagf g2 G2 |:",null,6,null,Identify the num of bars of the provided ABC notation score.
+Irishman_213340,"L:1/8
+M:2/4
+K:G
+ B d G B | B A A2 | A c F A | A G G2 | B B A G | F A3 | c c B A | G B3 | d d g f | f e3 | d d c A | 
+ G4 ||",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_44652,"L:1/4
+M:4/4
+K:Bb
+ E | E F C/C/ D | E F C G | c3/2 G/ F E | F3 | G | c G F A | G/ E C/- C D | E G F3/2 D/ | C3 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_13272,"L:1/4
+M:4/4
+K:G
+ B/c/ | d d d e | d3 c | B G G A | F2 D2 |""^bis"" B G G A | B G G A | F2 D :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_192144,"L:1/8
+M:4/4
+K:C
+ GG A2 | c4 c3 c | A2 G2 AA c2 | d4 d3 e | d2 c2 | cc c2 | e4 e3 e | d2 c4 A2 | G2 c2 c2 B2 | c4 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_118736,"L:1/4
+M:3/4
+K:Dmin
+ | D2 D | G2 G | F E2 | D3 | A A D | z A A | A2 G | F E2 | D3 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_182020,"L:1/8
+M:4/4
+K:Emin
+ B3 A Bded | BdAc BE E2 | BAGA (3Bcd ef |1 gfed Bded :|2 gfed Bdef | gfge dB B2 | dBeB (3Bcd ef | 
+ g3 a bgaf ||1 gfed (3Bcd ef :|2 gfed (3Bcd ed ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_106091,"L:1/4
+M:3/4
+K:C
+ E/D/ | C E G | c d c/B/ | A G2 | c/B/ | A G E/D/ | C E G | A3 ||",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_101531,"L:1/4
+Q:3/4=100
+M:6/4
+K:C
+ B c d d2 d | B c d d2 d | e f g g2 G | B3/2 c/ B A2 B | c3/2 d/ c B3/2 c/ d | A3/2 B/ G E2 G | 
+ D D G G B G | G B G G3 :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_208259,"L:1/8
+M:4/4
+K:Amix
+ e2 BA eAcA | BAGA Bcdf | eA A2 eAcA | Bded BAag | eA A2 eAcA | BAGA Bcdf | efed BAGA | 
+ Beed BAGB ||",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_192080,"L:1/8
+M:2/4
+K:F
+ AB | c3 .c3 .c3 .c/B/ A | F z Bc | d3 .d3 .d3 .d/c/ B | G z AB | c3 .c3 .c3 .c/B/ A | F z B A/A/ | 
+ G3 .G3 .E3 (.G/F/) E | F z ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_170406,"L:1/8
+M:2/2
+K:A
+ A3 A AAEE | F2 G2 A4 | A3 A A2 A2 | B2 e6 | A3 A AACC | D2 D2 F4 | E3 E E2 E2 | F2 A6 ||",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_48545,"L:1/8
+M:6/8
+K:D
+ EEE BEB | EBE AFD | EEE BEB | dcB AFD | EEE BEB | EBE AFD | GFG FGA | dAG FED :|",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_189538,"L:1/8
+M:3/2
+K:D
+ (GA) B2 (BG) | A3 (G) F2 GF A2 A2 | (3G6 .G6 .F6 .G6 .F6 .D6 .D4 D2 E2 D2 | G2 A4 GF D2 =C2 | 
+ D6 FA B2 B2 | A6 GF | A2 A2 | GF D4 D2 FD F2 | G2 A4 GF D2 =C2 | D6 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_196071,"L:1/8
+Q:1/4=120
+M:4/4
+K:C
+ AB | c A4 E AB | c A4 E AB | cc BA cc BA | e2 e2 e2 de | f f4 f ed | f e4 z dc | B2 ee B2 c2 | 
+ A6 :|",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_133563,"L:1/8
+Q:1/2=80
+M:2/4
+K:G
+ B>cdc | BAGF | GABc | A2 G2 | B>cdc | BAGF | GABc | A4 |:",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_202614,"L:1/8
+M:3/4
+K:Amin
+""^Andante"" E/^G/ AA | B>A GA B>A | A3 c/d/ ee/d/ | c>d{e} ga ge | e3 c/d/ ee/d/ | c>d ea ge/d/ | 
+ cB/A/ G2 E/^G/A/B/ | cd{e} g>e{e} d>B | AA A ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_13763,"L:1/8
+Q:1/4=110
+M:4/4
+K:G
+ G2 DG B2 GB | d2 Bd g4 | e2 ge d2 ge | dcBA B2 G2 | e2 ge d2 ge | dcBA B2 G2 | B>cdd{e} d2 cB | 
+ A2 de d4 | B>c dd{e} d2 cB | B2 A>A A2 g2 | gfed fedc | d2 d>d d2 ::",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_82640,"L:1/8
+M:6/4
+K:D
+ A2 | d3 e d2 c4 de | f2 e2 d2 e4 dc | d3 e d2 c3 d c2 | B2 E2 ^G2 A4 A2 | B2 G2 B2 d4 cB | 
+ A2 F2 D2 B6 | e3 f g2 c3 B A2 | d6 A4 F2 | G3 A B2 A3 d c2 | d6- d4 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_35209,"L:1/8
+M:6/8
+K:G
+ d/>c/ | BAG GED | D>EG G>AB | cc B/A/ ABG | dBG A2 A/B/ | cc B/A/ ABG | dBG A2 G/A/ | B>AG FE>D | 
+ DEG c2 B | ABG G>ED | DEG G2 ||",null,11,null,Identify the num of bars of the provided ABC notation score.
+Irishman_57037,"L:1/8
+M:3/4
+K:Bb
+ DCB, | D F2 B,D F | B B2 GF D | B,3 CB, A, | B,2 z B,/B,/ FB, | F F2 F/F/ | GA | B B2 FG F | 
+ B,3 CB, A, | B,3 ||",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_154221,"L:1/8
+Q:3/8=88
+M:3/8
+K:G
+ GAF | GAF | G2 c | cBA | B3 | GAF | GAF | G2 A | AGF | G3 :|",null,10,null,Identify the num of bars of the provided ABC notation score.
+Irishman_202352,"L:1/8
+M:3/4
+K:G
+ GB dg (f/g/a/b/) | (g>!wedge!a){a} gf/e/ dc | 
+ !wedge!B/!wedge!c/!wedge!d !wedge!B/!wedge!c/!wedge!d !wedge!B/!wedge!c/!wedge!d | 
+ (e/d/).c/.B/ (B2 A2) | (Bd) (dc) (cB) | g!wedge!f/!wedge!e/ ^d2 B2 | 
+ bTf !wedge!g!wedge!e !wedge!f!wedge!^d | (B^c/^d/) e3 Tf | !wedge!gTd (ed cB) | 
+ !wedge!c!wedge!a !wedge!B!wedge!g !wedge!A!wedge!f | (de/f/) g/e/f/g/ ac | B/A/G/F/ (F2 G2) :|",null,12,null,Identify the num of bars of the provided ABC notation score.
+Irishman_54877,"L:1/8
+M:6/8
+K:C
+ C | D-D D DEG | AAA D2 D | G-G G E2 D | C3 C2 E | D2 D DEF | A2 A(GA) c | A2 A GEC | D3- D2 ||",null,9,null,Identify the num of bars of the provided ABC notation score.
+Irishman_4501,"L:1/4
+Q:3/4=100
+M:9/4
+K:Dmin
+ f3 e2 d (^c/d/ e) A | d3 c2 B (A/B/ c) E | F E D A2 d ^c3 | d e f e2 d (^c/d/ e) A | 
+ d3 c2 B (A/B/ c) E | F E D A2 ^c d3 |:",null,6,null,Identify the num of bars of the provided ABC notation score.
+Irishman_205843,"L:1/8
+Q:1/4=72
+M:2/4
+K:C
+|: C2 EF | G4 | A3 B | A2 A2 | G4- | G4 :|",null,6,null,Identify the num of bars of the provided ABC notation score.
+Irishman_201368,"L:1/4
+Q:3/4=90
+M:6/4
+K:C
+ c/d/ e c d B G | A/B/ c E D2 C | E/F/ G E G2 G | c/d/ e c d2 d | c/d/ e c d B G | A/B/ c E D2 C | 
+ E/F/ G E G2 G | e/f/ g e c3 ||",null,8,null,Identify the num of bars of the provided ABC notation score.
+Irishman_131315,"L:1/8
+M:2/4
+K:F
+ C |""F"" CF FF | FG AA |""Bb"" BD DD | D3 B |""C7"" BG GG | Gc cB |""F"" AF""C7"" GE |""F"" F3 :|",null,9,null,Identify the num of bars of the provided ABC notation score.

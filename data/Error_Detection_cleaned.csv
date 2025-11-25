@@ -1,0 +1,3163 @@
+solution,prompt
+2,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef Ebfe | fed e3 | def | fed edB | AGA BAG | D##2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_3:g→Eb(key=G)
+1. enharmonic_error_in_measure_8:E2→D##2
+2. invalid_duration_in_measure_5:shortened(0.75→0.5)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>F#f gFe | fed D##dB | d>ef gfe | feF e3 | def gfe | fed eBbB | AGA BAG | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_1:e→F#(12度/18半音)
+1. enharmonic_error_in_measure_2:E→D##
+2. excessive_leap_≥10th_in_measure_4:d→F(11度/17半音)
+3. invalid_note_name_in_key_6:d→Bb(key=G)
+4. excessive_leap_≥10th_in_measure_1:f→F(12度/19半音)
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef gfe d>ef gfe | fGd edB | d>ef gfe | fed e3 | def gfe | fed edB | AGA AAG | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_7:B→A(key=G)
+1. excessive_leap_≥10th_in_measure_2:e→G(12度/19半音)
+2. invalid_duration_in_measure_1:lengthened(0.75→1.12)
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef F#fe | fed edB | d>ef gfe | fed F#3 | def gfe | fed edB | AGA BAb#G | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:A→G##
+1. excessive_leap_≥10th_in_measure_1:g→F#(12度/18半音)
+2. invalid_note_name_in_key_4:e3→F#3(key=G)
+3. enharmonic_error_in_measure_7:G#→Ab
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fC#d e3 | def gfe | fed edB | G##GA BAG | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:A→G##
+1. invalid_note_name_in_key_4:e→C#(key=G)
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>D##f gfe | fed edFb | d>ef gfe | fed e3 | def gfe | fed edB Ebed edB | AGA | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_7:shortened(0.75→0.62)
+1. enharmonic_error_in_measure_1:E→D##
+2. invalid_note_name_in_key_2:B→Fb(key=G)
+3. invalid_duration_in_measure_6:lengthened(0.75→1.0)
+4. invalid_note_name_in_key_6:f→Eb(key=G)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | def gfe | feG edB | GbGA BAG | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_6:d→G(11度/17半音)
+1. invalid_note_name_in_key_7:A→Gb(key=G)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | dD##f gfe | fed eE#B | AGA BAG | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_5:f→O#
+1. invalid_note_in_measure_7:A→H
+2. invalid_note_in_measure_8:G3→Z5
+3. invalid_note_name_in_key_6:d→E#(key=G)
+4. enharmonic_error_in_measure_5:E→D##
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | def gfe | fed edB | AEA BAG | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_7:G→E(12度/19半音)
+1. invalid_note_in_measure_3:g→T'''
+2. invalid_note_in_measure_7:E→Y#
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: G
+: d>ef gfe | fed edB | d>ef gfe | fed e3 | def gfe | fD##d edB | AGA BAG | E2 F G3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_6:E→D##
+1. invalid_note_in_measure_1:f→R##9
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3E#/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_4:F→E#
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | G##BA AFD | DGG BF#G | (3F/E/D/ EF A3 | ABA ABB# | ABG AFD | Bdg G3 Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:A→F#(11度/17半音)
+1. enharmonic_error_in_measure_5:C→B#
+2. invalid_duration_in_measure_7:lengthened(0.42→0.67)
+3. enharmonic_error_in_measure_2:A→G##
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BG##G | (3F/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_3:A→G##
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/A#/D/ EF A3 | ABA ABc | ABG AFD ABG AFD | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_4:E→A#(11度/17半音)
+1. invalid_duration_in_measure_6:lengthened(0.75→1.0)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+Wn3BA G##BA | ABA AFD | DGG BAG | (3F/E/D/ EF A3 | ABA ABB# | ABG AFD | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_5:C→B#
+1. invalid_note_in_measure_1:A→Wn3
+2. invalid_note_in_measure_4:F→Wn3
+3. enharmonic_error_in_measure_1:A→G##
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA ABA ABA | ABA AFD | DGG BG##G | (3F/E/D/ EF A3 | ABA ABc | ABG AFD ABG AFD | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_6:lengthened(0.75→1.0)
+1. invalid_duration_in_measure_1:lengthened(0.75→1.0)
+2. enharmonic_error_in_measure_3:A→G##
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/E/D/ EF A3 | AB#A ABc | ABG AFD | Bdg G3 Bdg | cG#F G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_5:B→B#(key=G)
+1. invalid_duration_in_measure_7:lengthened(0.42→0.79)
+2. excessive_leap_≥10th_in_measure_8:A→G#(13度/20半音)
+3. invalid_duration_in_measure_7:shortened(0.83→0.7)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | G##BA AFD | DGG BAG | (3F/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_7:d→O#
+1. enharmonic_error_in_measure_2:A→G##
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/E/D/ EF A3 | ABA ABc | ABG AFD | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:E→T'''
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: G
+ABA ABA | ABA AFD | DGG BAG | (3F/E/G##/ EF A3 | AAA ABc | ABG AE#D | Bdg G3 | cAF G3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_4:D→A(key=G)
+1. invalid_note_in_measure_2:D→I4
+2. enharmonic_error_in_measure_4:A→G##
+3. invalid_note_name_in_key_5:B→A(key=G)
+4. enharmonic_error_in_measure_6:F→E#
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg E#aafb | bgaf gefd | BGbBc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:A→Y#
+1. excessive_leap_≥10th_in_measure_8:A→Gb(11度/17半音)
+2. enharmonic_error_in_measure_6:F→E#
+3. invalid_duration_in_measure_4:lengthened(1.0→1.12)
+4. invalid_duration_in_measure_4:shortened(1.5→1.38)
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd Gb2 | defg faaf | d2 fd c2 | BABc dAFA | d2 fd c2 ec | defg faaf | bF#af gefd | BABc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_1:shortened(0.62→0.49)
+1. invalid_duration_in_measure_3:shortened(0.62→0.49)
+2. invalid_note_name_in_key_1:c2→Gb2(key=Edor)
+3. enharmonic_error_in_measure_7:Gb→F#
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec c2 ec | defg faA#f | d2 E#d c2 ecb | BABc dAFA | d2 fGb c2 ec | defg faaf | bgaf gefd | HABc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_8:B→H
+1. invalid_note_name_in_key_2:a→A#(key=Edor)
+2. enharmonic_error_in_measure_3:F→E#
+3. invalid_note_name_in_key_5:d→Gb(key=Edor)
+4. invalid_duration_in_measure_1:lengthened(0.62→0.87)
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg Eaaf | d2 fd c2 ec | BABc AAFA | d2 fd c2 ec | defg Gaaf | bgaf gefd | BABc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_4:d→A(key=Edor)
+1. excessive_leap_≥10th_in_measure_6:f→G(11度/17半音)
+2. excessive_leap_≥10th_in_measure_2:f→E(13度/20半音)
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaF# | d2 fd c2 ec | BABc dAFGb | d2 fd c2 eC# | defG faaf | bgaf gefd | BABc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_6:g→G(11度/17半音)
+1. invalid_note_name_in_key_4:A→Gb(key=Edor)
+2. invalid_note_name_in_key_5:c→C#(key=Edor)
+3. invalid_note_name_in_key_2:f→F#(key=Edor)
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fG# c2 ec | defg E#aaf# | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg faaf | bgaf gefd | BABc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:F→E#
+1. invalid_note_name_in_key_1:d→G#(key=Edor)
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defCb faaf | bgaf gefd | BABc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_8:A→U#2
+1. invalid_note_name_in_key_6:g→Cb(key=Edor)
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg faaf | bgaf gefd | BABB# dbAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_5:d→P
+1. 6
+2. invalid_note_in_measure_5:f→H
+3. enharmonic_error_in_measure_8:C→B#
+4. invalid_note_in_measure_2:f→I4
+5. invalid_note_in_measure_5:c→J
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fd c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg faaf | bgaf gefd | BABc
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_8:shortened(1.0→0.62)
+1. invalid_note_in_measure_1:c→X3
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+d2 fEb c2 ec | defg faaf | d2 fd c2 ec | BABc dAFA | d2 fd c2 ec | defg fabG##f | bgaf gefd | BABc dAFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_6:A→G##
+1. invalid_note_name_in_key_1:d→Eb(key=Edor)
+"
+2,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (D3/2 A/) Bc | d2 z2 (fAb) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GB) | G3/2 C#/ F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_8:F→B(10度/16半音)
+1. excessive_leap_≥10th_in_measure_5:d→Ab(10度/16半音)
+2. excessive_leap_≥10th_in_measure_4:B3→D3(11度/17半音)
+3. invalid_note_name_in_key_9:F→C#(key=F)
+"
+2,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 Bb2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_2:F2→Bb2(12度/19半音)
+"
+0,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) BB# | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 E#/ F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_9:F→E#
+1. enharmonic_error_in_measure_4:C→B#
+"
+0,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (Fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_5:F→E#
+1. enharmonic_error_in_measure_5:E#→F
+"
+2,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | S,A C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (F#d) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_8:A2→Vb5
+1. invalid_note_in_measure_8:F→X3
+2. excessive_leap_≥10th_in_measure_5:f→F#(12度/18半音)
+3. invalid_note_in_measure_3:G→S
+4. 
+"
+1,"Input:
+L: 1/8
+M: 3/4
+K: F
+I4 | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc Gb2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_1:C→I4
+1. invalid_note_in_measure_4:B→P
+2. 6
+3. invalid_note_name_in_key_7:d2→Gb2(key=F)
+4. invalid_duration_in_measure_9:lengthened(0.35→0.72)
+"
+2,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | T''' z2 (E#d) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_5:d2→T'''
+1. enharmonic_error_in_measure_5:F→E#
+2. invalid_note_in_measure_7:f→U#2
+"
+3,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA B#3 A/A/ | (B3/2 Gb/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2 z z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_8:G→U#2
+1. invalid_duration_in_measure_9:lengthened(0.35→0.47)
+2. invalid_note_name_in_key_4:A→Gb(key=F)
+3. invalid_note_name_in_key_3:C3→B#3(key=F)
+"
+3,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 F2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc Bc | d2 z2 (fd) | HA A2 GF | Bc d2 z A# | c3/2 A/ A2 (GF) | G3/2 F/ F2 z
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_4:lengthened(0.58→0.7)
+1. invalid_note_in_measure_6:c→H
+2. invalid_note_name_in_key_7:f→A#(key=F)
+"
+3,"Input:
+L: 1/8
+M: 3/4
+K: F
+C | DE F2 E#2 | GA C3 A/A/ | (B3/2 A/) (B3/2 A/) Bc | d2 z2 (fd) | cA A2 GF | Bc d2 z f | c3/2 A/ A2 (GF) | G3/2 F/ F2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:F2→E#2
+1. invalid_duration_in_measure_9:shortened(0.35→0.22)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd D##ee# | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_6:E→D##
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_5:shortened(0.88→0.76)
+1. invalid_duration_in_measure_8:lengthened(1.12→1.25)
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: C
+: | B#cd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:e→Qb7
+1. invalid_note_name_in_key_2:G→B#(key=C)
+2. invalid_duration_in_measure_1:shortened(0.25→0.0)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eeF | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc Ab :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_1:A→I4
+1. invalid_note_in_measure_9:c→Z5
+2. enharmonic_error_in_measure_4:E#→F
+3. excessive_leap_≥10th_in_measure_9:c→Ab(10度/16半音)
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | dE/d/c dBc | Gcd eee | de/d/c gcd de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_5:lengthened(0.88→1.25)
+1. excessive_leap_≥10th_in_measure_3:e→E(10度/16半音)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee Gcd eee | de/d/G# dBc | Abcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | ebdc B# :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_4:G#→Ab
+1. invalid_duration_in_measure_2:lengthened(0.75→1.0)
+2. excessive_leap_≥10th_in_measure_3:c→G#(13度/20半音)
+3. enharmonic_error_in_measure_9:C→B#
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/Db/g/g ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:g→Db(key=C)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GBb | Gcd eee | de/G#/c dBc | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:c→Wn3
+1. excessive_leap_≥10th_in_measure_3:d→G#(10度/16半音)
+2. invalid_note_in_measure_7:c→Y#
+3. invalid_note_in_measure_7:b→S
+4. 
+5. enharmonic_error_in_measure_1:A#→Bb
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/c dBc | Gcd eee | de/d/c gcd | Gcd | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_6:shortened(0.75→0.38)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: C
+: GA | Gcd eee | de/d/Gb dBGb | Gcd eee | de/d/c gcd | Gcd eee | de/d/c c'ba | g/g/g/g/g ee/e/e | edc c :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:c→Gb(12度/18半音)
+1. excessive_leap_≥10th_in_measure_3:c→Gb(11度/17半音)
+"
+3,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ DG GF/G/ | AG FD | DG GGb | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | Y#G G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_1:lengthened(0.62→0.99)
+1. invalid_note_name_in_key_3:A→Gb(key=G)
+2. invalid_note_in_measure_8:A→Y#
+3. invalid_note_in_measure_6:A→Qb7
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | AG G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_1:G→Vb5
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: G
+: | AG E#D | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | dGb/d/ EF | AG G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_7:e→Gb(key=G)
+1. invalid_note_in_measure_6:D→Y#
+2. invalid_duration_in_measure_1:shortened(0.62→0.37)
+3. excessive_leap_≥10th_in_measure_7:c→E(10度/16半音)
+4. enharmonic_error_in_measure_2:F→E#
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | CbG G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:A→Cb(key=G)
+1. invalid_note_in_measure_1:F→P
+2. 6
+3. invalid_note_in_measure_5:G→O#
+"
+1,"Input:
+L: 1/5
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | AG G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_length:1/8→1/5
+"
+0,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG# GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cE# | AG G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:F→E#
+1. excessive_leap_≥10th_in_measure_3:G→G#(12度/18半音)
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | AG F2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:G2→F2(key=G)
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DB# GA DB# GG## | Bc d2 | DG GB | A/B/A/G/ FD | A#e/d/ cF | AG G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_3:G→B#(key=G)
+1. invalid_duration_in_measure_3:lengthened(0.5→0.75)
+2. invalid_note_name_in_key_7:d→A#(key=G)
+3. invalid_note_in_measure_3:A→P
+4. 6
+5. enharmonic_error_in_measure_3:A→G##
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG CbA | BB# Db2 | DG GB | A/B/A/G/ FD | de/d/ cE# | G##G G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_4:C→B#
+1. invalid_note_name_in_key_3:G→Cb(key=G)
+2. enharmonic_error_in_measure_8:A→G##
+3. enharmonic_error_in_measure_7:F→E#
+4. invalid_note_name_in_key_4:d2→Db2(key=G)
+"
+0,"Input:
+L: 1/8
+M: 2/4
+K: G
+: DG GF/G/ | AG FD | DG GA | Bc d2 | DG GB | A/B/A/G/ FD | de/d/ cF | G##G G2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_8:A→G##
+"
+1,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: L
+fcf gcg | a2 A A3 | fcf fed | geg gab | afd ge^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_key:F→L
+"
+0,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcG gcg | Wn3 A C#3 | fcf fed | geg gab | afd ge^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_2:A3→C#3(13度/20半音)
+1. invalid_note_in_measure_6:D→X3
+2. invalid_note_in_measure_2:a2→Wn3
+3. invalid_note_name_in_key_1:f→G(key=F)
+"
+2,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg fcf gcg | Gb2 A Db3 | fcf fed | geg gG# | afd ge^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_2:a2→Gb2(key=F)
+1. enharmonic_error_in_measure_4:Ab→G#
+2. invalid_duration_in_measure_1:lengthened(0.75→1.0)
+3. excessive_leap_≥10th_in_measure_2:A3→Db3(10度/16半音)
+"
+0,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 | fcf fed | geg gab | afd ge^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_5:g→T'''
+"
+0,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | B#2 A A3 | fcf Eed | geg gab | afd ge^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:f→E(10度/16半音)
+1. invalid_note_name_in_key_2:a2→B#2(key=F)
+"
+0,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 A3 | fcf fed | geg gab | afd Ee^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_2:lengthened(0.23→0.35)
+1. excessive_leap_≥10th_in_measure_5:g→E(13度/20半音)
+2. invalid_note_in_measure_4:ab→Y#
+"
+1,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcG gcg | a2 Fb A3 | Abcf | geg gab | afd ge^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_3:shortened(0.75→0.38)
+1. invalid_note_in_measure_5:f→Qb7
+2. excessive_leap_≥10th_in_measure_1:f→G(12度/19半音)
+3. invalid_note_name_in_key_3:f→Ab(key=F)
+4. invalid_note_name_in_key_2:A→Fb(key=F)
+"
+3,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fB#f gcg | a2 A | fcf fed | geg gab | afd ge^c | d2 E D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_1:c→B#(key=F)
+1. invalid_duration_in_measure_2:shortened(0.23→0.11)
+2. excessive_leap_≥10th_in_measure_6:D→E(13度/20半音)
+3. invalid_note_in_measure_5:c→O#
+"
+2,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 | fcf fed | geg gab | afd ge^c afd ge^c | d2 D B3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_5:lengthened(0.75→1.0)
+1. invalid_note_name_in_key_6:D3→B3(key=F)
+"
+0,"Input:
+L: 1/8
+Q: 3/8=100
+M: 6/8
+K: F
+fcf gcg | a2 A A3 | fcf fed | Bbeg gab | afd ge^c | d2 D D3 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_4:g→Bb(key=F)
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd | c^fgc | Bb^E#gB | A3 e | d^FGe | d^F GC | BecA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_7:c→C(12度/19半音)
+1. enharmonic_error_in_measure_4:F→E#
+"
+2,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd d^fgd d^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_2:lengthened(0.5→0.75)
+1. invalid_duration_in_measure_9:shortened(0.04→-0.08)
+"
+1,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+F | d^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Abc | BecA | ^Gb3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:G#→Ab
+1. enharmonic_error_in_measure_1:E#→F
+2. invalid_duration_in_measure_10:shortened(0.0→-0.25)
+3. enharmonic_error_in_measure_9:F#3→Gb3
+"
+1,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgE | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BGcA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_8:e→G(13度/20半音)
+1. excessive_leap_≥10th_in_measure_2:d→E(13度/20半音)
+2. invalid_note_in_measure_2:E→T'''
+3. invalid_duration_in_measure_1:shortened(0.12→-0.13)
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^Gbgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:G→S
+1. 
+2. enharmonic_error_in_measure_2:F#→Gb
+"
+2,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgG | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_2:d→G(11度/17半音)
+"
+2,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+Z5 | Eb^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^A#3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_9:F3→A#3(key=Gmin)
+1. invalid_note_in_measure_1:e→Z5
+2. excessive_leap_≥10th_in_measure_7:F→F(12度/19半音)
+3. enharmonic_error_in_measure_2:D#→Eb
+4. invalid_note_in_measure_4:g→T'''
+"
+0,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^E#g#d | c^fgc | B^fgB | A#3 D## | d^FGe | d^F Gc | BecA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:F→E#
+1. enharmonic_error_in_measure_5:E→D##
+2. invalid_note_in_measure_6:e→Wn3
+3. invalid_note_name_in_key_9:F3→F3(key=Gmin)
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd | c^fgc | B^fgB | A3 e | d^FGe | d^F Gc | BecA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:e→P
+1. 6
+2. invalid_note_in_measure_4:g→R##9
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: Gmin
+e | d^fgd | c^fgAb | B^fgC | A3 e | d^GGe | d^E Gc | BecA | ^F3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:c→Ab(13度/20半音)
+1. excessive_leap_≥10th_in_measure_6:F→G(11度/17半音)
+2. enharmonic_error_in_measure_4:B#→C
+3. excessive_leap_≥10th_in_measure_7:F→E(10度/16半音)
+4. invalid_note_in_measure_5:e→J
+"
+3,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_8:B2→H
+"
+0,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/Fbb/ | f2 f f2 f | f3 d>ef f3 d>ef | g2 D f2 E | D3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_4:e→E(10度/16半音)
+1. enharmonic_error_in_measure_1:Eb→Fbb
+2. invalid_duration_in_measure_3:lengthened(0.42→0.67)
+3. invalid_note_name_in_key_5:d3→D3(key=Gmin)
+4. invalid_note_name_in_key_4:g→D(key=Gmin)
+"
+2,"Input:
+L: 2/3
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_length:1/8→2/3
+"
+1,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 A# f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB GAB | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_2:f→A#(key=Gmin)
+1. invalid_duration_in_measure_7:lengthened(0.42→0.54)
+"
+0,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: J
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_key:Gmin→J
+"
+3,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 E# fb2 F | f3 d>ef | g2 g f2 e | d3 d2 d | Wn3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:F→E#
+1. invalid_note_in_measure_6:d→T'''
+2. invalid_note_in_measure_6:c3→Wn3
+3. excessive_leap_≥10th_in_measure_2:f→F(12度/19半音)
+"
+0,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 E f2 e | d3 d2 d | c3 F2 d | c3 GAB | c F2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:B2→F2(key=Gmin)
+1. excessive_leap_≥10th_in_measure_4:g→E(13度/20半音)
+"
+0,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | B#3 GAB# | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:C3→B#3
+"
+1,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+Wn3/e/ | f2 f f2 f | f3 d>ef | g2 g f2 e | d3 d2 d | c3 F2 d | c3 GAB | c B2 B2 A | B3 B2 ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_1:d→Wn3
+"
+0,"Input:
+L: 1/8
+Q: 1/8=120
+M: 6/8
+K: Gmin
+d/e/ | f2 f f2 E | f3 d>ef | g2 F f2 e | d3 C#2 d | c3 F2 d | c3 GAB | c Ab2 B2 A | B3 B2 :: ::
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_8:B2→Ab2(10度/16半音)
+1. excessive_leap_≥10th_in_measure_2:f→E(13度/20半音)
+2. enharmonic_error_in_measure_5:Db2→C#2
+3. invalid_duration_in_measure_9:lengthened(0.1→0.23)
+4. excessive_leap_≥10th_in_measure_4:g→F(11度/17半音)
+"
+1,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 eGb | G##2 | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | Qb7 D2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_5:shortened(0.48→0.1)
+1. excessive_leap_≥10th_in_measure_4:c→Gb(12度/18半音)
+2. enharmonic_error_in_measure_5:A2→G##2
+3. invalid_note_in_measure_9:B4→Qb7
+4. invalid_note_name_in_key_9:A2→D2(key=A)
+"
+1,"Input:
+L: 0/1
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_length:1/8→0/1
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | G##2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 FbB | e3 e Eefc | Qb7 F2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_7:A→Fb(key=A)
+1. excessive_leap_≥10th_in_measure_9:A2→F2(12度/18半音)
+2. invalid_note_in_measure_9:B4→Qb7
+3. excessive_leap_≥10th_in_measure_8:f→E(10度/16半音)
+4. enharmonic_error_in_measure_4:A2→G##2
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>C# c>d | B>c d>e f3 e | a2 ga f2 D##c | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_2:B→C#(13度/20半音)
+1. invalid_duration_in_measure_2:shortened(0.81→0.44)
+2. invalid_note_in_measure_7:B→O#
+3. enharmonic_error_in_measure_4:E→D##
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B Ab>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 D#>B c3 e | a2 ga f2 e>a | (eB#)BA B2 AB | e3 e fefc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_7:c→B#(key=A)
+1. excessive_leap_≥10th_in_measure_5:B→D#(12度/18半音)
+2. invalid_note_name_in_key_2:c→Ab(key=A)
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 G | a2 ga f2 ec | A2 B>B c3 E | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:e→G(11度/17半音)
+1. excessive_leap_≥10th_in_measure_5:e→E(10度/16半音)
+2. invalid_note_in_measure_6:e→S
+3. 
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (eB#)BA B2 AB | e3 e fefc e fefc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:C→B#
+1. invalid_duration_in_measure_8:lengthened(0.67→0.92)
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_5:shortened(0.48→0.23)
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 eD## | B>c d>e f3 e | a2 ga f2 ec | Vb5 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fefc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_5:A2→Vb5
+1. enharmonic_error_in_measure_2:E→D##
+2. invalid_note_in_measure_2:c→R##9
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: A
+E | A>B c>d e2 ee | B>c d>e f3 e | a2 ga f2 ec | A2 B>B c3 e | a2 ga f2 e>a | (ec)BA B2 AB | e3 e fD##fc | B4 A2 z2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_8:E→D##
+"
+3,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""D##"" B/Bb/ B/A/ | G Eb | B/B/ B/A/ | G2 | G F | E D# | G F | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:E→D##
+1. invalid_duration_in_measure_8:shortened(0.12→-0.38)
+2. invalid_note_in_measure_1:A→S
+3. 
+4. excessive_leap_≥10th_in_measure_2:A→Eb(10度/16半音)
+5. invalid_note_name_in_key_6:F→D#(key=Emix)
+"
+3,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/E/ B/A/ | G2 | G F | E F | G F | E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:B→E(12度/19半音)
+"
+1,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | G F | E Bb | G F | E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_6:F→Bb(12度/18半音)
+"
+3,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ B/B/ B/A/ B/B/ | G2 | G B | E F | G F | E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:F→Qb7
+1. invalid_duration_in_measure_3:lengthened(1.0→1.75)
+2. excessive_leap_≥10th_in_measure_5:F→B(10度/16半音)
+"
+3,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | Gb E# | E F | G F | E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_3:B→B(key=Emix)
+1. enharmonic_error_in_measure_5:F→E#
+2. invalid_note_in_measure_1:B→Z5
+"
+1,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | G F | E F | G F | Eb2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:E2→Eb2(key=Emix)
+"
+3,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" Cbb/B/ B/Eb/ | G D | B/B/ B/A/ | G2 | G F | E# F | G F | E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_6:E→E#(key=Emix)
+1. enharmonic_error_in_measure_1:Bb→Cbb
+2. excessive_leap_≥10th_in_measure_2:A→D(12度/19半音)
+3. excessive_leap_≥10th_in_measure_1:A→Eb(10度/16半音)
+"
+2,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G A | B/B/ B/A/ | G2 | G F | E F | G F | E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_5:F→Y#
+1. invalid_note_in_measure_1:B→P
+2. 6
+"
+0,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/A/ | G G# | B/B/ B/A/ | C#2 | G F | E F | J F | E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_4:G2→Eb2(key=Emix)
+1. invalid_note_name_in_key_4:Eb2→C#2(key=Emix)
+2. enharmonic_error_in_measure_2:Ab→G#
+3. invalid_note_in_measure_7:G→J
+"
+3,"Input:
+L: 1/4
+Q: 1/4=180
+M: 2/4
+K: Emix
+""E"" B/B/ B/G/ | G A | B/B/ B/A/ | G2 | G F | E Fb | G F | FbA#2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_1:A→G(10度/16半音)
+1. enharmonic_error_in_measure_8:Eb2→Fbb2
+2. invalid_note_name_in_key_6:F→Fb(key=Emix)
+3. excessive_leap_≥10th_in_measure_8:b2→A#2(11度/17半音)
+4. invalid_note_in_measure_6:Fb→X3
+"
+1,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/Gb/ ee | Ae/e/ ed | c2""Dm"" d2 | ""Am"" cd | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 : c/d/C#/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_1:e→Gb(12度/18半音)
+1. invalid_duration_in_measure_6:lengthened(0.56→0.94)
+2. invalid_note_name_in_key_6:c→C#(key=Amin)
+3. invalid_duration_in_measure_4:shortened(0.88→0.76)
+"
+1,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/E/ ee | Ae/e/ ed | c2""Dm"" Gb2 | ""Am"" cd Fbb/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:d2→Gb2(10度/16半音)
+1. invalid_note_in_measure_2:e→Qb7
+2. enharmonic_error_in_measure_4:Eb→Fbb
+3. invalid_note_in_measure_5:A→J
+4. excessive_leap_≥10th_in_measure_1:e→E(13度/20半音)
+"
+0,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ ed | c2""Fm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ D#2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_6:A2→D#2(13度/20半音)
+1. excessive_leap_≥10th_in_measure_3:D→F(12度/19半音)
+"
+3,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" | Ae/e/ ed | c2""Dm"" d2 | ""Am"" cd e/d/B#/B#/ | ""Dm"" Bbd""Am"" cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:d→Qb7
+1. invalid_note_in_measure_3:d2→U#2
+2. invalid_duration_in_measure_1:shortened(0.75→0.5)
+3. enharmonic_error_in_measure_4:C→B#
+4. enharmonic_error_in_measure_5:A#→Bb
+"
+3,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" | AbCb/e/ D##d | c2""Dm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:E→D##
+1. invalid_duration_in_measure_1:shortened(0.75→0.38)
+2. invalid_note_name_in_key_2:e→Cb(key=Amin)
+"
+0,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ | c2""Dm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Bbd""Am"" cB cB Bbd""Am"" cB cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_5:A→Bb(13度/20半音)
+1. invalid_duration_in_measure_5:lengthened(0.75→0.88)
+2. invalid_duration_in_measure_2:shortened(0.62→0.49)
+3. invalid_note_in_measure_5:B→R##9
+4. invalid_duration_in_measure_5:lengthened(1.0→1.38)
+"
+2,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Hm"" Ae/e/ ee | Ae/e/ eEb | c2""Ebm"" d2 | ""Am"" cd e/d/c/B/ | ""Dm"" Ad""Am"" cB Ad""Am"" cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_3:D#→Eb
+1. invalid_note_in_measure_1:A→H
+2. enharmonic_error_in_measure_2:D#→Eb
+3. invalid_duration_in_measure_5:lengthened(0.75→1.12)
+"
+1,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ ed | c2""Dm"" d2 | ""Am"" cd e/d/c/B/ cd e/d/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:c→J
+1. invalid_duration_in_measure_4:lengthened(0.88→1.25)
+"
+0,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ ee | Ae/e/ ed | c2""Dm"" d2 | ""Am"" B#d e/d#/c/B/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_3:D→J
+1. enharmonic_error_in_measure_4:C→B#
+"
+0,"Input:
+L: 1/8
+Q: 1/4=96
+M: 2/4
+K: Amin
+:""Am"" Ae/e/ G#e | AFb/e/ ed | c2""Dm"" d2 | ""Am"" cd e/d/c/G/ e/d/c/G/ | ""Dm"" Ad""Am"" cB | c/d/c/B/ A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_4:B→G(11度/17半音)
+1. invalid_note_name_in_key_2:e→Fb(key=Amin)
+2. invalid_duration_in_measure_4:lengthened(0.88→1.0)
+3. excessive_leap_≥10th_in_measure_1:e→G#(10度/16半音)
+"
+2,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 G##G | ""D"" A8 | ""C#"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_3:A8→P
+1. 6
+2. invalid_note_in_measure_3:A8→S
+3. 
+4. enharmonic_error_in_measure_2:A→G##
+5. invalid_note_name_in_key_4:D→C#(key=D)
+6. invalid_note_in_measure_1:D4→Y#
+"
+0,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 AA""D"" A4 | ""Bm"" B3 A""Gb"" G2 AG | 1""D"" F8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_4:lengthened(0.59→0.84)
+1. invalid_note_name_in_key_5:G→Gb(key=D)
+"
+3,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" D#2 AEb | 1""B#""
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_6:shortened(0.14→-0.23)
+1. excessive_leap_≥10th_in_measure_5:G→Eb(12度/18半音)
+2. invalid_note_name_in_key_5:G2→D#2(key=D)
+3. invalid_note_name_in_key_6:D→B#(key=D)
+"
+2,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" B#2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_2:F2→B#2(key=D)
+1. invalid_note_in_measure_5:B3→Wn3
+2. invalid_note_in_measure_6:F8→I4
+"
+0,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AB#""D"" A4 | ""Bm"" B3 A""G"" G2 AG G2 AG | 1""D"" Ab8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_5:lengthened(0.73→0.98)
+1. excessive_leap_≥10th_in_measure_6:F8→Ab8(12度/18半音)
+2. excessive_leap_≥10th_in_measure_1:D4→A4(11度/17半音)
+3. invalid_duration_in_measure_1:shortened(0.59→0.21)
+4. invalid_note_name_in_key_4:A→B#(key=D)
+"
+0,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" | ""Fb"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_3:D→Fb(key=D)
+1. invalid_duration_in_measure_2:shortened(0.88→0.63)
+"
+1,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 | 1""D"" F8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_5:shortened(0.73→0.35)
+1. invalid_note_in_measure_4:A2→O#
+"
+0,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""O#"" F2 FG""D"" A2 AG | ""D"" Ab8 ""D"" Ab8 ""D"" | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AG | 1""D"" F8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_3:A8→Ab8(key=D)
+1. invalid_note_in_measure_2:D→O#
+2. invalid_note_in_measure_5:A→U#2
+3. invalid_duration_in_measure_3:lengthened(0.14→0.52)
+"
+0,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FE""D"" D4 | ""D"" F2 FG""D"" | ""D"" A8 ""D"" A8 | ""D"" | ""Bm"" G3 A""G"" G2 AG | 1""D"" E8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_2:shortened(0.88→0.51)
+1. excessive_leap_≥10th_in_measure_5:B3→G3(13度/20半音)
+2. invalid_duration_in_measure_4:shortened(0.59→0.21)
+3. invalid_note_name_in_key_6:F8→E8(key=D)
+4. invalid_duration_in_measure_3:lengthened(0.14→0.39)
+"
+1,"Input:
+L: 1/8
+Q: 1/4=120
+M: 4/4
+K: D
+:""D"" F2 FG""D"" D4 | ""D"" F2 E#G""D"" A2 AG | ""D"" A8 | ""D"" A2 AA""D"" A4 | ""Bm"" B3 A""G"" G2 AC# | 1""D"" E#8 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_6:F8→E#8(key=D)
+1. enharmonic_error_in_measure_2:F→E#
+2. invalid_note_in_measure_5:G→Vb5
+3. excessive_leap_≥10th_in_measure_5:G→C#(10度/16半音)
+4. invalid_note_name_in_key_1:E→G(key=D)
+"
+0,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | G##F FE | cGb/c/ ef | ec Bc/B/ | AF FE | AF FE | cB/c/ ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_3:B→Gb(key=A)
+1. enharmonic_error_in_measure_2:A→G##
+"
+3,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AE# FE | AF FE | cB/c/ ef | ec Bc/B/ | AF FE | AF A#E | cB/c/ ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:F→E#
+1. invalid_note_in_measure_4:c→T'''
+2. excessive_leap_≥10th_in_measure_6:F→A#(11度/17半音)
+"
+0,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | D#F FE | cB/c/ ef | ec Ebc/B/ | AF FC | AF FE | cB/c/ ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_5:E→C(12度/19半音)
+1. invalid_note_name_in_key_2:A→D#(key=A)
+2. invalid_note_name_in_key_4:B→Eb(key=A)
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | AE# FE | cB/c/ ef | ec Bc/B/ | AF FE | AF FE | cB/c/ Ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:F→E#
+1. excessive_leap_≥10th_in_measure_7:e→E(13度/20半音)
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/c/ ef | ec Bc/B/ | AF FE | AF FC | cB/c/ ec cB/c/ ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_7:lengthened(0.62→0.87)
+1. invalid_note_in_measure_6:F→S
+2. 
+3. excessive_leap_≥10th_in_measure_6:E→C(12度/19半音)
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/c/ Gf | ec Bc/B/ | G##F FE | AF FE | cB/c/ ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_5:A→G##
+1. invalid_note_name_in_key_3:e→G(key=A)
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | G##F FE | cB/c/ ef | ec Bc/B/ | AF FE | AE# FE | Qb7B/c/ ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_6:F→E#
+1. enharmonic_error_in_measure_2:A→G##
+2. invalid_note_in_measure_7:c→Qb7
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AE# FE | AF FE | cB/c/ ef cB/c/ ef | ec Bc/B/ | AF FE | AF FE | cB/c/ ec | BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:F→E#
+1. invalid_duration_in_measure_3:lengthened(0.62→0.87)
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/G/ ef | ec Bc/B/ | AbF FE | AF | cB/c/ ec | BA A2 : BA A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_6:shortened(0.5→0.38)
+1. invalid_duration_in_measure_8:lengthened(0.31→0.69)
+2. excessive_leap_≥10th_in_measure_3:c→G(10度/16半音)
+3. invalid_note_name_in_key_5:A→Ab(key=A)
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: A
+: AF FE | AF FE | cB/c/ | ec Bc/B/ | E#F FE | AF DbE | cB/c/ eF | BCb A2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_5:A→E#(key=A)
+1. excessive_leap_≥10th_in_measure_7:c→F(11度/17半音)
+2. invalid_duration_in_measure_3:shortened(0.62→0.37)
+3. invalid_note_name_in_key_8:A→Cb(key=A)
+4. excessive_leap_≥10th_in_measure_6:F→Db(10度/16半音)
+"
+2,"Input:
+L: 1/5
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcB | AEcE | BEdE | cedf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_length:1/8→1/5
+"
+0,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcB | AEcE | BEdEb | cedf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_6:E→Eb(key=A)
+"
+1,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cE | BE dB BE dB | cedf | edcB | AEcG | BEdE | Wn3edf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_5:E→G(12度/19半音)
+1. invalid_duration_in_measure_2:lengthened(0.5→0.75)
+2. excessive_leap_≥10th_in_measure_1:A→E(10度/16半音)
+3. invalid_note_in_measure_7:c→Wn3
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cF# | BD## dB | cedf | D##dcB | AEcE | BEdE | cedf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_4:E→D##
+1. invalid_duration_in_measure_9:shortened(0.0→-0.12)
+2. excessive_leap_≥10th_in_measure_1:A→F#(12度/18半音)
+3. enharmonic_error_in_measure_2:E→D##
+"
+0,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | eCB#B | AEcE AEcE AEcE | BF#dG# | cedf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_4:C→B#
+1. excessive_leap_≥10th_in_measure_6:E→G#(10度/16半音)
+2. invalid_duration_in_measure_5:lengthened(0.5→0.75)
+3. invalid_note_name_in_key_4:d→C(key=A)
+4. excessive_leap_≥10th_in_measure_6:E→F#(12度/19半音)
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cG# | BE dB | cedf | edcB | AEcE | BEBE | cedf | J | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_6:d→B(11度/17半音)
+1. invalid_note_in_measure_2:d→Qb7
+2. excessive_leap_≥10th_in_measure_1:A→G#(13度/20半音)
+3. invalid_note_in_measure_8:e4→J
+4. invalid_note_in_measure_7:f→J
+"
+1,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcB | AEcE | BEdE | cedf | Bb4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:e4→Bb4(key=A)
+"
+1,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedFb | edcB | AEcE | BEdG# | cedf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_6:E→G#(13度/20半音)
+1. invalid_note_name_in_key_3:f→Fb(key=A)
+2. invalid_note_in_measure_4:B→U#2
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cA | BE dB | cedf | edcD# | AEcE | BEdE | cedf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_4:B→D#(key=A)
+"
+3,"Input:
+L: 1/8
+Q: 1/2=80
+M: 2/4
+K: A
+A2 cAb | BE dB | cedf | edcB | AEGE | BEdBb | cedf | e4 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_6:E→Bb(key=A)
+1. invalid_note_name_in_key_5:c→G(key=A)
+2. excessive_leap_≥10th_in_measure_1:A→Ab(13度/20半音)
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | R##9F# F2 dBG##F | E2 ED B# D##3 | DEFD
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:A→R##9
+1. invalid_duration_in_measure_8:shortened(0.53→0.16)
+2. enharmonic_error_in_measure_6:A→G##
+3. enharmonic_error_in_measure_7:E3→D##3
+4. invalid_note_name_in_key_7:B#→B#(key=Edor)
+"
+1,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFBbD | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 ED B E3 | DEFD E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_2:E→Bb(11度/17半音)
+"
+1,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFbD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBbAE# | E2 ED B E3 | DEbE#D E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_6:F→E#
+1. invalid_note_in_measure_2:E→H
+2. invalid_note_name_in_key_2:F→Fb(key=Edor)
+3. enharmonic_error_in_measure_8:F→E#
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 E3 | (3Bcd ed e2 ef | g Ab3 gedB | AF F2 dBAF | E2 ED B E3 | DEFD D4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:E4→D4(key=Edor)
+1. excessive_leap_≥10th_in_measure_5:B3→Ab3(13度/20半音)
+2. invalid_duration_in_measure_3:lengthened(0.48→0.6)
+3. invalid_note_in_measure_2:F→Y#
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 ED Bb D##3 | DEFD E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:E3→D##3
+1. invalid_note_in_measure_5:B→R##9
+2. invalid_note_in_measure_4:d→Vb5
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: B#2 ED B E3 | DG#FD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 ED B Fbb3 | DEFD E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_1:E2→B#2(key=Edor)
+1. invalid_note_name_in_key_2:E→G#(key=Edor)
+2. enharmonic_error_in_measure_7:Eb3→Fbb3
+"
+2,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | D##2 ED B E#3 | DEFD E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_7:E2→D##2
+1. invalid_note_in_measure_6:F2→H
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B F#3 | (3Bcd ed e2 ef | g B3 gedB | AF F2 dBAF | E2 | DEFD E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_7:E3→F3(key=Edor)
+1. invalid_note_name_in_key_7:D→F(key=Edor)
+2. invalid_duration_in_measure_7:shortened(0.48→0.1)
+3. excessive_leap_≥10th_in_measure_3:E3→F#3(11度/17半音)
+"
+3,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 ED B E3 | (3Bcd ed e2 ef | g F#3 gedB | AF F2 dBAF | E2 ED B E3 | DEFD E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_5:B3→F#3(key=Edor)
+"
+0,"Input:
+L: 1/8
+M: 4/4
+K: Edor
+: E2 ED B E3 | DEFD GFED | E2 CD B E3 | (3Bcd ed e2 ef | g B3 gedB | AE# F2 dBbAF | E2 ED B E3 | DEFD E4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:E→C(13度/20半音)
+1. enharmonic_error_in_measure_6:F→E#
+2. invalid_note_in_measure_8:E4→J
+"
+0,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fG#""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_8:e→G#(13度/20半音)
+"
+0,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dA# | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Z5m"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:G→Z5
+1. invalid_note_name_in_key_1:c→A#(key=Dmin)
+"
+2,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc | d2e2 f2""C7""g2 | ""Qb7"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" A#4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_8:d4→A#4(10度/16半音)
+1. invalid_note_in_measure_3:F→Qb7
+"
+2,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""F7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:A7→P
+1. 6
+2. excessive_leap_≥10th_in_measure_6:A7→F7(12度/19半音)
+"
+3,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Ebm"" d2dc d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:D#→Eb
+"
+1,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2Ebc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc | ""A7"" f2fG#""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:D#→Eb
+1. invalid_note_in_measure_1:c→Z5
+2. invalid_duration_in_measure_7:shortened(0.38→0.26)
+3. invalid_note_name_in_key_8:e→G#(key=Dmin)
+"
+2,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dAb d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2D#c d2dc | ""G##7"" f2fe""Dbm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_1:c→Ab(10度/16半音)
+1. enharmonic_error_in_measure_8:A7→G##7
+2. invalid_note_name_in_key_7:d→D#(key=Dmin)
+"
+1,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""R##9m"" d2dc d2dc | d2e2 f2""C7""E2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""Fm"" a2fg | ""Gm"" D#g2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_6:ab→D#(key=Dmin)
+1. invalid_note_in_measure_5:a→P
+2. 6
+3. excessive_leap_≥10th_in_measure_2:g2→E2(10度/16半音)
+4. invalid_note_in_measure_1:D→R##9
+5. excessive_leap_≥10th_in_measure_5:D→F(11度/17半音)
+"
+1,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""E#"" abag""Dm"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc E2dc | ""A7"" f2fe""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_3:a→X3
+1. excessive_leap_≥10th_in_measure_7:d2→E2(10度/16半音)
+2. invalid_duration_in_measure_1:shortened(0.38→0.26)
+3. enharmonic_error_in_measure_5:F→E#
+"
+3,"Input:
+L: 1/16
+M: 2/4
+K: Dmin
+:""Dm"" d2dc d2dc d2dB# d2C#c | d2e2 f2""C7""g2 | ""F"" a2ag""Dm"" a2ag | ""Gm"" b2ba""C7"" g4 | ""F"" abag""F#m"" a2fg | ""Gm"" abg2""A7"" g2a2 | ""Dm"" d2dc d2dc | ""A7"" f2fe""Dm"" d4 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_1:lengthened(0.38→0.51)
+1. enharmonic_error_in_measure_1:Db→C#
+2. enharmonic_error_in_measure_1:C→B#
+3. invalid_note_name_in_key_5:D→F#(key=Dmin)
+4. invalid_note_in_measure_2:f2→I4
+"
+0,"Input:
+L: 1/4
+M: 3/4
+K: G
+A | B2 B | (B A) B | d d d | D2 E | F F A | E D B, | E E E | F2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_9:E2→F2(key=G)
+1. invalid_note_in_measure_8:E→R##9
+2. invalid_note_in_measure_5:E→Qb7
+3. excessive_leap_≥10th_in_measure_6:F→A(10度/16半音)
+"
+3,"Input:
+L: 1/4
+M: 3/4
+K: G
+A | B2 | (B A) B | d d d | D2 E | F F F | E D B, | E E E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_2:shortened(0.38→-0.12)
+1. invalid_note_in_measure_5:E→Vb5
+"
+2,"Input:
+L: 1/4
+M: 3/4
+K: G
+A | B2 | (B G##) B | d d d | D2 E | F F F | E D B, | E E E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_8:E→X3
+1. enharmonic_error_in_measure_3:A→G##
+2. invalid_duration_in_measure_2:shortened(0.38→0.13)
+3. invalid_note_in_measure_3:G#→P
+4. 6
+"
+2,"Input:
+L: 1/4
+M: 3/4
+K: G
+A | B2 B | (B A) B | d d d | D2 E | F F F | E D B, | E B E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_8:E→B(11度/17半音)
+"
+2,"Input:
+L: 1/4
+M: 3/4
+K: G
+A A A A | B2 B | (B A) F | d | D#2 E | F F F | E D B, | E E E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:B→F(13度/20半音)
+1. invalid_duration_in_measure_1:lengthened(0.25→1.0)
+2. invalid_note_name_in_key_5:D2→D#2(key=G)
+3. invalid_duration_in_measure_4:shortened(0.75→0.0)
+"
+2,"Input:
+L: 1/4
+M: 3/4
+K: G
+A | B2 Fb | (B A) B | d d d | D2 D## | F F F | E A B, | E E E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_5:E→D##
+1. invalid_note_name_in_key_2:B→Fb(key=G)
+2. excessive_leap_≥10th_in_measure_7:D→A(11度/17半音)
+3. invalid_note_in_measure_7:B→T'''
+"
+3,"Input:
+L: 1/4
+M: 3/4
+K: T
+A | B2 B | (B A) B | d d d | D2 E | F F F | E D B, | E E E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_key:G→T
+"
+3,"Input:
+L: 1/4
+M: 3/4
+K: G
+G## | B2 B | (B A) B | d d d | D2 D## | F F F | E D Bb, | E E E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:d→P
+1. 6
+2. enharmonic_error_in_measure_1:A→G##
+3. excessive_leap_≥10th_in_measure_7:B→Bb(13度/20半音)
+4. enharmonic_error_in_measure_5:E→D##
+"
+0,"Input:
+L: 1/4
+M: 3/4
+K: G
+A | B2 B | (B A) B | F# d d | D2 E | F E# F | E | E E E | A2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_7:shortened(0.75→0.25)
+1. enharmonic_error_in_measure_6:F→E#
+2. invalid_note_name_in_key_4:d→F#(key=G)
+3. invalid_note_name_in_key_9:E2→A2(key=G)
+"
+2,"Input:
+L: 1/4
+M: 3/4
+K: G
+Eb | B2 E | (B A) B | d d d | D2 E | F F F | E D B, | H D# E | E2
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_1:A→Eb(key=G)
+1. invalid_note_in_measure_8:E→H
+2. excessive_leap_≥10th_in_measure_2:B→E(11度/17半音)
+3. invalid_note_name_in_key_8:E→D#(key=G)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, E DB,G, | A, A2 | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_3:shortened(0.38→0.13)
+1. invalid_duration_in_measure_2:lengthened(0.56→0.81)
+2. invalid_note_in_measure_8:C→Wn3
+"
+1,"Input:
+L: 1/8
+M: 3/2
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_meter:6/8→3/2
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | T''', A2 Db2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_3:A→T'''
+1. excessive_leap_≥10th_in_measure_3:A2→Db2(10度/16半音)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, G#2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_5:Ab2→G#2
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,E, DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_6:lengthened(0.56→0.69)
+1. excessive_leap_≥10th_in_measure_6:G→E(12度/19半音)
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 | A, A2 A2 E | ABc cBA | A, A#2 G##2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_6:E→Y#
+1. invalid_duration_in_measure_2:shortened(0.56→0.31)
+2. enharmonic_error_in_measure_5:A2→G##2
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 G##2 Ab | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_1:E→Ab(key=Amin)
+1. invalid_note_in_measure_2:E→Vb5
+2. enharmonic_error_in_measure_1:A2→G##2
+"
+0,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:A→Z5
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: Amin
+A, A2 A2 E | G2 Fbb | A, A2 A2 E | ABc cBA | A, E2 A2 E | G2 E DB,G, | B#3 DCbD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:Eb→Fbb
+1. excessive_leap_≥10th_in_measure_5:A2→E2(11度/17半音)
+2. enharmonic_error_in_measure_7:C3→B#3
+3. invalid_duration_in_measure_2:shortened(0.69→0.56)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: X
+A, A2 A2 E | G2 E DB,G, | A, A2 A2 E | ABc cBA | A, A2 A2 E | G2 E DB,G, | C3 DCD | ECA, A,3 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_key:Amin→X
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEbD## BEE | AFD AFD | BEE BEE | GAB AD#D | BED# BEE | AFD AFD | GFG cBA | cBA GC#D :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:E→D##
+1. excessive_leap_≥10th_in_measure_4:F→D#(12度/18半音)
+2. invalid_note_name_in_key_5:E→D#(key=Emin)
+3. excessive_leap_≥10th_in_measure_8:F→C#(12度/18半音)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:A→X3
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAB AFD | BEE BEE | AFG# AFD | GFG cBA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_7:F→S
+1. 
+2. invalid_note_name_in_key_6:D→G#(key=Emin)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAB AFD | BEE BEE | AE#D G#FB | GFG cBA | Z5BA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_6:D→B(12度/18半音)
+1. invalid_note_in_measure_8:c→Z5
+2. invalid_note_in_measure_5:E→Vb5
+3. invalid_note_name_in_key_6:A→G#(key=Emin)
+4. enharmonic_error_in_measure_6:F→E#
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEE | GAC# AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_4:B→C#(10度/16半音)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | BEE BEA# | GAB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_3:E→A#(12度/18半音)
+"
+2,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AFD | T'''EE BEE | GAB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_3:B→T'''
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+CbEE BEE BEE BEE | AFD AFD | BEE BEE | GEbB AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_1:lengthened(0.75→1.12)
+1. invalid_note_name_in_key_1:B→Cb(key=Emin)
+2. excessive_leap_≥10th_in_measure_4:A→Eb(10度/16半音)
+"
+1,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BbED## | AFD AFD | BEE BEE | GAEb AFD | BEE BEE | AFD AFD | GFG cBA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:E→D##
+1. invalid_note_name_in_key_4:B→Eb(key=Emin)
+"
+3,"Input:
+L: 1/8
+M: 6/8
+K: Emin
+BEE BEE | AFD AE#Db | BEE BEE | GAB | BEE BEE | AFD AFD | GFG cAbA | cBA GFD :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:F→E#
+1. invalid_duration_in_measure_4:shortened(0.75→0.5)
+2. excessive_leap_≥10th_in_measure_7:B→Ab(10度/16半音)
+"
+1,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 F e2 d | ^cBA d2 c | d2 e f3 | e2 e e2 d | ^cAbA a2 g | f2 e d3 d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_6:lengthened(0.23→0.35)
+1. excessive_leap_≥10th_in_measure_1:e→F(12度/19半音)
+2. excessive_leap_≥10th_in_measure_5:B→Ab(13度/20半音)
+"
+1,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cB#A d2 B# | d2 e f3 | e2 e e2 d | ^cBA a2 g | f2 e d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:C→B#
+1. invalid_note_in_measure_1:d→I4
+"
+3,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c | d2 e f3 | e2 e e2 Gb | ^cBA a2 g | f2 e d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_4:d→Gb(key=Dmin)
+"
+1,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c ^F#BA d2 c | d2 e f3 | e2 e e2 d | ^cBA a2 g | f2 G d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:d→S
+1. 
+2. invalid_duration_in_measure_2:lengthened(0.56→0.94)
+3. excessive_leap_≥10th_in_measure_2:c→F#(12度/18半音)
+4. excessive_leap_≥10th_in_measure_6:e→G(12度/19半音)
+"
+1,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c | d2 e f3 | Eb2 e e2 | ^cBA a2 g | f2 e d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_4:shortened(0.38→0.26)
+1. invalid_note_in_measure_6:e→T'''
+2. invalid_note_name_in_key_4:e2→D#2(key=Dmin)
+3. enharmonic_error_in_measure_4:D#2→Eb2
+"
+2,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e | ^B#BA d#2 c | d2 e f3 | U#2 e e2 d | ^cBA a2 g | f2 e d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_1:shortened(0.38→0.13)
+1. enharmonic_error_in_measure_2:C→B#
+2. invalid_note_in_measure_4:e2→U#2
+3. invalid_duration_in_measure_7:shortened(0.0→-0.12)
+"
+0,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA d2 c | d2 e Ab3 | e2 e e2 F | ^cBA a2 g | f2 e d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_4:d→F(12度/19半音)
+1. excessive_leap_≥10th_in_measure_3:f3→Ab3(10度/16半音)
+"
+3,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cBA F2 c | C#2 e f3 | e2 G | ^cCbbA a2 g | f2 e d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_5:Bb→Cbb
+1. invalid_duration_in_measure_4:shortened(0.38→0.01)
+2. enharmonic_error_in_measure_3:Db2→C#2
+3. excessive_leap_≥10th_in_measure_2:d2→F2(13度/20半音)
+4. excessive_leap_≥10th_in_measure_4:e→G(11度/17半音)
+"
+0,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 e e2 d | ^cCbbA d2 c | d2 e f3 | e2 e e2 d | ^cBG## a2 gb | f#2 D## d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_2:Bb→Cbb
+1. enharmonic_error_in_measure_5:A→G##
+2. enharmonic_error_in_measure_6:E→D##
+"
+3,"Input:
+L: 1/8
+Q: 3/8=123
+M: 6/8
+K: Dmin
+e2 D## e#2 d | ^cBA d2 c | d2 e f3 | e2 e e2 d | ^cBA Gb2 g | F#2 e d3 | :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_1:E→D##
+1. invalid_note_name_in_key_5:a2→Gb2(key=Dmin)
+2. invalid_note_name_in_key_6:f2→F#2(key=Dmin)
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | AF DF | EF | E>F GA | Be B2 | AG FD | E2 Cb2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_8:E2→Cb2(key=Emin)
+1. invalid_duration_in_measure_4:shortened(0.31→0.18)
+"
+0,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Vb5F B2 | AF DF | R##9F D2 R##9F D2 | E>F GA | Be B2 | AG FD | E2 E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_4:E→R##9
+1. invalid_duration_in_measure_4:lengthened(0.19→0.56)
+2. invalid_note_in_measure_2:B→Vb5
+3. invalid_note_in_measure_6:B2→Z5
+4. enharmonic_error_in_measure_2:E#→F
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | B#D## B2 | AF DF | Vb5F A#2 | E>F GEb | Be B2 | AG FD | E2 E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_2:B2→Y#
+1. excessive_leap_≥10th_in_measure_4:D2→A#2(12度/19半音)
+2. invalid_note_in_measure_4:E→Vb5
+3. enharmonic_error_in_measure_2:E→D##
+4. excessive_leap_≥10th_in_measure_5:A→Eb(13度/20半音)
+"
+3,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: Eb>E# GA | Be B2 | AF DF | EF D2 | E>F GA | Be B2 | AG FD | D##2 F2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_8:E2→D##2
+1. enharmonic_error_in_measure_1:F→E#
+2. enharmonic_error_in_measure_8:E#2→F2
+"
+0,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | AF DF | S,F D2 | D##>F# GA | Be B2 | AG FD | E2 E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. enharmonic_error_in_measure_5:E→D##
+1. invalid_note_in_measure_8:E2→R##9
+2. invalid_note_in_measure_4:E→S
+3. 
+4. invalid_note_in_measure_3:F→U#2
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F BA | BA# B2 | AF DF | EF D2 | E>F GA | Be B2 | G##G F#D FD | E2 E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. excessive_leap_≥10th_in_measure_1:G→B(12度/18半音)
+1. invalid_note_name_in_key_2:e→A#(key=Emin)
+2. invalid_duration_in_measure_7:lengthened(0.5→0.62)
+3. enharmonic_error_in_measure_7:A→G##
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F GA E>F GA | Be B2 | AF DF | EF D2 | E>F GA | Be B2 B2 | AG FD | E2 Db2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_duration_in_measure_1:lengthened(0.5→0.75)
+1. invalid_note_name_in_key_8:E2→Db2(key=Emin)
+2. invalid_duration_in_measure_6:lengthened(0.31→0.43)
+3. invalid_note_in_measure_1:G→J
+"
+1,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | AF DF | EF D2 | E>Db GA | Be B2 | AG FD | E2 E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_name_in_key_5:F→Db(key=Emin)
+"
+0,"Input:
+L: 1/8
+M: 7/8
+K: Emin
+: E>F GA | Be B2 | AF DF | EF D2 | E>F GA | Be B2 | AG FD | E2 E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_meter:2/4→7/8
+"
+2,"Input:
+L: 1/8
+M: 2/4
+K: Emin
+: E>F GA | Be B2 | T'''F DF | EF D2 | E>F GA | Be B2 | AG FD | E2 E2 :
+
+Task:
+Identify inserted errors in the provided ABC score
+
+Options:
+0. invalid_note_in_measure_3:A→T'''
+"
