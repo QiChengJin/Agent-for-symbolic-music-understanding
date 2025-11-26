@@ -99,6 +99,49 @@ qa_clean_df.to_csv(output_path, index=False)
 
 
 
+# ==============================
+# 2. Emotion_Recognition 
+# ==============================
+
+
+metadata_er = data_dir / "Emotion_Recognition.csv"
+er_df = pd.read_csv(metadata_er)
+
+
+import ast
+
+def build_prompt_er(row):
+    input_content = row["score"]
+    task = row["task_description"]
+
+
+    prompt = f"""Input:
+{input_content}
+
+Task:
+{task}
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:"""
+
+    return prompt
+
+
+er_df["prompt"] = er_df.apply(build_prompt_er, axis=1)
+
+
+er_clean_df = er_df.drop(columns = ["title","score", "choices", "target","task_description"])
+er_clean_df = er_clean_df.rename(columns={"target_index": "solution"})
+output_path = data_dir / "Emotion_Recognition_cleaned.csv"
+er_clean_df.to_csv(output_path, index=False)
+
+
+
+
+
 
 
 
