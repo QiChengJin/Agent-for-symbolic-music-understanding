@@ -91,7 +91,7 @@ Answer:"""
 qa_df["prompt"] = qa_df.apply(build_prompt_qa, axis=1)
 
 
-qa_clean_df = qa_df.drop(columns = ["title","score", "choices", "target","task_description"])
+qa_clean_df = qa_df.drop(columns = ["title", "choices", "target","task_description"])
 qa_clean_df = qa_clean_df.rename(columns={"target_index": "solution"})
 output_path = data_dir / "Metadata_QA_cleaned.csv"
 qa_clean_df.to_csv(output_path, index=False)
