@@ -1,0 +1,2177 @@
+prompt,solution
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:3/4
+L:1/4
+K:G
+e|:""G""d2B|""D""A3/2B/2c
+
+
+Options:
+0. ""G""d2B
+1. ""D""A2e
+2. ""D""A3/2B/2c
+3. ""G""B2G
+
+Answer:",3102
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:2/4
+L:1/4
+K:A|:""A""A ""E""c/4B/4A/4G/4|""A""A/2c/2 e/2a/2
+
+
+Options:
+0. ""E""g/2b/2 e/2d/2
+1. ,
+2. ,
+
+Answer:",213
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:D
+A/2|:""D""d/2c/2d/2e/2 fA|""G""Be ""A""cA
+
+
+Options:
+0. ""G""Be ""A""cA
+1. ""D""d/2c/2d/2e/2 f/2e/2d/2c/2
+2. ""D""d/2c/2d/2e/2 f/2e/2d/2c/2
+3. ""Em""Be ""A""aA
+
+Answer:",1320
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+f|:""G""g3/2a/2 ""D""gf|""G""gd2e
+
+
+Options:
+0. ""G""B"" Em""G2A/2B/2
+1. ""G""BG2A
+2. ""C""dc ""D""BA
+3. ,
+
+Answer:",21034
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:C|:""G7""ff ed|ff/2f/2 ed
+
+
+Options:
+0. cc AG
+1. ""C""c3/2A/2 G3/2A/2
+2. ""G7""ff ed
+3. f/2ff/2 ed
+
+Answer:",1023
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:A
+""A""EA/2B/2 E/2c/2B/2E/2|c/2B/2A c2|""A""EA/2B/2 E/2c/2B/2E/2
+
+
+Options:
+0. ""A""c/2B/2A ""E""B2
+1. c/2B/2A A2
+2. ""A""EA/2B/2 E/2c/2B/2E/2
+3. ""A""c/2e/2a a=G
+4. ""D""F/2A/2B ""A""A2:
+
+Answer:",12034
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:3/4
+L:1/4
+K:Bb|""Gm""[G2B2][Ac]|[Bd][Ac][GB]
+
+
+Options:
+0. [^F2A2][GB]
+1. [Ac][GB][FA]
+2. ""Gm""[G/2B/2][G/2B/2][GB][Ac]
+3. ""D""[A/2c/2][A/2c/2][Ac][Bd]
+4. [c3e3]
+
+Answer:",34012
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+P:A
+^G/2A/2^A/2
+P:B|:""G""B/2G/2B/2d/2 g/2d/2B/2G/2|""C""AA A2
+
+
+Options:
+0. ""D""A/2F/2A/2c/2 A/2e/2d/2c/2\
+1. ""G""B/2G/2B/2d/2 g/2d/2B/2G/2
+2. ""C""AA A2
+3. ""D""A/2F/2A/2c/2 A/2f/2e/2f/2
+4. ""G""BG G/2^G/2A/2^A/2
+
+Answer:",4123
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+P:A
+d
+P:B|:""G""gd/2g/2 B/2g/2d/2g/2|""Am""e/2d/2c/2d/2 ""D""e/2d/2e/2f/2
+
+
+Options:
+0. P:C
+1. :""G""B/2d/2G/2d/2 B/2d/2G/2d/2
+2. ""D""c/2e/2d/2c/2 ""G""B/2G/2G/2d/2:
+
+Answer:",3201
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:D
+""D""D/2d/4c/4d/2d/2 f/2d/2f|""D""a/2f/2a/4g/4f/4e/4 ""A""d/4c/4d/4e/4""D""d/2d/2|\
+""D""D/2d/4c/4d/2d/2 f/2d/2f
+
+
+Options:
+0. ""A""g/2g/2""D""f/2f/2 ""A""g/2g/2""D""f
+1. ,
+2. ,
+
+Answer:",2013
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:3/4
+L:1/4
+K:C
+G|:""C""c2c|""G""dcA
+
+
+Options:
+0. ""C""G/2c3/2E
+1. ""G""D3/2A/2G
+2. ""F""A3/2G/2F
+3. ""C""EGc
+
+Answer:",132
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:/f2Ideal for G/D melodeon/fP
+M:2/4
+L:1/4
+K:G
+f/2|:""G""g/2d/2 ""C""e/2f/4e/4|""G""d/2B/2 ""D""c/2d/4c/4
+
+
+Options:
+0. ""G""B/2G/2 ""D""A/2F/2
+1. ,
+2. ,
+3. ,
+4. ,
+
+Answer:",513204
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:E
+""E""eE (3G/2F/2E/2B/2G/2|c/2B/2G/2B/2 c/2B/2c/2d/2|c/2B/2G/2B/2 c/2B/2c/2d/2
+
+
+Options:
+0. c/2B/2G/2B/2 c/2B/2c/2d/2
+1. ,
+2. ,
+
+Answer:",1302
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:F
+[ac]|:""C""[g3/2B3/2][f/2 B/2 ][eB][dB]|""F""[c3/2A3/2][c/2 A/2 ][gA][cA]
+
+
+Options:
+0. ""F""[c3/2A3/2][c/2 A/2 ][gA][cA]
+1. ""F""[c3/2A3/2][c/2 A/2 ][fA][ac]
+2. ,
+
+Answer:",2130
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:C
+G/2|:""C""c/2d/2e/2c/2 ""F""A/2c/2F|""C""c/2d/2e/2c/2 ""G""B/2d/2d
+
+
+Options:
+0. K:G
+1. ""D""cA/2c/2 ""G""B/2d/2g/2d/2
+2. :""D""cA/2c/2 ""G""d/2B/2G/2B/2
+3. ,
+
+Answer:",34021
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:2/4
+L:1/4
+K:D
+A/2|:""D""A/2F/2 D/2A/2|""D""F/2A/2 D/2d/2
+
+
+Options:
+0. ,
+1. ,
+2. ,
+
+Answer:",3102
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:2/4
+L:1/4
+K:A
+""A""e3/4a/4 e/2d/2|""D""B3/4A/4 ""A"" B/2c/2|""Bm""d3/4c/4 ""A"" d/2e/2
+
+
+Options:
+0. ""A""c/2e/2 A/2e/2
+1. ""D""f/2g/2 a/2f/2
+2. ""A""A/2A/4A/4 A:
+3. ""A""e/2c/2 ""E""B/2c/2
+4. ,
+
+Answer:",451320
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:2/4
+L:1/4
+K:G
+B/2c/2|:""G""d3/4e/4 d/2B/2|""G""g B/2c/2
+
+
+Options:
+0. ""Em""g/2f/2 ""Bm""e/2d/2
+1. ""C""e/2d/2 ""D""c/2B/2
+2. ""Am""c/2 AB/4c/4\
+3. ""G""d3/4e/4 ""D""d/2B/2
+4. ""G""d3/4e/4 ""Em""d/2B/2
+
+Answer:",42301
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:/f2Play AABA last time/fP
+M:2/4
+L:1/4
+K:A
+""A""C/2C/4D/4 E/2E/4F/4|E/2E/4F/4 E/4D/4C/4D/4|E/2E/4F/4 E/2E/4F/4
+
+
+Options:
+0. ""A""C/2C/4D/4 E/2E/4F/4
+1. E/2E/4F/4 E/2D/2
+2. E/2E/4F/4 E/4D/4C/4D/4
+3. ,
+
+Answer:",30214
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:2/4
+L:1/4
+K:A
+""A""e3/4A/4 a3/4e/4|""D""f3/4e/4 d3/4c/4|""E""B3/4c/4 d3/4e/4
+
+
+Options:
+0. ""A""A3/2e/2:
+1. ,
+2. ,
+3. ,
+
+Answer:",31240
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:2/4
+L:1/4
+K:C
+(3a/4g/4f/4|:""C""e/2c/2 ""G""B/2d/2|""C""c3/2""F""F/2
+
+
+Options:
+0. ""G""B/2dg/4f/4
+1. ""C""e/2c/2 ""G""B/2d/2
+2. ""C""E/2G/2 ""D""A/2c/2
+3. ""C""E/2G/2 ""G""e/2B/2
+4. [1""C""c3/2 (3a/4g/4f/4:
+
+Answer:",205134
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:6/8
+L:1/8
+K:D
+""D""d3 DFA|""Em""e3 EGB|ede gfe
+
+
+Options:
+0. ""D""d3 DCD
+1. ede ged
+2. ""A""Ace ""D""d3:
+3. ""Em""e3 E^DE
+4. ""Em""dcB ""A""ABc
+5. ""A""cde ""Bm""def
+
+Answer:",403125
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:A
+""A""A/4A/4A/2A/2c/2 e/2c/2A/2c/2|""E""B/4B/4B/2G/2B/2 dc/2B/2|\
+""A""A/4A/4A/2A/2c/2 e/2c/2""E""d/2B/2
+
+
+Options:
+0. ""A""c/2e/2e/2f/4g/4 ae/2c/2
+1. a/2e/2c/2A/2 ""E""B/4B/4B/2B/2d/2
+2. ""A""c3/4e/4""E""B/2c/2 ""A""A/4A/4A/2A:
+
+Answer:",2013
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:""From A.Train's song""
+M:3/4
+L:1/4
+K:D
+P:A
+""D""a2f|d3/2e/2f|""G""B3/2c/2d
+
+
+Options:
+0. ""A""e3
+1. ""A""A2g
+2. ""D""f3/2e/2d
+3. ""E""B3/2c/2d
+4. a2A
+
+Answer:",12430
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:2/4
+L:1/4
+K:D
+""D""D/4A/4F/4A/4 ""G""D/4B/4G/4B/4|""D""D/2e/4f/4 ""A""g/4f/4f/4e/4|\
+""D""D/4A/4F/4A/4 ""Em""D/4e/4f/4g/4
+
+
+Options:
+0. ""D""F/2""A""E/2 ""D""D:
+1. ,
+2. ,
+3. ,
+
+Answer:",34210
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:3/4
+L:1/4
+K:G
+""G""e2d|B3/2A/2G|""Am""A2B
+
+
+Options:
+0. ""G""GBe
+1. E3
+2. ""C""A2B
+3. ""D""E2F
+
+Answer:",1230
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:/f2Can be played fast or sedate/fP
+M:4/4
+L:1/4
+K:G
+d2 B3/2d/2|""G""g3d|""C""e/2d/2c/2B/2 ""D""A/2e/2d/2c/2
+
+
+Options:
+0. ,
+1. ,
+2. ,
+3. ,
+4. ,
+
+Answer:",35214
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+B,C ^C|:""G""DB B^A/2B/2|BG D^D
+
+
+Options:
+0. ""A""EB B^A/2B/2
+1. B2 E=F
+2. ""G""BG ""Am""E_E
+3. BA2^A
+4. ""D""FB BA/2B/2
+
+Answer:",1432
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:3/4
+L:1/4
+K:C
+P:A
+""C""[C2E2][DF]|[E3G3]|""F""[F2A2][GB]
+
+
+Options:
+0. [d3f3]
+1. [A3c3]
+2. ""G""[B2d2][ce]
+3. ""C""[c2e2][df]
+
+Answer:",1203
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:6/8
+L:1/8
+K:G
+P:A
+D\
+P:B|:""G""Gz2""D""Az2|""G""B3 -B2d
+
+
+Options:
+0. ,
+1. ,
+2. ,
+3. ,
+
+Answer:",13402
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+P:A
+DE \
+P:B|:""G""G2 AG|ED EG
+
+
+Options:
+0. ""D7""=F2DE:
+1. [1""G""G3/2A/2 BG
+2. ""D""BA Bd
+3. B3/2d/2 gB
+4. ""G""dB ""D""cA
+5. ""C""e3/2f/2 ge
+
+Answer:",325410
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+d2|""G""G2A2 B2c2|""G""dd2d d2d2
+
+
+Options:
+0. ,
+1. ,
+2. ,
+
+Answer:",1230
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+(3fg^g|""D""a2a2 f2f2|""D""dA^GA B2A2
+
+
+Options:
+0. ""A7""cA^GA B2A2
+1. ""Em""g2g2 e2e2
+2. ""A7""cAce ba(3gfe
+3. ""D""dA^GA B2A2
+4. ""D""a2a2 f2f2
+
+Answer:",10432
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+d2|""G""D2EF G2B_B|""G""(3ABAGA Bd3
+
+
+Options:
+0. ""C""g2fe ""G""dBGB
+1. ""Am""AEFG ""D7""A2d2
+2. ""C""g2fe ""G""dBGB
+3. ""G""D2EF G2B_B
+4. ""G""(3ABAGA Bd3
+
+Answer:",1342
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+(3DFA|""D""B2AF A2Bc|""Bm""dcdF ""A7""G2FG
+
+
+Options:
+0. ""D""A2fe ""A7""dBAG
+1. ""D""B2AF A2Bc
+2. ""D""F2D2 ""A7""D4
+3. ""D""F2D2 ""A7""D2(3DFA
+4. ""Bm""dcdF ""A7""G2FG
+5. ""D""A2fe ""A7""dBAG
+
+Answer:",31452
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:ABACA
+M:4/4
+L:1/8
+K:G
+P:A
+(3Bdg|:""G""b2b2 gfge|""G""d2d2 B2G2
+
+
+Options:
+0. ""G""b2b2 gfge
+1. ""G""d2d2 B2G2
+2. ""G""ed^cd ""D7""B2(3Bdg
+3. ""D7""FGAB c2e2
+
+Answer:",3201
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+dB|""D""BAFA DAFA|""G""BA(3Bcd ""A7""e2de
+
+
+Options:
+0. ""D""fgaf ""A7/e""egfe
+1. ""D/f+""dfed ""G""B2dB
+2. ""D""BAFA DAFA
+3. ""G""BA(3Bcd ""A""e2de
+
+Answer:",123
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:C
+G2|:""C""c2ed c2GB|""C""c2GF E/2C3/2C2
+
+
+Options:
+0. ""C""c2ed c2GB
+1. ""Dm""d2AG F/2D3/2D2
+2. ""C""c2GF E/2C3/2CE
+3. ""Dm""defe d2A^c
+4. ""Dm""DEFG ABcA
+5. ""Dm""d2AG F/2D3/2D2
+
+Answer:",310245
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+(3DEF|""G""G2GB ""D7""D2(3DEF|""G""GFGA ""G7""B4
+
+
+Options:
+0. ""G""GFGA ""G7""B4
+1. ""D7""BcBA ""G""G2:
+2. ""A7""ABAG ""D7""E2(3DEF
+3. ""C""cBce ""G""dBGA
+4. ""G""G2GB ""D7""D2(3DEF
+5. ""C""cBce ""G""dBAG
+
+Answer:",524031
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+P:A
+E2|""A""A2A2 ""E7""AcBd|""A""c2c2 ""D""cedf
+
+
+Options:
+0. ""A""eagf ""E7""edcB
+1. ""A""ABcA ""E7""dBGE
+2. ""A""c2c2 ""D""cedf
+3. ""A""A2A2 ""E7""AcBd
+4. ""A""eagf edcB
+
+Answer:",41320
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+GA|""G""BGDB ""D7/a""cADc|""G""d^cde dBGF
+
+
+Options:
+0. ""C""E2cB ""Am""AGFG
+1. ""C""E2cB ""Am""AGFG
+2. ""A7""(3ABA(3GFE ""D7""D2dc
+3. ""G""BGDB ""D7/a""cADc
+4. ""G""d^cde dBGF
+
+Answer:",2341
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:Dm
+""Dm""D2DE DCA,C|""Dm""DCDE F2""C7""FA|""F""c2cd A2GF
+
+
+Options:
+0. ""Dm""E2""Gm""D2 ""Dm""D2
+1. ""Dm""D2DE DCA,C
+2. ""F""ABcA ""A7""GFEF
+3. ""C""ECCC C2""A7""FE
+4. ""Dm""DCDE F2""C7""FG
+
+Answer:",31420
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+A2|""D""DDFA ""G""BA(3Bcd|""D""DDFA d2(3cd^d
+
+
+Options:
+0. ""A""eAce ""D""faec
+1. ""D""ADFA ""G""BA(3Bcd
+2. ""A7""dedc ""D""d2:
+3. ""Em""(3efe(3dcB ""A7""(3ABA(3GFG
+4. ""D""DDFA d2(3cd^d
+5. ""A""eAce ""D""fe(3f^ga
+
+Answer:",531402
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+(3ABc|""D""dAFA ""G""GBAG|""D""FAFA ""G""GBAG
+
+
+Options:
+0. ""D""dAFA ""G""GBAG
+1. ""D""FDFD ""A7""GEGE
+2. ""D""FAFA ""G""GBAG
+3. ""D""FDFD ""A7""EA(3ABc
+4. ""D""d2f2 d2:
+5. ""D""FAdA ""A7""fedc
+
+Answer:",130254
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+BA|""G""(3GFGDG BGBd|""C""(3cBcAB ""D7""cdef
+
+
+Options:
+0. ""G""gdBG ""D7""FAdc
+1. ""G""B2G2 G2:
+2. ""Am""FGAB ""D7""cAFD
+3. ""G""(3GFGDG BGBd
+4. ""C""(3cBcAB ""D7""cdef
+5. ""G""g2df ""C""ecAG
+
+Answer:",523401
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:Am
+P:A
+E2|""Am""A2AB cBcd|""Am""efec ""G""d2cd
+
+
+Options:
+0. ""E7""B^GE2 E2(3E^FG
+1. ""Am""ea^ga ""E7""edcB
+2. ""Am""A^GAB cBcd
+3. ""Am""efec ""G""d2cd
+4. ""Am""edcB ABcA
+
+Answer:",40231
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+d2|""G""gfed edBd|""C""ed(3efg ""G""B2BA
+
+
+Options:
+0. ""Am""e2A2 ""D7""A2(3def
+1. ""Em""GFGA BABd
+2. ""C""ed(3efg ""G""B2BA
+3. ""G""gfed edBd
+4. ""G""GFGA ""D""BcBA
+5. ""Em""G2E2 E2:
+
+Answer:",103245
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+D2|:""G""G2BA B/2G3/2GB|""Am""A/2e3/2ed ""D""e/2A3/2AB
+
+
+Options:
+0. ""C""cdec ""G""BcdB
+1. P:B
+2. [2""Am""AcBA ""Em""G/2E3/2D2
+3. ""C""e/2a3/2ag ""D""a/2e3/2ef
+4. :""G""G2gf g/2d3/2dg
+
+Answer:",52143
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+dc|""G""BGDG BGDG|""G""(3gagfg ""C""e2dc
+
+
+Options:
+0. ""Am""dcB/2c3/2 ""D7""A2dc
+1. ""G""BGDG BGDG
+2. ""G""BGDG BGDG
+3. ""G""(3gagfg ""C""e2dc
+
+Answer:",1023
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+(3DEF|""G""GFGB ""D7""AGED|""G""GBdg ""C""e2""D7""(3def
+
+
+Options:
+0. ""G""GFGB ""D7""AGED
+1. ""G""gfgd ""Em""edBG
+2. ,
+
+Answer:",1203
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+(3ABc|""D""dcdf ""A7""ec(3ABc|""G""dBGB ""D""AFDF
+
+
+Options:
+0. ""Em""EGFA GBgf
+1. ""E7""edcB ""A7""AB(3cBA
+2. ""D""dcdf ""Em""e^deg
+3. ""D""f^efg afdA
+
+Answer:",123
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+AF|""D""DAFA DAFA|""D""defe dcBA
+
+
+Options:
+0. ""A""eAfA gAfA
+1. ""D""DAFA DAFA
+2. ""Em""edcB ""A7""AGFE
+3. ""D""defe dcBA
+
+Answer:",213
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+BA|""G""GBDG B,DGB|""G""dgBd GBAG
+
+
+Options:
+0. ""G""dgBd GBAG
+1. ""D7""ed^cd ed=cA
+2. ""G""GBDG B,DGB
+3. ""D7""AcFA DFAc
+
+Answer:",3120
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+fg|""D""abag f/2d3/2(3def|""G""gBed ""A7""c/2A3/2A2
+
+
+Options:
+0. ""D""abag f/2d3/2df
+1. ,
+2. ,
+3. ,
+
+Answer:",3124
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+P:A
+cd|""A""e2e2 c2cd|""A""e2e2 c2Bc
+
+
+Options:
+0. ""A""A2A2 a3a
+1. ""E7""d2d2 B2cB
+2. ""D""f2dB ""A""A2GA
+3. ""D""g2f2 ""A""e2dc
+4. ""E7""d2d2 B2Bc
+
+Answer:",41032
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+cd|""A""e2e2 c2cd|""A""e2e2 c2Bc
+
+
+Options:
+0. ""E7""d2d2 B2cB
+1. ""D""f2dB ""A""A2GA
+2. ""E7""d2d2 B2Bc
+3. ""A""A2A2 a3a
+4. ""D""g2f2 ""A""e2dc
+
+Answer:",20341
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+P:A
+cd|""A""e2ed cde2|""E7""""G""Bcdc Bcd2
+
+
+Options:
+0. ""A""cAEA cAc2
+1. ""E7""dBGB dBd2
+2. ""A""ABcA ""E7""""G""B2:
+3. ,
+
+Answer:",42301
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+P:A
+ed|""A""c2Ac ""D""d2Bd|""A""c2Ac ""E7""BGEd
+
+
+Options:
+0. ,
+1. ,
+2. ,
+
+Answer:",1023
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:AAB
+M:4/4
+L:1/8
+K:Em
+P:A
+B2|""Em""E2EF G2GA|""Em""B2B2 GFGA
+
+
+Options:
+0. ""Em""E4 E2:
+1. ""D""FGAF D2B,2
+2. ""Em""B2E2 EFGE
+3. ""G""BAGB d2dc
+4. ""Em""B2E2 ""D""GFED
+5. ""Em""EDEF ""C""GFGA
+
+Answer:",215340
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:AAB
+M:4/4
+L:1/8
+K:Em
+P:A
+B2|""Em""EDEF GFGA|""Em""B4 ""B7""GFGA
+
+
+Options:
+0. ""G""BAGB d2(3d^c=c
+1. ""Em""B2E2 EFGE
+2. ""Em""EDEF ""C""GFGA
+3. ""Em""B2E2 ""D""GFED
+4. ""D""FGFE D2B,2
+
+Answer:",14203
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+(3efg|""A""a2g2 a2A2|""D""fedf ""A""e2cA
+
+
+Options:
+0. ""A""EA""E7""GB ""A""Aceg
+1. ""E7""B2^A2 B2E2
+2. ""A""a2g2 a2A2
+3. ""E7""B2^A2 B2E2
+4. ""A""EA""E7""GB ""A""A4
+5. ""D""fedf ""A""e2cA
+
+Answer:",102534
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+AB|""A""c2^B2 c2B2|""A""c^Bcf ecAc
+
+
+Options:
+0. ""A""c^Bcf ecAc
+1. ""Bm""Bagf ""E7""edcB
+2. ""Bm""B2^A2 B2=a2
+3. ""Bm""B2^A2 B2A2
+4. ""A""c2^B2 c2B2
+
+Answer:",31402
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:AABBC
+M:4/4
+L:1/8
+K:D
+P:A
+de|""D""fgfe ""G""dedB|""D""AFAd ""A7""c/2e3/2e2
+
+
+Options:
+0. ""D""fgfe ""G""dedB
+1. ""D""A2(3FED F/2A3/2Ad
+2. ""A7""cdea ""D""f/2d3/2 :
+
+Answer:",231
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+AG|""D""FDFA dfaf|""G""gfec ""A""dcBA
+
+
+Options:
+0. ""Em""EDEF ""A7""GBAG
+1. ""G""G2BG ""D""F2AF
+2. ""G""gfec ""A""dcBA
+3. ""D""FDFA dfaf
+
+Answer:",1032
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+AG|""D""F2Ad fdAF|""G""G2Bd gdBG
+
+
+Options:
+0. ""D""F2Ad fdAF
+1. ""Em""E2GB ""A7""(3edcAG
+2. ""D""fafd ""A7""Bgec
+3. ""G""G2Bd g2ag
+4. ""D""F2Ad fdAF
+
+Answer:",41032
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:AAB
+M:4/4
+L:1/8
+K:G
+P:A
+B/2A/2|""G""G2G2 B/2d3/2dB|""C""cABG ""D7""AG(3FED
+
+
+Options:
+0. ""G""gabg ""D""agf/2d3/2
+1. ,
+2. ,
+
+Answer:",3210
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+ba|""G""gfge B2ed|""Am""cBcA E2AG
+
+
+Options:
+0. ""D7""FGAB cdef
+1. ""G""gfge ""Em""B2ed
+2. ""Am""cBcA E2AG
+3. ""G""(3gba(3gfe ""D7""d2ba
+
+Answer:",312
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+P:A
+D/2|C/2E3/2A3/2B/2 c/2B/2A/2G/2A3/2c/2|d3/2e/2f3/2e/2 d/2c/2B/2A/2G/2B3/2
+
+
+Options:
+0. C/2E3/2A3/2B/2 c/2B/2A/2G/2A3/2a/2
+1. a3/2A/2c/2d/2e f3/2a/2e3/2a/2
+2. f/2g/2a/2f/2ea cAA3/2:
+
+Answer:",231
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+dc|""G""B2BA BdBG|""C""c2cB cecA
+
+
+Options:
+0. ""G""dBGB ""D7""cAFA
+1. ""G""B2BA BdBG
+2. ""G""GBdf ""Em""gfge
+3. ""Am""d3e ""D7""dcBA
+4. ""C""cBcd efge
+
+Answer:",23140
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+dc|""G""B2BA (3Bcd(3BAG|""C""c2cB (3cde(3cBA
+
+
+Options:
+0. ""G""B2BA (3Bcd(3BAG
+1. ""Am""dcde ""D7""(3ded(3cBA
+2. ""C""(3cGc(3ece (3gfg(3age
+3. ""G""(3GDG(3BGB ""Em""(3dBd(3gfe
+
+Answer:",3102
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+GA|:""G""GEDE GAB2|""C""(3cBABG AGE2
+
+
+Options:
+0. ""G""dedB ""Em""AGE2
+1. ""G""Bdge dcB2
+2. ,
+3. ,
+
+Answer:",34201
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+(3DEF|""G""G2g2 gdBG|""C""c2e2 egfe
+
+
+Options:
+0. ""G""dBdg ""D7""ecAF
+1. ""G""dBdg ""C""edcB
+2. ""C""c2e2 egfe
+3. ""Am""ABcA ""D7""GFED
+4. ""G""G2g2 gdBG
+5. ""G""G2B2 G2:
+
+Answer:",134205
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+(3ABc|""D""dcdA FAdf|""Em""edcB ""A7""A2g2
+
+
+Options:
+0. ""Em""edcB ""A7""Agfe
+1. ""D""fgaf ""G""gfed
+2. ""Em""edcB ""A7""A2g2
+3. ""D""dcdA FAdf
+4. ""D""fgaf ""A7""bgec
+
+Answer:",10324
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+A2|""D""(3ABAFA f2d2|""D""(3ABAFA f2da
+
+
+Options:
+0. ""G""gfed ""A""c2cd
+1. ""D""(3ABAFA f2da
+2. ""E7""(3efe(3dcB ""A7""A4
+3. ""D""(3ABAFA f2d2
+
+Answer:",231
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:ABC
+M:4/4
+L:1/8
+K:D
+P:A|:ag|""D""fadf AdFA
+
+
+Options:
+0. ""D""DFAd f2ef
+1. ""Em""gbeg ceAF
+2. ""Em""gbge ""A7""cABc
+3. ""D""DFAd f2ef
+4. ""A7""GABG E2ag
+5. ""D""fadf AdFA
+
+Answer:",14532
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+de|""D""fA(3AAA f2ef|""G""gB(3BBB g2ag
+
+
+Options:
+0. ""D""fgaf ""A7""gecd
+1. ""D""fA(3AAA f2ef
+2. ""Em""gBed ""A7""dcde
+3. e2d2 d2:
+4. ""D""fA(3AAA f2ef
+5. ""G""gB(3BBB g2ag
+
+Answer:",421503
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:F
+P:A
+(3FED|""F""CAGF CAGF|""Bb""(3DEDGB ""G7""d4
+
+
+Options:
+0. ""F""CAGF CAGF
+1. ""F""(3FAG(3FED ""C7""C4
+2. ""C7""c_cBG AGDE
+3. ""C7""c_cBG AGDE
+4. ""F""F2A2 F2:
+5. ""Bb""(3DEDGB ""G7""d4
+
+Answer:",310524
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+Bc|""G""dgfe dcBA|""G""GBDG B2(3BAG
+
+
+Options:
+0. ""G""GBDG B2AG
+1. ""G""GBDG ""D7""B2Bc
+2. ""G""dgfe (3ded(3cBA
+3. ""D7""FADF A2(3AGF
+
+Answer:",3120
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+FG|""D""(3ABAFA dfaf|""G""gaba gfed
+
+
+Options:
+0. ""A7""ABGA FFG^G
+1. ""Em""cded cdBc
+2. ""D""(3ABAFA dfaf
+3. ""G""gaba gfed
+
+Answer:",1023
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+ag|""D""f/2d3/2d2 A/2d3/2d2|""D""fdaf d2ef
+
+
+Options:
+0. ""D""fdaf d2(3fga
+1. ""A7""cAec A2ag
+2. ""D""f/2d3/2d2 A/2d3/2d2
+3. ""Em""g/2e3/2e2 c/2e3/2e2
+
+Answer:",3120
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+A2|""D""d2d2 d2d2|""A7""cdec ""D""d3e
+
+
+Options:
+0. ""D""f2f2 ""Bm""f2f2
+1. ""Em""efge ""A7""cABc
+2. ""D""defg ""D7/c""a4
+3. ""A7""efge ""D7""f4
+4. ""G""gabg ""A7""e2e2
+5. ""D""fgaf ""Bm""d4
+
+Answer:",34512
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:AAB
+M:4/4
+L:1/8
+K:D
+P:A|:fe|""D""dcdB A2GF
+
+
+Options:
+0. ""G""EEFG ""A7""A2Bc
+1. :de
+2. P:B
+3. ""D""d2f2 d2:
+4. ""D""f2f2 ""Bm""f2gf
+5. ""D""dBAA ""A7""ddec
+
+Answer:",53214
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+D2|""G""(3GED(3GAB ""D7""(3AFD(3ABA|""G""(3GBd(3gfg ""C""(3agf(3edc
+
+
+Options:
+0. ""G""(3GFE(3DEF (3GDB:
+1. ""G""(3GED(3GAB ""D7""(3AFD(3ABA
+2. ""G""(3Bcd(3BAG ""D7""(3ABc(3AGF
+3. ""G""(3Bcd(3BAG ""D7""(3ABc(3AGF
+4. ""G""(3GBd(3gfg ""C""(3agf(3edc
+5. ""G""(3GFG(3AGF ""D7""(3GFE(3DEF
+
+Answer:",351420
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+D2|""G""GDGB ""D7""AGAB|""G""G2gf ""C""gedc
+
+
+Options:
+0. ""G""G2gf ""C""gedc
+1. ""G""(3BcdBG ""D7""(3ABcAF
+2. ""G""GFGA ""D7""GFED
+3. ""G""GDGB ""D7""AGAB
+
+Answer:",1230
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:Am
+P:A
+(3G_GF|""E7""E2e2 _e2d2|""Am""cBAB c2BA
+
+
+Options:
+0. ""E7""E2e2 _e2d2
+1. ""E7""^GEGB eBGE
+2. ""Am""cBAB ""F""c2BA
+3. ""Am""AEAc ecAc
+
+Answer:",1302
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+(3def|""G""gdBd GB(3def|""G""gdBd G2AB
+
+
+Options:
+0. ""C""ed^cd ""D7""B2(3def
+1. ""Am""cAFA ""D""DFAc
+2. ""G""gdBd GB(3def
+3. ""G""gdBd G2AB
+
+Answer:",1023
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+GA|""Em""BcAB GAFG|""Em""EFGA B2ef
+
+
+Options:
+0. ""Em""gfed ""G""edBd
+1. ""Em""BcAB GAFG
+2. ""Em""EFGA B2ef
+3. ""Am""cBAG ""B7""A2GA
+
+Answer:",312
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+P:A
+cB|""A""AGAc ecAc|""D""dcdf ""A""ecAc
+
+
+Options:
+0. ""A""AGAc ecAc
+1. ""Bm""B2Bc ""E7""BdcB
+2. ""D""d2(3fed ""A""c2a2
+3. ""A""agaf ""E7""edcB
+4. ""D""dcdf ""A""ec(3Ace
+
+Answer:",21043
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+FE|""D""D2FA d2dc|""G""BGBd ""D""A2Ad
+
+
+Options:
+0. ""A""c2ce ""D""d2df
+1. ""D""D2FA d2dc
+2. ""Em""ecdB ""A7""AFGE
+3. ""G""BGBd ""A7""cAce
+4. ""G""BGBd ""D""A2Ad
+
+Answer:",2143
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+(3DEF|""G""G2F2 E2D2|""D7""ABcA ""G""dBG2
+
+
+Options:
+0. ""C""e/2g3/2g2 ""G""d/2g3/2g2
+1. ""A7""ABAG ""D7""FAd2
+2. ""C""e2d2 ""Am""c2B2
+3. ""G""G2F2 E2D2
+4. ""Am""G2""D7""F2 ""G""G2
+5. ""D7""ABcA ""G""dBG2
+
+Answer:",213504
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+(3def|""G""g2bg d2gd|""G""BcdB G2AB
+
+
+Options:
+0. ""D7""FGAB cdef
+1. ""G""BcdB G2AB
+2. ""G""g2bg d2gd
+3. ""C""c2ec ""Am""A2cA
+
+Answer:",3021
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+P:A
+dc|""G""BgdB ""D7""AecA|""G""GdBG ""D7""FcAF
+
+
+Options:
+0. ""G""GdBG ""D7""FcAF
+1. ""A7""^cded ""D7""fed=c
+2. ""G""GDEF GABc
+3. ""G""GDEF GABc
+4. ""G""BgdB ""D7""AecA
+
+Answer:",31402
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:D
+P:A
+FG|""D""A2A2 ""G""B2B2|""D""A^GAd f2df
+
+
+Options:
+0. ""D""A2A2 ""G""B2B2
+1. ""D""A^GAd f2df
+2. ""D""ddfd ""A7""BGFG
+3. ""A7""e^def g2e2
+
+Answer:",3201
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:A
+P:A
+e2|""A""ABcd ecae|""D""fgaf ""A""ecae
+
+
+Options:
+0. ""D""fagf ""E7""edcB
+1. ""A""ABcd ecae
+2. ""D""fgaf ""A""ecae
+3. ""D""fgaf ""A""ecAc
+4. ""B7""BAGF ""E7""E2(3EFG
+
+Answer:",34120
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G
+(3DEF|""G""(3GGGG2 (3GGGG2|""G""BGBd gdBG
+
+
+Options:
+0. ""D""d2d2 ""D7""d2 c2
+1. ""G""(3GGGG2 (3GGGG2
+2. ""D""fafd ""A7""ege^c
+3. ""G""BGBd g2ag
+4. ""D7""(3DDDD2 (3DDDD2
+5. ""D7""FDFA dAFD
+
+Answer:",451320
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/8
+K:G|:""G""GABc d2d2|""C""cBcA ""D""d2d2
+
+
+Options:
+0. ""G""GABc d2d2
+1. ""C""cBcA ""D""d2d2
+2. ""Am""AGFG ""D""A2d2
+3. ""C""cBAA ""G""BAGG
+
+Answer:",3201
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:6/4
+L:1/4
+K:D
+P:A
+af|""D""d3 ccd|""G""BG ""D/a""A2 ""A7""AB/2c/2
+
+
+Options:
+0. ,
+1. ,
+2. ,
+3. ,
+4. ,
+
+Answer:",352401
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+Q:1/4=180
+D|:""G""GB/2c/2 ""D7""de/2f/2|""G""ga ""Em""b2
+
+
+Options:
+0. ""G""gd ""D7""d/2e/2d/2c/2
+1. ""G""B2 G2:
+2. ,
+
+Answer:",123
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+P:A
+D|g2 fe|d2 eF/2G/2
+
+
+Options:
+0. ,
+1. ,
+2. ,
+
+Answer:",2103
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:A(AB)4
+M:4/4
+L:1/4
+K:G
+P:A
+D|""G""GG ""D7""G/2F/2E/2D/2|""G""GA/2B/2 ""C""cB/2c/2
+
+
+Options:
+0. ""G""GA/2B/2 ""C""cB/2c/2
+1. ""G""GG ""D7""G/2F/2E/2D/2
+2. ""G""dd ""D7""A/2c/2B/2A/2
+3. ,
+
+Answer:",43102
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:A(ABBB)2(ACCC)2B
+M:6/8
+K:D
+P:A
+""D""dcd f2e|""G""d2B BdB|""D""ABA d2e
+
+
+Options:
+0. ""G""d2B BdB
+1. ""D""fdd ""A7""d2A
+2. ""D""dcd f2e
+3. ""D""ABA d2e
+4. ,
+
+Answer:",120354
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:A(AABB)(AACC)
+M:4/4
+L:1/4
+K:Gm
+P:A
+G/2A/2|""Gm""BB Gf|""Gm""dc/2B/2 ""F""cc
+
+
+Options:
+0. ""Gm""BG G:
+1. ,
+2. ,
+3. ,
+
+Answer:",40132
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+P:AB
+M:4/4
+K:D
+M:4/4
+L:1/4
+P:A
+D/2E/2|""D""F/2G/2F/2E/2 Dd|""D""F/2G/2F/2E/2 Dd
+
+
+Options:
+0. ,
+1. ,
+2. ,
+
+Answer:",3201
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:F
+P:A
+D/2E/2|""Dm""F/2G/2F/2E/2 Dd|""Dm""AA ""C""G""Dm""A
+
+
+Options:
+0. ,
+1. ,
+2. ,
+3. ,
+
+Answer:",21034
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:A(ABB) times 4
+M:4/4
+L:1/4
+K:D
+P:A
+(3A/2B/2c/2|""D""d/2c/2d/2e/2 d(3E/2F/2G/2|""D""A/2B/2A/2F/2 D(3A/2B/2c/2
+
+
+Options:
+0. ""D""A/2B/2A/2F/2 D(3E/2F/2G/2
+1. ""D""f/2d/2""A7""e/2c/2 ""D""d
+2. ""Em""f/2e/2e/2d/2 ""A7""e/2g/2f/2e/2
+3. ,
+4. ,
+
+Answer:",324051
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:(ABB)4
+M:4/4
+L:1/4
+K:Bb
+P:A
+F|""Bb""B3/2B/2 ""Eb""Bc|""Bb""B2 ""F7""FF
+
+
+Options:
+0. ,
+1. ,
+2. ,
+
+Answer:",2301
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+P:A
+G/2A/2|""Em""B/2c/2B/2G/2 EF/2G/2|""D""A/2c/2A/2F/2 DG/2A/2
+
+
+Options:
+0. ""D7""DG ""G""G:
+1. ,
+2. ,
+
+Answer:",3012
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+d|""G""g/2f/2g/2e/2 dg|""Am""a/2g/2f/2e/2 ""D""d2
+
+
+Options:
+0. ""D""a/2g/2f/2e/2 d2
+1. ""C""a/2g/2f/2e/2 ""D""d2
+2. ""C""c
+3. ,
+4. /2b/2a/2g/2 ""D7""f/2d/2e/2f/2
+5. ,
+
+Answer:",205134
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+B/2c/2|""G""dd de|d3c
+
+
+Options:
+0. ,
+1. ,
+2. ,
+3. ,
+4. ,
+
+Answer:",134250
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+P:A
+d/2c/2|""G""B""D""A ""G""Gd/2c/2|""G""B""D""A ""G""Gg
+
+
+Options:
+0. ,
+1. ,
+2. ,
+3. ,
+4. ,
+
+Answer:",324105
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:Gm
+P:A
+d/2c/2|""Gm""B""D""A ""Gm""Gd/2c/2|""Gm""B""D""A ""Gm""GB/2d/2
+
+
+Options:
+0. cB AG
+1. ""Bb/d""F/2G/2F/2D/2 Bd/2c/2
+2. ,
+3. ,
+
+Answer:",42013
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:Am
+P:A
+e/2d/2|""Am""cB/2c/2 Ae/2^f/2|""Am""e/2d/2c/2B/2 A/2c/2e
+
+
+Options:
+0. ""G""Bg BG
+1. ,
+2. ,
+3. ,
+4. ,
+
+Answer:",210543
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+P:A
+G/2A/2|""G""BA BG|""Am""AA A2
+
+
+Options:
+0. ""G""B/2c/2d ""C""ef
+1. ,
+2. ,
+3. ,
+
+Answer:",43021
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+d|:""G""B/2d/2d/2g/2 g/2d/2d/2g/2|""C""g/2e/2""D7""d/2c/2 ""G""BG:
+
+
+Options:
+0. ,
+1. ,
+2. ,
+
+Answer:",1302
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+e|:""G""dB ""C""A3/2E/2|""C""EE ""G""D3/2D/2
+
+
+Options:
+0. ""C""AE ""G""D3/2D/2
+1. ""G""GB AG
+2. ""G""dB ""C""A3/2G/2
+3. ""D""A2 ""C""e2
+
+Answer:",1320
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+d|""G""gd ""D7""de/2f/2|""G""gd ""D7""de/2f/2
+
+
+Options:
+0. ""G""gd ""D7""dc
+1. [1""G""B2 G:
+2. [2""G"" B2 G2
+3. :""C""ce ed/2c/2
+
+Answer:",123
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:3/4
+L:1/4
+K:C
+P:A
+A/2B/2|cGE|C3/2D/2E
+
+
+Options:
+0. F3/2G/2A
+1. BGB
+2. cGE
+3. FAd
+
+Answer:",3120
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+M:4/4
+L:1/4
+K:G
+d3/2d/2|""G""ed dB|""C""c2 d3/2c/2
+
+
+Options:
+0. ""D7""D2 d3/2d/2
+1. ""G""cB AG
+2. ,
+3. ,
+4. ,
+
+Answer:",134520
+"
+Task:
+Given the initial three bars and a shuffled list of the remaining bars, output the indices in the correct sequence. Return only the 0-indexed positions from the shuffled list as a concatenated string. For instance, if the shuffled list is [Bar A, Bar B, Bar C, Bar D], and the correct order is B → D → A → C, output ‘1302‘ 
+Input:
+N:A(ABBB)(ACCC)A
+M:6/8
+K:G
+P:A
+g|""C""gfe ede|""C""edc cBc
+
+
+Options:
+0. ""C""edc cBc
+1. ""C""gfe ede
+2. ""G""dBg dBG
+3. ""G""dBG ""D7""DAF
+4. ""Am""FAA ""D""A2g
+
+Answer:",24103

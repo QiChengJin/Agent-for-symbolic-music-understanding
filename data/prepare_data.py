@@ -140,18 +140,106 @@ er_clean_df.to_csv(output_path, index=False)
 
 
 
+# barsequence = data_dir / "Bar_Sequencing.csv"
+# bs_df = pd.read_csv(barsequence)
+
+
+# def build_prompt_bs(row):
+#     input_content = row["input"]
+#     task = row["task_description"]
+
+
+#     prompt = f"""Input:
+# {input_content}
+
+# Task:
+# {task}
+
+# Options:
+# there are {len(row["choices"])} bars: 
+# {row["choices"]}
+
+# Answer:"""
+#     return prompt
+
+# bs_df["prompt"] = bs_df.apply(build_prompt_bs, axis=1)
+
+
+# bs_clean_df = bs_df.drop(columns = ["title","input", "choices", "target_index","task_description"])
+# bs_clean_df = bs_clean_df.rename(columns={"target": "solution"})
+# output_path = data_dir / "Bar_Sequencing_cleaned.csv"
+# bs_clean_df.to_csv(output_path, index=False)
 
 
 
 
+import pandas as pd
+import re
+
+barsequence = data_dir / "Bar_Sequencing.csv"
+bs_df = pd.read_csv(barsequence)
 
 
+def parse_choices(choices_str: str):
+    """
+    把像 ['""G""d2B', '""D""A2e', '""D""A3/2B/2c', '""G""B2G']
+    这种字符串解析成一个 list:
+    ['""G""d2B', '""D""A2e', '""D""A3/2B/2c', '""G""B2G']
+    不用 literal_eval，避免因为引号/反斜杠炸掉。
+    """
+    s = choices_str.strip()
+
+    # 先尝试用单引号括起来的 item 解析
+    items = re.findall(r"'(.*?)'", s)
+    if items:
+        return [x.strip() for x in items]
+
+    # 如果没有单引号，就尝试双引号
+    items = re.findall(r'"(.*?)"', s)
+    if items:
+        return [x.strip() for x in items]
+
+    # 实在不行，就当成一个整体（极端 fallback）
+    return [s]
 
 
+def build_prompt_bs(row):
+    input_content = row["input"]
+    task = row["task_description"]
+
+    # 解析 choices
+    choices_list = parse_choices(row["choices"])
+
+    # 编号形式：0., 1., 2., ...
+    options_text = "\n".join(
+        f"{i}. {bar}"
+        for i, bar in enumerate(choices_list)
+    )
+
+    # 这里只负责组织 input/task/options，格式要求你之后再 concat
+    prompt = f"""
+Task:
+{task}
+Input:
+{input_content}
 
 
+Options:
+{options_text}
+
+Answer:"""
+
+    return prompt
 
 
+# 构建 prompt 列
+bs_df["prompt"] = bs_df.apply(build_prompt_bs, axis=1)
 
+# 只保留 prompt + solution
+bs_clean_df = bs_df[["prompt", "target"]].rename(columns={"target": "solution"})
 
+# 输出 clean CSV
+output_path = data_dir / "Bar_Sequencing_cleaned.csv"
+bs_clean_df.to_csv(output_path, index=False)
 
+print("Clean file saved →", output_path)
