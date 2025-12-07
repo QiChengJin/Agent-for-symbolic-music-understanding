@@ -3,8 +3,8 @@ from inference_auth_token import get_access_token
 import pandas as pd
 from scipy.stats import kendalltau
 import re
-# model_name = "google/gemma-3-27b-it"
-model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+model_name = "google/gemma-3-27b-it"
+# model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 df = pd.read_csv("data/Metadata_QA_cleaned.csv")
 
 
@@ -84,3 +84,11 @@ accuracy = correct / len(df)
 print("\n===========================")
 print(f"Model: {model_name}")
 print(f"Accuracy: {accuracy:.4f}")
+
+df["pred"] = predictions
+
+# 写出 CSV
+output_path = "metadata_QA_gemma_baseline_results.csv"
+df.to_csv(output_path, index=False)
+
+print(f"Saved predictions to {output_path}")
