@@ -1,0 +1,579 @@
+solution,prompt,agent_answer
+1,"Input:
+X:1
+M:3/4
+L:1/16
+K:Dm
+[D,0d0F0D,,0][dF][dF] [d2F2][D,0c0][d0D0A,0F0][d2F2][d0F0] | [c2F2][c0B,,0B,,,0F0][cF] [cF][c2F2][F0c0B,0B,,0][C0F0c0]B,0<[c0F0] | [A,0d0F0][c2F2] [G,,0C,,0c0] G2[c2G2]d2[C,5c5G,5G5] |C3[A,,,0A,,0][A0A,0e0][A2e2] [e2A2][e0A0A,,,0A,,0]< [e0E,0A,0] |[d2G2][A,,2A,,,2e2]A2Ac[D,,0d0A,,0] d2d2 [c2D,2] |
+[d0A,0D0A0][G2c2][D,0A0d0]d2 [B,,,0B,,0]< [B0f0]f2 [f0F,0] |f2[B,0B0f0]g2[D0f0] f2[C,0C,,0G0e0][e2G2] |e2[G2C,2][C,0e0G0C,,0] [e2G2C2]G,2c2 [C,0c0]c2[A,,,0A,,0a0]^c2 |[^c0g0][c2a2] [A,,0c0g0]<[A,0a0c0E,0][c0g0]f2 |
+[D,,7A,,7] [d0A0] [D,2D,,2A,,2]d2 d |de[f0B,,0B0B,,,0]f2f2 [f2B,,2][f0B0B,0F,0B,,0] g2 |[B,,0f0]f2[C,0C,,0][e2G2][e2G2] [e2G2][e2C,2G2][e0G0C0G,0] |[eG][C,0C,,0e0G0] [eG]e[A,,,0A,,0]<[e0A0] e2e2[e0A,,0] |
+[e2A2A,2E,2]c2 [c0A,,0]c2 [f0D,,0A0A,,0][A2A,2f2][A0A,0f0] |[D,0A0f0][A0f0A,0D0] [A2f2]D,2d2 d2[B,,2B,,,2][d0B,0F0] |[d2F2][B,,0d0F0]< [d0B,0F0F,0][c0F0] B,,[d2F2][E0c0C,,0] [cE] |[Ec][c2E2G,2] [c0E0G,0]<C0[E2c2][cE]=B,0D2[c36E36] |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding in close proximity, and there are frequent leaps and changes in register throughout the piece. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in the later sections. There is continuous motion with limited sustained tones and frequent leaps across registers, creating a sense of energy. The texture is often dense, with multiple notes sounding in close proximity, further contributing to the high arousal level. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in the later sections. There's a continuous flow of motion with limited sustained notes and frequent leaps between registers, creating a sense of energy. The texture is often dense, with multiple notes sounding in close proximity, further contributing to the high arousal level.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent dissonances and unstable harmonic movement, particularly with the use of diminished chords and chromatic passing tones. The melodic contour is largely descending or static, creating a sense of weight and resignation, and the register remains consistently in the lower to mid range, contributing to a dark and somber character. These elements combine to create a generally tense and gloomy atmosphere. | The piece features frequent dissonances and unstable harmonic movement, particularly with the use of diminished chords and chromatic passing tones. The melodic contour often descends or remains static in low registers, contributing to a sense of heaviness and gloom. While there are some upward gestures, they are often brief and followed by downward motion, preventing a sustained feeling of brightness. | The harmony is largely dissonant and unstable, with frequent chromaticism and unresolved tensions created by the use of accidentals and passing tones. The melodic contour is often descending or static, lacking significant upward motion, and the register frequently dwells in the lower ranges, contributing to a dark and weighty feel. These features combine to create a sense of unease and sadness.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+0,"Input:
+X:1
+M:3/4
+L:1/16
+K:Am
+[E,E,,] [E,E,,][E,2E,,2][E0^C0A,0A0][A,,2A,,,2][C,2C,,2][A,,2A,,,2] |[f0A0a0F,,0][F,,,4^c4][F,,F,,,]F,,,F,, [F,,F,,,][A0f0F,,0a0F,,,0=c0] [F,,2F,,,2] |[F,,3F,,,3][_B,,0B,,,0f0B0]^c3 F,,3[B,2B,,2B,,,2] |[_B,,3^C3F3B,,,3] [B3B,3C3B,,3] B,,,2[C3c3B,,3B,,,3B3][^G0e0E,0E,,0=B0]G3 |B,,2[E,E,,] [E,E,,][B0E0^G0][E,,3E,3] [G,,G,]G,,2[E,3E,,3] |
+[c0F0^G0F,,0]F,,,5C,,2 [F,,2F,,,2][F,,,0F,,0=g0][c4^G4] |[F,,,5F,,5][^C,0^G0C,,0g0]c3C,C, | ^C,,[C,^g][C,,0c0]C,0<g0[G,,0G0]c2 [C,0C,,0g0G0c0][C,3C,,3][C,4C,,4] |[F,,0a0F,,,0A0][f2c2]>F,,,2[fF,,]F,,,f [F,,A]fF,,,A0F,,2f[F,,,A]f0 [a3A3] [c3F,,3] |
+F,,,3[F,,0F,,,0a0][A3c3][F,,4F,,,4][B,,0B,,,0b0B0][^f4^d4] |B,,,B,, B0 B,,,^f^d0[B,,B][fB,,,b]dBB,,0[F,,0b0] [d2f2]< [f2b2B2d2] [B,,3B,,,3] [d4b4f4B4] [B,,3B,,,3] |[^f2^d2b2B,,2B2B,,,2]E,,2[A,,0A,,,0A0a0=d0][A,A,,]D, E,0 | [A,,A,,,]A,0A,,0D[A,,,0E0]<A0A,,0d ea0E,,0d'e'[a'0A,,0A,,,0]e'd' aedAED |
+A,A,,,0[E,D,]A,,D,2 E,A,DEA,,Ad e [aA,,,]d'E,,e'[A,,0a0a'0A,,,0e'0^c'0]A,, |A,,,a0A,,e'A,,,a[e'0A,,0] a A,,,a'A,,a0A,,,a'[aA,,][A,,,a'] a A,, a'A,,,0[^c'a]A,,a'A,,,aA,,0[a'0c'0][A,,,a] | [A,,0a'0]<a0A,,,0a'[^c'0a0]E,,2A,,,45 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding together, and there are frequent leaps and a wide registral range throughout the piece, particularly in the melodic lines. | The score features a high rhythmic density with many sixteenth notes and rapid figurations, particularly in the later sections. There’s continuous motion with few sustained notes, and frequent leaps across a moderate range contribute to a sense of energy and activity. The texture is often quite dense, with multiple notes sounding in close proximity. | The score features a high rhythmic density with many sixteenth notes and rapid figurations, particularly in the ornamented sections. There is continuous motion with few sustained notes, and frequent leaps across registers, contributing to a sense of energy and activity. The texture is often dense, with multiple notes sounding in close proximity, further enhancing the high arousal level.
+
+Valence Classification: LOW
+  Reasoning: The piece features predominantly descending melodic lines and a heavy emphasis on the lower register, creating a somber feel. The harmony relies on repeated, somewhat tense patterns with frequent chromaticism, and lacks clear resolution, contributing to a sense of unease. While there are occasional upward gestures, they are overshadowed by the overall downward contour and dark harmonic color. | The piece features consistently descending melodic lines and a heavy focus on the lower register, creating a dark and somber feel. The harmony relies on repeated, unresolved patterns and frequent dissonances, particularly with the use of accidentals, contributing to a sense of tension. While there are occasional upward gestures, they are quickly followed by downward motion, reinforcing the overall low valence. | The piece features frequent dissonances and unstable harmonic movement, particularly with chromatic alterations and unresolved tensions. The melodic contour is largely descending or static in the low register, creating a sense of weight and gloom, and the consistent focus on the lower octaves contributes to a dark and somber quality. While there are some upward gestures, they are often brief and do not establish a sense of brightness or uplift.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+0,"Input:
+X:1
+M:3/4
+L:1/16
+K:Bbm
+[f0B,0F0B,,0B0d0][B0b0D,0]< [A,0A,,0B0d0]f2[G,,0F0] |FB0[d0F,,0]f3 [D,2F2][F,0F,,0b0]B2[B0F,,0F,0f0d0] [G3g3] |[F,2a2A2][b0D,0B0][F,3c3F,,3]b3[E,0c0c'0E,,0] | E,3c2[f0B,,0][d0a0d'0f0]E,2 [B,,2d2][a0E,0A0] |[d0B,,0][a3E,3][A,,0A0A,,,0g0] A,,3A2[E,0a0A0e0A,,0]=A2 |
+A,0[g3G3] [=a2A2c2][e0_A,0]A,,3[E,,3E3=A,3] [_A,,3C3A,,,3] |[B,0G,,0G,,,0D0][G,,0G,,,0]G,2 B,2[G,0D,0D0] |G,2B,3[D2D,2] [B,G,,A][B,2A2][B,2F,,2A2] |[D,0D0]<[D0F0B,0] F,2[b0D0B0][c2D2] D, |
+[c2D2]F,2[E3e3F,,3] [E,0e0B0E,,0]E,3 |[B,0g0]G2E3[f0G0] [G3=e3] B,,2[f2_E,2] |[E,,2g2]df0[A,,,0A,,0] a2A,,3E,2G,3 |E2 G3g3b2gb c'0 |
+e'24 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations. There's continuous motion with few sustained notes and frequent leaps between notes, especially in the melodic lines. The texture is quite dense, with many notes sounding together, contributing to a sense of energetic activity. | The score features a high rhythmic density with many 1/16 notes and rapid figurations. There is continuous motion with few pauses, and the texture is often dense, with multiple notes sounding simultaneously, especially in the chords. The melodic lines also exhibit frequent leaps and a wide range, contributing to a sense of energy. | The score features a high rhythmic density with many 1/16th notes and rapid figurations. There is continuous motion with little silence, and frequent leaps and interval jumps are present throughout the melodic lines, creating a sense of energy. The texture is often dense, with multiple notes sounding close together in time.
+
+Valence Classification: LOW
+  Reasoning: The piece features predominantly dark harmonic color with frequent use of diminished and minor intervals, especially given the key of Bbm. The melodic contour often descends or remains static in the lower register, creating a sense of weight and sadness, and there's a limited use of bright, high-register activity to offset this darkness. While there are some upward gestures, they are often brief and followed by descending phrases, contributing to an overall feeling of tension and gloom. | The piece features predominantly dark harmonic color with frequent chromaticism and diminished intervals, creating a tense atmosphere. The melodic contour is largely descending or static, with few soaring gestures, and the register is heavily focused on the lower range, contributing to a sense of weight and gloom. While there are occasional upward movements, they are often brief and do not overcome the overall sense of darkness. | The piece features predominantly dark harmonic color with frequent use of diminished and minor intervals, particularly noticeable in the opening and throughout. Melodic contours often descend or remain static in the lower register, creating a sense of weight and gloom. The focus remains largely in the lower and mid-low registers, contributing to a consistently dark and somber feel, despite occasional upward gestures.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+0,"Input:
+X:1
+M:3/4
+L:1/16
+K:D#m
+[a3A3][g3G3][f2F2] [E3e3c3][D,,,0D,,0c0][E0e0] |[ADd] [F,0D,0A,0]<[d0A0D0] [D,2D,,2]<[a2A2] [g3G3] |[f2F2A,2d2D,2]D2[g3G3c3][G0g0c0C,,0][e4C,4][Gec] |[G,0E,0C0C,0][G0c0C0][C,,0C,0][G0g0c0e0]< [f0c0F0][e0c0C0E,0][C,0E0G,0] |[f3F3C,3c3C,,3] [A,,0g0A,,,0G0c0][G3c3g3] [G0G,0A,,0][ecE][A,A,,][E0e0A,,0A,0c0] [A,0A,,0] |
+E,,2[A,,0A,,,0C0c0][A0c0C0][A,,0G,0] [A2A,2][g3A,,3G3A,,,3] |[B,,0f0B,,,0F0][FdB]F,0<[D,0B,0]B,,2[F0B0][B,,0B,,,0][a3A3] |[g2G2] [F,3B,3] B,,3 [f2F2][e3c3E3][C,2C,,2C2][D,,,0D,,0][c0E0e0] |[d0D,,0A0D,0D0][A,0D,0F,0D,,0][A0D0]d[D,D,,] [a0A0][g3G3] |
+[f2F2A,2][D,2A2][G3g3] [C,3C,,3c3][C,,0C,0G0g0][e4c4][e0G0]c2<[G,2E,2C2] |Gc[C,0C,,0] [c0g0G0] e2[F0f0c0][c0E0e0C0G,0][C,0E,0] [F3f3C,3c3] [d3C,,3] |[G0g0A,,0c0A,,,0]< [c0g0G0][A,G,A,,] [ceE][c0e0E0A,0]A,,E,, |[A,,0c0A,,,0C0G0][C0c0G0]<[A,0A,,0G,0]G[A,0A0A,,0]< [g0G0A,,0^^c0A,,,0][B,,0B,,,0f0F0] |
+[F0B0] F,0< [B,0D,0] B,,2F [B,,2B,,,2]<A2 G2 |[F,3B,3]F3[D0d0D,0][dD]D,0A,0 [d'd][d'd][d2d'2] | [cc'][c'c][c2c'2][Aa][Aa] [a3A3][G3g3D,3]A,2e2 |[f3F3] [G0g0e0c0]< [C,0C,,0] [G,0C0E,0F0] c[g0G0c0G,0][a0C,,0C,0A0e0]c |
+G,,[C,0C,,0A0D0d0]<[C0E,0G,0C,0][D2G2]G,2[C,,3C,3C3] | [d0d'0A,,0A,,,0][d'd][d'd] [A,0A,,0G,0E,0][cc'eg][gc'ce] [A,,0A,,,0]< [c0c'0e0g0][A,,0A,,,0a0A0]e[Aea] g |[e0A0a0]g[G,0A,,0][g2G2][a3A,,3A,,,3A3] [a0f0A0][B,,4B,,,4] | [B,0D,0B,,0F,0]<[a0A0f0d0] [B,,B,][F,,0A0]dB,,, [A0d0a0]<[D0D,0F,0B,0]B,, A0 [d2f2] |
+[B,,0D,,0a0A0B,,,0]d[Aa][D,0d0D,,0d'0]A,,[d'd][d'0d0] [D,0C0F,0]A,[c'ae']e[eac'e'] | [D,0D,,0]< [c'0e'0a0e0]A,,2[D,0D,,0f0f'0][ac'] [faf'c'][f0f'0c'0]a[C0A,0D,0]F, [g0g'0] f'2[g'0g0D,0][c'3D,,3e'3]=e'2 |[a'0C,,0C,0c'0a0] [E,0C0]< G,0 [c'ff'][f0f'0c'0C,,0]C,2 [C,0g0c'0g'0e'0C,,0]G,,2[e'0C,,0c'0C,0]e4 |[C2G,2E,2]<c'2e3[C,0C,,0D0d0C0][Dd] [A,,,0d'0A,,0d0]<[d'0d0]c'[d'0d0] |
+[A,,G,][c0c'0d0][cc'] A,,0 [c2c'2] E,2E,,2[a0A,,0A,,,0A0][aA][A,,G,][g2G2] |[a3A,,3A,,,3A3] [A0a0d0f0]<[B,,0B,,,0] [D,0B,0F,0B,,0][A2f2d2] [B,,0B,0] |[d0A0f0F,,0]B,,, [A0d0] f2[F,0B,0D,0][A2d2][B,3B,,3] |B,,,48 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many sixteenth notes and rapid figurations. There's continuous motion with relatively little sustained tone, and frequent leaps and interval jumps throughout the melodic lines, creating a sense of energy. The texture is often quite dense, with multiple notes sounding in close proximity. | The score features a high rhythmic density with many 1/16 notes and rapid figurations. There's continuous motion with relatively little sustained tone, and frequent leaps and interval jumps throughout the melodic lines, contributing to a sense of energetic activity. The texture is often quite dense, with multiple notes sounding in close succession. | The score features a high rhythmic density with many sixteenth notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding simultaneously, and there are frequent leaps and a wide registral range throughout the piece, contributing to a high level of energy.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent chromaticism and dissonant intervals, creating harmonic tension that isn't consistently resolved. The melodic contour often descends, and there's a prevalence of low-register activity, particularly in the bass lines, contributing to a dark and weighty feel. While there are some upward gestures, they are often fleeting and overshadowed by the overall downward pull. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension that isn't consistently resolved. The melodic contour often descends, with many sighing or falling gestures, and the register frequently dips into very low ranges, contributing to a dark and weighty feel. These elements combine to suggest a generally somber and tense emotional quality. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension that doesn't consistently resolve. The melodic contour often descends, with many sighing or falling phrases, and the register frequently dips into the very low range, contributing to a dark and weighty feel. These elements combine to suggest a generally somber and tense emotional quality.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+3,"Input:
+X:1
+M:3/4
+L:1/16
+K:D#m
+[^^G,,2F2] [=E0E,0]<[^G0^^G,0] [F,0G,,0F0]G,,2 |[G0G,0=E,0]^^G,,2[G0G,0E,0G,,0][b4G,,,4B4f4G,,4] |[F,,0F,,,0][f0a0c0A0][f0a0c0F,,0][C,0a0] c2a2 [F,,2a2] |[g0F,,0]< [C,0a0g0][b0f0d0]F,,2 D,2[c'0f0]D,3 | F,2[b0F,,0d0] [F,,2a2c2][g2B2D,2F,2][f0A0][E,0B,,0g0B0E,,0]B,,2 |
+E,2[g0D0B,,0B0G,0D,0d0]D2g2d2[g0E,,0][f0B0d0][E,2E,,2] |[g0D,0D,,0]d2 [^^C,,0a0c0A,,0][A,,2C,2] [b0c0A,,0C,0C,,0][A,,2C,2C,,2] | [A,,2^^C,,2a2c2]g2 [f2A,,2A2A,,,2]e2<[B,,2f2B2d2B,,,2][B,,0f0B,,,0] |[f0F,0B0][B,,0B,0f0][g0c0G0C,0G,0][C,0g0]((3G,2C,2G0)[c0f0C,0][e0C,0C,,0] |
+c[A,,,0A,,0] A,,c2[C,2c'2][b0A,,0D,,0f0d0A,,,0] a d |[bA,,][D,,2D,,,2] g2[G,,0G,,,0f0]d3G,,2D,2 | [f0F,0D,0]<[c'0d0][f0G,,0][f0D,0F,0]f[c'e][C,0C,,0] |[d0C,0] f[C,0C,,0]C,,2 [C,,0a0] |
+[C,,,2C,,2] [F,,0g0B,,,0] [B2d2][B,,,f]g B,,2[f2B,,,2] | [B,,,0f0][B,,,2g2] [a0B0B,,0]<[d0B,,,0][B,,,f][gc][C,,2G,,2]C,,2 |[C,,0G,,0C,0][C,,2g2][C,,2g2][C,,0a0][G,,2C,2b2][c'0e0A,,0] ^^C,,3 |^^C,, [A,,2^c'2][A,,0^^C,0^c'0]< [^^c'0e0E,0] |
+[a2G,2][E,2g2] [A,,0f0A0d0]D,,2 [A,,2D,2]D,,2 |[A,,2D,2]D,, [A,,0D,0]<[A,,0D,,0a0d0A0][g0D,0A,,0][f0D,0]A4 |a2 [g0F,,0]< [B,,0d0B0B,,,0][f0d0]f3[D0a0A0d0F,0] | a2[g0^^c0B,0B,,0]F,4[B,,2f2] [B,,2f2]B,,0^c'2 |
+[B,,2B,,,2][B,,,0B,,0a0^^c0][B,,,0B,,0g0][C,,0f0]D,,2A,,2 |[D,0A0d0][aA,,d] [B0g0d0G,,0]D,2 a0 gD,gf [e0D,,0] |d[c0C,,0] G,, f2e2c[C,,2C,2] G,,2<[C,2F,,2f2A2] |[F,a]g[C,fE,,] g[E,e]f[dD,,] eA,,df[D,2A2D,,2A,,2d2] |
+[A,,ad][g0D,0B0d0G,,0]D,2D,0a0gD,g D,2 f2eD,,d[C,,2C,2c2] |[C,,0G,,0C,0c0G0][c0C,,0] [C,,2G,,2][C,,G,,C,][Af] [C,,0C,0] |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many sixteenth notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding together, and there are frequent leaps and a wide registral range contributing to a lively and energetic feel. | The score features a high rhythmic density with many sixteenth notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding in close proximity, and there are frequent leaps and a wide registral range, contributing to a generally energetic feel. | The score features a high rhythmic density with many sixteenth notes and rapid figurations. There’s continuous motion with little sustained tone, and frequent leaps between registers, creating a sense of energy and activity. The texture is often dense, with multiple notes sounding in close proximity, further contributing to the high arousal level.
+
+Valence Classification: LOW
+  Reasoning: The piece relies heavily on descending melodic lines and a generally dark harmonic color, particularly with the frequent use of diminished and minor intervals. While there are some upward gestures, they are often brief and followed by sinking motions, and the register remains predominantly in the lower and mid-low ranges, contributing to a somber and tense atmosphere. | The piece features frequent descending lines and a generally dark harmonic color, particularly with the use of diminished chords and chromaticism. The register is often focused in the lower ranges, contributing to a sense of weight and gloom, and the melodic contour often sighs downwards rather than soaring upwards. | The piece features frequent descending melodic lines and a generally dark harmonic color, particularly with the use of diminished and minor chords in D# minor. While there are some upward gestures, they are often brief and followed by sinking motions, and the register remains largely in the lower and mid-low ranges, contributing to a sense of weight and gloom.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+3,"Input:
+X:1
+M:3/4
+L:1/16
+K:Dm
+F2E2D2 |G,,3D,2B,2D,2A,2D,2 |G,2D,2G,,2 D,2B,2 D,2 |A,2 [F0D,0]E2G,2 [D,0D0]F,,3 |C,2A,2C,2G,2C,2[F,,2F,2] |C,2F,,2C,2 A,2C,2 G,2 |
+[C,,2C,2F2] [F,,2E2][C,2D2] C,,3G,,2 |[E,0G,,0]G,, G,,D,2G,,2C,5 |C,,2G,,2E,2G,,2D,2[G,,2F2] |E2C,2D0G,,2G,,3 D,2B,4 |
+A,2 D,2G,2 D,2G,,2 |D,2B,2D,2A,2[F0D,0][E2G,2] |[D,0D0]B,,3F,2 B,2F,2 | C2 B,,2F,2 B,2F,2B,,3 F,2 |
+B,2 F,2C2 F2[E2B,2] C2 |F,,3C,2A, CC,2G,2 |C,2F,2C,2F,,3C,2 | A,2C,2 G,2F2 [d2D2][C,,0E0] |
+C,,2G,,2E,4D,4 |[C,0C,,0]G,,2C,,2G,,2E,2 G,,2 |D,2 [F2G,,2][E,0E0]C,2 D5 |A,,2F,4E,2A,,2D,48 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q3 (sad) (Label: 2)
+
+Arousal Classification: LOW
+  Reasoning: The score primarily consists of long note values and sustained tones, particularly quarter and half notes given the 1/16 default length. The melodic motion is generally stepwise or with small leaps, and the texture appears relatively sparse with few instances of dense chords or rapid figurations. The range is also fairly contained, without extreme registral jumps. | The score features predominantly long note values and sustained tones, especially given the 1/16 default note length. There's a slow-moving quality with few rapid changes per bar, and the texture is generally sparse with clear space between events, despite some chords. The registral range is relatively narrow, with motion mostly contained within a limited span. | The score features predominantly long note values and sustained tones, with a focus on stepwise motion and limited rhythmic density. The texture is generally sparse, and while there are some leaps, they don’t occur frequently enough to suggest high arousal; instead, the melodic lines move relatively gently. The range is moderate, without extreme registral activity.
+
+Valence Classification: LOW
+  Reasoning: The piece features predominantly descending melodic contours and a heavy focus on the low register, particularly with repeated low D and G notes. The harmony relies on minor tonality and includes frequent chromaticism and unresolved tensions, creating a dark and somber color, rather than a bright or uplifting one. While there are some upward gestures, they are often brief and followed by descending phrases, reinforcing the overall sense of gloom. | The piece relies heavily on dark, low-register harmonies and descending melodic lines, creating a somber mood. Frequent use of minor tonality and intervals, alongside a generally downward contour, contribute to a sense of weight and tension, particularly in the opening and closing phrases. While there are occasional upward gestures, they are often brief and do not overcome the prevailing darkness. | The piece features predominantly descending melodic lines and a heavy focus on the lower register, creating a dark and somber feel. The harmony relies on repeated, stable but melancholic chords in a minor key, and the frequent use of low D and C notes contributes to a sense of weight and gloom. While not overtly dissonant, the harmonic progressions lack significant upward resolution or brightness.
+
+Combined Result: LOW arousal + LOW valence → Q3 (sad)
+"
+3,"Input:
+X:1
+M:3/4
+L:1/16
+K:Gm
+B,4^C,^F=C,2 ((3G,2C2E2) [C,GG,,] |CG,C,c((3G2G,2d0)G,,2CG,0 G,0< =B0 CG,CC,0c2 | CG[G,C] =B,,0((3C,2G,2C2)EGC |=B0C,G,[G,,0c0][D0B,0][C,0G0] G,C,0^F2C | ^FG,2[=B,,C,] G,GCE [G,,G]CG,,0B |
+G,[C,0d0]<[D0C,0][E0G0]G,[C,0c0][C,0C0]E [G,0C0] |C,2G, CE[G0C,0] C[C,0E0]G, [C,0=B0] |C,2[G,0E0] G,2G3C,3 [f0G,0] |C,[F0G0] G,d2[G,0D0] GE[G,,d] |
+((3D2G2G,2) [G,,0d0]D[GC,] G,G0C,2G, |DG2 dE[G0C,0] G,[d0G,,0]G2C0 G2 |((3G,2d2D2)GG,2 [g0G,,0]C,[C,2G2] | ((3G,2d2D2) [C,0G0]E[d2C,2]FGE |
+[C,0d0][C,0D0]G G,2C, G,2[C,0D0]G [C,0G,,0d0] |[C,0E0]G D[C,d]G, G2D[C,0d0]G | G,GD2[f0G,0]C,2 G[G,,0G,0][d0G,,0] D | C,G2E [G,0d0]<C,0D[G0G,0] E[G,,0d0C,0]((3D2G2G,2) |
+d0G [C,0G0]G2G, d2DG2 |G,d2DGG,,2 d0 GDG2 | G,g2C, GG,2g DG2 E |gD2G3g2 D2<G2 g48 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in the repeated patterns and grace notes. There is continuous motion with little silence, and a generally dense texture created by the overlapping note groupings and chords. The melodic lines exhibit frequent leaps and a wide range, contributing to the energetic feel. | The score features a high rhythmic density with many 1/16 notes and frequent groupings of notes, creating a sense of continuous motion. The texture is often dense, with multiple notes sounding together, and there are frequent leaps and rapid figurations throughout the melody and bass lines. The registral activity is also notable, with movement across a moderate range. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in the repeated patterns. There is continuous motion with little silence, and a generally busy texture created by multiple notes sounding close together in time. The melodic lines also exhibit frequent leaps and a wide range, contributing to the energetic feel.
+
+Valence Classification: LOW
+  Reasoning: The harmony is largely based around the Gm key and features frequent chromatic alterations and dissonant intervals, creating a tense harmonic color. The melodic contour frequently descends, with many sighing figures and downward gestures, particularly in the lower register. While there are some upward movements, the overall impression is one of darkness and weight, reinforced by the consistent use of the low register and the lack of bright, open intervals. | The harmony is largely based around the Gm key, featuring frequent chromatic alterations and dissonant intervals, creating a tense harmonic color. The melodic contour often descends, with many sighing figures and falling lines, and the register remains largely in the lower to mid range, contributing to a sense of darkness and weight. While there are some upward gestures, they are often brief and do not overcome the overall downward pull. | The harmony is largely based around the Gm key with frequent chromatic alterations and dissonant intervals, creating a tense harmonic color. The melodic contour features many downward gestures and stepwise motion in the lower register, contributing to a sense of heaviness and sinking. While there are some upward movements, they are often brief and followed by descending lines, reinforcing the overall low valence.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+1,"Input:
+X:1
+M:3/4
+L:1/16
+K:Dm
+[e0E0C,,0][C0c0C,0] [G,0C0C,,0]C,2[A,2F2F,,,2F,,2] F,[F,,2F,2]<[G2G,2C2G,,2G,,,2] |[A3C3A,3A,,3A,,,3][D0F0d0A0D,0]D,,3 D2[A,2F,2][D,0D0f0] |A[ADD,] [GA,F,][f2F2][G3G,,3][A0B,0]D2<G,2 |G,[B,0B0D0]A2[A0E0]<[C,0C,,0] [A0E0]<[c0G,0E,0][A0C,0C,,0] |E,[G2C,2]<[E,2G,2][A,2F,,,2F,,2C2] F,[F,,2F,,,2][G,3C3G3G,,3G,,,3] |
+[C3A3A,,3A,3]A,,,3[D,0A0D0D,,0d0F0] f[F,0A,0A0][D,0f0] | [AD,][D,A][GF,A,] [F2f2][G,,0G0]<[A0B,0D0]G,3 |[G,G][B,0D0B0] [dAa][^F,,0A0d0a0]<[A0a0d0][A,0b0F,0B0][a0A0D0D,0] |[d2D2D,2][A3^F,3A,3F3F,,3][g3G,,3B3G,,,3d3][G2G,2][c3a3A3][=F3F,3] |
+[G3c3C3C,3] [B0B,0D0]< [G,0G,,0G0][G,0B,0] D[B,0B0]((3D2G2B2) [d0D0] | GBdGB d2 g[B0G0g0G,0b0d0] [B0G0] g2[A3f3a3F3c3F,3] |[gGcC,C][gG] g2 C,[G,,,0G,,0G0B0F0][B2F2G2] [B0F0G0]<[c0d0D0] |[dB,BF]G,2 G[e0c0][C,0C,,0][G2c2e2][Gec][G0c0e0]E2 f |
+[g'0g0]C |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many sixteenth notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding in close succession, and there are frequent leaps and a wide registral range throughout the piece. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding together, and there are frequent leaps and quick changes in pitch throughout the melodic lines. The range is also quite active, contributing to the overall energetic feel. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding together, and there are frequent leaps and quick changes in pitch throughout the melodic lines. The registral activity is also high, with frequent jumps across octaves.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent descending melodic lines and a generally low registral focus, particularly in the opening phrases with repeated low C and G notes. While there are some upward gestures, they are often followed by immediate downward motion, creating a sense of instability and tension, and the harmonic color leans towards dissonance and unresolved tension, contributing to a gloomy overall impression. | The piece features frequent descending melodic lines and a generally low registral focus, particularly with repeated low notes and phrases in the bass clef. While there are some upward gestures, they are often followed by downward motion, and the harmonic language relies on close intervals and lacks strong, uplifting resolutions, creating a sense of tension and gloominess. The repeated use of minor tonality and chromaticism further contributes to the overall dark character. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension that doesn't consistently resolve. The melodic contour is largely descending or static, with many phrases ending on lower notes, and the register is often focused on the lower and mid-low ranges, contributing to a sense of weight and darkness. These elements combine to create a generally somber and tense atmosphere.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+0,"Input:
+X:1
+M:3/4
+L:1/16
+K:Eb
+((3G,2A,2C,,2) C,G,A, [C,0C0C,,0]G,A, | [C,C,,]G,A, [C0B,0G,,,0G,,0]C,2G, [A,0G,,0]C,F, | [C0G,0G,,0]C,E, [G,,F,]C,D, [C,0F,,0F,,,0C0]G,A, | [C,F,,]G,A, [F,,0C,0C0]G,A, [F,,C,]G,A, | [B,0E,,,0E,,0C0]C,2G, [E,,0A,0]C,F, [E,,0C0G,0]C,E, [F,0E,,0] |
+C,D,2 C,0< [c0C0]GA [E0C0]G((3G,2A2c0) [C0C,0] |GG,A [CE]GG,2A [c0B0] B,,CG,0G A0 | ECG,0F [cG] B,,CG,0E F ECG,2D2 | [F,,0c0C0][GC,]A A,0 CG((3C,2A2F,,0) [c0C0]GC,A A,2 |
+CGC,2A [cBE,,]CC,0G A G,CC,2F [D,,0c0] G |C=B,,E [F,F]CB,,2D C,0 [cc']G,E | EG,C, [C,0c0c'0]G,E EG,C, | [B,,0c'0c0]G,E [E0b0B0]G,B,, B,,0 [aA]G,E |
+[E0G0g0]G,B,, [F,,cc']C,A, A,C,F,, | [F,,0c'0] ((3c2C,2A,2) A,C,F,, [c'0c0] E,,C,G, G, | [=bB]C,E,, [=a0A0D,,0]B,,F, F,2 [gG]B,,D,,2 | [c'0c0C,0]((3G,2E2E2)G,C, C,0 [cc']G,((3E2E2G,2) |
+C,2 [B,,0c'0c0]G,E [bB]G,B,, B,,0 | [aA]G,E [EGg]G,B,,2 [F,,0c0c'0]C,A, | A,C,F,, F,,0< [c'0c0]C,A, A,C,F,,2 [G,,0G0] |E,0CG,0G C0 A[C0G,0][A0E0E,0] G,,0 GE,0CG0G, [C0A0] |
+[G,C][AE,] [A,,0G0]<[E,0C0]A,G C0 AG0C0A,A0E, [B0A,,0] |[E,0E0][B0A,0]< [C0c0]EA,cE, [c0G,,0]<G0E,[c0G,0] | [C0d0]<[G0G,0]d0E, [G,,0c0]<[E,0G0][c0G,0] [C0d0][GG,][E,d] | [A,,0e0][AE,][A,0e0] C0 f[A0A,0]f0E, [gA,,][c0E,0][A,0g0] [C0f0] |
+[A,B][E,f] [gG][Cc][gG] [Ff]B,[fF] [Gg] |Cc[Gg] F fB,B[Ff] [Gg]Cc[Gg] F | fB,B[Ff] [Gg]C2c[Gg] [Ff]B,B[F2f2] | [CC,][e0E0G,0][CG] [EA][C0C,0]G[G,E] [C,C][E0G,0][C,0C0G0] [E0A0] |
+C0GG,0E [G,,0C0][EE,][GG,] [A0C0]<[G0G,0][E0E,0]< C0 | G,,B,0E,C0G, [E,0A,0][G,,C][G,E,] [F,,0C0][C,E][GF,] [A,A] |[F,,0F,0G0][C,2E2] [F,,0C0][C,E][F,,0F,0G0] [A,,A,A]F,G[C,2E2] | [E,,C][C,E][E,0G0E,,0] [A0G,0][GE,][C,E] [C0D,,0]<[B,0=B,,0][CD,] [F,A,] |
+CD,[=B,,G,] [C,C][E0G,0][GC,C] [A0E0]<[C0C,0G0][G,2E2] [C,0C0] |[G,0E0][C,0G0] [EA][C0G0]G,2E [B,,0C0]<[E0G,0]GC | [A0E0]<[C0G0][G,0E0] [B,,C][B,0E,0B,,0][G,0C0] [E,0A,0][B,,C][G,2E,2] |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q3 (sad) (Label: 2)
+
+Arousal Classification: LOW
+  Reasoning: The score is characterized by predominantly long note values and sustained tones, particularly in the opening and closing sections. While there are some shorter notes, they are often grouped within larger phrases and do not create a consistently dense rhythmic texture. The melodic motion is generally stepwise and contained within a relatively narrow range, contributing to a subdued and calm overall effect. | The score is characterized by predominantly long note values and sustained tones, particularly in the opening and closing sections. While there are some shorter notes, they are often grouped within larger phrases, and the overall motion is relatively slow and stepwise, lacking frequent leaps or rapid figurations. The texture is generally sparse, with clear space between events, contributing to a calm and subdued feel. | The score is characterized by predominantly long note values and sustained tones, particularly in the opening and closing sections. While there are some shorter notes, they are often grouped within larger phrases and do not create a consistently dense rhythmic texture. The melodic motion is generally stepwise, and the texture remains relatively sparse throughout, contributing to a calm and subdued overall feeling.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent dissonances and unstable harmonic progressions, particularly with the use of accidentals and chromaticism. The melodic contour often descends or remains static in the lower register, creating a sense of weight and gloom, and the register is heavily focused on low and mid-low ranges, contributing to a dark overall sound. | The piece is characterized by frequent chromaticism and dissonant intervals, creating harmonic tension that rarely resolves fully. The melodic contour is largely descending or static, with many sighing figures, and the register remains predominantly in the lower and mid-low ranges, contributing to a dark and somber feel. | The piece features frequent dissonances and unstable harmonic progressions, particularly with the use of accidentals and closely voiced chords. The melodic contour is largely descending or static, with limited soaring gestures, and the register often dwells in the lower ranges, contributing to a sense of darkness and weight.
+
+Combined Result: LOW arousal + LOW valence → Q3 (sad)
+"
+1,"Input:
+X:1
+M:3/4
+L:1/16
+K:D#m
+F3C,3A,3C3 |[c3C,3]F,3 A,3A3 |B,,3E2D,3 [G,0G0]<[F0D,,0D,0] |^^C3A,,2C,3 F,3A,4 |B,,0E2^^C,3 G,3B,3 |
+D0F,3D,4G,,4 |C,,6 [F,,3A3]C,3 |[A,0c0][c3C3] [D,0d0]F,3 |[A,3f3] [^B,3B3d3][E,0a0]G,3 |
+[C3g3a3]c3[=e2C,2]E,3 [^^G3G,3] |^^c3[D,3^c3] F,3B,3F3 |B3[E,,0E,0G0] G,3C3 |D3E3 F4 G4 |
+B6[c0F,,0A0][C0F0F,0] | C,4 [A,0C0]F,3[c0C,0] |F,3 A3 [C,2A,2]F,3[e3B,,3E3] |D,3 [G3G,3][D,3F3][A,,2^^C2] C,3 |
+F,3A,4[B,,0E0] ^^C,3 |G,3B,3D4F,3 | D,4 G,,4 C,,4 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and short note values throughout. There's continuous motion due to the lack of significant pauses, and the melodic lines contain frequent leaps and ornamentation, creating registral activity. The texture is often dense with chords and rapid figurations. | The score features a high rhythmic density with many 1/16 notes and short note values throughout. There is continuous motion with little silence, and frequent leaps and ornamentation (e.g., ""^"" symbols) contribute to registral activity. The texture is often dense, with multiple notes sounding together, particularly in the chords and ornamented passages. | The score features a high rhythmic density with many 1/16 notes and short note values throughout. There's continuous motion with limited sustained tones and frequent leaps, particularly in the melodic lines, creating a sense of energy. The texture is often dense, with multiple notes sounding simultaneously or in quick succession.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent chromaticism and dissonant intervals, creating harmonic tension, particularly with the use of accidentals in the D# minor key. The melodic contour is largely descending or static, with many phrases ending on lower notes, contributing to a sense of weight and sadness. While there are occasional upward gestures, the overall registral focus remains in the lower and mid-registers, reinforcing the dark and gloomy character. | The harmony is largely based around minor tonality with frequent chromaticism and unresolved tension, particularly noticeable in the use of accidentals and diminished-sounding intervals. The melodic contour frequently descends or remains static in the lower register, creating a sense of weight and sadness, and the piece heavily utilizes the low register with sustained notes in the bass, contributing to a dark and gloomy atmosphere. | The harmony relies heavily on minor tonality and features frequent chromaticism, creating a sense of tension rather than resolution. The melodic contour often descends, particularly in the opening phrases and repeated patterns, contributing to a sighing quality, and the register remains largely in the lower and mid-range, avoiding bright, soaring high notes. These elements combine to produce a predominantly dark and somber musical character.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+2,"Input:
+X:1
+M:3/4
+L:1/16
+K:Em
+G5[g2G,2]D0G2B,2 |d3[G3B3] [G,2g2][D0G,0][G2b2] [a2B,2][G2g2]B2 |[a0C,0]ba[G,0C0]b a bE,aba[C0E0E,0] g2[a2C,2] | G,0< [b0C0][E,2c'2][C2E2][a2D,2]A,2D2 F,2 |[D2F2f2] [D,2a2][c'0A,0][D2d2][F,2b2][D2F2] a2 |
+[G0b0G,0]c'b0D0 G0 c'bc'0B,0bc' b2< G2 [B2a2][b2G,2] |D0c'0[G2g2][B,2d'2][g2G2B2] [g2G,2][D0G0] |B,2[G2d2]B2[g2G,2] [D0G0b0][B,2a2] | G2 [B2g2][a0C,0]b a [bCG,]abE,0a b a[C0E0]g2[a2C,2] |
+G,0<g0C2 [E,2f2]C2E2[f2D,2]A,2D2 |F,2[D2d2A,2F2]D,0f2 A,0< [a0D,0][F,2g2] | [F0D0d0] A,2f2[G,2g2]D0G2B,2G2B2 | G,2[D0G0]B,2[G2B2][g0G,0]D0 [g0G0] |
+B,2 [G2d2B2][G,0g0]< [D0G0]b2[a2B,2] |[G2B2g2]a0C,0 ba[G,0C0b0]ab0E,0 a ba[C2g2]E2 | a2 C,2G,0<[b0C0][E,2c'2][C0c0][E0e0][A,,0a0D,0] [A,0D0] |F,2 [f2d2D2F2][a0D,0]<[c'0A,0D0d0][b2F,2] |
+[F2D2][A,2a2][G0G,0b0] c'bD0G0c'bc'0B,0 bc'b3[Gg]B2a2 | [b2G,2]D0[G2c'2][d'2B,2][G2B2][g2G,2] D0 | G2B,2 [d2G2B2][g0G,0]<[D0G0b0][B,2a2D2] |[G2B2D2]g2[a0C,0] ba[G,0C0b0]ab E,0 a b2<a2[C2E2]g2 |
+a2 C,2[G,0g0]C2[E,2f2]C2[E2e2][D,2f2] A,2 D2 |F,2 [d2D2F,2A,2][f2D,2][A,0a0D0]d2[g2F,2] |[D3d3]f2 [g2G,2][D0G0] B,2[G2B2] |G,2[D0G0]B,2[G24B24] |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations. There’s continuous motion with few sustained notes, and a generally dense texture created by closely spaced notes and chords, especially in the ornamented sections. The range is also quite active with frequent leaps between octaves. | The score features a consistently high rhythmic density with many 1/16 notes and rapid figurations. There's continuous motion with very little sustained sound, and a generally dense texture created by many notes sounding in close succession, especially in the ornamented passages. The range is also quite active, with frequent leaps between octaves. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding simultaneously, and there are frequent leaps and a wide range utilized throughout the piece.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent chromaticism and dissonant intervals, creating harmonic tension that isn’t consistently resolved. The melodic contour is largely descending or static, with many sighing figures, and the register frequently dips into the lower range, contributing to a sense of darkness and weight. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension, particularly in the use of lowered 7ths and minor chords. The melodic contour often descends or remains static in lower registers, contributing to a sense of weight and sadness, and the register is generally focused on the lower and mid ranges, avoiding bright, soaring high notes. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension, particularly with the use of accidentals and close voicings. The melodic contour often descends or remains static in the lower register, contributing to a sense of weight and gloom, and the register is heavily focused on the lower and mid-range, lacking bright, soaring high-register activity.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+0,"Input:
+X:1
+M:3/4
+L:1/16
+K:Ab
+E2E,2[F,,0B0][C,0A0][F,,0F,0]C,2[C,2A2]F,2 |[C,2A2][F,,2B2][C,2A2][F,0C,0][C,2A2]F,2 |C,2A2[D,,2B2] A2A,,2D,2 [A2A,,2]D,2 | [A,,2A2][D,,2B2] [A,,2A2]D,2 [A,,2A2]D,2 [A,,2A2] |[d0A,,0]< [E,0c0E0]A,,2 [A,,0E,0c0]A,2 [E,2c2] |
+[d2A,,2] [E,0c0E0]<[c0A,0] [E,2c2]A,2[c0E,0]E2 |[E,,2c2][B,,2B2]E,2[B,,0B0]E,2B,,2E2 |[d0E,,0][c0B,,0]E,2[B,,0B0][E,,0B,,0][B,,2E2] |[F,,2B2][C,2A2]F,2[C,2A2]F,2[C,2A2] |
+[F,,2B2][C,2A2] F,2[C,0A0]< [F,0C,0][C,2A2] | [D,,2G2][F2A,,2] D,2[F2A,,2] D,2F2A,,2 [G0D,,0] |[A,,2F2]D,2[F2A,,2]D,2[A,,2F2][A,,2E2] |[E,2c2]A,2[A,,0c0E,0]A,0c2[E,2c2][E0d0A,,0] |
+[E,2c2]A,2 A,,0[E,2c2]A,,2 [E,0E0][c2E,,2] | [B,,2B2]E,2 [B,,2B2]E,2 [B,,0E0][d2E,,2] | [B,,0c0]<[c0E,0] [B0B,,0]E,2 [B,,0E0]<[F,,0A0] C,2 |F,0C,2 [C,0A,0]<[F,0C,0]C,4[C,0E0] |
+B2c2B2A2D,,2A,,0A,, |D,2[D,,2F,2]D,2A,,4E2 |B2c2 B2A2 [A,,0c0]E,2 | A,2[E0C0]< [A,0A,,0]E,4E2 |
+B2c2 B2A2 [E,,2B2]B,,2[E,0E,,0] |[G,0E0]BB,,2B,,10 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q3 (sad) (Label: 2)
+
+Arousal Classification: LOW
+  Reasoning: The score consists primarily of longer note values (eighth notes and longer) with relatively few very short notes, creating a slow-moving feel. The texture is generally sparse, with few instances of multiple notes sounding simultaneously, and the melodic motion is largely stepwise or with small leaps, resulting in limited registral activity. | The score features predominantly long note values and sustained tones, especially given the 1/16 default note length and frequent use of notes tied over multiple beats. There is a generally slow-moving, stepwise motion with limited rapid figurations, and the texture is often sparse with clear space between phrases. While there are some leaps, they don't occur frequently enough to suggest high arousal. | The score is characterized by predominantly long note values and sustained tones, particularly with the use of the '2' length indicator. There’s a slow-moving, stepwise motion in many of the lines, and while there are some repeated figures, they don’t create a sense of high energy. The texture is generally sparse, with space between phrases, and the registral range is relatively contained.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent use of minor harmonies and descending melodic lines, creating a generally somber feel. The register is predominantly low, with a focus on the bass clef and lower octaves, contributing to a dark and weighty texture. While there are occasional upward gestures, they are often followed by downward motion, preventing a sense of sustained brightness. | The piece features frequent chromaticism and dissonant intervals, particularly in the use of lowered 7ths and augmented seconds, creating harmonic tension. The melodic contour is largely descending or static, with many phrases ending on lower notes, contributing to a sense of weight and sadness. While there are some higher register notes, the overall focus remains in the lower and mid-registers, reinforcing the dark and somber character. | The harmony relies heavily on repeated, close-position dyads and chords in the lower register, creating a dark and somewhat claustrophobic sound. Melodic contours are largely descending or static, with few soaring gestures, and the frequent use of low notes (F,, A,, B,,) contributes to a sense of weight and gloominess. While there are some brighter moments, the overall impression is one of tension and unresolved harmonic motion.
+
+Combined Result: LOW arousal + LOW valence → Q3 (sad)
+"
+3,"Input:
+X:1
+M:3/4
+L:1/16
+K:Bb
+[B0F0F,0]B,3D3 [B2F2]G0<B0[B,0e0E0]g2 |gB3BE,[E,0^f0e0F0C0] |B,2>E,2B [C0A0f0] D,2>f2 f3 A,2 |g[G,0B0D0F0]cd2D4 |d[C,0B,0c0E0]B B3d3 |
+[c0F0][F,E] B2>B2 C2<c2 c0 | d[B,0B,,0F,0] f5B,,3 [B,5E5C,5G,5] |[F3B,3D,3C3]B3[B,0E0E,0G0g0] |BB,0[B2G2] [B2G2][c0C0F0F,0A0C,0] |
+[c0a0f0F0] [g3E,3e3A3] c3[C5f5D,5A5] | d3[F5F,5=B5G,,5G,5] [A,,0A,0c0][d3F3B,,3G,3] |[e0G0] [B,4C,4] E4[B,0E0C,0G0] |[C,3G,3E3][B,3G3][C,3B3] |
+ff[CEF,] f[C0E0F,0f0] ff4 |F,,3 [b0F,0B0]ag f[B,,0B,0F,0] f3 |[F,3f3]C0[^F0=f0B0D,0]fedc | A,3B0D, [d0F0][G,,3F,3] [D,0d0][B,3d3] |
+[B,0d0C,0G0=E0] dcG,0B BB,2 g |f[B,2C,2e2E,2]>g2f2< G,2[EF,g] f4 |[f0C0]fE2<c'2b[B,B,,F,] |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in the later sections. There's continuous motion with limited sustained tones and frequent leaps across a moderate range, creating a sense of energy. The texture is often dense, with multiple notes sounding together, further contributing to the high arousal level. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding together, and there are frequent leaps and wide registral activity throughout the piece. | The score features a high rhythmic density with many 1/16th notes and rapid figurations, particularly in the later sections. There's continuous motion with few sustained notes and a generally dense texture created by chords and closely spaced notes. The melodic lines also exhibit frequent leaps and a wide range, contributing to the energetic feel.
+
+Valence Classification: LOW
+  Reasoning: The harmony is frequently dissonant, with many chromatic alterations and unstable chord voicings, creating a tense atmosphere. The melodic contour often features descending lines and sighing figures, particularly in the first and last lines, contributing to a sense of sadness. While there are some higher register notes, the overall weight of the piece feels grounded in the lower and mid-registers, with a generally dark harmonic color. | The harmony frequently features dissonant intervals and unstable chord patterns, particularly with chromatic alterations and unresolved tensions. The melodic contour often descends or remains static in the lower register, creating a sense of weight and gloom, and there’s a consistent focus on the lower and mid-low registers throughout the piece, contributing to a darker overall sound. | The harmony is often tense, featuring chromaticism and unresolved dissonances, particularly with accidentals like ^f and =b. The melodic contour frequently descends or remains static in the lower register, creating a sense of weight and gloom, and the piece largely avoids soaring upward gestures. While there are some brighter moments, the overall impression is one of darkness and instability due to the harmonic and melodic choices.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+3,"Input:
+X:1
+M:3/4
+L:1/16
+K:Bb
+[G,0G,,,0G,,0] ^F,6 |G,6 | ^F,6G,6 |^F,6[G,7G,,7G,,,7] |^F,7[B,0G,,0G,,,0G,0] |G,6 B,6 |
+G,6 B,6 |G,5[B,6E,6E6G,,6] |G,6[B,0D0G,,0D,0G,,,0] |G,5[B,5D5]G,5 |
+[D6B,6]G,5 |[C6C,6G,,6]G,5 |B,0<[D,0G,,,0G,0B,,0G,,0]G,5 B,5 |G,5B,5 |
+G,6[D,,0A,0A,,0] |B,3A,4 D,4 | [G,0G,,0] G,,,4D,4[G,,0G,0] |[G,,0D,0G,,,0]<[G,0G,,0][G,,5D,5] |
+[B,0F,,0C,0G,0] [G,5C,5] F,,5 |[E,,0B,,0B,0D0B,,,0]G,4[E,,5B,,5B,5D5] |G,4[B,5D5B,,5E,,5] | G,4 [B,0G,0]D6[G5B,,5D,,5]G,5 |
+[G0C0G,0C,0E0C,,0]G,4 |[E,0E,,0][G4E4C4]C,0G,4[G0C0C,0E0C,,0] |G,4[E,4E,,4G4][C4E4][C,0C,,0G,0] |[B,0D0] [G0B,,0B,,,0] G,4 |
+[D,0D,,0B,0G0G,0D0] [B,,4G,4][B,,0B,0G0B,,,0D0G,0]D48 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q3 (sad) (Label: 2)
+
+Arousal Classification: LOW
+  Reasoning: The score is characterized by predominantly long note values and sustained tones, particularly with the use of the '6' notation indicating extended durations. There's a slow-moving quality to the lines, with limited rhythmic density and frequent repetitions of similar patterns. The texture is relatively sparse, and while there are some leaps, they don't create a sense of constant motion or high energy. | The score is characterized by predominantly long note values and sustained tones, particularly with the use of the '6' notation indicating sustained notes. There is a slow-moving quality to the lines, with few rapid changes per bar, and the texture is relatively sparse despite some chords, allowing space between events. The range is somewhat limited, with most motion occurring within a relatively narrow register. | The score consists primarily of long note values and sustained tones, particularly with the use of the '6' notation indicating duration. There is a generally slow-moving quality with limited rhythmic density and a lack of rapid figurations. The texture is relatively sparse, with few instances of many notes sounding simultaneously, and the range is mostly contained within a limited space.
+
+Valence Classification: LOW
+  Reasoning: The piece relies heavily on low-register activity with repeated notes and descending patterns, creating a dark and somber feel. The harmony is largely based on repeated, static chords and lacks clear resolution, contributing to a sense of tension and unease. While there are occasional upward gestures, they are often immediately followed by downward motion, preventing a sense of uplift. | The piece relies heavily on low registers and repeated, descending patterns, creating a dark and somber feel. The harmonic color is largely based on closely voiced intervals and lacks significant upward motion or bright, consonant chords. The melodic contour is predominantly downward or static, contributing to a sense of weight and gloom. | The piece relies heavily on low registers and repeated, descending patterns, creating a dark and somber feel. The harmony is largely based on closely voiced chords and stepwise motion in the bass, contributing to a sense of weight and tension rather than brightness. While there are occasional upward gestures, they are often immediately followed by downward motion, preventing a sustained feeling of uplift.
+
+Combined Result: LOW arousal + LOW valence → Q3 (sad)
+"
+1,"Input:
+X:1
+M:3/4
+L:1/16
+K:Am
+[c'0A,0E0A0] c4 e4 | c'4 c4 e4 | d'12 | e'7d'4[E,E] | b4 ^G4 e4 |
+d'4 ^G4 e4 | [^G12e'12] | c'8 d'4 | [F,0C0C,0f'0] f4 a4 |
+f'4 f4 a4 | e'12 | d'8 c'4 | [d'2A,2D,2]>A2 e4 f4 |
+c'4 e2>e2 f4 | b18 |[c6A,,6] | [A,,0c0E,0A,0A0]A,, [C0A,,0]A,,A,, [A,,0E0]A,,A,, |
+A,,0 c2c2 C4 [E0A,,0] | [A,,0d0]< [C0A,,0]EE2 [A,,0E0]E3 | e2Ee [C0A,,0]e2 e [A,,0E0]EE | [^G,0E,0B0E,,0]<E0B B,2B B EB,2E |
+d2ed B,2>B2 E4 | e2E0ee [d0e0] B,ee2 E2e2E [E0e0] | d[eE][E0e0]d d0< E0 [B,2B,,2]<E2 [Ef]ee | [F,0C,0f0F,,0]<[f0E0][fF] f [f0F0]ffF Af0<A0FA |
+f2Af[f0A0] f0 F2>F2 A2((3F2A2g0) | A2fg [f0F0]gfg2 A2>A2 | [f2A2]f0Af0f[f0A0] [f0F0]fff [f0A0]f3 | [A,,0e0D,0]eee E2> e2 F4 |
+d2F2 [F0E0]F3 F4 | c2<F2 F0 E2F2 F4 | B2F2 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 and 1/8 notes, creating a sense of constant motion. There are frequent leaps and rapid figurations, particularly in the ornamented sections, and the texture is often quite dense with multiple notes sounding together. The registral activity is also notable with frequent jumps between octaves. | The score features a high rhythmic density with many 1/16th notes and rapid figurations, particularly in sections like measures 1-2 and 17-21. There's a continuous sense of motion with limited sustained tones and frequent leaps in the melodic lines, creating a busy texture. The wide registral range, spanning multiple octaves, further contributes to the energetic feel. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in sections like measures 1-2 and 17-21. There is continuous motion with little silence, and frequent leaps and ornamentation contribute to a sense of energetic activity. The texture is often dense, with multiple notes sounding in close proximity, especially in the lower register.
+
+Valence Classification: LOW
+  Reasoning: The piece features frequent dissonances and unresolved harmonic tension, particularly with the use of accidentals and chromatic passing tones. The melodic contour is largely descending or static in the low register, creating a sense of weight and gloom, and the consistent focus on the lower octaves contributes to a dark and somber quality. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension, particularly in the lower register with the repeated A,, and related chords. The melodic contour is largely descending or static, with many phrases ending on lower notes, and the overall register is heavily focused on the lower octaves, contributing to a dark and somber feel. While there are occasional upward gestures, they are often brief and followed by downward motion, failing to establish a sense of brightness. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension, especially in the lower register with repeated low A,,. The melodic contour often descends or remains static in the low register, and while there are occasional upward gestures, they are often brief and followed by downward motion, contributing to a generally weighed-down feeling. The extensive use of the low register and dark intervallic patterns further reinforces a sense of gloominess.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+1,"Input:
+X:1
+M:3/4
+L:1/16
+K:Bb
+e5_A,,0a6 |_A,0C,5E,5C5 |[E3_A,3]e4A,,b5 | [D,0_A,,0=B,0]<[A,,0F,0D0]B,6 |[_A,,3=B,3F3]F,3d4[d4G,,4] |[B,0E,0] E5G,5 |
+B,3G3e4^F,,c5 | E,0 A,5[C5^F,5] |E3A,2c4F,,0a6 |B,0D,5 F,5 D5 |
+B,3F3c4B0=E,,6 |[^C5B5]G,5B,7 =E6 |[B6^C6]G6 [B0F,,0] |E,5C5E5^F,5[B,8F8]B8 |
+F,,0A6 |E,0C7 [A,7F7] |[f9C9]A8 B,,0 | [b0B0]<F,0D5 |
+[B,,0B,0]< [D0F0]B0[G,,0f0D0][c'0B,,0] |E,0C5 [E5^F,5] C5 |[^F3E,3B,3]e3[e0B,,0][E,0A,,0]A,5 | [C0^F,0][E3A,3]C3E,3 c3 |
+B,,2d4 B,0D,5 |[D42F,42] |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations. There is continuous motion with few sustained notes and frequent leaps, particularly in the melodic lines, creating a sense of energy. The texture is often dense, with multiple notes sounding together, contributing to the overall high arousal level. | The score features a high rhythmic density with many 1/16 notes and rapid figurations. There is continuous motion with few pauses, and frequent leaps and interval jumps are present throughout the melodic lines, creating a sense of energy. The texture is often dense, with multiple notes sounding together, particularly in the ornamented sections. | The score features a high rhythmic density with many 1/16 notes and rapid figurations. There's continuous motion with few sustained tones, and the texture is often dense with multiple notes sounding together, particularly in the chordal sections. The melodic lines also exhibit frequent leaps and a wide registral range.
+
+Valence Classification: LOW
+  Reasoning: The harmony relies heavily on chromaticism and unresolved tensions, particularly with the frequent use of accidentals and stepwise descending bass lines. Melodically, there's a preponderance of downward gestures and a generally sinking contour, especially in the lower register, creating a sense of weight. While there are some higher notes, the overall focus remains in the lower and mid-registers, contributing to a darker, less bright sound. | The harmony frequently employs chromaticism and unresolved tensions, particularly with the use of accidentals and chords like `[A,,0F,0D0]`. The melodic contour is largely descending or static, with many phrases ending on lower notes, creating a sense of weight. While there are some higher register notes, the overall impression is dark due to the prevalence of lower notes and the harmonic instability. | The harmony frequently employs chromaticism and unstable intervals, creating a tense color, particularly with the use of accidentals and diminished-sounding figures. The melodic contour often descends or remains static in the lower register, contributing to a sense of weight and gloom, and while there are some upward gestures, they are often brief or followed by downward motion. The piece largely dwells in the lower and mid-registers, with limited sustained brightness, reinforcing the overall dark impression.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+2,"Input:
+X:1
+M:3/4
+L:1/16
+K:F#dor
+[d'0b0B0c0g0]e10 |d'5 g4 ^G0<[e0g0d'0b0] |[e'0^g0]b7d'3 | [A,0c'0a0]E8 |e3 [A,5^g5c'5][G8b8] |a3[e0c0D0A0]F12 |
+e3 | [D0^G0]c5e5=g8 |e3 [A,0A0F,0F0d0] D11 |A6^G16[D16F16] |
+[d'0b0g0]<[e0G0C0B0] |d'2> e2 ^G[B,0g0]b0d'5[e'0_b0] |d'3 [A,0c'0e0] |E5c3e3 [A,5^g5c'5] |
+E6b5^G3 |a2 F0 D,3 A3[c2e2]A,3E6 |D3F3[^G,0e0][G5c5] |[g0d0]D7e3 |
+[F0F,0d0D0]A5F5A6 |[^G0D0] |F5 [G0C0B,0E0d0] |d5[^G,0E0G0] [B0C0] |
+d5e8 |d3[E0A,,0c0]E,3C3 B,3 |A,3E3 [^G,,0G0c0]E,3 |[B5^G,5]A5[F,0D,,0] |
+C3 E2A,,3E,3 D,3C,3 |F,3[C,,0^G,0E0C0]D,,3=G5 |E5A,0D6 |[F,6D,6] [G,6E,6] |
+^G,11F,11 |F,5e0^F,2 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many sixteenth notes and rapid figurations, creating a sense of constant motion. The texture is often dense, with multiple notes sounding simultaneously, and there are frequent leaps and wide registral activity throughout the piece. | The score features a high rhythmic density with many 1/16th notes and rapid figurations, creating a sense of continuous motion. The texture is often dense, with multiple notes sounding simultaneously, and there are frequent leaps and a wide registral range throughout the piece. | The score features a high rhythmic density with many 1/16th notes and rapid figurations. There is continuous motion with little silence, and frequent leaps and interval jumps are present throughout the melody and implied harmony. The texture is often dense, with multiple notes sounding close together in time, contributing to a sense of energy.
+
+Valence Classification: LOW
+  Reasoning: The harmony is often tense, utilizing chromaticism and unresolved leaps, particularly in the opening and throughout the piece. The melodic contour frequently descends or remains static in lower registers, creating a sense of weight and gloom, and there's a consistent focus on the lower and mid-low registers, contributing to a dark overall timbre. While there are some upward gestures, they are often brief and followed by descending lines, preventing a sense of sustained brightness. | The harmony is often dissonant and unstable, with frequent chromatic alterations and unresolved tensions, particularly noticeable in the complex chord voicings. The melodic contour frequently descends or remains static in the lower register, creating a sense of weight and gloom, and there's a consistent focus on the lower and mid-low registers, contributing to a dark and somber overall feel. While there are occasional upward gestures, they are often brief and overshadowed by the prevailing downward or static motion. | The harmony is largely dissonant, with frequent chromaticism and unresolved tensions created by the use of accidentals and complex chord voicings. The melodic contour is predominantly descending or static, lacking significant upward leaps, and the register focuses heavily on the lower and mid-low ranges, contributing to a dark and somber feel. These features combine to create a sense of weight and instability, suggesting a low valence.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+3,"Input:
+X:1
+M:3/4
+L:1/16
+K:Bm
+A3G,2DG2< d2[e2A,2] |EAf aB,0<[a0f0] A3[f3F3] |[F,3e3]E3C3[c2G,2] |DGB2c2A,2 EAd e |d0B,3f2 [A3e3][d3F3][F,3d3] |
+E3C3A2G,2 DGd3 |[e0A0A,0] EAf3a2[B,0a0]f2A3 |[A3F3f3][F,3e3]E3C3 |[c2G,2]D((3G2B6c0)[A,0A0]E |
+Ade [d0B,0] f2[A3e3][d3F3] [d3F,3] |E3C3 [G,2a2]>D2 | ((3G2e0G,,6) [A,2f2]>E2 A2a3 [B,3d3] |A3[e3F3A3] F,3 f3E3 |
+C3 [a2G,2]D G2e2 f3 A,2 |E A2a3 [d3B,3]A3 |[c3F3] [c3F,3][d3E3][e2C2]d3 [G,2f2] |DG2a3[A,0e0A0]EA |
+d3[d3B,3]A3 [e2F2]d0F,0f2 |[e0E0]d2< C2 e2d3[G,2f2]DG2 a3 |[e2A,2]>E2A2< d2[B,3d3] |A3 F3B48 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations. There is continuous motion with limited sustained notes, and the texture is often dense with multiple notes sounding simultaneously, especially with the use of chords and brackets. The melodic lines also exhibit frequent leaps and a wide range, contributing to the energetic feel. | The score features a high rhythmic density with many 1/16 notes and short note values throughout. There’s continuous motion with few sustained notes, and frequent leaps and rapid figurations are present, particularly in the ornamented sections with angled brackets. The texture is often dense, with multiple notes sounding close together in time, contributing to a sense of energetic activity. | The score features a high rhythmic density with many 1/16 notes and short note values throughout. There's continuous motion due to the lack of significant pauses, and the texture is often dense with multiple notes sounding together, especially with the use of chords and brackets. Additionally, there are frequent leaps and rapid figurations, contributing to the energetic feel.
+
+Valence Classification: LOW
+  Reasoning: The harmony features frequent chromaticism and unstable intervals, creating a tense color, particularly with the use of accidentals and diminished-sounding chords. The melodic contour is largely descending or static, with few sustained upward gestures, and the register is often focused in the lower to mid-range, contributing to a darker overall feel. While there are some brighter moments, the pervasive harmonic tension and downward motion suggest a predominantly low valence. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension—for example, the use of accidentals and chords like <d2[e2A,2]. The melodic contour often descends or remains static in a low register, and while there are some upward gestures, they are often brief and followed by downward movement, contributing to a sense of weight. The prevalence of notes in the lower and mid-low registers, combined with the harmonic instability, suggests a generally dark and tense character. | The piece features frequent chromaticism and dissonant intervals, creating harmonic tension, particularly with the use of accidentals and chords like diminished triads. The melodic contour often descends or remains static in the lower register, contributing to a sense of weight and gloom, and the register is heavily focused on the lower and mid-range, avoiding bright, soaring high notes. These elements combine to suggest a predominantly low valence.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+1,"Input:
+X:1
+M:3/4
+L:1/16
+K:Em
+B3e3[e'12g12] |g'3 | [g'0C0]<[G0f'0][f'0c0][e3e'3c3] | [e'0e0c0]d'6d'3 | G3d3g3[b12d12] |
+b3 | [f'3D3][f'3A3][f'0d0][f3f'3] [g'0g0a0] |a'3g'3 | E3B3e3[g12e'12] |
+g'3 | [g'0C0][f'3G3][f'0c0][e3e'3] | [e'0e0c0]d'6d'3 | G3d3g6<a6 |
+[b3d3][e'3^c3] | [d'0D0] d3A3[d0f'0A0]<[f'0f0]d3 [d0A0g'0] | [e0g0]<[a'0A0][g'0g0] |E3 B3e3[e'0g0^A0] |
+b3 |[c'0C0c0] [c'0G0][c3c'3][e0c'0c0] |d'6c'3b3 |G3 d3g3[a0c0] |
+d3[b3d3] |[a0D0] A3[a0d0][a0f0A0] |[b6d6][a3A3]g3 |E3 B3e3g3 |
+a'3 g'3f'3[c0g'0] |C3 G3c3[e'0e0]c12 |f'3 |[g'0G0] [g'0d0]<[g'0g0][b0g'0] |
+a'6[g'3g3]f'3 |D3A4d4 |[f0A0] g4 [a0c0A0] d4 |g4b9 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations, especially in the ornamented sections. There is continuous motion with limited sustained tones, and the texture is often dense with multiple notes sounding simultaneously, creating a sense of activity. Frequent leaps and quick changes in pitch contribute to the overall energetic feel. | The score features a high rhythmic density with many 1/16 notes and rapid figurations. There is continuous motion with limited sustained tones, and frequent leaps and interval jumps are present throughout the melodic lines. The texture is often dense, with multiple notes sounding close together in time, particularly in the ornamented sections. | The score features a high rhythmic density with many 1/16 notes and frequent grace notes, creating a sense of constant motion. There are frequent leaps and rapid figurations, particularly in the ornamented sections with groups of notes like ""[e'12g12]"". The texture is often dense, with multiple notes sounding together in time, contributing to an energetic feel.
+
+Valence Classification: LOW
+  Reasoning: The harmony frequently uses dissonant intervals and unstable chord patterns, particularly with the use of accidentals and chromaticism (e.g., ^c3, d4). The melodic contour often features descending lines and sighing figures, contributing to a sense of sadness, and the register is heavily focused on the lower and mid-range, lacking bright, high-register activity. These elements combine to create a generally dark and tense musical atmosphere. | The harmony relies heavily on minor tonality and features frequent chromaticism and dissonant intervals, creating a tense harmonic color. The melodic contour often descends or remains static in a lower register, with many downward gestures and a lack of soaring lines. While there are some higher notes, the overall emphasis remains in the mid-low register, contributing to a darker, more somber feel. | The harmony frequently employs dissonant intervals and unstable chords, particularly with the use of accidentals like ^c and the frequent chromaticism. The melodic contour often descends or remains static in a lower register, creating a sense of weight and gloom, and the piece largely avoids soaring upward gestures. While there is some activity in higher registers, it is often shadowed by darker, lower-register patterns.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"
+3,"Input:
+X:1
+M:3/4
+L:1/16
+K:D#m
+G2[F,,0A0C0] | [C,0G0]A2 F,2c2C,4[G4E,,4] |[C,2A2] G2E,7 |[D,,0F0][A,,0F0] [F0F,0] | A,,4 [F,7A,,7A,7C,,7]C,5 | c2[B,,0d0F0]<[F,0c0]d2 |
+B,2[f0^B,,0] F,3 [c0A,,0f0F0][c2F,2] |c2A,7[D0G,,0B,0F,0] |G3G,3 B,3[B,0D0C,,0C,0] |C,4[B,0E0]C,2 |
+C2[F,,0A0][C,2G2] A2F,2c2 |C,3 [A,,0^^c0G0G,0] A2G2A,5 | F2[D,,0F0]A,,3 |F,2A,2 D2F2[C,,3A,3F3]A,,3 |
+[E0A,,0C,0]c2[B0d0G,,0] | [D,2c2][B2d2]B,3G,,2A2[G3C,,3F3] |A2 [G0F0]C5F2 | [F,,0A,0C0]< [C,0F0][B,,0B,0F,0]C,3 |
+[F,,0A,0]F,6 |C9 |
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The score features a high rhythmic density with many 1/16 notes and rapid figurations, especially in the lower register. There is continuous motion with little silence, and the texture is often dense due to the use of chords and overlapping note values. Frequent leaps and a wide range contribute to the energetic feel. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in the repeated notes and grace notes. There is continuous motion with little silence, and frequent leaps and a wide registral range are present throughout the piece, creating a sense of activity. The textures are often dense with multiple notes sounding simultaneously, further contributing to the high arousal level. | The score features a high rhythmic density with many 1/16 notes and rapid figurations, particularly in the repeated notes and grace notes. There is continuous motion with little silence, and the texture is often dense due to the chords and overlapping note values. The melodic lines exhibit frequent leaps and a wide registral range, contributing to a sense of energy.
+
+Valence Classification: LOW
+  Reasoning: The harmony is consistently tense, utilizing diminished-sounding chords (e.g., G2[F,,0A0C0]) and frequent chromatic alterations. The melodic contour largely descends or remains static in low registers, creating a sense of weight and gloom, and there's a notable emphasis on the lower octaves throughout the piece. While there are occasional upward gestures, they are brief and do not overcome the overall downward and dark character. | The harmony is largely based around minor tonality with frequent chromaticism and unresolved tensions, particularly in the use of accidentals and diminished-sounding chords like G2[F,,0A0C0]. The melodic contour often descends or remains static in the lower register, and while there are some upward gestures, they are often followed by falling lines, creating a sense of weight. The piece heavily utilizes the low register with sustained notes in the bass, contributing to a dark and somber overall character. | The harmony is largely based around minor tonality with frequent chromaticism and unresolved tensions, particularly with the use of accidentals and diminished-sounding chords. The melodic contour often descends or remains static in the lower register, creating a sense of weight and gloom, and the piece stays predominantly in the lower and mid-low registers, contributing to a dark and somber feel.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+"

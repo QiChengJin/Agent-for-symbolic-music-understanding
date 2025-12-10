@@ -1,0 +1,1009 @@
+prompt,data,label,split,label_name,solution,agent_answer,predicted_label
+"Input:
+X:1
+L:1/16
+M:none
+I:linebreak $
+K:Bb
+ d d d2 A2 d d d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | g2 g2 g a d' b a/ c'/ b/ a/ g2 | 
+ g3/2 a/ g/ d3/2- d2 g2 g2 g4 d2 d2 A2 d2 d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | 
+ g2 g2 g a d b a/ c'/ b/ a/ g2 | g3/2 a/ g/ d3/2- d2 g2 g4 | g c' c'4 c'2 c' a3 | 
+ d'3/2 c'/ d' g'3 d' d' d'4 | c' d' d'2 d'2 a2 c'/ a3/2 a3/2 g/ | g3/2 a/ d'/ a3/2- a2 g g g4 | 
+ d2 d2 A2 d2 d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | g2 g2 g a d' b a/ c'/ b/ a/ g2 | 
+ g3/2 a/ g/ d3/2- d2 g2 g4 | d' f' f' f'3 f' d' d' g'3 | d'- d' c'/ d'3/2 b/ a3/2 g g d4 | 
+ g2 g2 g a d'2 b a g2 | g3/2 a/ d'/ g3/2 b/ a3/2 g g g4 | d d d2 A2 d d d4 | 
+ g2 a3/2 d'/ b/ a3/2 g2 d4 | g2 g2 g a d' b a/ c'/ b/ a/ g2 | 
+ g3/2 a/ g/ d3/2- d2 g2 g2 g4 d2 d2 A2 d2 d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | 
+ g2 g2 g a d b a/ c'/ b/ a/ g2 | g3/2 a/ g/ d3/2- d2 g2 g4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/16
+M:none
+I:linebreak $
+K:Bb
+ d d d2 A2 d d d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | g2 g2 g a d' b a/ c'/ b/ a/ g2 | 
+ g3/2 a/ g/ d3/2- d2 g2 g2 g4 d2 d2 A2 d2 d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | 
+ g2 g2 g a d b a/ c'/ b/ a/ g2 | g3/2 a/ g/ d3/2- d2 g2 g4 | g c' c'4 c'2 c' a3 | 
+ d'3/2 c'/ d' g'3 d' d' d'4 | c' d' d'2 d'2 a2 c'/ a3/2 a3/2 g/ | g3/2 a/ d'/ a3/2- a2 g g g4 | 
+ d2 d2 A2 d2 d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | g2 g2 g a d' b a/ c'/ b/ a/ g2 | 
+ g3/2 a/ g/ d3/2- d2 g2 g4 | d' f' f' f'3 f' d' d' g'3 | d'- d' c'/ d'3/2 b/ a3/2 g g d4 | 
+ g2 g2 g a d'2 b a g2 | g3/2 a/ d'/ g3/2 b/ a3/2 g g g4 | d d d2 A2 d d d4 | 
+ g2 a3/2 d'/ b/ a3/2 g2 d4 | g2 g2 g a d' b a/ c'/ b/ a/ g2 | 
+ g3/2 a/ g/ d3/2- d2 g2 g2 g4 d2 d2 A2 d2 d4 | g2 a3/2 d'/ b/ a3/2 g2 d4 | 
+ g2 g2 g a d b a/ c'/ b/ a/ g2 | g3/2 a/ g/ d3/2- d2 g2 g4 |]",1,train,Q2,1,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical piece features complex rhythms, rapid note changes, and a driving melody, which are characteristic of high-arousal music. | The given musical piece has a fast tempo (indicated by the 16th notes and complex rhythms), and the use of driving rhythms and repetitive patterns creates an energetic and intense atmosphere. | The given piece features fast note values (sixteenth and eighth notes), rapid arpeggios, and driving rhythmic patterns, which contribute to a high-energy and intense atmosphere.
+
+Valence Classification: HIGH
+  Reasoning: The key is Bb, which is often associated with bright and cheerful music. The melody features many repetitive and ascending patterns, creating a sense of joy and playfulness. | The given musical piece is in the key of Bb, often associated with more somber or melancholic moods. The repetition of the same melodic patterns and the use of descending phrases also contribute to a sense of sadness or longing. | The piece is written in a major key (Bb) and has a lively, upbeat rhythm, with a mix of stepwise motion and leaps, suggesting a bright and joyful atmosphere.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:none
+I:linebreak $
+K:C#
+ =A2 c^^d |{/d} =e2 .e2 |{/=efef} e2 c2 | cd=ec | =A2 c^^d | .=e2 .c2 | .=e2 c2 | cd=ec | =A2 c^^d | 
+ .=e2 .e2 |${/=efef} e2 c2 | cd=ec | =A4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:none
+I:linebreak $
+K:C#
+ =A2 c^^d |{/d} =e2 .e2 |{/=efef} e2 c2 | cd=ec | =A2 c^^d | .=e2 .c2 | .=e2 c2 | cd=ec | =A2 c^^d | 
+ .=e2 .e2 |${/=efef} e2 c2 | cd=ec | =A4 |]",3,train,Q4,3,"Emotion Classification: Q4 (relaxed) (Label: 3)
+
+Arousal Classification: LOW
+  Reasoning: The given music piece features a slow tempo (L:1/8) and a repetitive structure, which suggests a calm and peaceful atmosphere. | The music features a slow tempo (L:1/8), and a steady, repetitive melody, creating a calm atmosphere. | The presence of eighth notes (L:1/8), ornaments (^^), and a relatively fast rhythm suggest a high level of energy and intensity.
+
+Valence Classification: HIGH
+  Reasoning: The given music notation features a lively rhythm (indicated by the 8th note and lack of rests) and a bright key signature (C#), suggesting a pleasant and joyful atmosphere. | The key of C# is often associated with bright and uplifting music, and the melody features a lively rhythm and a mix of stepwise motion and leaps, creating a sense of joy and playfulness. | The use of the major key (C#) and the overall lively rhythm suggests a bright and joyful atmosphere.
+
+Combined Result: LOW arousal + HIGH valence → Q4 (relaxed)
+",3
+"Input:
+X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:Db
+ de fA | ddcB | cded | cB A2 | de fA | ddcB | cdeg | fe d2 :: ffgf | edce | efed | cB A2 | de fA |$ 
+ ddcB | cdeg | fe d2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:Db
+ de fA | ddcB | cded | cB A2 | de fA | ddcB | cdeg | fe d2 :: ffgf | edce | efed | cB A2 | de fA |$ 
+ ddcB | cdeg | fe d2 |]",2,train,Q3,2,"Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical piece features a slow tempo (L:1/8) and a steady, repetitive rhythm (M:2/4), which suggests a calm and peaceful atmosphere. | The given musical notation features complex rhythms and rapid note changes, particularly in the second part of the piece, which suggests a high level of energy and intensity. | The given musical piece has a fast tempo (indicated by the 2/4 time signature and eighth-note rhythms), and the use of eighth-note arpeggios and melodic motifs creates a driving and energetic feel.
+
+Valence Classification: LOW
+  Reasoning: The key of Db (D flat) is often associated with somber or melancholic moods, and the minor key progression in the given tune contributes to a generally sad or unpleasant atmosphere. | The key of Db and the use of minor and descending melodic patterns suggest a somber or melancholic mood, which is characteristic of low valence. | The key of Db is often associated with somber or melancholic moods, and the minor chord progression and descending melody patterns also contribute to a low valence.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+",1
+"Input:
+X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:Bb
+ F | B B c c | d2 c c | d B B A | B2 z F | B B c c | d2 c c | d B B A | B2 z d | d d c c | 
+ d d c c | d d c c | d d c2 | z c d B | B A B x |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:Bb
+ F | B B c c | d2 c c | d B B A | B2 z F | B B c c | d2 c c | d B B A | B2 z d | d d c c | 
+ d d c c | d d c c | d d c2 | z c d B | B A B x |]",2,train,Q3,2,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given music piece is primarily composed of slow, repetitive, and calm melodic patterns, indicating a low-energy and peaceful atmosphere. | The time signature is 4/4, which is often associated with strong rhythmic patterns, and the presence of repeating eighth-note patterns and driving rhythms (e.g., 'd d c c') contribute to a sense of energy and intensity. | The piece has a strong rhythmic pattern with a driving 4/4 time signature, and the repetition of notes creates an energetic and intense feel.
+
+Valence Classification: HIGH
+  Reasoning: The given musical notation features a lively and repetitive rhythm, with a consistent and upbeat pattern, which is often associated with pleasant and joyful music. | The use of the key of Bb, often associated with bright and uplifting music, along with the repetition of upbeat and cheerful patterns (e.g., 'B B c c', 'd d c c'), suggests a pleasant and joyful atmosphere. | The given musical piece is in the key of Bb, which is often associated with bright and cheerful moods. The use of repeated, ascending melodic patterns and the overall rhythmic structure contribute to a lively and joyful atmosphere.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/4
+Q:3/4=90
+M:6/4
+I:linebreak $
+K:Ddor
+ D | D2 A A2 G | F3/2 G/ A G2 E | F2 G A3/2 B/ c | d A2 D2 :: c | c c c c2 c | c2 d e2 e |$ 
+ f3/2 e/ f g3/2 f/ g | a e2 d3 | c c c c2 c | c3/2 d/e/f/ g2 d | d A2 A3/2 G/ F | G A2 D2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+Q:3/4=90
+M:6/4
+I:linebreak $
+K:Ddor
+ D | D2 A A2 G | F3/2 G/ A G2 E | F2 G A3/2 B/ c | d A2 D2 :: c | c c c c2 c | c2 d e2 e |$ 
+ f3/2 e/ f g3/2 f/ g | a e2 d3 | c c c c2 c | c3/2 d/e/f/ g2 d | d A2 A3/2 G/ F | G A2 D2 |]",0,train,Q1,0,"Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The presence of many 16th notes (e.g., A2 G, F3/2 G/ A G2 E, f3/2 e/ f g3/2 f/ g) and complex rhythms creates a driving and intense feel, characteristic of high arousal music. | The presence of driving rhythms, complex time signatures (3/4, 6/4), and a mix of short and long note lengths contribute to a sense of energy and intensity. | The tune features a slow and steady rhythm with a focus on repetition, particularly in the first part with the repeated 'c' notes, creating a calm atmosphere.
+
+Valence Classification: LOW
+  Reasoning: The tune is in the key of D major (Ddor, but the D major key signature is used), which often evokes a bright and cheerful atmosphere. | The key signature 'Ddor' (D dorian mode) and the use of minor and descending melodic patterns often create a somber or melancholic atmosphere, suggesting a low valence. | The use of the Dorian mode (Ddor) often creates a somber or melancholic atmosphere, which is typically associated with low valence.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+",1
+"Input:
+X:1
+L:1/16
+M:2/4
+I:linebreak $
+K:C
+ cBcd | e2e2 d2ed | cGce d2ed | cege agfe | ^c2d2 gagf | e2e2 d2ed | cGce d2ed | cGce dfed |$ 
+""^FINE"" c4 :| GABc | d2d2 ^c2de | d2d2 eg^fe | d2d2 cBcd | c2B2 GABc | d2d2 ^c2de | d2d2 f2ed |$ 
+ e2c2 efde | c2e2 GABc | d2d2 e2d^c | d2d2 g2^fe | d2d2 eg^fe | ^c2d2 bag^f | e2e2 g^fed |$ 
+ c2c2 ABcd | e2a2g2^f2 |""^D.C."" g4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/16
+M:2/4
+I:linebreak $
+K:C
+ cBcd | e2e2 d2ed | cGce d2ed | cege agfe | ^c2d2 gagf | e2e2 d2ed | cGce d2ed | cGce dfed |$ 
+""^FINE"" c4 :| GABc | d2d2 ^c2de | d2d2 eg^fe | d2d2 cBcd | c2B2 GABc | d2d2 ^c2de | d2d2 f2ed |$ 
+ e2c2 efde | c2e2 GABc | d2d2 e2d^c | d2d2 g2^fe | d2d2 eg^fe | ^c2d2 bag^f | e2e2 g^fed |$ 
+ c2c2 ABcd | e2a2g2^f2 |""^D.C."" g4 |]",0,train,Q1,0,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical piece features fast-paced rhythms (e.g., 1/16 and 2/4 time signatures), rapid note changes, and driving melodic patterns, which are characteristic of high-arousal music. | The given musical piece features complex rhythms, frequent note changes, and a fast time signature (L:1/16), indicating a high level of energy and intensity. | The given musical piece has a calm and peaceful feel due to the use of slow note values (1/16, 2/4) and a steady, repetitive rhythm, which suggests a low-energy and soothing atmosphere.
+
+Valence Classification: HIGH
+  Reasoning: The given music piece appears to be in a major key (C major) and features lively rhythms and melodic patterns, suggesting a bright and joyful atmosphere. | The given musical piece appears to be in a lively 2/4 time signature, and the use of major keys (C) and ascending melodies suggests a bright and joyful atmosphere. | The given music notation appears to be in a major key (K:C) and features lively rhythms and repetitive patterns, suggesting a bright and joyful melody.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:E
+ B |: e2 d e2 f | g3 g2 g | b2 g f2 g | f3 e2 B :| f3 e2 z || bbb g2 b | a2 g f3 | bbb g2 b |$ 
+ a2 g f3 |:""^Intro"" bbg e3 | ede f2 f | f2 g b2 g | f3 e3 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:E
+ B |: e2 d e2 f | g3 g2 g | b2 g f2 g | f3 e2 B :| f3 e2 z || bbb g2 b | a2 g f3 | bbb g2 b |$ 
+ a2 g f3 |:""^Intro"" bbg e3 | ede f2 f | f2 g b2 g | f3 e3 |]",3,train,Q4,3,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given music piece has a fast-paced and driving rhythm, with a high note density and repetition of short melodic patterns, indicating a high level of energy and intensity. | The presence of many eighth-note rhythms (indicated by the 6/8 time signature and the notation of multiple notes per beat) and the use of driving, repetitive patterns (e.g., ""bbb g2 b"" and ""bbg e3"") create a sense of energy and intensity, characteristic of high arousal music. | The fast tempo (indicated by the time signature 6/8 and the quick note changes) and the use of driving rhythms and repetitive patterns (such as 'bbb g2 b') create an energetic and intense feel.
+
+Valence Classification: HIGH
+  Reasoning: The tune is in a major key (E major) and features lively, bouncy rhythms (6/8 time signature), which are often associated with pleasant and joyful music. | The given music piece is in the key of E, which is often associated with bright and uplifting sounds. The use of triplets and eighth-note rhythms also creates a lively and joyful atmosphere. | The given music piece is in 6/8 time and has a lively, upbeat rhythm, often associated with joyful or lively music. The key of E major also contributes to the overall bright and pleasant atmosphere.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:2/2
+I:linebreak $
+K:G
+ Bd | e2 ge f B3 | gfeg f2 ed | ABde f3 d | egfe dBAB | e B3 g B3 | f A3 G3 A | BedB AcBA |$ 
+ AGFG E2 :: de | g2 bg a f3 | g2 af e3 d | efgf edBA | BAB/c/d e3 f | g2 bg a f3 | g2 df e3 d |$ 
+ B2 dB AcBA | AGFG E2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/2
+I:linebreak $
+K:G
+ Bd | e2 ge f B3 | gfeg f2 ed | ABde f3 d | egfe dBAB | e B3 g B3 | f A3 G3 A | BedB AcBA |$ 
+ AGFG E2 :: de | g2 bg a f3 | g2 af e3 d | efgf edBA | BAB/c/d e3 f | g2 bg a f3 | g2 df e3 d |$ 
+ B2 dB AcBA | AGFG E2 |]",1,train,Q2,1,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given music piece features complex rhythms, rapid note changes, and an upbeat tempo, suggesting high energy and intensity. | The piece features fast-paced rhythms (indicated by the 1/8 and 2/2 time signatures, and the use of eighth and sixteenth notes), driving melodic lines, and a strong emphasis on movement, suggesting high energy and intensity. | The given musical piece features fast-paced rhythms (indicated by the 16th notes and 8th notes), energetic melodic patterns (e.g., 'e2 ge f B3', 'gfeg f2 ed'), and a driving feel, which are characteristic of high-arousal music.
+
+Valence Classification: HIGH
+  Reasoning: The tune features a lively 2/2 time signature and is written in a major key (G), which is often associated with bright and joyful music. | The tune appears to be a lively and upbeat folk melody, with a mix of stepwise motion and leaps, and a predominantly major key (G), which is often associated with bright and joyful music. | The given music piece is in 2/2 time and the key of G, often associated with bright and cheerful music. The use of eighth notes and triplets also contributes to a lively and upbeat feel.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:F
+ C | C2 A A2 G | G2 F F2 E | D2 D F2 D/D/ | D2 C F2 C | D2 D F2 D | C3 C2 F | E2 E G2 E | 
+ E2 G F2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:F
+ C | C2 A A2 G | G2 F F2 E | D2 D F2 D/D/ | D2 C F2 C | D2 D F2 D | C3 C2 F | E2 E G2 E | 
+ E2 G F2 |]",3,train,Q4,3,"Emotion Classification: Q4 (relaxed) (Label: 3)
+
+Arousal Classification: LOW
+  Reasoning: The given musical piece has a slow tempo (L:1/8) and a steady, repetitive rhythm, indicating a calm and peaceful atmosphere. | The given musical piece features a slow tempo (L:1/8), and the note durations are mostly longer, contributing to a calm atmosphere. | The piece features a slow tempo (L:1/8) and a moderate, steady rhythm (M:6/8), with a calm and peaceful key signature (K:F), suggesting a low-arousal atmosphere.
+
+Valence Classification: HIGH
+  Reasoning: The key of F and the 6/8 time signature often suggest a lively and upbeat feel, which is typical of high-valence music. | The key signature (K:F) and the use of major chords (C, G, F) suggest a bright and cheerful atmosphere, which is characteristic of high valence. | The key of F and the use of 6/8 time signature often associated with lively or dance-like music, along with the predominantly stepwise motion and lack of dissonant intervals, suggest a pleasant and joyful atmosphere.
+
+Combined Result: LOW arousal + HIGH valence → Q4 (relaxed)
+",3
+"Input:
+X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:Eb
+ e _g e/g/ | f/d/ B e | _g b g/b/ | a/f/ e _g | f B _d/e/ | _g/f/ e g | f B _d/e/ | _g/f/ d e |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:Eb
+ e _g e/g/ | f/d/ B e | _g b g/b/ | a/f/ e _g | f B _d/e/ | _g/f/ e g | f B _d/e/ | _g/f/ d e |]",2,train,Q3,2,"Emotion Classification: Q3 (sad) (Label: 2)
+
+Arousal Classification: LOW
+  Reasoning: The given musical piece features a slow and contemplative melody, with a steady and repetitive rhythm, and a minor key (Eb), which contributes to a calm and peaceful atmosphere. | The given music piece features complex and fast-paced rhythms, with multiple notes and ornaments (e.g., / and _), indicating a high level of energy and intensity. | The melody features a slow and contemplative pace, with a mix of stepwise motion and some leaps, but the overall feel is calm and peaceful, especially with the use of the Eb key and the gentle rhythmic pattern.
+
+Valence Classification: LOW
+  Reasoning: The key of Eb and the use of minor and suspended notes (e.g., _g, b, f/d/, _d/e/) suggest a melancholic and introspective atmosphere, which is typically associated with low valence. | The given musical notation appears to be in 3/4 time (waltz rhythm), often associated with lively and joyful music. | The given music notation appears to be in a minor key (Eb) and features many descending and repetitive melodic patterns, often associated with sad or melancholic music.
+
+Combined Result: LOW arousal + LOW valence → Q3 (sad)
+",2
+"Input:
+X:1
+L:1/8
+M:3/4
+I:linebreak $
+K:Dmin
+ A^c d2 Ac | de f2 ed | .e2 e2- ee | fg a2 fe | df e2 ^ce | .d2 d4 :: a2 fa fa | ag eg eg |$ 
+ ge fg ag | fe (3d^cd e2 | a2 fa fa | ag eg eg | ge fg ag | ef d4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:3/4
+I:linebreak $
+K:Dmin
+ A^c d2 Ac | de f2 ed | .e2 e2- ee | fg a2 fe | df e2 ^ce | .d2 d4 :: a2 fa fa | ag eg eg |$ 
+ ge fg ag | fe (3d^cd e2 | a2 fa fa | ag eg eg | ge fg ag | ef d4 |]",2,train,Q3,2,"Emotion Classification: Q3 (sad) (Label: 2)
+
+Arousal Classification: LOW
+  Reasoning: The given musical piece is in a minor key (Dmin) and features a slow, steady rhythm with a moderate tempo (M:3/4), which often evokes a calm atmosphere. | The piece is written in a minor key (Dmin) and features a slow tempo (L:1/8), which often contribute to a calm atmosphere. | The slow tempo (L:1/8) and moderate pace (M:3/4) suggest a calm atmosphere, and the use of minor keys (K:Dmin) often evokes feelings of serenity or melancholy, contributing to low arousal.
+
+Valence Classification: LOW
+  Reasoning: The key is D minor, which is often associated with sad or melancholic emotions, and the overall rhythm and note progression also contribute to a somber and introspective mood. | The key signature (Dmin) and the use of minor chords typically evoke a somber or melancholic mood, which is characteristic of low valence. | The key is D minor, which is often associated with sad or melancholic music.
+
+Combined Result: LOW arousal + LOW valence → Q3 (sad)
+",2
+"Input:
+X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:Ab
+|:""^A""""Abmaj7"" c3/2 c/ c2- | c F/A/ (3c B A |""Bb9""""Fm7"" c4 |""Bb9"" (3z F A c B/A/ |""Bbm9""""Eb9"" c4 |$ 
+""Bbm7"" (3z F A""Eb7"" (3c B A |""Abmaj7"" c2""Amaj7"" ^c2 |""Bbmaj7"" =d2""Amaj7"" ^c2 || 
+""Abmaj7"" c3/2 c/ c2- |$ c F/A/ (3c B A |""Bb9"" c4 | (3z F A (3c B A |""Bbm9"" c4 | 
+""E13sus4"" (3z F A""Eb13"" (3c B A |$""Abmaj7"" c2""Amaj7"" ^c2 |""Bbmaj7"" =d2""Cbmaj7"" e2 |] 
+""^B""""Cmaj7""""C6"" =e4 |""Cmaj7"" z G/B/""C6"" f/=e/=d/c/ |""Cm7"" e3/2 =d/""F9"" e2- |$""Cm7"" e2""F9"" =d c |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:Ab
+|:""^A""""Abmaj7"" c3/2 c/ c2- | c F/A/ (3c B A |""Bb9""""Fm7"" c4 |""Bb9"" (3z F A c B/A/ |""Bbm9""""Eb9"" c4 |$ 
+""Bbm7"" (3z F A""Eb7"" (3c B A |""Abmaj7"" c2""Amaj7"" ^c2 |""Bbmaj7"" =d2""Amaj7"" ^c2 || 
+""Abmaj7"" c3/2 c/ c2- |$ c F/A/ (3c B A |""Bb9"" c4 | (3z F A (3c B A |""Bbm9"" c4 | 
+""E13sus4"" (3z F A""Eb13"" (3c B A |$""Abmaj7"" c2""Amaj7"" ^c2 |""Bbmaj7"" =d2""Cbmaj7"" e2 |] 
+""^B""""Cmaj7""""C6"" =e4 |""Cmaj7"" z G/B/""C6"" f/=e/=d/c/ |""Cm7"" e3/2 =d/""F9"" e2- |$""Cm7"" e2""F9"" =d c |]",3,train,Q4,3,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The presence of complex, extended chords (e.g., Abmaj7, Bb9, Eb9, E13sus4, Eb13) and rapid arpeggios (e.g., c3/2 c/ c2-) suggest a high level of musical intensity and energy. | The given music piece features complex chord progressions, but the overall feel is calm and peaceful due to the slow tempo (indicated by the 3/2 and 4/4 time signatures and the use of whole and half notes) and the use of major and minor seventh chords, which often create a relaxed atmosphere. | The piece features complex, syncopated rhythms, and rapid chord changes, creating an intense and driving atmosphere.
+
+Valence Classification: HIGH
+  Reasoning: The presence of major chords (e.g., ""Abmaj7"", ""Amaj7"", ""Bbmaj7"", ""Cmaj7"") and the overall progression suggest a bright and joyful atmosphere. | The use of major 7th chords (e.g. Abmaj7, Amaj7, Bbmaj7, Cbmaj7, Cmaj7) and the overall progression create a bright, uplifting atmosphere, suggesting a high valence. | The use of major 7th chords (e.g., ""Abmaj7"", ""Amaj7"", ""Bbmaj7"", ""Cmaj7"") and the overall progression create a bright and uplifting atmosphere.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:3/4
+I:linebreak $
+K:C#
+|: C>E CC EG | GF DE C2 | C>E CC EG | F2 G4 :: E>F EF GG | AF FG E2 | E>F EF GG | AF FG E2 |$ 
+ E>D B,D C2 | E>D B,D C2 | C>E GG EF | D2 C4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:3/4
+I:linebreak $
+K:C#
+|: C>E CC EG | GF DE C2 | C>E CC EG | F2 G4 :: E>F EF GG | AF FG E2 | E>F EF GG | AF FG E2 |$ 
+ E>D B,D C2 | E>D B,D C2 | C>E GG EF | D2 C4 |]",3,train,Q4,3,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given music notation features fast-paced and repetitive patterns, particularly with the use of eighth notes (L:1/8) and the driving rhythm in the melody, indicating a high level of energy and intensity. | The given musical notation features a fast-paced rhythm with many eighth notes and sixteenth notes (indicated by the time signature 3/4 and the presence of many short notes), which suggests a high level of energy and intensity. | The given music notation features fast-paced and repetitive patterns (e.g., ""C>E CC EG"" and ""E>F EF GG""), indicating high energy and intensity.
+
+Valence Classification: HIGH
+  Reasoning: The tune is in 3/4 time, which is commonly associated with waltzes, and has a lively, upbeat feel. The use of eighth notes and the repetition of melodic patterns also contribute to a sense of energy and joy. | The given musical notation is in 3/4 time and has a lively rhythm, often associated with upbeat and joyful music. The key of C# also tends to produce a bright sound. | The tune is in 3/4 time and has a lively rhythm, often associated with upbeat and joyful music.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/4
+Q:1/4=100
+M:4/4
+I:linebreak $
+K:Dmix
+ A/B/ | c c A/B/ c | d d D F/G/ | A A G/F/ E | D3 :| A | d3/2 e/ =f d | e e !fermata!A A |$ 
+ d3/2 e/ =f e | d3 d | c d B/A/ G | d d D F/G/ | A A G/F/ E | D3 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+Q:1/4=100
+M:4/4
+I:linebreak $
+K:Dmix
+ A/B/ | c c A/B/ c | d d D F/G/ | A A G/F/ E | D3 :| A | d3/2 e/ =f d | e e !fermata!A A |$ 
+ d3/2 e/ =f e | d3 d | c d B/A/ G | d d D F/G/ | A A G/F/ E | D3 |]",1,train,Q2,1,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical piece is in 4/4 time (M:4/4) and has a driving rhythm with repeating eighth notes (e.g., c c, d d, e e) and a fermata (!fermata!) that adds intensity, indicating high arousal. | The presence of driving rhythms (e.g., 3/2 and 4/4 time signatures, and repetition of notes), energetic melodic patterns (e.g., the use of eighth notes and sixteenth notes), and the fermata, which adds a sense of intensity, contribute to the high arousal classification of this piece. | The given musical piece features a mix of fast-paced and complex rhythms (indicated by the 3/2 and 1/4 time signatures, and the use of ornaments and fermatas), as well as a driving melody with many eighth-note and sixteenth-note patterns, suggesting a high-energy and intense musical experience.
+
+Valence Classification: HIGH
+  Reasoning: The tune is in D minor (Dmix), which often gives a melancholic or somber feel, and the use of minor chords and descending patterns contributes to a more subdued atmosphere. | The tune is in a major key (Dmix), and the rhythm and note patterns suggest a lively and upbeat melody, which is often associated with pleasant and joyful music. | The use of the major key (Dmix) and the lively rhythm (1/4 and 1/4=100) often associated with upbeat and cheerful music, suggests a high valence.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:2/2
+I:linebreak $
+K:G
+ d^cAF G2 GF | DEFG ABcA | d^cAF GBAF | DEFG ABcA | d^cAF G2 GF | DEFG ABcA | d^cAF GBAF |$ 
+ DFAc BG G2 || Addc d2 cd | efcd efge | fgef d2 dc | AGFG ABcB | Addc d2 cd | efcd efge |$ 
+ faef d2 dc | Aceg fd d2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/2
+I:linebreak $
+K:G
+ d^cAF G2 GF | DEFG ABcA | d^cAF GBAF | DEFG ABcA | d^cAF G2 GF | DEFG ABcA | d^cAF GBAF |$ 
+ DFAc BG G2 || Addc d2 cd | efcd efge | fgef d2 dc | AGFG ABcB | Addc d2 cd | efcd efge |$ 
+ faef d2 dc | Aceg fd d2 |]",0,train,Q1,0,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical piece features a fast tempo (indicated by the time signature 2/2 and the use of eighth notes and sixteenth notes), driving rhythms, and a lively melody, suggesting a high level of energy and intensity. | The given musical piece is in 2/2 time (M:2/2), which often indicates a strong and driving rhythm. Additionally, the presence of eighth notes (L:1/8) and the use of repetitive and energetic patterns contribute to a high-arousal feel. | The given musical piece is in 2/2 time (common time) and has a moderate to fast-paced rhythm, with a mix of eighth and sixteenth notes, indicating a high level of energy and intensity.
+
+Valence Classification: HIGH
+  Reasoning: The given musical piece is in the key of G, which is often associated with a bright and cheerful tone. The use of ascending arpeggios (broken chords played in a smooth, flowing manner) and the repetition of the melody also contribute to a lively and joyful atmosphere. | The given musical notation appears to be in 2/2 time and the key of G, which is often associated with bright and cheerful music. | The given tune is in the key of G major, which is often associated with bright and cheerful music.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:C
+|: A2 ec A2 eA | f2 e2 e2 a2 | A2 ec A2 eA | c2 B2 B2 c2 | A2 ec A2 eA | f2 e2 e2 a2 |$ 
+ fa ea ca Ba | c2 A2 A2 :: a2 | f2 ea c2 Aa | c2 A2 A2 a2 | f2 ea c2 Aa | c2 B2 B2 A2 |$ 
+ f2 ea c2 Aa | ec ac e2 a2 | fa ea ca Ba | c2 A2 A2 :: ec | A<A ec Ae cA | f2 e2 e2 a2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:C
+|: A2 ec A2 eA | f2 e2 e2 a2 | A2 ec A2 eA | c2 B2 B2 c2 | A2 ec A2 eA | f2 e2 e2 a2 |$ 
+ fa ea ca Ba | c2 A2 A2 :: a2 | f2 ea c2 Aa | c2 A2 A2 a2 | f2 ea c2 Aa | c2 B2 B2 A2 |$ 
+ f2 ea c2 Aa | ec ac e2 a2 | fa ea ca Ba | c2 A2 A2 :: ec | A<A ec Ae cA | f2 e2 e2 a2 |]",1,train,Q2,1,"Emotion Classification: Q4 (relaxed) (Label: 3)
+
+Arousal Classification: LOW
+  Reasoning: The time signature is 4/4, and the rhythm has a strong, driving pattern with many eighth notes and repetitive phrases, suggesting an energetic and intense feel. | The given musical piece features a slow tempo (L:1/8) and a moderate time signature (M:4/4), which typically indicates a more relaxed and calm atmosphere. | The given music notation features a moderate tempo (M:4/4) and a calm key (K:C), but the overall feel is more subdued due to the use of eighth-note and quarter-note rhythms, which create a steady, gentle flow.
+
+Valence Classification: HIGH
+  Reasoning: The given musical notation is in the key of C, which is often associated with bright and cheerful music. The use of major chords (A and C) and the overall structure of the tune also suggest a lively and pleasant atmosphere. | The key is C major, which is often associated with bright and joyful music, and the melody features a lively rhythm and a mix of stepwise motion and leaps, creating a sense of playfulness and energy. | The tune is in the key of C, which is often associated with bright and cheerful music, and features a lively rhythm with a mix of stepwise motion and leaps, creating a sense of joy and playfulness.
+
+Combined Result: LOW arousal + HIGH valence → Q4 (relaxed)
+",3
+"Input:
+X:1
+L:1/8
+M:none
+I:linebreak $
+K:none
+ A2 A>^F A2 d>^c | B2 A>B d3 e |$ e>Bd>e e^ffe | d>BA>^F d2 F2 | E3 ^F D2 ^f>g || 
+ a>d (3e^fg a>d (3efg | a>d (3e^fg a>df>a |$ a>g^f>e d>ef>g | a>d (3e^fg a>df>a | b2 b2 b2 ^f>a | 
+ b>ab>^c' b3 c' | b>a^f>e d>ef>a | b2 b2 b2 ^f>b |$ b>a^f>b a>fe>g | ^f>ed>f (3efe d>e | 
+ (3g^fe d>B A>^F d>F | A2 A>^F A2 d>^c | B2 A>B d3 e |$ e>Bd>e e^ffe | d>BA>^F d2 F2 | 
+ E3 ^F D2 D2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:none
+I:linebreak $
+K:none
+ A2 A>^F A2 d>^c | B2 A>B d3 e |$ e>Bd>e e^ffe | d>BA>^F d2 F2 | E3 ^F D2 ^f>g || 
+ a>d (3e^fg a>d (3efg | a>d (3e^fg a>df>a |$ a>g^f>e d>ef>g | a>d (3e^fg a>df>a | b2 b2 b2 ^f>a | 
+ b>ab>^c' b3 c' | b>a^f>e d>ef>a | b2 b2 b2 ^f>b |$ b>a^f>b a>fe>g | ^f>ed>f (3efe d>e | 
+ (3g^fe d>B A>^F d>F | A2 A>^F A2 d>^c | B2 A>B d3 e |$ e>Bd>e e^ffe | d>BA>^F d2 F2 | 
+ E3 ^F D2 D2 |]",0,train,Q1,0,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical piece features complex and fast-paced rhythms, rapid note changes, and a driving pattern, which are characteristic of high arousal music. | The given musical piece features complex, driving rhythms and rapid note changes, which are characteristic of high-arousal music. | The given musical piece features complex rhythms, rapid note changes, and a driving pattern, indicating a high level of energy and intensity.
+
+Valence Classification: HIGH
+  Reasoning: The tune has a lively and upbeat feel, with many rising arpeggios and a generally bright, bouncy rhythm, which is often associated with joyful music. | The tune has a melancholic and introspective feel, with a focus on minor keys and descending melodic lines, suggesting a somber or sad mood. | The given tune features a lively and upbeat rhythm, with a mix of ascending and descending melodic patterns, suggesting a bright and joyful atmosphere.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:C
+ C4 | A,2 G, A, | D D2 A, | B, A, G,2 | C D E C | D E F D | E C2 A, | B, A, G,2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:C
+ C4 | A,2 G, A, | D D2 A, | B, A, G,2 | C D E C | D E F D | E C2 A, | B, A, G,2 |]",2,train,Q3,2,"Emotion Classification: Q4 (relaxed) (Label: 3)
+
+Arousal Classification: LOW
+  Reasoning: The time signature is 4/4, but the rhythm is relatively slow and features many longer notes (e.g., C4, A,2, G,2), which contributes to a calm and peaceful atmosphere. | The given music piece is in 4/4 time, but the note lengths and rests suggest a moderate to slow tempo. The melody is also relatively simple and doesn't contain many dramatic changes, indicating a calm and peaceful atmosphere. | The given music piece is in 4/4 time, which is common, but the note lengths and rests suggest a more steady, calm pace.
+
+Valence Classification: HIGH
+  Reasoning: The key signature is C major, often associated with happy and bright music, and the melody features a mix of stepwise motion and some leaps, creating a lively and joyful feel. | The key signature (K:C) is in the key of C major, often associated with happy and uplifting music. | The key signature (K:C) and the overall melody progression suggest a bright and cheerful tune, typical of high valence music.
+
+Combined Result: LOW arousal + HIGH valence → Q4 (relaxed)
+",3
+"Input:
+X:1
+L:1/8
+M:3/4
+I:linebreak $
+K:D
+ d2 dddd | d2 defd | ec A2 G2 | TG2 F2 A2 | B2 c2 d2 | ceAceg | f/g/a g2 f2 | Tf2 e4 :: a2 aaaa |$ 
+ a2 bagf | gf g2 f2 | Tf2 e2 A2 | BFGABc | Td2 c2 d2 | egfded | c2 d4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:3/4
+I:linebreak $
+K:D
+ d2 dddd | d2 defd | ec A2 G2 | TG2 F2 A2 | B2 c2 d2 | ceAceg | f/g/a g2 f2 | Tf2 e4 :: a2 aaaa |$ 
+ a2 bagf | gf g2 f2 | Tf2 e2 A2 | BFGABc | Td2 c2 d2 | egfded | c2 d4 |]",0,train,Q1,0,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The piece features driving rhythms, rapid note repetition, and a mix of ascending and descending melodic lines, creating a sense of energetic and intense movement. | The piece features a fast tempo (indicated by the 1/8 and 3/4 time signatures and the numerous 16th notes), driving rhythms, and a mix of ascending and descending arpeggios, creating an energetic and intense atmosphere. | The given musical piece has a fast tempo (indicated by the 1/8 note and the many eighth notes) and complex rhythms, which typically evoke high energy and intensity.
+
+Valence Classification: HIGH
+  Reasoning: The given music notation is in the key of D major, which is often associated with bright and joyful sounds. | The tune is in 3/4 time and the key of D major, which is often associated with bright and cheerful music. The use of stepwise motion and repetition of notes also contributes to a lively and joyful feel. | The tune is in 3/4 time, which is often associated with lively and upbeat music, and the key of D major, which is commonly used for bright and cheerful melodies.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:C
+|:""^A"" G | G2 c cBc | def e2 d | cBA GAB | c3 c2 ::""^B"" e/f/ | g2 g g>fe | fde f2 f | def ged |$ 
+ c3 B2 G | G2 c cBc | def e2 d | cBA GAB | c3 c2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:C
+|:""^A"" G | G2 c cBc | def e2 d | cBA GAB | c3 c2 ::""^B"" e/f/ | g2 g g>fe | fde f2 f | def ged |$ 
+ c3 B2 G | G2 c cBc | def e2 d | cBA GAB | c3 c2 |]",3,train,Q4,3,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The 6/8 time signature and the presence of eighth notes and sixteenth notes (indicated by the ""/8"" and the use of multiple notes in a single beat) suggest a lively, driving rhythm. | The time signature is 6/8, which often indicates a lively or driving rhythm, and the note patterns and ornamentations (e.g., the ""g>fe"" and ""^A"" and ""^B"" markings) suggest a high level of energy and intensity. | The time signature (6/8) and the use of triplets and slower note values suggest a waltz-like rhythm, which is often associated with calm and peaceful music.
+
+Valence Classification: HIGH
+  Reasoning: The given musical piece is in 6/8 time and has a lively rhythm, often associated with upbeat and joyful music, particularly in folk or dance traditions. | The given musical notation is in 6/8 time and has a lively, upbeat rhythm, often associated with joyful and bright music. | The given music notation is in 6/8 time and has a lively, upbeat rhythm, often associated with joyful or folk dance music.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:F#
+ F, | A,2 A, A,/ A,3/2 F, G,G,F, | F, z F, A,2 G, A,/ A,3/2 B, | C3- C z A, C3/2 C/ C | CB, A, G,3/2 A,/ G, G,3 |$ 
+[M:6/8] D2 D | C3/2 A,/ F, G,A,G, | F,3- F, z |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:F#
+ F, | A,2 A, A,/ A,3/2 F, G,G,F, | F, z F, A,2 G, A,/ A,3/2 B, | C3- C z A, C3/2 C/ C | CB, A, G,3/2 A,/ G, G,3 |$ 
+[M:6/8] D2 D | C3/2 A,/ F, G,A,G, | F,3- F, z |]",3,train,Q4,3,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The time signature is primarily in 6/8, which is often associated with lively and energetic rhythms, and the use of eighth notes and sixteenth notes contributes to a driving and intense feel. | The given music piece features a slow tempo (L:1/8) and a 6/8 time signature, which often creates a waltz-like or lilting feel, contributing to a calm atmosphere. | The given musical piece features complex rhythms (6/8 time signature, multiple note divisions), and a relatively fast pace, which contributes to a high arousal classification.
+
+Valence Classification: HIGH
+  Reasoning: The given musical piece is in 6/8 time, which is often associated with lively and upbeat rhythms, and the key of F# is generally considered bright and cheerful. | The given musical piece is in 6/8 time, often associated with lively and upbeat rhythms, and features a bright key (F#) and a mix of stepwise motion and leaps, suggesting a playful and joyful atmosphere. | The use of the F# key and the lively 6/8 time signature suggest a bright and joyful atmosphere.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+Q:1/4=90
+M:6/8
+I:linebreak $
+K:Db
+ B F =G | (2:3:2AB (2:3:2cd | B3 B F =G | (2:3:2AB (2:3:2cd |[M:9/8] !fermata!B6 F B c |$ 
+[M:6/8] d2 B A B A- | A2 G F3 | z2 z d e f | (2:3:2cF (2:3:2Bc | d3 d e f | c3 F B c |$ 
+[M:9/8] d2 c !fermata!B6 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+Q:1/4=90
+M:6/8
+I:linebreak $
+K:Db
+ B F =G | (2:3:2AB (2:3:2cd | B3 B F =G | (2:3:2AB (2:3:2cd |[M:9/8] !fermata!B6 F B c |$ 
+[M:6/8] d2 B A B A- | A2 G F3 | z2 z d e f | (2:3:2cF (2:3:2Bc | d3 d e f | c3 F B c |$ 
+[M:9/8] d2 c !fermata!B6 |]",2,train,Q3,2,"Emotion Classification: Q2 (angry) (Label: 1)
+
+Arousal Classification: HIGH
+  Reasoning: The time signatures and note lengths used in the piece (1/8, 1/4, 9/8) suggest complex and driving rhythms, while the fermata (!fermata!) adds a sense of intense drama. | The given musical piece features complex time signatures (6/8, 9/8), rapid note changes, and fermatas, indicating intense and driving elements. | The piece features complex time signatures (6/8, 9/8), fermata, and rapid note sequences, indicating a high level of intensity and energy.
+
+Valence Classification: LOW
+  Reasoning: The song is written in a minor key (Db) and features slow and contemplative rhythms (1/8, 1/4=90), which often evoke feelings of sadness or melancholy. | The piece is written in the key of Db, which is often associated with somber or melancholic moods. Additionally, the use of fermatas and slower time signatures (6/8 and 9/8) may contribute to a more contemplative or sorrowful atmosphere. | The key of Db and the use of minor chords, combined with the fermata (pause) and the slow tempo (Q:1/4=90), create a somber and melancholic atmosphere.
+
+Combined Result: HIGH arousal + LOW valence → Q2 (angry)
+",1
+"Input:
+X:1
+L:1/8
+M:2/2
+I:linebreak $
+K:F
+ F4 F2 c2 | BB GG _E4 | F4 F2 B2 | c6 z2 | c4 c2 c2 | BB GG _E3 E | FF B2 B2 G2 | F6 F2 |$ 
+ F3 F F2 cc | B2 G2 _E3 E | F2 FF G2 B2 | c6 c2 | c2 cc c2 c2 | BB GG _E3 E | F2 B2 B2 G2 | 
+ F6 z2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/2
+I:linebreak $
+K:F
+ F4 F2 c2 | BB GG _E4 | F4 F2 B2 | c6 z2 | c4 c2 c2 | BB GG _E3 E | FF B2 B2 G2 | F6 F2 |$ 
+ F3 F F2 cc | B2 G2 _E3 E | F2 FF G2 B2 | c6 c2 | c2 cc c2 c2 | BB GG _E3 E | F2 B2 B2 G2 | 
+ F6 z2 |]",2,train,Q3,2,"Emotion Classification: Q4 (relaxed) (Label: 3)
+
+Arousal Classification: LOW
+  Reasoning: The given musical piece features a slow tempo (L:1/8, M:2/2), and the use of calm notes and gentle rhythms, indicating a peaceful atmosphere. | The piece features fast note durations (sixteenth notes and eighth notes) and a strong rhythmic pattern, creating an energetic and driving feel. | The given musical piece is primarily in 6/8 time and features a moderate tempo with a calm and peaceful melody, indicating low arousal.
+
+Valence Classification: HIGH
+  Reasoning: The given musical notation is in the key of F, often associated with bright and cheerful music. The use of major chords (F, Bb, C) and the overall rhythm also contribute to a lively and joyful atmosphere. | The given music is in the key of F, which is often associated with bright and cheerful music. The use of major chords (F, Bb, C) and the lively rhythm also contribute to the overall pleasant and joyful feel of the piece. | The given music notation is in the key of F, which is often associated with bright and cheerful music. The melody also features a lively rhythm and repetitive patterns, contributing to an overall pleasant and joyful atmosphere.
+
+Combined Result: LOW arousal + HIGH valence → Q4 (relaxed)
+",3
+"Input:
+X:1
+L:1/8
+Q:1/8=130
+M:2/4
+I:linebreak $
+K:C#
+ c2 | cc cc | c B2 c | dc Bc | ABc>A | GG GG | A2 B2 | c2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+Q:1/8=130
+M:2/4
+I:linebreak $
+K:C#
+ c2 | cc cc | c B2 c | dc Bc | ABc>A | GG GG | A2 B2 | c2 |]",2,train,Q3,2,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The fast tempo (Q:1/8=130) and driving rhythm (M:2/4, eighth-note patterns) suggest a high-energy piece. | The tempo (Q:1/8=130) is fast, and the time signature (M:2/4) suggests a strong, driving rhythm, contributing to a high arousal classification. | The tempo (Q:1/8=130) is quite fast, and the time signature (M:2/4) suggests a strong, driving rhythm.
+
+Valence Classification: HIGH
+  Reasoning: The key of C# is often associated with bright and uplifting music, and the 2/4 time signature suggests a lively and energetic feel. | The key of C# and the overall upbeat rhythm (Q:1/8=130) suggest a lively and energetic atmosphere, which is often associated with high valence. | The piece is written in a major key (C#), which often corresponds to a brighter and more uplifting mood.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:none
+I:linebreak $
+K:C#
+""C#""""E#7"" E8 |$""A#m"" ece^^d-""B#7"" d B2 d |""E#7"" dBd^^c-""A#7"" c4 |""D#7"" cA^^AB-""G#7"" BG ^A2 |$ 
+""C#"" e4""G#9#5"" G4 |""C#"" E2 E2""G#7"" GE G2 |""C#6"" A6 G2 | A2 A2""E#7"" BA B2 |""A#m"" c6 A2 |$ 
+""D#9"" c2 c2""A#m7"" cA c2 |""D#9"" e6 A2 |""D#m7"" c2 c2""G#9"" AG""G#9#5"" A2 |""C#"" c4""G#9#5"" z2 G2 :|""C#"" c6 z2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:none
+I:linebreak $
+K:C#
+""C#""""E#7"" E8 |$""A#m"" ece^^d-""B#7"" d B2 d |""E#7"" dBd^^c-""A#7"" c4 |""D#7"" cA^^AB-""G#7"" BG ^A2 |$ 
+""C#"" e4""G#9#5"" G4 |""C#"" E2 E2""G#7"" GE G2 |""C#6"" A6 G2 | A2 A2""E#7"" BA B2 |""A#m"" c6 A2 |$ 
+""D#9"" c2 c2""A#m7"" cA c2 |""D#9"" e6 A2 |""D#m7"" c2 c2""G#9"" AG""G#9#5"" A2 |""C#"" c4""G#9#5"" z2 G2 :|""C#"" c6 z2 |]",2,train,Q3,2,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical piece has a fast tempo (indicated by the eighth notes and sixteenth notes), complex chord progressions (such as E#7, G#9#5, and D#9), and rapid changes in notes, which contribute to a high-energy and intense atmosphere. | The given musical piece features complex chord progressions, rapid note changes, and an overall fast tempo, indicating a high-energy and intense composition. | The given musical piece features complex chord progressions, rapid note changes, and an overall fast-paced rhythm, which are indicative of high energy and intensity.
+
+Valence Classification: HIGH
+  Reasoning: The key signature (C#) and chord progression (e.g., C#, G#9#5, E#7) suggest a bright and uplifting tone. | The key signature (C#) and chord progression (E#7, G#7, G#9#5) suggest a bright and uplifting melody. | The song features several minor chords (e.g., A#m, D#m7) and dissonant, tense chord progressions (e.g., E#7, G#9#5), which often create a somber or melancholic mood.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/4
+M:none
+I:linebreak $
+K:Bb
+""Ab7/Eb"" _G3 |""Ab7"" _G3 |""Ab7/Eb"" _G3- |""Ab7"" G F E |$""Ab7/C"" _A3 |""Ab7b5"" D3 |""Ab7"" E3 | 
+""Ab+7"" =E3 |""Db"" F3- |""Db/C"" F3- |""Db/Bb"" F3- |""Db/Ab"" F3 |$""Db"" F3 |""Ab+"" =E3 |""Db"" F E _D | 
+ _D E F |""Ab7/Eb"" _A3 |""Ddim"" _A3 |""Ab7/Eb"" _A3- |""Ab7"" A3 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:none
+I:linebreak $
+K:Bb
+""Ab7/Eb"" _G3 |""Ab7"" _G3 |""Ab7/Eb"" _G3- |""Ab7"" G F E |$""Ab7/C"" _A3 |""Ab7b5"" D3 |""Ab7"" E3 | 
+""Ab+7"" =E3 |""Db"" F3- |""Db/C"" F3- |""Db/Bb"" F3- |""Db/Ab"" F3 |$""Db"" F3 |""Ab+"" =E3 |""Db"" F E _D | 
+ _D E F |""Ab7/Eb"" _A3 |""Ddim"" _A3 |""Ab7/Eb"" _A3- |""Ab7"" A3 |]",3,train,Q4,3,"Emotion Classification: Q3 (sad) (Label: 2)
+
+Arousal Classification: LOW
+  Reasoning: The given musical piece features a slow and repetitive progression, with many sustained notes (e.g., ""_G3"", ""_A3"") and a lack of rapid changes, indicating a calm and peaceful atmosphere. | The given musical piece features a slow tempo (indicated by the 1/4 time signature and the use of whole notes and half notes), and a predominantly legato feel, which suggests a calm and peaceful atmosphere. | The given musical piece features complex, slow-moving chord progressions and relatively calm, descending melodic lines, which are often associated with low-arousal music.
+
+Valence Classification: LOW
+  Reasoning: The use of minor and diminished chords (e.g., Ab7, Ab7b5, Ddim) and the overall progression create a melancholic and somber atmosphere, indicating a low valence. | The use of minor and diminished chords, such as Ab7, Ab7b5, and Ddim, often associated with sad or tense emotions, suggests a low valence. | The use of minor and diminished chords (e.g., Ab7, Ab7b5, Ddim) and the overall somber, slow feel of the piece (indicated by the 1/4 time signature and the use of quarter notes) contribute to a low valence.
+
+Combined Result: LOW arousal + LOW valence → Q3 (sad)
+",2
+"Input:
+X:1
+L:1/8
+M:none
+I:linebreak $
+K:D
+ ^g>fe | ef^g | f>ed | def | e>dc- | cee |:$ a2 f | ^gaa | ^g>fe | ef^g | f>ed | def | e>dc- | 
+ cee :| c2 z |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:none
+I:linebreak $
+K:D
+ ^g>fe | ef^g | f>ed | def | e>dc- | cee |:$ a2 f | ^gaa | ^g>fe | ef^g | f>ed | def | e>dc- | 
+ cee :| c2 z |]",2,train,Q3,2,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical notation features a fast tempo (L:1/8), and a driving rhythm, indicating high energy and intensity. | The given musical piece features a slow tempo (L:1/8) and a simple, repetitive melody, which suggests a calm and peaceful atmosphere. | The given musical piece features fast-paced rhythms and complex note patterns, indicating a high-energy and intense composition.
+
+Valence Classification: HIGH
+  Reasoning: The key signature (K:D) and the lively rhythm (1/8 time signature, use of eighth-note patterns) suggest a bright and cheerful atmosphere. | The key signature (K:D) and the use of ascending arpeggios (^g>fe, ^gaa) suggest a bright and cheerful melody, which is typical of high valence music. | The given musical notation is in the key of D major, which is often associated with bright and joyful music.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:F#
+ F>Acc | dd/d/ c2 | F>Acc | d2 c2 | BBAA | GG F2 | BBAA | GGFc | G4 | F3 z |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:F#
+ F>Acc | dd/d/ c2 | F>Acc | d2 c2 | BBAA | GG F2 | BBAA | GGFc | G4 | F3 z |]",3,train,Q4,3,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The presence of eighth-note rhythms and the use of strong, driving rhythms (e.g., 'dd/d/', 'BBAA', 'GGF2') suggest high energy and intensity. | The given music piece features a slow tempo (L:1/8) and a steady, repetitive rhythm, which creates a calm atmosphere. | The use of eighth notes (L:1/8) and driving rhythms (dd/d/ c2, d2 c2) contribute to a high-energy feel.
+
+Valence Classification: HIGH
+  Reasoning: The key of F# and the use of major chords (F>Acc, BBAA) and a lively rhythm (6/8 time signature and fast note values) contribute to a bright and joyful atmosphere. | The use of minor keys (indicated by the lower case letters 'd' and 'c') and the slow, mournful rhythm (suggested by the 1/8 and 2/4 time signatures) contribute to a somber and melancholic atmosphere. | The key signature F# and the use of major chords (F>Acc, BBAA, GG) suggest a bright and pleasant atmosphere, typical of high valence music.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:G
+ G G G | D2 G | B3 | B A B | c2 B | A3 | A A A | B2 c | d3 | A B c | B2 A | G3 | G G G | e2 e |$ 
+ d3 | A B c | B2 A | G3 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:G
+ G G G | D2 G | B3 | B A B | c2 B | A3 | A A A | B2 c | d3 | A B c | B2 A | G3 | G G G | e2 e |$ 
+ d3 | A B c | B2 A | G3 |]",0,train,Q1,0,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The piece features a fast-paced rhythm with many eighth and sixteenth notes, and a mix of ascending and descending melodic lines, creating an energetic and driving feel. | The given musical piece features a fast-paced rhythm with many eighth and sixteenth notes (indicated by the 2 and 3 after the notes), and a driving pattern of repetition, suggesting high energy and intensity. | The given musical piece features complex rhythms (e.g., B3, d3, A3, G3) and rapid note changes, indicating an energetic and intense composition.
+
+Valence Classification: HIGH
+  Reasoning: The tune appears to be in a major key (G major), which is often associated with a brighter and more joyful tone, and the use of repeated notes and ascending patterns may contribute to a sense of playfulness and energy. | The tune is primarily in a major key (G major) and features repetitive, upbeat patterns, suggesting a lively and joyful atmosphere. | The tune is primarily composed of ascending and repetitive patterns, often associated with lively and cheerful music. The use of the G major key and the overall structure also contribute to a bright and joyful atmosphere.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0
+"Input:
+X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:A
+ caB>c | ec B2 | Ba/f/Bc | aA/f/ e2 | e>fac | B/a/fa>f | Bcef | aa/f/ e2 | caBc | ee/c/ B2 | 
+ Bafa |$ aa/f/ e2 | e>fac | Ba f2 | Bafa | aa/f/ e2 | caB>c | ec B2 | Ba/f/Bc | aa/f/ e2 | e>fac |$ 
+ B/a/fa>f | B>cef | aa/f/ e2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:A
+ caB>c | ec B2 | Ba/f/Bc | aA/f/ e2 | e>fac | B/a/fa>f | Bcef | aa/f/ e2 | caBc | ee/c/ B2 | 
+ Bafa |$ aa/f/ e2 | e>fac | Ba f2 | Bafa | aa/f/ e2 | caB>c | ec B2 | Ba/f/Bc | aa/f/ e2 | e>fac |$ 
+ B/a/fa>f | B>cef | aa/f/ e2 |]",3,train,Q4,3,"Emotion Classification: Q1 (happy) (Label: 0)
+
+Arousal Classification: HIGH
+  Reasoning: The given musical notation features complex rhythms and rapid note changes (e.g., ""caB>c"", ""B/a/fa>f"", ""B>cef""), indicating a high-energy and intense piece. | The given musical piece features complex rhythms, rapid note changes (e.g., 'caB>c', 'B/a/fa>f'), and frequent use of ornaments (e.g., 'e>fac', 'B>cef'), which are characteristic of high-energy and intense music. | The given musical piece features complex and fast-paced rhythms, indicated by the presence of eighth notes (L:1/8), and rapid note changes, which create an energetic and intense atmosphere.
+
+Valence Classification: HIGH
+  Reasoning: The given musical piece is in the key of A major, which is often associated with bright and joyful music. | The given music notation is in the key of A, which is often associated with bright and cheerful music. The use of major chords and ascending melodic patterns also contribute to a pleasant and joyful atmosphere. | The key signature (K:A) and the overall structure of the tune, with a mix of ascending and descending patterns, suggest a lively and upbeat melody, which is typically associated with high valence.
+
+Combined Result: HIGH arousal + HIGH valence → Q1 (happy)
+",0

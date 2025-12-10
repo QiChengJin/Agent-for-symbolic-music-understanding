@@ -5,7 +5,8 @@ import re
 import sys
 from collections import Counter
 
-model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+#model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+model_name = "google/gemma-3-27b-it"
 df = pd.read_csv("data/Emotion_Recognition_cleaned.csv")
 
 if len(sys.argv) > 1 and sys.argv[1].startswith('--'):
@@ -89,7 +90,8 @@ Remember: follow the LABEL / REASON format exactly.
 def analyst_answer_once(prompt):
     analyst_prompt = build_analyst_prompt(prompt)
     # CHANGED: 解释会长一点，给多点 token
-    return call_llm(analyst_prompt, max_tokens=128, temperature=0.5)
+    # Use higher temperature (0.7) to encourage diversity in analyst opinions for voting
+    return call_llm(analyst_prompt, max_tokens=128, temperature=0.7)
 
 
 # CHANGED: prompt 里提到 LABEL 格式，逻辑不变
@@ -212,13 +214,14 @@ for i, row in df.iterrows():
         analyst_answers = []
         clean_labels = []
         analyst_reasons = []  # NEW: 当前样本的 reasons
+        format_checks = []  # 当前样本的 format checks
 
         for k in range(num_analysts):
             ans = analyst_answer_once(prompt)
             analyst_answers.append(ans)
 
             fmt = format_checker_llm(ans)
-            raw_format_checks.append(fmt)
+            format_checks.append(fmt)
 
             if fmt.strip().upper() == "INVALID":
                 lab = extract_option_index(ans)
@@ -270,6 +273,7 @@ for i, row in df.iterrows():
         predictions_majority.append("")
         predictions_agent.append("")
         raw_analyst_answers.append([])
+        raw_format_checks.append([])
         raw_judge_answers.append("")
         analyst_reasons_all.append([])
 
@@ -280,6 +284,7 @@ results_df = pd.DataFrame({
     'prediction_majority': predictions_majority,
     'prediction_agent': predictions_agent,
     'raw_analyst_answers': raw_analyst_answers,
+    'raw_format_checks': raw_format_checks,
     'analyst_reasons': analyst_reasons_all,     # NEW: 存每个样本的 reason 列表
     'raw_judge_answer': raw_judge_answers
 })

@@ -1,0 +1,499 @@
+prompt,data,label,split,label_name,solution,agent_answer,predicted_label
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:E
+ B, | E2 E E2 G | F2 EFGA | G3- GzB, | E2 E E2 G | F2 EFGA | G3 FGA | B2 B A2 G | F3 EFG | A2 FFBB |$ 
+ EzG | E2 GFGF | E3 FGA | B2 B A2 G | F3 EFG | A2 FFBB | EzG | E2 GFGF | E2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:E
+ B, | E2 E E2 G | F2 EFGA | G3- GzB, | E2 E E2 G | F2 EFGA | G3 FGA | B2 B A2 G | F3 EFG | A2 FFBB |$ 
+ EzG | E2 GFGF | E3 FGA | B2 B A2 G | F3 EFG | A2 FFBB | EzG | E2 GFGF | E2 |]",3,train,Q4,3,1,1
+"Input:
+X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:C#
+ G | c e G c | A c/A/ G c | B c d e | d2 z G/G/ | f3/2 e/d/d/g/f/ | e3/2 d/ c G/G/ | A f/f/ e d |$ 
+ c2 z |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:C#
+ G | c e G c | A c/A/ G c | B c d e | d2 z G/G/ | f3/2 e/d/d/g/f/ | e3/2 d/ c G/G/ | A f/f/ e d |$ 
+ c2 z |]",3,train,Q4,3,2,2
+"Input:
+X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:G
+ AA AG A2 z2 | DD EG D2 z2 | AA AA G2 G2 | DD EG D2 D2 | AA EA G2 E2 | DD EG D4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:G
+ AA AG A2 z2 | DD EG D2 z2 | AA AA G2 G2 | DD EG D2 D2 | AA EA G2 E2 | DD EG D4 |]",2,train,Q3,2,1,1
+"Input:
+X:1
+L:1/16
+Q:1/8=80
+M:2/2
+I:linebreak $
+K:D
+|: z16 |{/a} B>eg3/2{/a}B<eg/{/a}B>e |{/aga} g>Be>g- g4 |{/a} B>e{/aga}g3/2{/a}B<eg<Be/ |$ 
+{/aga} g>Be3/2{/aga}g/- g4 || A>ce>A{/a}c>e{/a}A>c | e>A{/a}c>e- e4 | 
+{/a} B>e{/aga}g3/2{/a}B<eg<Be/ |${/aga} g>Be3/2{/aga}g/- g4 ||{/a} B>d{/a}f>B{/a}d>fB3/2{/a}d/ | 
+{/a} f>Bd3/2{/a}f/- f4 |${/a} B3/2{/e}B/{/f}B3/2{/e}B/{/a}c2d2 |{/Aed} e4 g4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/16
+Q:1/8=80
+M:2/2
+I:linebreak $
+K:D
+|: z16 |{/a} B>eg3/2{/a}B<eg/{/a}B>e |{/aga} g>Be>g- g4 |{/a} B>e{/aga}g3/2{/a}B<eg<Be/ |$ 
+{/aga} g>Be3/2{/aga}g/- g4 || A>ce>A{/a}c>e{/a}A>c | e>A{/a}c>e- e4 | 
+{/a} B>e{/aga}g3/2{/a}B<eg<Be/ |${/aga} g>Be3/2{/aga}g/- g4 ||{/a} B>d{/a}f>B{/a}d>fB3/2{/a}d/ | 
+{/a} f>Bd3/2{/a}f/- f4 |${/a} B3/2{/e}B/{/f}B3/2{/e}B/{/a}c2d2 |{/Aed} e4 g4 |]",2,train,Q3,2,1,1
+"Input:
+X:1
+L:1/8
+Q:1/4=120
+M:2/2
+I:linebreak $
+K:C
+ C |[K:G] .TBe' ad z2 | G2 G>G G2 B>c | d>B G>G G2 c>d | e>c g2 d>B g2 | gfag fedc |$ 
+ B>d B<G A<c A<F | GBcd efga | bgfg fed^c | d2 d>d d2 :: z2 | a2 a>a ac'ba | g2 g>g gbag |$ 
+ fedg fedc | B2 A>A AcBA | G2 G>G G2 cd | e<c a2 f<d g2 | Bd ce Ac FA | G2 G>G G2 :: z2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+Q:1/4=120
+M:2/2
+I:linebreak $
+K:C
+ C |[K:G] .TBe' ad z2 | G2 G>G G2 B>c | d>B G>G G2 c>d | e>c g2 d>B g2 | gfag fedc |$ 
+ B>d B<G A<c A<F | GBcd efga | bgfg fed^c | d2 d>d d2 :: z2 | a2 a>a ac'ba | g2 g>g gbag |$ 
+ fedg fedc | B2 A>A AcBA | G2 G>G G2 cd | e<c a2 f<d g2 | Bd ce Ac FA | G2 G>G G2 :: z2 |]",0,test,Q1,0,1,1
+"Input:
+X:1
+L:1/8
+M:none
+I:linebreak $
+K:C
+ dd dB |""C7"" c2 A2 | A2 B2 | c2 A2 |$""D7"" dd dc |""G"" B2 G2 ::""C7"" e3 d | c2 e2 |""D7"" d3 c | 
+ B2 d2 |""C7"" c3 B | A2 dc | B2 c2 |$""D7"" d4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:none
+I:linebreak $
+K:C
+ dd dB |""C7"" c2 A2 | A2 B2 | c2 A2 |$""D7"" dd dc |""G"" B2 G2 ::""C7"" e3 d | c2 e2 |""D7"" d3 c | 
+ B2 d2 |""C7"" c3 B | A2 dc | B2 c2 |$""D7"" d4 |]",3,train,Q4,3,1,1
+"Input:
+X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:Abmin
+|: a3/2 b/ =g | a e c' | b c' a | b/a/g/f/ e | a3/2 b/ =g | a e c' | b c' a | b3 :: c' g g | e/f/ g g |$ 
+ a d d | B/c/ d d | d/e/ f e | =f/g/ a =g | a/b/ c' b/a/ | a3 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:Abmin
+|: a3/2 b/ =g | a e c' | b c' a | b/a/g/f/ e | a3/2 b/ =g | a e c' | b c' a | b3 :: c' g g | e/f/ g g |$ 
+ a d d | B/c/ d d | d/e/ f e | =f/g/ a =g | a/b/ c' b/a/ | a3 |]",2,train,Q3,2,2,2
+"Input:
+X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:Eb
+""^A"" B |""Eb"" d e d e |""Ab"" c c""Bb7"" B B |""Eb"" e e e/e/e/e/ |""Cm"" g g""Bb7"" f B |""Eb"" d e d e |$ 
+""Eb""""Cm"" e e e/e/e/e/ |""Bb7"" g f""Eb"" e :|""^B"" f |""Eb"" g b b b |""Eb7"" g b b3/2 b/ |""Ab"" a a""Eb"" g g |$ 
+""Fm"" f f/g/""Bb7"" f/d/c/B/ |""Eb"" d e d e |""Eb""""Cm"" e e e/e/e/e/ |""Bb7"" g f""Eb"" e :| f |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:4/4
+I:linebreak $
+K:Eb
+""^A"" B |""Eb"" d e d e |""Ab"" c c""Bb7"" B B |""Eb"" e e e/e/e/e/ |""Cm"" g g""Bb7"" f B |""Eb"" d e d e |$ 
+""Eb""""Cm"" e e e/e/e/e/ |""Bb7"" g f""Eb"" e :|""^B"" f |""Eb"" g b b b |""Eb7"" g b b3/2 b/ |""Ab"" a a""Eb"" g g |$ 
+""Fm"" f f/g/""Bb7"" f/d/c/B/ |""Eb"" d e d e |""Eb""""Cm"" e e e/e/e/e/ |""Bb7"" g f""Eb"" e :| f |]",3,train,Q4,3,1,1
+"Input:
+X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:Bb
+|: f2 dB g2 gb | fdcB cAGF | f2 dB g2 gb | fdec B4 :: d2 dB cAGF | f2 fd ecBA | gfef gabg |$ 
+ fdec B4 :: B2 B>A BFDB, | B2 B>A BFDB, | Bcde fgfe | dBcA B2 B,2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:Bb
+|: f2 dB g2 gb | fdcB cAGF | f2 dB g2 gb | fdec B4 :: d2 dB cAGF | f2 fd ecBA | gfef gabg |$ 
+ fdec B4 :: B2 B>A BFDB, | B2 B>A BFDB, | Bcde fgfe | dBcA B2 B,2 |]",0,train,Q1,0,1,1
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:A
+ f/4g/4f/ | eAA cAA | eAA A2 f/4g/4f/ | eAA cBA | GBB Bcd | eAA cAA | eAA aAA | cBA GAB |$ 
+ cAA A2 :: e | aga fga | ecA Ace | aga fba | gee efg | aga fga | ecA AGA | EEA GAB | cAA A2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:A
+ f/4g/4f/ | eAA cAA | eAA A2 f/4g/4f/ | eAA cBA | GBB Bcd | eAA cAA | eAA aAA | cBA GAB |$ 
+ cAA A2 :: e | aga fga | ecA Ace | aga fba | gee efg | aga fga | ecA AGA | EEA GAB | cAA A2 |]",0,train,Q1,0,2,2
+"Input:
+X:1
+L:1/8
+M:none
+I:linebreak $
+K:Ab
+""Gb"" _G2 G G2 A B2 B z BB |""Db"" A2 _G F2 G A2- x A2 A |$""Ab7"" A2 A A _G2 E A,2 A, A,2 A, | 
+""Db"" D2 A, D2 E F2- x F2 F |$""Gb"" _G2 F G G2 A B2 B z BB |""Db"" A2 _G F2 G A2- x A2 A | 
+""Ab7"" A3 A A3 A2- A3 |""^Back to chorus"" A6 A z2 z3 ||$""Db""O D6 z z2 C2 D | 
+""Ebm"" E6 z""Ab7"" F F- F z3/2 F/ |""Db"" D6 F- z2 z3 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:none
+I:linebreak $
+K:Ab
+""Gb"" _G2 G G2 A B2 B z BB |""Db"" A2 _G F2 G A2- x A2 A |$""Ab7"" A2 A A _G2 E A,2 A, A,2 A, | 
+""Db"" D2 A, D2 E F2- x F2 F |$""Gb"" _G2 F G G2 A B2 B z BB |""Db"" A2 _G F2 G A2- x A2 A | 
+""Ab7"" A3 A A3 A2- A3 |""^Back to chorus"" A6 A z2 z3 ||$""Db""O D6 z z2 C2 D | 
+""Ebm"" E6 z""Ab7"" F F- F z3/2 F/ |""Db"" D6 F- z2 z3 |]",3,train,Q4,3,1,1
+"Input:
+X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:Cb
+ cc/B/ cG | cege | fdcB | c/B/c/d/ cG | cc/B/ cG | cege | fdcB | c4 :| fe e2 | dc c2 | Bcde |$ 
+ f/g/f/e/ d2 | fe e2 | dc c2 | Bf e/d/c/B/ |{/B} c4 :| e3 g | c3 e |{/=c} d2 fd |{/c} B2 AG | 
+ c2 de |$ f3 e | edcB | c4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:Cb
+ cc/B/ cG | cege | fdcB | c/B/c/d/ cG | cc/B/ cG | cege | fdcB | c4 :| fe e2 | dc c2 | Bcde |$ 
+ f/g/f/e/ d2 | fe e2 | dc c2 | Bf e/d/c/B/ |{/B} c4 :| e3 g | c3 e |{/=c} d2 fd |{/c} B2 AG | 
+ c2 de |$ f3 e | edcB | c4 |]",3,train,Q4,3,2,2
+"Input:
+X:1
+L:1/4
+M:none
+I:linebreak $
+K:none
+""Em"" G2""C"" e |""G/B"" d B2 |""D7/A"" A3 |$""G"" B3 |""G7/F"" A2 G |""C/E"" c2 d |""C"" e g2 |""G/B"" d3/2 e/ d | 
+""G/D"" G2 B |""D7"" A3 |""G"" G B, C ||$""G"" D3/2 D/ D |""C"" E""D"" ^F""E"" G | A""D7/F#"" d3/2 c/- |""G"" B G G | 
+""C"" G c e |""E7"" d3/2 c/ B |""A7"" B A G |""D7"" A2 B/c/ |$""G"" d3/2 e/ d |""G7/B"" g d g | 
+""E"" g""D"" ^f""C"" e |""G"" e d c/A/ |""Em"" G3/2 A/ B |""Am"" E c E |""D7"" D B3/2 A/ | 
+""G"" G""A"" ^F""B"" =F""^D.S. al Fine"" |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:none
+I:linebreak $
+K:none
+""Em"" G2""C"" e |""G/B"" d B2 |""D7/A"" A3 |$""G"" B3 |""G7/F"" A2 G |""C/E"" c2 d |""C"" e g2 |""G/B"" d3/2 e/ d | 
+""G/D"" G2 B |""D7"" A3 |""G"" G B, C ||$""G"" D3/2 D/ D |""C"" E""D"" ^F""E"" G | A""D7/F#"" d3/2 c/- |""G"" B G G | 
+""C"" G c e |""E7"" d3/2 c/ B |""A7"" B A G |""D7"" A2 B/c/ |$""G"" d3/2 e/ d |""G7/B"" g d g | 
+""E"" g""D"" ^f""C"" e |""G"" e d c/A/ |""Em"" G3/2 A/ B |""Am"" E c E |""D7"" D B3/2 A/ | 
+""G"" G""A"" ^F""B"" =F""^D.S. al Fine"" |]",0,train,Q1,0,1,1
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:A
+ B | ABA E2 E | F2 F E2 E | ABA A2 B | c3 e3 | ABA E2 E | F2 F E2 E | def ecA | B3 A :: ABc cdc |$ 
+ cde ecA | GAB BcB | BcB BGE | ABc cdc | cde ecA | cea ecA | B3 A2 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:A
+ B | ABA E2 E | F2 F E2 E | ABA A2 B | c3 e3 | ABA E2 E | F2 F E2 E | def ecA | B3 A :: ABc cdc |$ 
+ cde ecA | GAB BcB | BcB BGE | ABc cdc | cde ecA | cea ecA | B3 A2 |]",0,train,Q1,0,1,1
+"Input:
+X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:G
+|: d | Bd Bd | B/B/B/B/ Bd | B>d Bd | c/c/c/c/ ce | ce ce | a/a/a/a/ ag | a>g fe | d2- d :|$ 
+ a>g fa | g2- g ||[K:D] A | AB/c/ de | fg a2 | a>e a>a | f>e dc/B/ | AB/c/ de | fg a2 | a2 e2 |$ 
+ a2 d |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:2/4
+I:linebreak $
+K:G
+|: d | Bd Bd | B/B/B/B/ Bd | B>d Bd | c/c/c/c/ ce | ce ce | a/a/a/a/ ag | a>g fe | d2- d :|$ 
+ a>g fa | g2- g ||[K:D] A | AB/c/ de | fg a2 | a>e a>a | f>e dc/B/ | AB/c/ de | fg a2 | a2 e2 |$ 
+ a2 d |]",0,train,Q1,0,2,2
+"Input:
+X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:G
+ B/A/ |""G"" G3/2 A/ G |""G7"" G B d |""C"" c e g |""C"" g2 f/e/ |""G"" d3/2 c/ B |""D7"" A G A |""G"" B d B | 
+""D7"" A2 B/A/ |""G"" G3/2 A/ G |""G7"" G B d |""C"" c e g |""C"" g2 f/e/ |""G"" d g B |""D7"" A3/2 G/ A | 
+""G"" G3- |""D7"" G d c |""G"" B d g |""G7"" g2 d |""C"" e c g |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/4
+M:3/4
+I:linebreak $
+K:G
+ B/A/ |""G"" G3/2 A/ G |""G7"" G B d |""C"" c e g |""C"" g2 f/e/ |""G"" d3/2 c/ B |""D7"" A G A |""G"" B d B | 
+""D7"" A2 B/A/ |""G"" G3/2 A/ G |""G7"" G B d |""C"" c e g |""C"" g2 f/e/ |""G"" d g B |""D7"" A3/2 G/ A | 
+""G"" G3- |""D7"" G d c |""G"" B d g |""G7"" g2 d |""C"" e c g |]",0,train,Q1,0,2,2
+"Input:
+X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:G
+ D | G3 A B2 g>e | d<BA>G{/B} A2 GE | G3 A BABd | e2 dc B2{/c} gG | G3 A Bcde | d<BA>G A2 GE |$ 
+ DEGA BABd | e>gd>g B2 g || a | bage d>ege | dBA>G{/B} A2 GE | gage dege | eBdG B2 ga | 
+ bage dega |$ gedB A3/2B/8c/4 BA | G3 A BABd | eBdG B2 g |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:4/4
+I:linebreak $
+K:G
+ D | G3 A B2 g>e | d<BA>G{/B} A2 GE | G3 A BABd | e2 dc B2{/c} gG | G3 A Bcde | d<BA>G A2 GE |$ 
+ DEGA BABd | e>gd>g B2 g || a | bage d>ege | dBA>G{/B} A2 GE | gage dege | eBdG B2 ga | 
+ bage dega |$ gedB A3/2B/8c/4 BA | G3 A BABd | eBdG B2 g |]",0,train,Q1,0,1,1
+"Input:
+X:1
+L:1/8
+Q:1/4=90
+M:6/8
+I:linebreak $
+K:B
+ F | B2 B B2 c | d2 c B2 B | c2 c A2 A | B3 B2 F | B2 B B2 c | d2 c B2 B | c2 c AGA |$ 
+ B3 B2""^Chorus"" B | c2 c c2 c | c2 d edc | d2 d d2 c | d2 e f2 f/e/ | d2 c B2 e |$ d2 c B2 B | 
+ c2 c AGA | B3 z3 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+Q:1/4=90
+M:6/8
+I:linebreak $
+K:B
+ F | B2 B B2 c | d2 c B2 B | c2 c A2 A | B3 B2 F | B2 B B2 c | d2 c B2 B | c2 c AGA |$ 
+ B3 B2""^Chorus"" B | c2 c c2 c | c2 d edc | d2 d d2 c | d2 e f2 f/e/ | d2 c B2 e |$ d2 c B2 B | 
+ c2 c AGA | B3 z3 |]",2,train,Q3,2,1,1
+"Input:
+X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:Bb
+|: [BD]3{/d} cBc | [BD]3 F2 F | G2 c{/B} AGA | B2 f{/e} dcd | [BD]3{/d} cBc | [BD]3 F2 F |$ 
+ G z c{/B} AGA | B3- B3 :: B2 B Bba | a2 g gfe | d2 c ceg | g2 f fed | cBB Bdf | fee dcB | 
+ Acd ecA |$ B3 B,3 ::[K:Gdor][M:6/8] d2 G B/A/B/c/d | cFA cFA | d2 G B/A/B/c/d | cfd c2 A :: 
+ G2 g gdg |$ fdf cAF | G2 g gdg | fdf g2 a | bag fed | cAf cAF | d2 G B/A/B/c/d | cfd c2 A |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/8
+M:6/8
+I:linebreak $
+K:Bb
+|: [BD]3{/d} cBc | [BD]3 F2 F | G2 c{/B} AGA | B2 f{/e} dcd | [BD]3{/d} cBc | [BD]3 F2 F |$ 
+ G z c{/B} AGA | B3- B3 :: B2 B Bba | a2 g gfe | d2 c ceg | g2 f fed | cBB Bdf | fee dcB | 
+ Acd ecA |$ B3 B,3 ::[K:Gdor][M:6/8] d2 G B/A/B/c/d | cFA cFA | d2 G B/A/B/c/d | cfd c2 A :: 
+ G2 g gdg |$ fdf cAF | G2 g gdg | fdf g2 a | bag fed | cAf cAF | d2 G B/A/B/c/d | cfd c2 A |]",1,test,Q2,1,1,1
+"Input:
+X:1
+L:1/16
+Q:1/8=140
+M:2/4
+I:linebreak $
+K:E
+ B,2 | GAGF G2E2 | FGAGF2 B,2 | GAGFE2 G2 | FE DF E2 :| E2 | AAGF G2 EE | AA BA G3 E |: 
+ G2 GB E2 GG |$ FE DE F2F2 | G2 GB E2 GG | FE DF E4 |]
+
+Task:
+Choose the most probable emotional label of the provided score. Label Q1 refers to happy (high valence high arousal), Q2 refers to angry (low valence high arousal), Q3 refers to sad (low valence low arousal) and Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+
+Answer:","X:1
+L:1/16
+Q:1/8=140
+M:2/4
+I:linebreak $
+K:E
+ B,2 | GAGF G2E2 | FGAGF2 B,2 | GAGFE2 G2 | FE DF E2 :| E2 | AAGF G2 EE | AA BA G3 E |: 
+ G2 GB E2 GG |$ FE DE F2F2 | G2 GB E2 GG | FE DF E4 |]",3,train,Q4,3,1,1
