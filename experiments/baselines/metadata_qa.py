@@ -1,18 +1,16 @@
 from openai import OpenAI, APIConnectionError, APITimeoutError
-from inference_auth_token import get_access_token
+from pathlib import Path
+
+from music_agent.auth import get_access_token
 import pandas as pd
 from scipy.stats import kendalltau
 import re
-import sys
-
 # model_name = "google/gemma-3-27b-it"
-model_name = "openai/gpt-oss-20b"
-#model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-df = pd.read_csv("data/Emotion_Recognition_cleaned.csv")
+model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+# model_name = "openai/gpt-oss-20b"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+df = pd.read_csv(PROJECT_ROOT / "data/processed/Metadata_QA_cleaned.csv")
 
-if len(sys.argv) > 1 and sys.argv[1].startswith('--'):
-    n = int(sys.argv[1][2:])
-    df = df.head(n)
 
 client = OpenAI(
     api_key=get_access_token(),
@@ -55,12 +53,10 @@ def extract_option_index(pred_raw, num_options=10):
 
 
 predictions = []
-raw_responses = []
 taus = []
 correct = 0
 
 for i, row in df.iterrows():
-
     prompt = row["prompt"] 
 
     try:
@@ -70,14 +66,12 @@ for i, row in df.iterrows():
             temperature=0
         )
 
-        raw_response = response.choices[0].message.content
-        pred = extract_option_index(raw_response)
-        raw_responses.append(raw_response)
+        pred = response.choices[0].message.content
+        pred = extract_option_index(pred)
 
     except Exception as e:
         print("Error at sample", i, e)
         pred = ""
-        raw_responses.append("")
 
     predictions.append(pred)
 
@@ -85,16 +79,9 @@ for i, row in df.iterrows():
     if str(pred) == str(row["solution"]):
         correct += 1
 
+
     print(f"[{i}] GT={row['solution']} | Pred={pred}")
 
-# Save results to CSV
-results_df = pd.DataFrame({
-    'index': df.index,
-    'ground_truth': df['solution'].values,
-    'prediction': predictions,
-    'raw_response': raw_responses
-})
-results_df.to_csv('emotion_recognition_results.csv', index=False)
 
 accuracy = correct / len(df)
 
@@ -102,3 +89,10 @@ print("\n===========================")
 print(f"Model: {model_name}")
 print(f"Accuracy: {accuracy:.4f}")
 
+df["pred"] = predictions
+
+# 写出 CSV
+output_path = PROJECT_ROOT / "results/metadata_QA_meta_baseline_results.csv"
+df.to_csv(output_path, index=False)
+
+print(f"Saved predictions to {output_path}")

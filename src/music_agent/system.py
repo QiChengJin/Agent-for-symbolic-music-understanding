@@ -1,7 +1,8 @@
 from openai import OpenAI, APIConnectionError, APITimeoutError
-from inference_auth_token import get_access_token
+from .auth import get_access_token
 import pandas as pd
 import re
+from pathlib import Path
 from collections import Counter
 
 model_name = "google/gemma-3-27b-it"
@@ -852,7 +853,9 @@ if __name__ == "__main__":
         
         # Save results
         df["agent_answer"] = results
-        output_path = csv_path.replace(".csv", "_multi_agent_results.csv")
+        output_dir = Path(__file__).resolve().parents[2] / "results"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_path = output_dir / f"{Path(csv_path).stem}_multi_agent_results.csv"
         df.to_csv(output_path, index=False)
         print(f"\nResults saved to: {output_path}")
         
@@ -879,4 +882,3 @@ if __name__ == "__main__":
                 print(f"\nSystem: {answer}\n")
             except Exception as e:
                 print(f"\nError: {e}\n")
-

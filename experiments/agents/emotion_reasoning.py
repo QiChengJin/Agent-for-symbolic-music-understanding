@@ -1,12 +1,16 @@
 from openai import OpenAI, APIConnectionError, APITimeoutError
-from inference_auth_token import get_access_token
+from pathlib import Path
+
+from music_agent.auth import get_access_token
 import pandas as pd
 import re
 import sys
 from collections import Counter
 
-model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-df = pd.read_csv("data/Emotion_Recognition_cleaned.csv")
+#model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+model_name = "google/gemma-3-27b-it"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+df = pd.read_csv(PROJECT_ROOT / "data/processed/Emotion_Recognition_cleaned.csv")
 
 if len(sys.argv) > 1 and sys.argv[1].startswith('--'):
     n = int(sys.argv[1][2:])
@@ -57,12 +61,17 @@ def call_llm(prompt, max_tokens=8, temperature=0.0):
         return ""
 
 
+# CHANGED: 要求 analyst 输出 LABEL + REASON
 analyst_instruction = f"""You are an emotion classifier for musical scores written in ABC notation.
 
 Your job:
 - Read the input score.
 - Decide which ONE of the following 4 categories it belongs to.
-- Answer with ONLY a single number: 0, 1, 2, or 3.
+- THEN briefly explain why.
+- IMPORTANT: You MUST follow this exact output format:
+
+Line 1: LABEL: <one number 0, 1, 2, or 3>
+Line 2: REASON: <your short explanation in 1-3 sentences>
 
 {category_text}
 
@@ -78,23 +87,30 @@ Now classify the following score:
 Score:
 {prompt}
 
-Your answer (ONLY one number 0/1/2/3):"""
+Remember: follow the LABEL / REASON format exactly.
+"""
 
 def analyst_answer_once(prompt):
     analyst_prompt = build_analyst_prompt(prompt)
-    return call_llm(analyst_prompt, max_tokens=4, temperature=0.5)
+    # CHANGED: 解释会长一点，给多点 token
+    # Use higher temperature (0.7) to encourage diversity in analyst opinions for voting
+    return call_llm(analyst_prompt, max_tokens=128, temperature=0.7)
 
 
+# CHANGED: prompt 里提到 LABEL 格式，逻辑不变
 format_checker_instruction = f"""You are a strict format checker.
 
-You are given an answer that *should* contain ONE label for the emotion of a musical score.
+You are given an answer that should look like:
+
+LABEL: <one number 0, 1, 2, or 3>
+REASON: <some explanation>
 
 {category_text}
 
 Your task:
 - Extract the label index (0, 1, 2, or 3) from the given answer.
-- If there is more than one number, choose the one that clearly represents the final label.
-- If you cannot find a valid label, respond with "INVALID".
+- If there is more than one number, use the one that appears after 'LABEL:'.
+- If you cannot find a valid number (0-3) anywhere, respond with "INVALID".
 
 Your response must be EITHER:
 - A single digit 0/1/2/3
@@ -120,28 +136,44 @@ def extract_option_index(text, num_options=4):
             return idx
     return ""
 
+# NEW: 从 analyst 的回答中抽取 REASON 文本
+def extract_reason(text: str) -> str:
+    if not text:
+        return ""
+    lines = str(text).splitlines()
+    for line in lines:
+        if line.strip().upper().startswith("REASON:"):
+            return line.split(":", 1)[1].strip()
+    # 如果没有 REASON: 行，就把整段当理由兜底
+    return str(text).strip()
 
+
+# CHANGED: Judge 现在会看 label + reason
 judge_instruction = f"""You are a meta-judge combining the opinions of several analyst agents.
 
-Each analyst has independently classified the *same* musical score into one of 4 categories.
+Each analyst has independently classified the same musical score into one of 4 categories and provided a short explanation.
 
 Your job:
 - Look at the original score.
-- Look at all analyst predictions and how many voted for each label.
+- Look at all analyst predictions AND their reasons.
+- Consider how reasonable each explanation is given the 4 emotion definitions.
+- Also consider how many analysts voted for each label.
 - Decide the SINGLE best label (0, 1, 2, or 3).
 
 {category_text}
 
 Guidelines:
-- If there is a clear majority (most analysts agree), you should usually follow the majority.
-- If analysts are split, think again about the score and choose the label that best fits the music.
+- If there is a clear majority AND their reasoning matches the category definition, you should usually follow the majority.
+- If analysts are split, prefer the label whose explanations best match the musical features in the score and the category definitions.
+- If some explanations are clearly wrong or inconsistent with the score or the definitions, you may ignore those votes.
 - You MUST output ONLY the final label number (0/1/2/3). Do NOT explain."""
 
-def build_judge_prompt(prompt, analyst_answers, clean_labels):
+# CHANGED: 多传一个 analyst_reasons
+def build_judge_prompt(prompt, analyst_answers, clean_labels, analyst_reasons):
     lines = []
-    for i, (ans, lab) in enumerate(zip(analyst_answers, clean_labels), start=1):
-        lines.append(f"Analyst {i}: label={lab}, raw_answer={repr(ans)}")
-    summary = "\n".join(lines)
+    for i, (lab, reason) in enumerate(zip(clean_labels, analyst_reasons), start=1):
+        lines.append(f"Analyst {i}:\n  Label: {lab}\n  Reason: {reason}")
+    summary = "\n\n".join(lines)
 
     counts = Counter([l for l in clean_labels if l in ["0", "1", "2", "3"]])
     count_str = ", ".join(f"{k}: {v}" for k, v in sorted(counts.items()))
@@ -151,7 +183,7 @@ def build_judge_prompt(prompt, analyst_answers, clean_labels):
 Score:
 {prompt}
 
-Analyst predictions:
+Analyst predictions (label + reason):
 {summary}
 
 Vote counts by label: {count_str if count_str else "no valid labels"}
@@ -160,8 +192,8 @@ Now, choose the SINGLE best label for this score.
 
 Your answer (ONLY one number 0/1/2/3):"""
 
-def content_checker_llm(prompt, analyst_answers, clean_labels):
-    judge_prompt = build_judge_prompt(prompt, analyst_answers, clean_labels)
+def content_checker_llm(prompt, analyst_answers, clean_labels, analyst_reasons):
+    judge_prompt = build_judge_prompt(prompt, analyst_answers, clean_labels, analyst_reasons)
     return call_llm(judge_prompt, max_tokens=4, temperature=0.0)
 
 
@@ -171,6 +203,7 @@ predictions_agent = []
 raw_analyst_answers = []
 raw_format_checks = []
 raw_judge_answers = []
+analyst_reasons_all = []   # NEW: 保存所有样本的 reasons
 
 correct_single = 0
 correct_majority = 0
@@ -183,13 +216,15 @@ for i, row in df.iterrows():
     try:
         analyst_answers = []
         clean_labels = []
+        analyst_reasons = []  # NEW: 当前样本的 reasons
+        format_checks = []  # 当前样本的 format checks
 
         for k in range(num_analysts):
             ans = analyst_answer_once(prompt)
             analyst_answers.append(ans)
 
             fmt = format_checker_llm(ans)
-            raw_format_checks.append(fmt)
+            format_checks.append(fmt)
 
             if fmt.strip().upper() == "INVALID":
                 lab = extract_option_index(ans)
@@ -197,7 +232,12 @@ for i, row in df.iterrows():
                 lab = extract_option_index(fmt)
             clean_labels.append(lab)
 
+            # NEW: 提取理由
+            reason = extract_reason(ans)
+            analyst_reasons.append(reason)
+
         raw_analyst_answers.append(analyst_answers)
+        analyst_reasons_all.append(analyst_reasons)
 
         single_label = clean_labels[0] if clean_labels and clean_labels[0] in ["0", "1", "2", "3"] else ""
         predictions_single.append(single_label)
@@ -215,7 +255,8 @@ for i, row in df.iterrows():
         if str(majority_label) == str(row["solution"]):
             correct_majority += 1
 
-        judge_answer = content_checker_llm(prompt, analyst_answers, clean_labels)
+        # CHANGED: 传入 analyst_reasons
+        judge_answer = content_checker_llm(prompt, analyst_answers, clean_labels, analyst_reasons)
         raw_judge_answers.append(judge_answer)
 
         final_label = extract_option_index(judge_answer)
@@ -235,7 +276,9 @@ for i, row in df.iterrows():
         predictions_majority.append("")
         predictions_agent.append("")
         raw_analyst_answers.append([])
+        raw_format_checks.append([])
         raw_judge_answers.append("")
+        analyst_reasons_all.append([])
 
 results_df = pd.DataFrame({
     'index': df.index,
@@ -244,9 +287,11 @@ results_df = pd.DataFrame({
     'prediction_majority': predictions_majority,
     'prediction_agent': predictions_agent,
     'raw_analyst_answers': raw_analyst_answers,
+    'raw_format_checks': raw_format_checks,
+    'analyst_reasons': analyst_reasons_all,     # NEW: 存每个样本的 reason 列表
     'raw_judge_answer': raw_judge_answers
 })
-results_df.to_csv('emotion_recognition_agent_results.csv', index=False)
+results_df.to_csv(PROJECT_ROOT / 'results/emotion_recognition_agent_results.csv', index=False)
 
 accuracy_single = correct_single / len(df)
 accuracy_majority = correct_majority / len(df)

@@ -641,7 +641,7 @@ Options:
 
 ### 数据预处理
 
-系统包含 `data/prepare_data.py` 脚本用于预处理原始数据：
+系统包含 `scripts/prepare_data.py` 脚本用于预处理原始数据：
 
 1. **Error Detection**: 解析错误列表，构建 prompt
 2. **Metadata QA**: 处理选项列表，格式化 prompt
@@ -654,7 +654,7 @@ Options:
 
 ### 1. 环境要求
 
-- Python 3.8+
+- Python 3.10+
 - 虚拟环境（推荐）
 
 ### 2. 安装依赖
@@ -686,7 +686,7 @@ scipy>=1.9.0
 系统使用 Globus 认证访问 LLM API。首次运行需要认证：
 
 ```bash
-python inference_auth_token.py authenticate
+python -m music_agent.auth authenticate
 ```
 
 这会：
@@ -719,7 +719,7 @@ client = OpenAI(
 ### 方式 1: 交互式模式
 
 ```bash
-python multi_agent_system.py
+python -m music_agent.system
 ```
 
 然后输入问题，例如：
@@ -743,16 +743,16 @@ Options:
 
 ```bash
 # 处理整个数据集
-python multi_agent_system.py data/Emotion_Recognition_cleaned.csv
+python -m music_agent.system data/processed/Emotion_Recognition_cleaned.csv
 
 # 结果会保存为
-# data/Emotion_Recognition_cleaned_multi_agent_results.csv
+# results/Emotion_Recognition_cleaned_multi_agent_results.csv
 ```
 
 ### 方式 3: 在代码中调用
 
 ```python
-from multi_agent_system import run_agent_system
+from music_agent.system import run_agent_system
 
 user_prompt = """
 Input:
@@ -777,15 +777,15 @@ print(answer)
 #### 运行情感分类系统（完整版）
 ```bash
 # 测试运行（前10个样本）
-python emotion_recognition_agent_2.py --10
+python experiments/agents/emotion_reasoning.py --10
 
 # 完整运行
-python emotion_recognition_agent_2.py
+python experiments/agents/emotion_reasoning.py
 ```
 
 #### 运行元数据 QA 系统
 ```bash
-python metadata_QA_agent.py
+python experiments/agents/metadata_qa.py
 ```
 
 ---
@@ -796,33 +796,29 @@ python metadata_QA_agent.py
 
 ```
 Agent-for-symbolic-music-understanding/
-├── multi_agent_system.py          # 主系统（多智能体协调）
-├── emotion_recognition_agent_2.py  # 情感分类系统（独立运行）
-├── emotion_recognition_agent.py   # 情感分类系统（旧版本）
-├── emotion_recognition_baseline.py # 情感分类基线
-├── metadata_QA_agent.py           # 元数据 QA 系统
-├── metadata_QA_baseline.py        # 元数据 QA 基线
-├── inference_auth_token.py        # Globus 认证模块
-├── requirements.txt               # 依赖列表
+├── src/music_agent/               # 主系统与 Globus 认证模块
+├── experiments/                   # Agent 变体、基线与评估脚本
 ├── data/
-│   ├── prepare_data.py            # 数据预处理脚本
-│   ├── Emotion_Recognition_cleaned.csv
-│   ├── Metadata_QA_cleaned.csv
-│   └── Error_Detection_cleaned.csv
-└── venv/                          # 虚拟环境
+│   ├── raw/                       # 原始任务数据
+│   └── processed/                 # Prompt-ready 数据
+├── results/                       # 已记录的实验输出
+├── scripts/                       # 数据预处理与结果汇总
+├── docs/                          # 系统文档、论文与图像
+├── pyproject.toml                 # Python 包配置
+└── requirements.txt               # 依赖列表
 ```
 
 ### 核心函数映射
 
 | 功能 | 函数名 | 位置 |
 |------|--------|------|
-| 主入口 | `run_agent_system()` | `multi_agent_system.py` |
-| Controller | `agent_A_controller()` | `multi_agent_system.py` |
-| ABC 系统 | `agent_B_abc_system()` | `multi_agent_system.py` |
-| 情感系统 | `agent_C_emotion_system()` | `multi_agent_system.py` |
-| 任务拆分 | `split_tasks_for_agents()` | `multi_agent_system.py` |
-| ABC 提取 | `extract_abc_from_prompt()` | `multi_agent_system.py` |
-| 选项提取 | `extract_option_index()` | `multi_agent_system.py` |
+| 主入口 | `run_agent_system()` | `src/music_agent/system.py` |
+| Controller | `agent_A_controller()` | `src/music_agent/system.py` |
+| ABC 系统 | `agent_B_abc_system()` | `src/music_agent/system.py` |
+| 情感系统 | `agent_C_emotion_system()` | `src/music_agent/system.py` |
+| 任务拆分 | `split_tasks_for_agents()` | `src/music_agent/system.py` |
+| ABC 提取 | `extract_abc_from_prompt()` | `src/music_agent/system.py` |
+| 选项提取 | `extract_option_index()` | `src/music_agent/system.py` |
 
 ---
 
@@ -912,10 +908,10 @@ pip install -r requirements.txt
 
 ```bash
 # 运行认证脚本
-python inference_auth_token.py authenticate
+python -m music_agent.auth authenticate
 
 # 验证 token
-python inference_auth_token.py get_access_token
+python -m music_agent.auth get_access_token
 ```
 
 ### 步骤 3: 数据准备（可选）
@@ -924,7 +920,7 @@ python inference_auth_token.py get_access_token
 
 ```bash
 # 运行数据预处理脚本
-python data/prepare_data.py
+python scripts/prepare_data.py
 ```
 
 这会生成清理后的 CSV 文件。
@@ -933,20 +929,20 @@ python data/prepare_data.py
 
 ```bash
 # 交互式模式测试
-python multi_agent_system.py
+python -m music_agent.system
 
 # 或批处理模式（小样本）
-python emotion_recognition_agent_2.py --5
+python experiments/agents/emotion_reasoning.py --5
 ```
 
 ### 步骤 5: 完整运行
 
 ```bash
 # 运行多智能体系统
-python multi_agent_system.py data/Emotion_Recognition_cleaned.csv
+python -m music_agent.system data/processed/Emotion_Recognition_cleaned.csv
 
 # 或运行独立的情感分类系统
-python emotion_recognition_agent_2.py
+python experiments/agents/emotion_reasoning.py
 ```
 
 ### 步骤 6: 结果分析
@@ -1108,7 +1104,7 @@ Analyst Predictions:
 
 **解决**：
 ```bash
-python inference_auth_token.py authenticate --force
+python -m music_agent.auth authenticate --force
 ```
 
 ### 问题 2: ABC 提取失败
@@ -1241,4 +1237,3 @@ results = await asyncio.gather(*analyst_tasks)
 **文档版本**: 1.0  
 **最后更新**: 2024  
 **维护者**: [Your Name]
-

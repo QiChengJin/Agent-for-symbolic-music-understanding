@@ -1,9 +1,12 @@
 from openai import OpenAI, APIConnectionError, APITimeoutError
-from inference_auth_token import get_access_token
+from music_agent.auth import get_access_token
 import pandas as pd
 import re
 import sys
 from collections import Counter
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 #model_name = "google/gemma-3-27b-it"
 model_name = "meta-llama/Meta-Llama-3.1-70B-Instruct"
@@ -502,7 +505,7 @@ Answer:"""
             pred_labels.append(pred_match.group(1) if pred_match else "")
         results_df["predicted_label"] = pred_labels
         
-        output_path = csv_path.replace(".csv", "_emotion_test_results.csv")
+        output_path = PROJECT_ROOT / "results" / f"{Path(csv_path).stem}_emotion_test_results.csv"
         results_df.to_csv(output_path, index=False)
         
         # Calculate accuracy
@@ -534,4 +537,3 @@ Answer:"""
                 print(f"\nSystem:\n{answer}\n")
             except Exception as e:
                 print(f"\nError: {e}\n")
-

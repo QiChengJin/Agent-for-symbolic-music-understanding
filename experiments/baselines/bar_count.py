@@ -1,12 +1,15 @@
 from openai import OpenAI, APIConnectionError, APITimeoutError
-from inference_auth_token import get_access_token
+from pathlib import Path
+
+from music_agent.auth import get_access_token
 import pandas as pd
 import re
 import sys
 
 #model_name = "google/gemma-3-27b-it"
 model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-df = pd.read_csv("data/Bar_Count_Estimation.csv")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+df = pd.read_csv(PROJECT_ROOT / "data/raw/Bar_Count_Estimation.csv")
 
 if len(sys.argv) > 1 and sys.argv[1].startswith('--'):
     n = int(sys.argv[1][2:])
@@ -106,7 +109,7 @@ results_df = pd.DataFrame({
     'prediction': predictions,
     'raw_response': raw_responses
 })
-results_df.to_csv('bar_count_results.csv', index=False)
+results_df.to_csv(PROJECT_ROOT / 'results/bar_count_results.csv', index=False)
 
 
 accuracy = correct / len(df)
@@ -114,4 +117,3 @@ accuracy = correct / len(df)
 print("\n===========================")
 print(f"Model: {model_name}")
 print(f"Accuracy: {accuracy:.4f}")
-

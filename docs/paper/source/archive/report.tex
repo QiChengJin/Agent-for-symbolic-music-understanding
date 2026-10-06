@@ -1,0 +1,594 @@
+\documentclass[sigconf]{acmart}
+% ----------------------------------------------------------------------
+% ACM Required Metadata
+% ----------------------------------------------------------------------
+\copyrightyear{2025}
+\acmYear{2025}
+\setcopyright{rightsretained}
+\acmConference[ConfName '25]{Conference Name}{Month DD--DD, 2025}{City, Country}
+\acmDOI{10.1145/nnnnnnn.nnnnnnn}
+\acmISBN{978-1-4503-XXXX-X/25/05}
+
+
+% ----------------------------------------------------------------------
+% Packages (optional)
+% ----------------------------------------------------------------------
+\usepackage[most]{tcolorbox}
+\tcbset{
+  colback=gray!10,
+  colframe=gray!50,
+  boxrule=0.5pt,
+  arc=3mm,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+}
+\tcbuselibrary{listings, skins}
+\usepackage{amsmath}
+\usepackage{float} % table/graph close to paragraph
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single
+}
+\lstset{
+  breaklines=true,
+  breakatwhitespace=true,
+}
+\newtcolorbox{promptbox}[2][]{
+  title={#2},
+  colback=white,
+  colframe=black,
+  fonttitle=\bfseries,
+  listing only,
+  listing options={
+      basicstyle=\ttfamily\small,
+      breaklines=true,
+      keywordstyle=\color{blue},    % highlight
+      commentstyle=\color{red},     % highlight
+      columns=fullflexible
+  },
+  #1
+}
+\usepackage{graphicx}
+
+% ----------------------------------------------------------------------
+% Title and Authors
+% ----------------------------------------------------------------------
+\title{\textbf{M.U.S.E.: Multi-agent Symbolic Music Understanding with LLMs}}
+
+\author{Qicheng Jin}
+\affiliation{
+  \institution{University or Chicago}
+  \city{Chicago}
+  \country{United States}
+}
+\author{Chenqi Wang}
+\affiliation{
+  \institution{University or Chicago}
+  \city{Chicago}
+  \country{United States}
+}
+\author{Chenxi Peng}
+\affiliation{
+  \institution{University or Chicago}
+  \city{Chicago}
+  \country{United States}
+}
+% ----------------------------------------------------------------------
+% Begin Document
+% ----------------------------------------------------------------------
+\begin{document}
+
+\begin{abstract}
+Symbolic music encodes compositions as discrete events such as pitches, durations, and bar structures, making it suitable for large language models (LLMs) to analyze. Despite their strong performance in natural language processing, LLMs often struggle with music-theoretic reasoning, including key signatures, pitch relationships, and higher-level semantic interpretation. In response to these challenges, we propose M.U.S.E., a multi-agent system designed to handle symbolic music understanding tasks. Using ABC notation, we evaluate both pure LLMs and our multi-agent system on benchmark tasks that convert symbolic music questions into multiple-choice or quantitative formats. These tasks provide objective measures of whether models genuinely interpret symbolic structure rather than relying on surface-level heuristics. The results demonstrate that M.U.S.E. outperforms LLMs alone on syntax understanding and emotion recognition tasks, showing the potential of a multi-agent approach to improving LLMs’ ability to understand symbolic music.
+\end{abstract}
+
+\keywords{Symbolic music, agentic AI, ABC notation, reasoning}
+
+\maketitle
+
+% ----------------------------------------------------------------------
+% Sections
+% ----------------------------------------------------------------------
+
+\section{Introduction}
+Symbolic music is a crucial concept in the field of digital audio and music information retrieval. It refers to a data format that records and represents music using "musical score" logic. Common formats of symbolic music are MIDI (.mid), MusicXML (.xml), and ABC (.abc). If we compare a piece of music to a speech, then audio is the recording file of the speech (recording the waveform of the sound), while symbolic music is the transcript of the speech (recording every word, intonation, and pause). It represents musical pieces as a sequence of discrete and abstract events, such as pitch, duration, and time, rather than an audio waveform. This structural representation can allow analysis and manipulation of musical elements like notes, harmony, and rhythm. 
+
+In the context of digital humanities and artificial intelligence, people's interest in understanding symbolic music has risen gradually. This transition reflects that people are not only satisfied by listening to the music at the surface level, but also hope to understand the basic ``grammar'' behind the music production. This pursuit has profound practical significance, especially in the computational music and generative AI areas. Using symbolic music, the researchers can train more complex models, enabling them to compose coherent music, automatically performing complex musical notation, and develop adaptive educational tools that can respond in real time to musicians' performances. In general, understanding symbolic music bridges the gap between human creativity and machine logic, opening up endless possibilities for the creation, analysis, and preservation of music.
+
+The discrete nature of symbolic music, similar to text, allows it to be tokenized and processed by language models. MusicBERT \citep{zengMusicBERTSymbolicMusic2021} is a large-scale pre-trained model for symbolic music understanding. It didn't adopt the pre-training methods from NLP to symbolic music, but designed some methods, like the efficient and universal OctupleMIDI encoding, the effective bar-level masking strategy, and the large-scale symbolic music corpus with more than 1 million music songs. This innovation makes the model perform better in four evaluated symbolic music understanding tasks, including melody completion, accompaniment suggestion, genre classification, and style classification. 
+
+The pre-training corpora of LLMs typically contain large amounts of music-related text and raw symbolic music data, making it possible to apply them to symbolic music understanding tasks \citep{zhouCanLLMsReason2024a}. Previous studies have shown inconsistencies in the performance of LLMs on symbolic music understanding tasks. \citet{maMusicLLMsLearn2024} applied a probing and intervention method to Music LLMs to explore their ability to understand musical concepts. The result shows that these models indeed acquire the concept of pitch and chord root. Some studies also find good performance of LLMs on basic syntax understanding \citep{shinLargeLanguageModels2025}\citep{yuanChatMusicianUnderstandingGenerating2024a}. However, LLMs may struggle significantly with the explicit logical reasoning required for complex composition and analysis. \citet{zhaoABCEvalBenchmarkingLarge2025} create an ABC-based benchmark target to assess the symbolic music understanding and instruction-following capabilities of LLMs. They reveal notable limitations in the high-level understanding capabilities of LLMs. For example, sequence-level tasks such as emotion recognition and genre recognition. \citet{zhouCanLLMsReason2024a} also identify that current LLMs exhibit poor performance in song-level multi-step music reasoning. When addressing complex musical tasks, they fail to leverage learned music knowledge. Based on the previous studies, we can see that there is a huge gap between music knowledge and reasoning. Therefore, how to enhance LLMs' reasoning ability in symbolic music is still an exciting direction worth exploring.
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/Agent system framework_04.jpg}
+    \Description{A system diagram illustrating the framework. On the left, a user input block feeds into an agent block. The agent block connects to a musical score generation module...}
+    \caption{The framework of M.U.S.E.: The system receives a user prompt. The detection subsystem checks whether the ABC score and the question are complete. If both are valid, the prompt is sent to the Controller, which determines the appropriate subsystem(s) to activate. Two subsystems handle the questions: the syntax understanding subsystem, which answers questions related to music-theory syntax, and the emotion understanding subsystem, which identifies emotional categories. Finally, the Aggregator combines the Controller’s decisions and the subsystem outputs to generate the final response for the user.}
+    \label{fig:system}
+\end{figure*}
+
+On the basis of these LLM capabilities, many researchers have expanded the scope of the LLMs as controllers to orchestrate various domain-specific expert models to solve complex AI tasks, such as HuggingGPT \citep{shenHuggingGPTSolvingAI2023}, AutoGPT, and other modal-specific models \citep{chenVisualGPTDataefficientAdaptation2022}\citep{wuVisualChatGPTTalking2023}\citep{huangAudioGPTUnderstandingGenerating2023}. These successes have inspired us to explore the possibility of designing a system capable of enhancing the high-level understanding capabilities of LLMs in symbolic music, better assisting musicians and music lovers in understanding symbolic music.
+
+Recent advances in agent-based methods have accelerated the development of intelligent music analysis and composition. WeaveMuse \citep{karystinaiosWeaveMuseOpenAgentic2025} is an open intelligent agent system for multimodal music understanding and generation. At its core, it integrates multi-agent collaboration and modular tools to achieve cross-modal interaction between text, symbolic notation, and audio, and supports local and cloud deployment. Similarly, MusicAgent \citep{yuMusicAgentAIAgent2023} is an autonomous intelligent agent for the music domain, powered by LLM, providing an end-to-end automated solution for music processing. It consists of two core components: a toolset covering generation, understanding, and auxiliary tasks; and an autonomous workflow using LLM for task planning, tool selection, and response generation. It also provides plug-in modules for optimizing GPU resource utilization and supports three deployment methods: code invocation, command line, and gradient visualization.
+
+These multi-agent solutions heavily rely on external computational resources or tools and depend on GPU servers for deploying local inference services. Although they may address issues related to diverse data formats and platforms, they cannot leverage the intrinsic musical understanding of LLMs and tend to overuse external processes for music understanding tasks, which may lead to failures in interpreting symbolic music. In sum, the contributions of our paper are as follows:
+
+(1) We propose the first multi-agent symbolic music understanding system, M.U.S.E. It leverages the internal basic musical concept–understanding capabilities of LLMs without requiring external tools.
+
+(2) Through the ABC-Eval benchmark\citep{zhaoABCEvalBenchmarkingLarge2025}, we demonstrate that our multi-agent solution improves symbolic music understanding compared with standalone LLMs. Since music composition requires LLMs to possess genuine musical understanding, the system’s enhanced capability could further advance research in music generation.
+
+(3) Our method also provides cost-efficiency benefits by eliminating the need to retrain LLMs or deploy local inference services.
+
+(4) We open-sourced our code to support progress in this research area and enable further exploration and development by the community.
+
+
+\section{M.U.S.E.: Music Understanding System Engine}
+
+\subsection{User prompt}
+To demonstrate how our multi-agent framework interacts with end users, we provide an example prompt that a typical user might submit to the system. We intentionally choose a musically rich ABC score as the user input because it reflects a realistic use case in which a music lover or musician uploads symbolic music to learn what emotion the piece conveys. \autoref{fig:myscore} provides a standard score corresponding to this ABC notation for reference. The prompt below serves as a running illustration in the following section, where we explain the roles and responsibilities of each agent in the system.
+
+\begin{tcolorbox}[title=Example of user prompt, colback=gray!10, colframe=gray!60, listing only]
+\textbf{ABC score:}
+\begin{verbatim}
+M:4/4
+L:1/8
+K:G
+|:"G"GABc d2d2|"C"cBcA "D"d2d2|"C"cBAA "G"BAGG|
+"Am"AGFG "D"A2d2|"G"GABc d2d2|"C"cBcA "D"d2d2|
+"C"cBAA "G"BAGG|"D"AAdd "G"G2G2:|
+|:"Em"gfeg "D"f2f2|"C"cBcA "D"d4|"C"edce "G"d2B2|
+"Em"GABG "D"A4|"Em"gfeg "D"f2f2|"C"edce "G"d4|
+"C"cBAc "G"BAGB|"D"A2F2 "G"G4:|
+\end{verbatim}
+\textbf{Question:} \\
+What specific emotion does this music piece convey?
+\end{tcolorbox}
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/myscore.png}
+    \caption{The standard musical score corresponding to the ABC notation provided in the example user prompt. This score is included for reference to help readers visualize the symbolic input.}
+    \label{fig:myscore}
+\end{figure*}
+
+\subsection{System Overview}
+Our system is designed as a modular multi-agent framework, shown in \autoref{fig:system}. This multi-agent framework interprets user queries about a musical score in ABC notation and provides an appropriate explanation to help user. Because users are likely to enter incomplete ABC scores or forget to answer certain questions, a system was built to check the completeness of user prompts, which contributes to the overall stability of the agent system. 
+
+Users may ask two major types of questions: (1) ABC syntax questions, which requires an understanding of symbolic music structure (e.g. key, meter, rhythm, chord functions), and (2) emotion-based questions, which requires an understanding of expression of the music. Because these tasks require different forms of domain expertise, we build two subsystems to handle the two tasks separately.
+
+The Controller Agent will analyze the query and determine whether user’s query is about ABC semantic question, an emotion-related question, or a combination of both. It then determines which downstream subsystem(s) should be activated. If the Controller Agent identifies the question as ABC syntax question, it activates the Syntax Understanding Subsystem. This subsystem will parse the ABC score, analyze the structural musical representation and perform symbolic reasoning. Finally it will return a structured answer to address user’s question. If the controller agent identifies the question as a emotion-based question. The Emotion Understanding Subsystem will be activated. This subsystem employs an arousal-valence framework approach to do the emotion classification. It first analyzes the arousal level and valence level  of the ABC score separately, and then combines these dimensional classifications using an emotion combiner agent to map them onto the final emotion categories (Q1: happy, Q2: angry, Q3: sad, Q4: relaxed). Finally, it returns a structured answer with detailed reasoning for each dimension to address the emotion-related question. 
+
+The Aggregator Agent will, at the end, combine the output from the two subsystems. when the Controller agent's desicion on the question is one type of the tasks, it will just pass on the output. when the controller agent thinks user asks both ABC semantic questions and emotion-based questions. This agent produces coherent final answer tailored at user’s query. 
+
+Overall this modular, role-based multi-agent architecture enables the system to deliver a reliable, interpretable and musically grounded responses across different question types. 
+
+\subsection{User prompt completion detection subsystem}
+\subsubsection{Check for}
+The Input Validator serves as the first gatekeeper of our multi-agent system, operating before the Controller Agent to ensure that user inputs meet the minimum requirements for processing. The main responsibility of the Input Validator is to verify the presence and completeness of ABC notation scores in user queries, and to confirm that users have asked a question that can be answered by our system. This pre-validation step prevents downstream agents from processing invalid or incomplete inputs, thereby improving system efficiency and providing clearer error messages to users.
+
+The Input Validator employs a two-stage validation approach. First, it uses rule-based extraction methods to attempt to identify ABC notation from common patterns such as code blocks, "Input:" or "Score:" markers, and ABC header fields (X:, K:, M:, L:). If this initial extraction succeeds, the validator then calls an LLM to verify the completeness of the extracted ABC score and to check whether the user has asked a question. If the initial extraction fails, the LLM is called to attempt extraction and validation in a single step. This hybrid approach combines the reliability of pattern matching with the flexibility of LLM-based understanding, ensuring robust input validation across various input formats.
+
+\begin{promptbox}{Example prompt of Input Validator (when ABC not detected)}
+
+You are an input validator for a music analysis system.\\
+
+Your task is to check if the user input contains an ABC notation score.\\
+
+User input:\\
+\{user\_prompt\}\\
+
+ABC notation typically:\\
+- Starts with headers like X:, K:, M:, L:, R:\\
+- Contains musical notes (A-G with optional sharps/flats and octaves)\\
+- May be wrapped in code blocks (\`\`\`) or after "Input:" or "Score:"\\
+
+Please analyze the user input and:\\
+1. If you find ABC notation, extract it completely and respond with:\\
+   EXTRACTED\_ABC:\\
+   [the complete ABC score here]\\
+
+2. If you confirm there is NO ABC notation, respond with:\\
+   NO\_ABC\_SCORE\\
+
+3. If the input is unclear or incomplete, respond with:\\
+   UNCLEAR\_INPUT\\
+
+Your response:
+\end{promptbox}
+
+\begin{promptbox}{Example prompt of Input Validator (when ABC detected)}
+
+You are an input validator for a music analysis system.\\
+
+Your task is to:\\
+1. Verify that the extracted ABC score is complete and correct\\
+2. Check if the user has asked a question\\
+
+User input:\\
+\{user\_prompt\}\\
+
+Extracted ABC score:\\
+\{extracted\_abc\}\\
+
+Please analyze and respond in one of these formats:\\
+
+If the ABC score is complete and correct, AND the user has asked a question:\\
+VALID\_INPUT\\
+
+If the ABC score is incomplete or missing parts:\\
+INCOMPLETE\_ABC:\\
+[description of what's missing or what should be added]\\
+
+If the user has NOT asked a question:\\
+NO\_QUESTION\_DETECTED\\
+
+If there are other issues:\\
+ISSUE:\\
+[description of the issue]\\
+
+Your response:
+\end{promptbox}
+\subsubsection{Controller agent}
+Controller agent is the entrance to our multi-agent system. The main responsibility of controller agent is to understand user’s query and pre-classify user’s  query type such that we can maximize our agentic system’s performance by activating the most suitable downstream subsystem to answer user’s query. The controller agent will output the following intent categories by analyzing user’s query: ABC(If the query is about ABC semantic questions), EMOTION (If the query is about emotion-related questions) and BOTH (If the query is a combination of both). 
+
+\begin{promptbox}{Example prompt of Controller Agent}
+
+
+You are the Controller Agent.\\
+
+Your job is to decide which specialized agents should be used.\\
+
+Rules:\\
+- If the user asks about ABC notation, keys, bars, chords -> respond "ABC"\\
+- If the user asks about emotion, valence/arousal, mood -> respond "EMOTION"\\
+- If both topics appear -> respond "BOTH"\\
+- Otherwise -> respond "NONE"\\
+
+Return ONLY ONE WORD.\\
+
+User query:\\
+\{user\_prompt\}\\
+\end{promptbox}
+
+
+
+
+\subsection{Controller agent}
+Controller agent is the entrance to our multi-agent system. The main responsibility of controller agent is to understand user’s query and pre-classify user’s  query type such that we can maximize our agentic system’s performance by activating the most suitable downstream subsystem to answer user’s query. The controller agent will output the following intent categories by analyzing user’s query: ABC(If the query is about ABC semantic questions), EMOTION (If the query is about emotion-related questions) and BOTH (If the query is a combination of both). 
+
+\begin{promptbox}{Example prompt of Controller Agent}
+
+
+You are the Controller Agent.\\
+
+Your job is to decide which specialized agents should be used.\\
+
+Rules:\\
+- If the user asks about ABC notation, keys, bars, chords -> respond "ABC"\\
+- If the user asks about emotion, valence/arousal, mood -> respond "EMOTION"\\
+- If both topics appear -> respond "BOTH"\\
+- Otherwise -> respond "NONE"\\
+
+Return ONLY ONE WORD.\\
+
+User query:\\
+\{user\_prompt\}\\
+\end{promptbox}
+
+
+
+\subsubsection{Syntax Understanding Subsystem (Agent B)}
+This agent is activated when the controller determines that the user’s query concerns ABC syntax understanding. The Syntax Subsystem consists of two sub-agents: the ABC Score Expert Agent and the Evaluator Agent. The ABC Score Expert Agent is responsible for parsing the score and extracting structured musical information such as the key, meter, note durations, and bar structure. It focuses solely on summarizing and organizing the musical content without attempting to reason about or answer the user’s question.
+The Evaluator Agent, in contrast, receives the analysis produced by the ABC Score Expert and uses it to answer the user’s music-theory questions. This separation between parsing and reasoning improves both the stability and interpretability of the system. In the evaluation section, we compare this architecture against a single-LLM baseline and observe substantial performance improvements.
+
+\begin{promptbox}{Example prompt of ABC Score Expert Agent}
+
+
+You are an ABC notation expert. Your job is to interpret the following ABC score.\\
+
+Score:\\
+\{input\_abc\}\\
+
+Explain the meaning of each ABC component in a structured and concise way.\\
+Focus on:\\
+- Key (K:)\\
+- Meter / time signature (M:)\\
+- Default note length (L:)\\
+- Chord symbols\\
+- Bar boundaries\\
+\\
+Do NOT answer the user's question.\\
+ONLY produce an analysis of the ABC score.\\
+\end{promptbox}
+\begin{promptbox}{Example prompt of the Evaluator Agent}
+
+You are the evaluator agent.\\
+
+You will receive an analysis of an ABC score from the ABC Expert.\\
+Your job is to answer the user's question based ONLY on that analysis.\\
+
+ABC Expert Analysis:\\
+\{analysis\}\\
+
+Task:\\
+\{user\_prompt\}\\
+
+\end{promptbox}
+
+\subsubsection{Emotion Understanding Subsystem (Agent C)}
+This agent is activated when the controller determines that the user's query concerns emotion-related questions. The Emotion Understanding Subsystem have three sub-agents: the Arousal Analyst Agents, the Valence Analyst Agents, and the Emotion Combiner Agent. The Arousal Analyst Agents are responsible for analyzing and determining the arousal level (HIGH or LOW) of the provide abc score, by observing musical features. Similarly, the Valence Analyst Agents analyze the score to determine the valence level (HIGH or LOW). Each agent includes three independent analysts to ensure robustness of the decision through majority vote. Finally the Emotion Combiner Agent, it receives the arousal and valence classifications produced by the respective analyst groups and uses them to determine the final emotion category (Q1-Q4, represent happy, angry, sad, and relaxed) according to the arousal-valence mapping. The approach of separating dimensional analysis and final classification improves both the stability and interpretability of the emotion recognition system. Also, by letting each analyst only focus on arousal or valence, their judgement will be more objective to the features of the music segment. In the evaluation section, we compare this architecture against a single-LLM baseline and observe significant performance improvements.
+
+\begin{promptbox}{Example prompt of Arousal Analyst Agent}
+
+You are an Arousal Analyst Agent. Your job is to analyze the following ABC score and determine its arousal level.\\
+
+Arousal classification:\\
+- HIGH arousal: energetic, intense, driving\\
+- LOW arousal: calm, peaceful, relaxed\\
+
+Focus on observable musical features:\\
+- Rhythmic density and tempo\\
+- Motion continuity and activity\\
+- Texture activity\\
+- Pitch range and dynamics\\
+
+Score:\\
+\{input\_abc\}\\
+
+Output format:\\
+AROUSAL: <HIGH or LOW>\\
+REASON: <brief explanation>\\
+
+AROUSAL:
+\end{promptbox}
+
+\begin{promptbox}{Example prompt of Valence Analyst Agent}
+
+You are a Valence Analyst Agent. Your job is to analyze the following ABC score and determine its valence level.\\
+
+Valence classification:\\
+- HIGH valence: pleasant, bright, joyful\\
+- LOW valence: unpleasant, dark, sad\\
+
+Focus on observable musical features:\\
+- Harmonic quality and consonance\\
+- Melodic contour and direction\\
+- Key characteristics\\
+- Overall emotional tone\\
+
+Score:\\
+\{input\_abc\}\\
+
+Output format:\\
+VALENCE: <HIGH or LOW>\\
+REASON: <brief explanation>\\
+
+VALENCE:
+\end{promptbox}
+
+\begin{promptbox}{Example prompt of the Emotion Combiner Agent}
+
+You are the Emotion Combiner Agent.\\
+
+You will receive arousal and valence classifications from the Analyst Agents.\\
+Your job is to determine the final emotion category based on the arousal-valence mapping.\\
+
+Categories:\\
+0: Q1 (happy   - high valence, high arousal)\\
+1: Q2 (angry   - low  valence, high arousal)\\
+2: Q3 (sad     - low  valence, low  arousal)\\
+3: Q4 (relaxed - high valence, low  arousal)\\
+
+Mapping:\\
+- High Valence + High Arousal → Label 0\\
+- Low Valence + High Arousal → Label 1\\
+- Low Valence + Low Arousal → Label 2\\
+- High Valence + Low Arousal → Label 3\\
+
+Score:\\
+\{input\_abc\}\\
+
+Arousal Analysis:\\
+\{arousal\_result\}\\
+
+Valence Analysis:\\
+\{valence\_result\}\\
+
+Answer:
+\end{promptbox}
+
+
+
+\subsubsection{Aggregator Agent}
+The Aggregator Agent is responsible for outputting the final answer to user's query. It will interact with the controller agent in the following way: It only operates after controller agent has classified the user's query and determined which subsystem(s) should be activated. It simply gather and organize the outputs produced by the selected agents. Specifically, if the controller agent's decision is ABC, the Aggregator Agent will return only the output from the ABC Semantic Understanding Subsystem (Agent B) to the user. If the controller agent’s decision is EMOTION, the Aggregator Agent will return only the output from the Emotion Understanding Subsystem (Agent C). If the controller agent’s decision is BOTH, then the Aggregator Agent will combine the outputs from both subsystems and returns an integrated answer to the user. In all, the Aggregator agent serves as the final assembly layer of the system. The controller agent determines which agent should be active and the Aggregator determines how their outputs are combined and presented to users. 
+\begin{promptbox}{Aggregation Logic}
+Check the controller's decision. \\ 
+
+If the decision is ABC:\\
+    Return only Agent B's output.\\
+
+If the decision is EMOTION:\\
+    Return only Agent C's output.\\
+
+If BOTH:\\
+    Return both outputs, merged in order.\\
+\end{promptbox}
+
+\subsection{Advantage}
+Overall, we designed a multi-agent architecture in which each subsystem handles a specific music understanding task, allowing the system to optimize its solution based on the most appropriate prompt template and internal reasoning process designed for each sub-task. This modular structure has three advantages. First, it provides strong interpretability, as the behavior of each module is transparent and traceable. Second, the modular architecture makes it easy to add additional functional subsystems without modifying existing modules, such as a harmony agent or a music generation agent. Third, when a user’s query involves multiple aspects. for example, first asking about the structure of the music score and then the emotional color it conveys the multi-agent architecture can invoke the corresponding experts separately and then use another agent to aggregate and integrate their outputs into a coherent answer, avoiding the confusion or hallucination that may occur when a single large model performs cross-domain reasoning.
+
+
+\section{Experiment}
+Describe benchmark tasks, datasets, assumptions, and metrics.
+\subsection{Benchmark Description}
+A major difficulty in symbolic music understanding is verifying whether a model truly understands the symbolic music structure, rather than producing plausible but hallucinated answers. Unlike other music AI tasks, such as genre classification based on audio perception or evaluating creative outputs where judgment often rely on human listening and subjective scoring, symbolic music understanding demands more objective, quantitative and fine-grained benchmarks. This is essential for helping us distinguish the structural reasoning from surface level pattern matching. 
+
+To address this need, we draw inspiration from the recent \citet{zhaoABCEvalBenchmarkingLarge2025}, which combines several symbolic-music datasets into well-defined multiple-choice and numeric prediction tasks.These tasks are designed to test specific aspects of music understanding in a measurable and objective way. The benchmark decomposes symbolic music reasoning into three major categories: Basic Syntax Understanding (e.g. Bar Count Estimation, Metadata  Q\&A); Segment-level Understanding(e.g. Bar Sequencing, error detection); Sequence-level Understanding (e.g. Emotion Recognition). Each category assesses different aspects of symbolic music understanding from low-level information extraction from symbolic music score to high level semantic interpretation like describing the emotion of the provided symbolic music score.  With this benchmarking, it is possible to meaningfully compare the behavior of pure LLMs and agentic systems without stepping into subjective evaluation or open-ended outputs.  In our experiments, we select two representative tasks from the ABC-EVAL benchmark: Metadata Q\&A and Emotion Recognition. 
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\toprule
+\textbf{Task} & \textbf{Category} & \textbf{Size} \\
+\midrule
+\textbf{Metadata Q\&A} & Basic Syntax & 60 \\
+\textbf{Emotion Recognition} & Sequence-Level & 120 \\
+\bottomrule
+\end{tabular}
+\caption{Subset of evaluation tasks used in our study.}
+\label{tab:tasks}
+\end{table}
+We choose these tasks for two main reasons. First, they capture two levels of symbolic music understanding. Metadata Q\&A focus on low-level syntactic reasoning such as key, meter, and bar structure, which allow us to evaluate whether the model truly understand the symbolic meaning of ABC notation and its ability to parse symbolic notation correctly. In contrast, Emotion Recognition requires higher-level semantic interpretation that relies on melodies, chord progressions, rhythmic cues and etc.. These tasks provide a balanced view of both structural and semantic understanding. 
+\subsection {Evaluation Protocol}
+For benchmarking purposes, we directly invoke the subsystem responsible for each task rather than routing queries through the Controller Agent. This allows us to isolate and evaluate the symbolic-music understanding capabilities of each specialized agent without confounding the results with routing errors. Our goal is to measure the musical reasoning performance of the agent modules themselves, rather than the orchestration mechanism. To evaluate, we took two tasks from ABC-eval benchmark: Metadata Q\&A questions and Emotion Recognition questions. (Table 1) Metadata Q\&A questions mainly focus on the basic syntax understanding of music score in ABC notation. For example, in Metadata Q\&A, the multiple choice question might ask the key signature of the music piece or the time signature of the music piece. Among all four choices, there is only one correct answer. 
+\begin{tcolorbox}[title=Metadata Q\&A, colback=gray!10, colframe=gray!60, listing only]
+\begin{verbatim}
+M:4/4
+L:1/8
+K:G
+|:"G"GABc d2d2|"C"cBcA "D"d2d2|"C"cBAA "G"BAGG|
+"Am"AGFG "D"A2d2|"G"GABc d2d2|"C"cBcA "D"d2d2|
+"C"cBAA "G"BAGG|"D"AAdd "G"G2G2:|
+|:"Em"gfeg "D"f2f2|"C"cBcA "D"d4|"C"edce "G"d2B2|
+"Em"GABG "D"A4|"Em"gfeg "D"f2f2|"C"edce "G"d4|
+"C"cBAc "G"BAGB|"D"A2F2 "G"G4:|
+
+Task:
+Identify the time signature of the provided 
+ABC notation score.
+
+Options:
+0. 4/4   1. 3/4
+2. 6/4   3. 6/8
+\end{verbatim}
+\end{tcolorbox}
+The Emotion Recognition task, on the other hand, focus on sequence level understanding of music score in ABC notation. Similar to Metadata Q\&A, it provides a ABC score and 4 choices of emotion label and there is only one correct answer.
+\begin{tcolorbox}[title=Emotion Recognition, colback=gray!10, colframe=gray!60, listing only]
+\begin{verbatim}
+M:4/4
+L:1/8
+K:G
+|:"G"GABc d2d2|"C"cBcA "D"d2d2|"C"cBAA "G"BAGG|
+"Am"AGFG "D"A2d2|"G"GABc d2d2|"C"cBcA "D"d2d2|
+"C"cBAA "G"BAGG|"D"AAdd "G"G2G2:|
+|:"Em"gfeg "D"f2f2|"C"cBcA "D"d4|"C"edce "G"d2B2|
+"Em"GABG "D"A4|"Em"gfeg "D"f2f2|"C"edce "G"d4|
+"C"cBAc "G"BAGB|"D"A2F2 "G"G4:|
+
+Task:
+Choose the most probable emotional label of the 
+provided score. 
+Label Q1 refers to happy (high valence high arousal), 
+Q2 refers to angry (low valence high arousal), 
+Q3 refers to sad (low valence low arousal) and 
+Q4 refers to relaxed (high valence low arousal).
+
+Options:
+0. Q1      1. Q2
+2. Q3      3. Q4
+\end{verbatim}
+\end{tcolorbox}
+\subsection{Model Performance}
+We evaluate two baseline LLMs: google/gemma-3-27b-it and meta-llama/Meta-Llama-3.1-8B-Instruct.
+Gemma represents a high-performing mid-sized model that generally achieves strong results across a variety of reasoning tasks, making it a suitable benchmark for measuring the upper bound of standalone symbolic-music understanding. In contrast, Meta's LLaMA is a much smaller model designed for lightweight inference. We include it to examine whether our agentic framework can compensate for limited model capacity. By comparing these two models in both standalone and agentic settings, we assess not only their individual symbolic-music reasoning ability but also the extent to which our multi-agent system amplifies the strengths or mitigates the weaknesses of the underlying LLM.
+
+\subsubsection{Standalone Performance}
+Based on Table 2, we can see the performance of standalone LLMs on symbolic music understanding tasks. Meta LLaMA demonstrates low performance on both the Metadata Q&A tasks and the Emotion Recognition tasks, while Google Gemma performs well on the Metadata Q&A tasks and shows much better performance on the Emotion Recognition tasks, though still not ideal. We can see that current LLMs still struggle to understand symbolic music in ABC notation and can only weakly reason about it, leaving plenty of room for improvement for an agentic solution.
+% \begin{table}[h]
+% \centering
+% \begin{tabular}{lcc}
+% \toprule
+% \textbf{Model} & \textbf{Metadata Q\&A} & \textbf{Emotion Recognition} \\
+% \midrule
+% Meta LLaMA & 25.00\% & 10.00\% \\
+% Google Gemma & 98.33\% & 15.00\% \\
+% \bottomrule
+% \end{tabular}
+% \caption{Standalone accuracy on two tasks from the ABC-EVAL benchmark.}
+% \label{tab:llm-standalone}
+% \end{table}
+% \begin{table}[h]
+% \centering
+% \begin{tabular}{lcc}
+% \toprule
+% \textbf{Model} & \textbf{Metadata Q\&A} & \textbf{Emotion Recognition} \\
+% \midrule
+% Meta LLaMA & 95.00\% & 30.00\% \\
+% Google Gemma & 98.33\% & 45.00\% \\
+% \bottomrule
+% \end{tabular}
+% \caption{Agentic performance of the same LLMs on the two ABC-EVAL tasks, using our multi-agent framework.}
+% \label{tab:llm-standalone}
+% \end{table}
+
+\begin{table}[h]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{p{3cm} *{4}{c}}
+\toprule
+\textbf{Task} &
+\multicolumn{2}{c}{\textbf{Meta-Llama-3.1-70B-Instruct}} &
+\multicolumn{2}{c}{\textbf{gemma-3-27b-it}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+& \textbf{LLM} & \textbf{Agent} & \textbf{LLM} & \textbf{Agent} \\
+\midrule
+\textbf{controller} & not apply\ & \textbf{100\%} & not apply\ & \textbf{100\%} \\
+\textbf{Metadata Q\&A} & 61.67\% & \textbf{98.33\%} & \textbf{98.33\%} & \textbf{98.33\%} \\
+\textbf{Emotion Recognition} & 14.00\% & 38.00\% & 18.00\% & \textbf{53.30\%} \\
+\textbf{Arousal} & 38.00\% & 60.00\% & 34.00\% & \textbf{76.67\%} \\
+\textbf{Valence} & 40.00\% & 58.00\% & 62.00\% & \textbf{60.00\%} \\
+\bottomrule
+\end{tabular}
+}
+\caption{Comparison of standalone LLM accuracy vs. agentic performance on two ABC-EVAL tasks.}
+\label{tab:llm-agent-compare}
+\end{table}
+
+
+
+
+\subsubsection{agentic Performance}
+For the evaluation of agent, we first test the Controller and find that, for both the LLaMA and Gemma, it classifies the question type into the correct category on our queries for all of the test questions. This makes evaluating the task-specific subsystems (Agent B and Agent C) a reasonable proxy for the performance of the full agentic system.
+
+
+We then test the performance of our agentic solution. Specifically, we evaluate the Metadata Q\&A questions using our Syntax Understanding Subsystem (Agent B) and the Emotion Recognition questions using our Emotion Understanding Subsystem (Agent C). For the Metadata Q\&A task, we observe a drastic increase in performance when building the agent framework on top of Meta LLaMA, from 61.67\% to 98.33\%, and consistently strong performance when building on top of Google Gemma, both achieving 98.33\%. These results highlight an important effect of the agent architecture: We effectively reduce the reasoning burden un the underlying LLM. Even a small model like Meta LLaMA, which performs poorly when asked to interpret ABC notation directly can achieve nearly perfect accuracy once the ABC notation understanding task is structured using our agentic solution. This suggests that the agentic approach does not merely improve accuracy, but fundamentally changes the nature of the task such that even weaker model can reliably solve.    
+ 
+
+For the Emotion Recognition task, the problem is substantially more challenging, and the agent provide more significant improvement. When directly asked to choose among the four discrete emotion labels, one-shot LLM achieve 14.00\% and 18.00\% accuracy for Meta LLaMA and Google Gemma. The result is worse than random guessing, which have the expected accuracy of 25\%. With the Agent C, the Emotion recognation agent, the accuracy improved to 38.00\% for Meta LLaMA and 53.30\% for Google Gemma. While the absolute accuracy still have room for improvement, the relative gains are considerable. This indicates that decomposing the understanding problem into a structured pipeline, that first reason on arousal and valence seprately, and then mapping these dimensions to categorical labels helps the model make more better understanding to the music. If looks into detail of the emotion recognition, we also observe that the improvement on the arousal component is particularly pronounced. This suggests that, when an LLM is directly asked to judge the overall emotion, its arousal judgment is more easily influenced by irrelevant textual or contextual factors, whereas explicitly factoring out arousal as an intermediate step within the agentic pipeline leads to more stable and robust predictions.
+
+ 
+
+
+
+
+
+\section{Discussion}
+Interpret results. Why does the agent help? Why does it fail sometimes?
+
+
+\section{Conclusion}
+Considering the limited ability of large language models (LLMs) to understand symbolic music and the shortcomings of current music-related agent systems, we built M.U.S.E. - a multi-agent system designed to enhance symbolic music understanding with LLMs without relying on external music-processing tools. By evaluating performance on both syntax understanding and emotion recognition tasks, we demonstrate that our multi-agent system can perform better than single LLMs alone.  Our agent solution also highlights several directions for future development, including the possibility of incorporating additional music understanding tasks beyond our current two representative tasks, such as harmony analysis, bar sequencing, and genre detection. Overall, our experimental results show that a multi-agent system is effective for symbolic music understanding and offers a pathway for bridging music knowledge and music reasoning in current LLMs.
+
+\section{Contribution}
+\textbf{Core}\\
+Chenxi Peng chenxipeng@uchicago.edu\\
+Chenqi Wang chenqiw@uchicago.edu\\
+Qicheng Jin qjin5@uchicago.edu\\
+
+
+% ----------------------------------------------------------------------
+% Bibliography
+% ----------------------------------------------------------------------
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+
+
+\end{document}

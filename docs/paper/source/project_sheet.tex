@@ -1,0 +1,72 @@
+\documentclass[11pt]{article} % 设置基本字体大小为11pt
+
+% --- Fix for font shape 'OMS/cmtt/m/n' undefined ---
+% issue: use \texttt{}
+\usepackage[T1]{fontenc} % % Enables modern text encoding
+\usepackage{lmodern} % % Loads Latin Modern fonts (includes cmtt support)
+% ---------------------------------------------------
+
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage[letterpaper,top=2.54cm,bottom=2.54cm,left=1.91cm,right=1.91cm, marginparwidth=1.75cm]{geometry}
+
+\AtBeginEnvironment{table}{\small} % 在table环境开始时设置字体为small
+\AtBeginEnvironment{tablenotes}{\footnotesize} % 设置表格注释字体为small
+
+% Add the hyperref package: making table (and figure, equation, section, etc.) references clickable in LaTeX
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+% changing line spacing
+\usepackage{setspace}
+
+% Remove indentation globally
+\setlength{\parindent}{0pt}
+
+% some space between paragraphs
+\setlength{\parskip}{0.2cm}
+
+% By default, LaTeX treats tables (and figures) as floats, meaning it decides where to put them — often at the top or bottom of a page — to optimize page layout.
+% If you want your table to appear right after a certain paragraph, without forcing a page break, you have several clean options depending on how strict you want to be.
+\usepackage{float}
+
+\usepackage{array} % required for text wrapping in tables
+
+\usepackage{booktabs}   % for \toprule, \midrule, \bottomrule
+
+
+\title{Project Sheet}
+\author{Chenxi Peng, Chenqi Wang, Qicheng Jin}
+%\date{October 22 2025}
+
+\begin{document}
+
+\maketitle
+\section{Problem statement and motivation} 
+While Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language reasoning, code generation, and creative composition, their understanding of symbolic music remains constrained. Specifically, LLMs struggle with theory-based tasks requiring long-term coherence, such as maintaining pitch relationships, valid chord progressions, and correct key modulations. To address these limitations, researchers have adopted an 'LLM-as-Controller' paradigm, orchestrating domain-specific expert models to solve complex tasks. Systems such as MusicAgent (Yu et al., 2023) and ComposerX (Deng et al., 2024) show this trend. However, the extent to which these agentic frameworks actually enhance symbolic music understanding remains underexplored and lacks systematic evaluation.
+
+\section{Agent roles and architecture diagram}
+For the metadata Q\&A agentic solution, we designed two agent modules: one is the ABC 1. ABC expert Agent - that interpret the information an ABC score represents 
+2. Evaluator Agent - responsible for answering the metadata question based on the expert’s analysis
+The ABC expert is prompted as a domain specialist in ABC music notation. It receives the ABC score as input and produces a structured analysis rather than an answer to user’s question. Specifically the agent is instructed to:
+Identify and explain the key significance of the music piece
+Identify the meter / time signature of the music piece 
+Describe chord symbols, bar boundaries, and rhythm patterns
+Summarize the melodic contour
+The Evaluator is instructed to base its answer only on the expert analysis and choose one option index from the provided choices (e.g. 0-3) and avoid any explanation or free-from text. This design turns the Evaluator into a discrete classifier over the expert’s structured interpretation. 
+
+\section{Evaluation setup}
+ A major difficulty in symbolic music understanding is verifying whether a model truly understands the symbolic music structure, rather than producing plausible but hallucinated answers. Unlike other music AI tasks, such as genre classification based on audio perception or evaluating creative outputs where judgement often rely on human listening and subjective scoring, symbolic music understanding demands more objective, quantitative and fine-grained benchmarks. This is essential for helping us distinguish the structural reasoning from surface level pattern matching. 
+
+To address this need, we got inspiration from a recent benchmark paper that combined several symbolic music datasets into well-defined multiple-choice and numeric prediction tasks. There tasks are designed to test specific aspects of music understanding in a measurable and objective way. The benchmark decomposes symbolic music reasoning into three major categories: Basic Syntax Understanding (e.g. Bar Count Estimation, Metadata  Q\&A); Segment-level Understanding(e.g. Bar Sequencing, error detection); Sequence-level Understanding (e.g. Emotion Recognition). Each category assesses different aspects of symbolic music understanding from low-level information extraction from symbolic music score to high level semantic interpretation like describing the emotion of the provided symbolic music score.  With this benchmarking, it is possible to meaningfully compare the behavior of pure LLMs and agentic systems without stepping into subjective evaluation or open-ended outputs.   
+
+For our study, we selected a subset of representative tasks from this benchmark including Metadata Q\&A for syntax level understanding and Emotion Recognition for sequence level semantic understanding. These tasks allow us to observe how agentic workflow influences symbolic music understanding in different level of complexity. 
+
+\section{Current progress and challenges faced}
+As a team, we explored two complementary tasks within symbolic music understanding using both pure LLM inference and agentic solutions. We focused on metadata Q\&A and emotion recognition when giving an ABC format score.
+In the metadata Q\&A task, we compared two baseline models: meta-llama/Meta-Llama-3.1-8B-Instruct and google/gemma-3-27b-it and constructed agents on top of each, consisting of an ABC score expert module and an evaluator module. We test them on a task called metadata Q\&A problem, where the model is given an ABC score and must answer multiple-choice questions regarding its key signature or time signature. This requires the model to correctly interpret the structure of ABC notation and understand what each element means in the ABC score and reason about the key signature and time signature. Our finding shows that Gemma-3-27B achieves 98.33\% accuracy both as a standalone model and as an agent, indicating that agentic solution provides limited additional benefit for this model on this task. However, Llama-3.1-8B performs poorly as a standalone model (25\% accuracy) but improves dramatically to 95\% when wrapped in an agentic system. This is a good sign indicating agent is able to compensate for the model’s weaknesses by guiding its reasoning process and enforcing structured extraction. 
+
+
+For emotion-recognition, the pure LLM with CoT have accuracy of 13.3\%, which is worse than random guessing (data is balanced, random guessing has expected accuracy of 25\%). For the agent, it has multiple analyst agents that each predict a label (with a reason), a format-checker agent that cleans their outputs into numeric labels, and a judge agent that combines all labels + reasons to decide the final answer. With that agent, could reach an accuracy of 55\% currently. major challenges include we are lack of training data mapping ABC scores to emotions, and the emotions are subjective and noisy, one ABC notation may include features from multiple emotions,
+
+
+\end{document}

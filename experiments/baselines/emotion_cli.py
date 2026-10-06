@@ -1,8 +1,11 @@
 from openai import OpenAI, APIConnectionError, APITimeoutError
-from inference_auth_token import get_access_token
+from music_agent.auth import get_access_token
 import pandas as pd
 import re
 import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 model_name = "google/gemma-3-27b-it"
 #model_name = "meta-llama/Meta-Llama-3.1-70B-Instruct"
@@ -219,7 +222,7 @@ Answer:"""
         results_df["agent_answer"] = results
         results_df["predicted_label"] = predicted_labels
         
-        output_path = csv_path.replace(".csv", "_baseline_results.csv")
+        output_path = PROJECT_ROOT / "results" / f"{Path(csv_path).stem}_baseline_results.csv"
         results_df.to_csv(output_path, index=False)
         
         # Calculate accuracy
@@ -256,4 +259,3 @@ Answer:"""
                 print(f"Full response: {full_response}\n")
             except Exception as e:
                 print(f"\nError: {e}\n")
-

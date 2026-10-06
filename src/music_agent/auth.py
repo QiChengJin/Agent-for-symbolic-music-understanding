@@ -143,7 +143,7 @@ if __name__ == "__main__":
         # This is important otherwise the CLI will print more than just the access token
         if not os.path.isfile(TOKENS_PATH):
             raise InferenceAuthError('Access token does not exist. '
-                'Please authenticate by running "python3 inference_auth_token.py authenticate".')
+                'Please authenticate by running "python -m music_agent.auth authenticate".')
         
         # Make sure no force flag was provided
         if args.force:

@@ -1,11 +1,14 @@
 from openai import OpenAI, APIConnectionError, APITimeoutError
-from inference_auth_token import get_access_token
+from pathlib import Path
+
+from music_agent.auth import get_access_token
 import pandas as pd
 from scipy.stats import kendalltau
 import re
 model_name = "google/gemma-3-27b-it"
 # model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-df = pd.read_csv("data/Metadata_QA_cleaned.csv")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+df = pd.read_csv(PROJECT_ROOT / "data/processed/Metadata_QA_cleaned.csv")
 client = OpenAI(
     api_key=get_access_token(),
     base_url="https://inference-api.alcf.anl.gov/resource_server/sophia/vllm/v1"
@@ -145,7 +148,7 @@ print(f"Model: {model_name}")
 print(f"Accuracy: {accuracy:.4f}")
 
 
-output_path = "metadata_QA_agent_gemma_results.csv"
+output_path = PROJECT_ROOT / "results/metadata_QA_agent_gemma_results.csv"
 df.to_csv(output_path, index=False)
 
 print(f"Saved predictions to {output_path}")

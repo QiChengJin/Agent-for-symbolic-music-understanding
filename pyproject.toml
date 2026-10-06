@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muse-symbolic-music-agent"
+version = "0.1.0"
+description = "A multi-agent LLM system for understanding symbolic music in ABC notation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "globus-sdk>=3.0.0",
+  "openai>=1.0.0",
+  "pandas>=1.5.0",
+  "scipy>=1.9.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

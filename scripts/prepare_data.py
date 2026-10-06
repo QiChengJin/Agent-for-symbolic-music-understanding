@@ -1,7 +1,10 @@
 import pandas as pd
 from pathlib import Path
-# path of data
-data_dir = Path("data")    
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+raw_data_dir = PROJECT_ROOT / "data/raw"
+processed_data_dir = PROJECT_ROOT / "data/processed"
+processed_data_dir.mkdir(parents=True, exist_ok=True)
 
 
 # ==============================
@@ -9,7 +12,7 @@ data_dir = Path("data")
 # ==============================
 
 
-error_detection_csv = data_dir / "error_detection.csv"
+error_detection_csv = raw_data_dir / "Error_Detection.csv"
 ed_df = pd.read_csv(error_detection_csv)
 
 def parse_error_list(err_string):
@@ -42,7 +45,7 @@ ed_df["prompt"] = ed_df.apply(build_prompt_ed, axis=1)
 ed_clean_df = ed_df.drop(columns = ["title","input","choices","target","task_description","error", "error_list"])
 ed_clean_df = ed_clean_df.rename(columns={"target_index": "solution"})
 
-output_path = data_dir / "Error_Detection_cleaned.csv"
+output_path = processed_data_dir / "Error_Detection_cleaned.csv"
 ed_clean_df.to_csv(output_path, index=False)
 
 
@@ -53,7 +56,7 @@ ed_clean_df.to_csv(output_path, index=False)
 # ==============================
 
 
-metadata_qa = data_dir / "Metadata_QA.csv"
+metadata_qa = raw_data_dir / "Metadata_QA.csv"
 qa_df = pd.read_csv(metadata_qa)
 
 
@@ -93,7 +96,7 @@ qa_df["prompt"] = qa_df.apply(build_prompt_qa, axis=1)
 
 qa_clean_df = qa_df.drop(columns = ["title", "choices", "target","task_description"])
 qa_clean_df = qa_clean_df.rename(columns={"target_index": "solution"})
-output_path = data_dir / "Metadata_QA_cleaned.csv"
+output_path = processed_data_dir / "Metadata_QA_cleaned.csv"
 qa_clean_df.to_csv(output_path, index=False)
 
 
@@ -104,7 +107,7 @@ qa_clean_df.to_csv(output_path, index=False)
 # ==============================
 
 
-metadata_er = data_dir / "Emotion_Recognition.csv"
+metadata_er = raw_data_dir / "Emotion_Recognition.csv"
 er_df = pd.read_csv(metadata_er)
 
 
@@ -135,7 +138,7 @@ er_df["prompt"] = er_df.apply(build_prompt_er, axis=1)
 
 er_clean_df = er_df.drop(columns = ["title","score", "choices", "target","task_description"])
 er_clean_df = er_clean_df.rename(columns={"target_index": "solution"})
-output_path = data_dir / "Emotion_Recognition_cleaned.csv"
+output_path = processed_data_dir / "Emotion_Recognition_cleaned.csv"
 er_clean_df.to_csv(output_path, index=False)
 
 
@@ -176,7 +179,7 @@ er_clean_df.to_csv(output_path, index=False)
 import pandas as pd
 import re
 
-barsequence = data_dir / "Bar_Sequencing.csv"
+barsequence = raw_data_dir / "Bar_Sequencing.csv"
 bs_df = pd.read_csv(barsequence)
 
 
@@ -239,7 +242,7 @@ bs_df["prompt"] = bs_df.apply(build_prompt_bs, axis=1)
 bs_clean_df = bs_df[["prompt", "target"]].rename(columns={"target": "solution"})
 
 # 输出 clean CSV
-output_path = data_dir / "Bar_Sequencing_cleaned.csv"
+output_path = processed_data_dir / "Bar_Sequencing_cleaned.csv"
 bs_clean_df.to_csv(output_path, index=False)
 
 print("Clean file saved →", output_path)
