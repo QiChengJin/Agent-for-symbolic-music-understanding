@@ -68,26 +68,32 @@ We evaluate M.U.S.E. on two representative tasks from
 | Emotion Recognition | Sequence-level semantics | 100 |
 
 The study compares standalone inference with the corresponding M.U.S.E.
-subsystem using two open-weight instruction models:
-`Meta-Llama-3.1-70B-Instruct` and `gemma-3-27b-it`.
+subsystem using three open-weight model configurations:
+`Meta-Llama-3.1-8B-Instruct`, `Meta-Llama-3.1-70B-Instruct`, and
+`gemma-3-27b-it`.
 
 ### Results
 
-| Task | LLaMA · LLM | LLaMA · Agent | Gemma · LLM | Gemma · Agent |
-|---|---:|---:|---:|---:|
-| Controller | N/A | **100%** | N/A | **100%** |
-| Metadata Q&A | 61.67% | **98.33%** | 98.33% | **98.33%** |
-| Emotion Recognition | 14.00% | **38.00%** | 18.00% | **53.30%** |
-| └ Arousal | 38.00% | **60.00%** | 34.00% | **76.67%** |
-| └ Valence | 40.00% | **58.00%** | 59.00% | **60.00%** |
-
-All figures above are taken from the evaluation table in the project paper.
+| Task | Model | Standalone LLM | M.U.S.E. Agent | Absolute gain |
+|---|---|---:|---:|---:|
+| Controller | LLaMA 3.1 70B | N/A | **100%** | N/A |
+| Controller | Gemma 3 27B | N/A | **100%** | N/A |
+| Metadata Q&A | LLaMA 3.1 8B | 25.00% | **95.00%** | **+70.00 pp** |
+| Metadata Q&A | LLaMA 3.1 70B | 61.67% | **98.33%** | **+36.66 pp** |
+| Metadata Q&A | Gemma 3 27B | 98.33% | **98.33%** | 0.00 pp |
+| Emotion Recognition | LLaMA 3.1 70B | 14.00% | **38.00%** | **+24.00 pp** |
+| └ Arousal | LLaMA 3.1 70B | 38.00% | **60.00%** | **+22.00 pp** |
+| └ Valence | LLaMA 3.1 70B | 40.00% | **58.00%** | **+18.00 pp** |
+| Emotion Recognition | Gemma 3 27B | 18.00% | **53.30%** | **+35.30 pp** |
+| └ Arousal | Gemma 3 27B | 34.00% | **76.67%** | **+42.67 pp** |
+| └ Valence | Gemma 3 27B | 59.00% | **60.00%** | **+1.00 pp** |
 
 ### Key findings
 
 - **Agentic decomposition closes the model-capability gap.** On Metadata Q&A,
-  the LLaMA-based system rises from 61.67% to 98.33%, matching the
-  Gemma-based agent and answering 59 of 60 questions correctly.
+  the 8B LLaMA experiment rises from 25.00% to 95.00%. The 70B LLaMA-based
+  system rises from 61.67% to 98.33%, matching the Gemma-based agent and
+  answering 59 of 60 questions correctly.
 - **Emotion benefits from structured reasoning.** M.U.S.E. improves four-way
   emotion accuracy from 14.00% to 38.00% with LLaMA and from 18.00% to 53.30%
   with Gemma.
