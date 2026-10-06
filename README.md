@@ -1,79 +1,130 @@
-# M.U.S.E. — Multi-Agent Symbolic Music Understanding
+# M.U.S.E.
 
-M.U.S.E. is an LLM-based multi-agent system for reasoning over music written in
-[ABC notation](https://abcnotation.com/). It routes each question to specialized
-agents for score analysis, emotion recognition, or both, then evaluates and
-combines their answers.
+### Multi-Agent Symbolic Music Understanding with LLMs
 
-The project explores a practical question: **can role-specialized LLM agents
-reason about symbolic music more reliably than a single direct prompt?**
+**Qicheng Jin · Chenqi Wang · Chenxi Peng**<br>
+University of Chicago
 
-> Research prototype developed with the Argonne Leadership Computing Facility
-> (ALCF) inference service. Running the models requires an eligible Globus
-> identity; the code, datasets, prompts, paper, and recorded results are included
-> for inspection.
+[Read the paper](docs/paper/MUSE-paper.pdf) · [Explore the implementation](src/music_agent/system.py) · [System documentation](docs/SYSTEM_DOCUMENTATION.md)
 
-## What it does
+M.U.S.E. is a multi-agent system that helps large language models reason about
+symbolic music written in [ABC notation](https://abcnotation.com/). Instead of
+asking one model to parse a score and solve a music question at the same time,
+M.U.S.E. separates input validation, task routing, score analysis, musical
+reasoning, and response aggregation into specialized agents.
 
-- Analyzes key, meter, harmony, rhythm, structure, and other ABC-score metadata.
-- Classifies emotion on a valence–arousal plane: happy, angry, sad, or relaxed.
-- Validates and extracts ABC notation before inference.
-- Routes technical, emotional, and mixed questions to dedicated agents.
-- Uses multiple arousal/valence analysts and a judge to reduce single-prompt
-  variance.
-- Supports interactive use and batch evaluation from CSV files.
+Our experiments on the ABC-Eval benchmark show that this decomposition improves
+both low-level syntax understanding and high-level emotion recognition - without
+retraining the underlying LLM or relying on external music-processing tools.
 
-## Architecture
+## System overview
 
-```text
-User prompt
-    │
-    ▼
-Input validator ── extracts and checks ABC notation
-    │
-    ▼
-Controller ─────── classifies the request as ABC / EMOTION / BOTH
-    │
-    ├── ABC expert ── evaluator
-    │
-    └── Emotion team ── 3× arousal + 3× valence analysts ── judge
-    │
-    ▼
-Response aggregator
-```
+![M.U.S.E. multi-agent architecture](docs/paper/source/images/muse-architecture.png)
 
-The main implementation is in
-[`src/music_agent/system.py`](src/music_agent/system.py). A detailed design and
-prompt walkthrough is available in
-[`docs/SYSTEM_DOCUMENTATION.md`](docs/SYSTEM_DOCUMENTATION.md).
+The system first checks that the user supplied a complete ABC score and a valid
+question. A controller then routes the request to one or both specialized
+subsystems:
 
-## Recorded results
+| Component | Responsibility |
+|---|---|
+| **Completion Detection** | Extracts ABC notation and validates score/question completeness |
+| **Controller Agent** | Routes each request to `ABC`, `EMOTION`, or `BOTH` |
+| **Syntax Understanding** | An ABC Score Expert parses the score; an Evaluator answers the question from that analysis |
+| **Emotion Understanding** | Independent analyst groups estimate arousal and valence; an Emotion Combiner maps them to a final category |
+| **Aggregator Agent** | Returns one subsystem response or combines both into a coherent answer |
 
-The following values are recalculated from the checked-in CSV outputs. They are
-small research runs rather than benchmark claims.
+This modular design makes each reasoning stage traceable, allows new musical
+capabilities to be added independently, and reduces the burden placed on any
+single model call.
 
-| Task / configuration | Samples | Accuracy |
-|---|---:|---:|
-| Emotion, direct prediction | 50 | 26.0% |
-| Emotion, single analyst | 50 | 44.0% |
-| Emotion, majority vote | 50 | 46.0% |
-| Emotion, agent judge | 50 | **50.0%** |
-| Metadata QA, Llama baseline | 60 | 25.0% |
-| Metadata QA, Gemma baseline | 60 | **98.3%** |
+## From symbolic score to musical meaning
 
-Reproduce the table locally with:
+ABC notation represents music as discrete symbols for pitch, duration, meter,
+key, chords, and bar structure. The example below is the conventional score
+rendering of an ABC input used throughout the paper.
 
-```bash
-python scripts/summarize_results.py
-```
+![Standard score rendered from the example ABC input](docs/paper/source/images/abc-score-example.png)
 
-The repository contains 619 task examples across bar counting, bar sequencing,
-error detection, metadata QA, and emotion recognition. Raw and prompt-ready
-versions are separated under `data/`.
+M.U.S.E. addresses two complementary levels of understanding:
 
-## Quick start
+- **Syntax understanding:** key, meter, note length, chord symbols, bar
+  structure, and related metadata questions.
+- **Emotion understanding:** a four-quadrant valence-arousal model - happy
+  (Q1), angry (Q2), sad (Q3), and relaxed (Q4).
 
-Requirements: Python 3.10+ and an ALCF-authorized Globus account.
+For emotion recognition, three independent Arousal Analysts and three Valence
+Analysts vote on `HIGH` or `LOW` for each dimension. The Emotion Combiner then
+maps the two-dimensional result to the final category. This reframes a difficult
+four-way decision as two simpler, interpretable judgments.
+
+## Evaluation
+
+We evaluate M.U.S.E. on two representative tasks from
+[ABC-Eval](https://anonymous.4open.science/r/ABC-Eval-B622):
+
+| Task | Understanding level | Evaluation size |
+|---|---|---:|
+| Metadata Q&A | Basic syntax | 60 |
+| Emotion Recognition | Sequence-level semantics | 100 |
+
+The study compares standalone inference with the corresponding M.U.S.E.
+subsystem using two open-weight instruction models:
+`Meta-Llama-3.1-70B-Instruct` and `gemma-3-27b-it`.
+
+### Results
+
+| Task | LLaMA · LLM | LLaMA · Agent | Gemma · LLM | Gemma · Agent |
+|---|---:|---:|---:|---:|
+| Controller | N/A | **100%** | N/A | **100%** |
+| Metadata Q&A | 61.67% | **98.33%** | 98.33% | **98.33%** |
+| Emotion Recognition | 14.00% | **38.00%** | 18.00% | **53.30%** |
+| └ Arousal | 38.00% | **60.00%** | 34.00% | **76.67%** |
+| └ Valence | 40.00% | **58.00%** | 59.00% | **60.00%** |
+
+All figures above are taken from the evaluation table in the project paper.
+
+### Key findings
+
+- **Agentic decomposition closes the model-capability gap.** On Metadata Q&A,
+  the LLaMA-based system rises from 61.67% to 98.33%, matching the
+  Gemma-based agent and answering 59 of 60 questions correctly.
+- **Emotion benefits from structured reasoning.** M.U.S.E. improves four-way
+  emotion accuracy from 14.00% to 38.00% with LLaMA and from 18.00% to 53.30%
+  with Gemma.
+- **Arousal shows the strongest gain.** Gemma improves from 34.00% to 76.67%
+  when arousal is handled as an explicit intermediate decision.
+- **Routing is reliable in the study setting.** Both models classify all 100
+  generated controller test queries correctly.
+
+## Why it works
+
+For Metadata Q&A, the ABC Score Expert first produces a structured analysis of
+the score, and the Evaluator reasons only from that analysis. Separating parsing
+from question answering makes the task more manageable and the model's behavior
+more interpretable.
+
+For emotion recognition, M.U.S.E. avoids asking the model to jump directly to a
+subjective label. It separately evaluates rhythmic and textural cues for arousal
+and harmonic, modal, and melodic cues for valence before combining them. The
+results suggest that this structure better matches how LLMs reason about
+symbolic musical information.
+
+## Limitations and future work
+
+Emotion recognition remains substantially harder than syntax understanding.
+Arousal is often visible in rhythmic density and motion, while valence depends
+on subtler harmonic and long-range melodic context. In addition, emotion labels
+come from human annotation and can admit multiple musically reasonable
+interpretations.
+
+Future work will explore soft-label emotion annotations based on broader human
+studies and extend the modular system to harmony analysis, bar sequencing, genre
+detection, and symbolic music generation.
+
+## Run the prototype
+
+The current implementation targets the ALCF OpenAI-compatible inference service
+and requires an eligible Globus identity.
 
 ```bash
 git clone https://github.com/QiChengJin/Agent-for-symbolic-music-understanding.git
@@ -83,77 +134,18 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -e .
 
-# First-time browser authentication
 python -m music_agent.auth authenticate
-
-# Interactive agent
 python -m music_agent.system
 ```
 
-Example input:
+The repository separates the importable system (`src/music_agent`), experiment
+variants (`experiments`), benchmark data (`data`), recorded outputs (`results`),
+and the complete paper materials (`docs/paper`).
 
-```text
-Input:
-X:1
-T:Example
-M:4/4
-L:1/8
-K:C
-CDEF GABc |
+## Resources
 
-Task: What is the key and which emotion does this melody most likely express?
-```
-
-For batch evaluation, pass a CSV containing a `prompt` column:
-
-```bash
-python -m music_agent.system data/processed/Metadata_QA_cleaned.csv
-```
-
-## Repository layout
-
-```text
-.
-├── src/music_agent/       # Importable core system and Globus authentication
-├── experiments/
-│   ├── agents/            # Voting, reasoning, and metadata-agent variants
-│   ├── baselines/         # Direct-prompt baselines
-│   └── evaluation/        # Standalone emotion-system evaluation
-├── data/
-│   ├── raw/               # Original task datasets
-│   └── processed/         # Prompt-ready datasets
-├── results/               # Recorded experiment outputs
-├── scripts/               # Data preparation and result summaries
-└── docs/
-    ├── SYSTEM_DOCUMENTATION.md
-    └── paper/              # Project paper, LaTeX sources, and figures
-```
-
-## Experiments and reproducibility
-
-All experiment scripts use paths relative to the repository root and write
-outputs to `results/`. After `pip install -e .`, examples include:
-
-```bash
-python experiments/baselines/emotion_direct.py --10
-python experiments/agents/emotion_reasoning.py --10
-python experiments/agents/metadata_qa.py
-python scripts/prepare_data.py
-```
-
-Model identifiers and inference parameters are intentionally kept next to each
-experiment so recorded configurations are easy to audit. The current scripts
-target ALCF's OpenAI-compatible inference endpoint.
-
-## Project report
-
-The full report, **“M.U.S.E. Multi-agent Symbolic Music Understanding with
-LLMs,”** is available as a [PDF](docs/paper/MUSE-paper.pdf). Its LaTeX sources
-and figures are included in [`docs/paper/source/`](docs/paper/source/).
-
-## Notes
-
-- No access tokens are stored in this repository. Globus stores local tokens
-  outside the project under the user's home directory.
-- Results can vary with model serving versions and sampling settings.
-- This is a research prototype, not a production music-analysis service.
+- [Full project paper](docs/paper/MUSE-paper.pdf)
+- [Detailed system and prompt documentation](docs/SYSTEM_DOCUMENTATION.md)
+- [ABC-Eval benchmark](https://anonymous.4open.science/r/ABC-Eval-B622)
+- [EMelodyGen paper](https://arxiv.org/abs/2309.13259)
+- [EMelodyGen dataset](https://huggingface.co/datasets/monetjoe/EMelodyGen)

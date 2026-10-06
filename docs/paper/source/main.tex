@@ -131,7 +131,7 @@ The pre-training corpora of LLMs typically contain large amounts of music-relate
 
 \begin{figure*}[ht]
     \centering
-    \includegraphics[width=\textwidth]{images/Copy of Agent system_2.png}
+    \includegraphics[width=\textwidth]{images/muse-architecture.png}
     \Description{A system diagram illustrating the framework. On the left, a user input block feeds into an agent block. The agent block connects to a musical score generation module...}
     \caption{The framework of M.U.S.E.: The system receives a user prompt. The Completion Detection Subsystem checks whether the ABC score and the question are complete. If both are valid, the prompt is sent to the Controller Agent, which determines the appropriate subsystem(s) to activate. Two subsystems handle the questions: the syntax understanding subsystem, which answers questions related to music-theory syntax, and the emotion understanding subsystem, which identifies emotional categories. Finally, the Aggregator combines the Controller’s decisions and the output(s) of subsystems to generate the final response for the user.}
     \label{fig:system}
@@ -145,7 +145,7 @@ These multi-agent solutions heavily rely on external computational resources or 
 
 \begin{figure*}
     \centering
-    \includegraphics[width=\textwidth]{images/myscore.png}
+    \includegraphics[width=\textwidth]{images/abc-score-example.png}
     \caption{The standard musical score corresponding to the ABC notation provided in the example user prompt. This score is included for reference to help readers visualize the symbolic input.}
     \label{fig:myscore}
 \end{figure*}
